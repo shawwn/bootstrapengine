@@ -1,0 +1,6 @@
+1>------ Build started: Project: Graphics, Configuration: Release Win32 ------
+1>Compiling...
+1>GrRenderLight.cpp
+1>Build log was saved at "file://c:\kevinb\code\engine\Graphics\Release\BuildLog.htm"
+1>Graphics - 0 error(s), 0 warning(s)
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

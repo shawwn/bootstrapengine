@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/s_kevinb/codesafe/!svn/ver/253/Trunk/ProjectBX/Samples/Win32
+END
+BApp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/197/Trunk/ProjectBX/Samples/Win32/BApp.cpp
+END
+Win32.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/197/Trunk/ProjectBX/Samples/Win32/Win32.vcproj
+END
+Main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/197/Trunk/ProjectBX/Samples/Win32/Main.cpp
+END
+BApp.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/253/Trunk/ProjectBX/Samples/Win32/BApp.h
+END
+Win32.sln
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/197/Trunk/ProjectBX/Samples/Win32/Win32.sln
+END

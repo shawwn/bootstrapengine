@@ -1,0 +1,46 @@
+9
+
+dir
+409
+https://secure.svnrepository.com/s_kevinb/codesafe/Trunk/ProjectBX/Engine
+https://secure.svnrepository.com/s_kevinb/codesafe
+
+
+
+2009-01-07T06:41:26.702334Z
+409
+spresser
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38bc38f1-ad32-0410-a363-b5f83eb29ce1
+
+Test
+dir
+
+Graphics
+dir
+
+FileSystem
+dir
+
+Common
+dir
+
+ThreadLib
+dir
+
+UberTexture
+dir
+

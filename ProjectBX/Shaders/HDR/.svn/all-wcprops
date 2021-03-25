@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/HDR
+END
+CalcLum.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/CalcLum.fsh
+END
+CalcLum.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/HDR/CalcLum.vsh
+END
+ToneMap.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/ToneMap.fsh
+END
+ToneMap.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/HDR/ToneMap.vsh
+END
+Blur.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Blur.fsh
+END
+Blur.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/HDR/Blur.vsh
+END
+BrightPass.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/BrightPass.fsh
+END
+BrightPass.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/HDR/BrightPass.vsh
+END
+PassThru.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/PassThru.fsh
+END
+PassThru.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/HDR/PassThru.vsh
+END
+Combine.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Combine.fsh
+END
+Combine.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/HDR/Combine.vsh
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/VSM
+END
+DepthPeelAlpha.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/373/Trunk/ProjectBX/Shaders/VSM/DepthPeelAlpha.fsh
+END
+DepthPeelAlpha.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/VSM/DepthPeelAlpha.vsh
+END
+Depth.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/373/Trunk/ProjectBX/Shaders/VSM/Depth.fsh
+END
+Depth.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/VSM/Depth.vsh
+END
+DepthMerge.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/373/Trunk/ProjectBX/Shaders/VSM/DepthMerge.fsh
+END
+DepthMerge.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/VSM/DepthMerge.vsh
+END
+Indir.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/373/Trunk/ProjectBX/Shaders/VSM/Indir.fsh
+END
+Indir.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/VSM/Indir.vsh
+END
+DepthPeel.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/373/Trunk/ProjectBX/Shaders/VSM/DepthPeel.fsh
+END
+DepthPeel.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/VSM/DepthPeel.vsh
+END

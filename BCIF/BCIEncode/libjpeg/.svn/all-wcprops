@@ -1,0 +1,431 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg
+END
+jdatadst.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdatadst.c
+END
+jconfig.vms
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.vms
+END
+jmemansi.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jmemansi.c
+END
+jchuff.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jchuff.c
+END
+jdtrans.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdtrans.c
+END
+jchuff.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jchuff.h
+END
+jcparam.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcparam.c
+END
+jquant1.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jquant1.c
+END
+jconfig.st
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.st
+END
+jconfig.bcc
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.bcc
+END
+jcphuff.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcphuff.c
+END
+jconfig.dj
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.dj
+END
+jccolor.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jccolor.c
+END
+jconfig.mac
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.mac
+END
+jcmarker.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcmarker.c
+END
+jmemmgr.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jmemmgr.c
+END
+jcsample.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcsample.c
+END
+jdsample.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdsample.c
+END
+jdmarker.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdmarker.c
+END
+jfdctflt.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jfdctflt.c
+END
+jmorecfg.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jmorecfg.h
+END
+jinclude.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jinclude.h
+END
+jconfig.doc
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.doc
+END
+jidctflt.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jidctflt.c
+END
+jctrans.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jctrans.c
+END
+jpegint.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jpegint.h
+END
+jcprepct.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcprepct.c
+END
+jutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jutils.c
+END
+jdinput.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdinput.c
+END
+jpeglib.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jpeglib.h
+END
+jconfig.mc6
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.mc6
+END
+jconfig.sas
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.sas
+END
+jconfig.wat
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.wat
+END
+jcmainct.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcmainct.c
+END
+jdmainct.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdmainct.c
+END
+jcapimin.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcapimin.c
+END
+jdpostct.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdpostct.c
+END
+jdapimin.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdapimin.c
+END
+jconfig.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.cfg
+END
+jmemsys.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jmemsys.h
+END
+jcdctmgr.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcdctmgr.c
+END
+jddctmgr.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jddctmgr.c
+END
+jerror.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jerror.c
+END
+jdhuff.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdhuff.c
+END
+jfdctfst.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jfdctfst.c
+END
+jcmaster.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcmaster.c
+END
+jerror.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jerror.h
+END
+jdmaster.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdmaster.c
+END
+jidctfst.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jidctfst.c
+END
+jdhuff.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdhuff.h
+END
+jcinit.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcinit.c
+END
+jquant2.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jquant2.c
+END
+jdct.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdct.h
+END
+jmemname.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jmemname.c
+END
+jdatasrc.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdatasrc.c
+END
+jconfig.manx
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.manx
+END
+jcapistd.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcapistd.c
+END
+jdapistd.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdapistd.c
+END
+jversion.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jversion.h
+END
+jconfig.vc
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.vc
+END
+jfdctint.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jfdctint.c
+END
+jidctint.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jidctint.c
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/README
+END
+jdmerge.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdmerge.c
+END
+jccoefct.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jccoefct.c
+END
+jdcoefct.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdcoefct.c
+END
+jcomapi.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jcomapi.c
+END
+jconfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jconfig.h
+END
+jdphuff.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdphuff.c
+END
+jidctred.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jidctred.c
+END
+jdcolor.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/libjpeg/jdcolor.c
+END

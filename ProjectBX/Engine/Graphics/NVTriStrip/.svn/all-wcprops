@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/NVTriStrip
+END
+NvTriStripObjects.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/NVTriStrip/NvTriStripObjects.cpp
+END
+NvTriStripObjects.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/NVTriStrip/NvTriStripObjects.h
+END
+NvTriStrip.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/NVTriStrip/NvTriStrip.cpp
+END
+VertexCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/NVTriStrip/VertexCache.h
+END
+NvTriStrip.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/NVTriStrip/NvTriStrip.h
+END

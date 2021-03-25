@@ -1,0 +1,71 @@
+9
+
+dir
+409
+https://secure.svnrepository.com/s_kevinb/codesafe/Trunk/Halo%2051/Build/VC2005
+https://secure.svnrepository.com/s_kevinb/codesafe
+
+
+
+2008-12-27T11:55:10.401254Z
+391
+shawnp
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38bc38f1-ad32-0410-a363-b5f83eb29ce1
+
+release
+dir
+
+Halo 51.sln
+file
+
+
+
+
+2009-01-29T10:45:34.156495Z
+591bcab860573af76f1435c17538992b
+2008-12-21T23:20:09.004927Z
+390
+shawnp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+885
+
+debug
+dir
+
+Projects
+dir
+

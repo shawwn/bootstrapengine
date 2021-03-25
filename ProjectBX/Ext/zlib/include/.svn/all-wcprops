@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include
+END
+inffast.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/inffast.h
+END
+crc32.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/crc32.h
+END
+inffixed.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/inffixed.h
+END
+inftrees.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/inftrees.h
+END
+zconf.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/zconf.h
+END
+zlib.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/zlib.h
+END
+inflate.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/inflate.h
+END
+trees.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/trees.h
+END
+deflate.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/deflate.h
+END
+zconf.in.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/zconf.in.h
+END
+zutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/242/Trunk/ProjectBX/Ext/zlib/include/zutil.h
+END

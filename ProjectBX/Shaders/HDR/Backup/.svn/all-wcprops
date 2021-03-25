@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup
+END
+HDRTone.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRTone.fsh
+END
+HDRTone.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRTone.vsh
+END
+HDRHiPass.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRHiPass.fsh
+END
+HDRHiPass.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRHiPass.vsh
+END
+HDRBloom.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRBloom.fsh
+END
+HDRBloom.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRBloom.vsh
+END
+HDRCopy.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRCopy.fsh
+END
+HDRCopy.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRCopy.vsh
+END
+HDRCombine.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRCombine.fsh
+END
+HDRCombine.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRCombine.vsh
+END
+HDRAvg.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRAvg.fsh
+END
+HDRAvg.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRAvg.vsh
+END
+HDRLum.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRLum.fsh
+END
+HDRLum.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/HDR/Backup/HDRLum.vsh
+END

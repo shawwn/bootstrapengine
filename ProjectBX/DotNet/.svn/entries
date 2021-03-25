@@ -1,0 +1,40 @@
+9
+
+dir
+409
+https://secure.svnrepository.com/s_kevinb/codesafe/Trunk/ProjectBX/DotNet
+https://secure.svnrepository.com/s_kevinb/codesafe
+
+
+
+2009-01-07T02:33:28.144672Z
+406
+kbray
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+38bc38f1-ad32-0410-a363-b5f83eb29ce1
+
+EngineManaged
+dir
+
+Editor
+dir
+
+EditorSetup
+dir
+
+EditLib
+dir
+

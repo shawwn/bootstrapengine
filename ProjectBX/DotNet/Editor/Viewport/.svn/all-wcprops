@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/392/Trunk/ProjectBX/DotNet/Editor/Viewport
+END
+GizmoMgr.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/270/Trunk/ProjectBX/DotNet/Editor/Viewport/GizmoMgr.cs
+END
+Viewport.resx
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/392/Trunk/ProjectBX/DotNet/Editor/Viewport/Viewport.resx
+END
+PaintState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Viewport/PaintState.cs
+END
+Viewport.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/s_kevinb/codesafe/!svn/ver/392/Trunk/ProjectBX/DotNet/Editor/Viewport/Viewport.Designer.cs
+END
+Viewport.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/392/Trunk/ProjectBX/DotNet/Editor/Viewport/Viewport.cs
+END
+OutputWindow.resx
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/311/Trunk/ProjectBX/DotNet/Editor/Viewport/OutputWindow.resx
+END
+DialogMgr.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Viewport/DialogMgr.cs
+END
+LookState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Viewport/LookState.cs
+END
+OutputWindow.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/DotNet/Editor/Viewport/OutputWindow.Designer.cs
+END
+OutputWindow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/DotNet/Editor/Viewport/OutputWindow.cs
+END
+SceneManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Viewport/SceneManager.cs
+END

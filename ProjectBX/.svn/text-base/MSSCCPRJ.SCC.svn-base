@@ -1,0 +1,17 @@
+SCC = This is a source code control file
+
+[engine.sln]
+SCC_Aux_Path = "P4SCC#192.168.15.2:1666##kevinb##bs-01"
+SCC_Project_Name = Perforce Project
+
+[Graphics.vcproj]
+SCC_Aux_Path = "P4SCC#192.168.15.2:1666##kevinb##bs-01"
+SCC_Project_Name = Perforce Project
+
+[Common.vcproj]
+SCC_Aux_Path = "P4SCC#192.168.15.2:1666##kevinb##bs-01"
+SCC_Project_Name = Perforce Project
+
+[Editor.vcproj]
+SCC_Aux_Path = "P4SCC#192.168.15.2:1666##kevinb##bs-01"
+SCC_Project_Name = Perforce Project

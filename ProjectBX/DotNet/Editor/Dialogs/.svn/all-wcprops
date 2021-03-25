@@ -1,0 +1,359 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/349/Trunk/ProjectBX/DotNet/Editor/Dialogs
+END
+ScriptEditor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/ScriptEditor.cs
+END
+UberTextureCreationDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/s_kevinb/codesafe/!svn/ver/344/Trunk/ProjectBX/DotNet/Editor/Dialogs/UberTextureCreationDialog.Designer.cs
+END
+ImportSceneDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/s_kevinb/codesafe/!svn/ver/265/Trunk/ProjectBX/DotNet/Editor/Dialogs/ImportSceneDialog.resx
+END
+BrushSelectionDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/BrushSelectionDialog.resx
+END
+TextureSelectionDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/TextureSelectionDialog.Designer.cs
+END
+UberizeDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/349/Trunk/ProjectBX/DotNet/Editor/Dialogs/UberizeDialog.cs
+END
+MaterialPassBlendDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/MaterialPassBlendDialog.resx
+END
+TextureSelectionDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/s_kevinb/codesafe/!svn/ver/311/Trunk/ProjectBX/DotNet/Editor/Dialogs/TextureSelectionDialog.cs
+END
+ImportModelDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/s_kevinb/codesafe/!svn/ver/311/Trunk/ProjectBX/DotNet/Editor/Dialogs/ImportModelDialog.resx
+END
+BrushCreationDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/s_kevinb/codesafe/!svn/ver/326/Trunk/ProjectBX/DotNet/Editor/Dialogs/BrushCreationDialog.Designer.cs
+END
+BrushCreationDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/s_kevinb/codesafe/!svn/ver/326/Trunk/ProjectBX/DotNet/Editor/Dialogs/BrushCreationDialog.cs
+END
+DetailCastDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/s_kevinb/codesafe/!svn/ver/321/Trunk/ProjectBX/DotNet/Editor/Dialogs/DetailCastDialog.Designer.cs
+END
+DetailCastProgressDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/s_kevinb/codesafe/!svn/ver/321/Trunk/ProjectBX/DotNet/Editor/Dialogs/DetailCastProgressDialog.resx
+END
+UberTextureCreationDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/UberTextureCreationDialog.resx
+END
+MaterialSelectionDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/MaterialSelectionDialog.resx
+END
+TextEntryDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/TextEntryDialog.resx
+END
+ModelSelectionDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/s_kevinb/codesafe/!svn/ver/268/Trunk/ProjectBX/DotNet/Editor/Dialogs/ModelSelectionDialog.resx
+END
+BrushPaletteSelectionDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/BrushPaletteSelectionDialog.resx
+END
+BaseDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/BaseDialog.resx
+END
+ImportSceneDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/ImportSceneDialog.Designer.cs
+END
+HDRColorDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/HDRColorDialog.resx
+END
+ImportSceneDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/s_kevinb/codesafe/!svn/ver/343/Trunk/ProjectBX/DotNet/Editor/Dialogs/ImportSceneDialog.cs
+END
+DetailCastDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/s_kevinb/codesafe/!svn/ver/321/Trunk/ProjectBX/DotNet/Editor/Dialogs/DetailCastDialog.resx
+END
+BrushSelectionDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/BrushSelectionDialog.cs
+END
+MaterialPassBlendDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/MaterialPassBlendDialog.Designer.cs
+END
+ScriptEditor.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/ScriptEditor.Designer.cs
+END
+MaterialPassBlendDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/MaterialPassBlendDialog.cs
+END
+ImportModelDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/s_kevinb/codesafe/!svn/ver/343/Trunk/ProjectBX/DotNet/Editor/Dialogs/ImportModelDialog.cs
+END
+Settings.resx
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/Settings.resx
+END
+UberTextureEditDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/s_kevinb/codesafe/!svn/ver/254/Trunk/ProjectBX/DotNet/Editor/Dialogs/UberTextureEditDialog.resx
+END
+DetailCastProgressDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/s_kevinb/codesafe/!svn/ver/321/Trunk/ProjectBX/DotNet/Editor/Dialogs/DetailCastProgressDialog.Designer.cs
+END
+DetailCastProgressDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/s_kevinb/codesafe/!svn/ver/323/Trunk/ProjectBX/DotNet/Editor/Dialogs/DetailCastProgressDialog.cs
+END
+MaterialSelectionDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/MaterialSelectionDialog.Designer.cs
+END
+UberTextureCreationDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/s_kevinb/codesafe/!svn/ver/344/Trunk/ProjectBX/DotNet/Editor/Dialogs/UberTextureCreationDialog.cs
+END
+MaterialSelectionDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/s_kevinb/codesafe/!svn/ver/343/Trunk/ProjectBX/DotNet/Editor/Dialogs/MaterialSelectionDialog.cs
+END
+UberizeDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/s_kevinb/codesafe/!svn/ver/326/Trunk/ProjectBX/DotNet/Editor/Dialogs/UberizeDialog.Designer.cs
+END
+ModelSelectionDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/s_kevinb/codesafe/!svn/ver/268/Trunk/ProjectBX/DotNet/Editor/Dialogs/ModelSelectionDialog.Designer.cs
+END
+TextEntryDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/TextEntryDialog.Designer.cs
+END
+ModelSelectionDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/s_kevinb/codesafe/!svn/ver/268/Trunk/ProjectBX/DotNet/Editor/Dialogs/ModelSelectionDialog.cs
+END
+TextEntryDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/269/Trunk/ProjectBX/DotNet/Editor/Dialogs/TextEntryDialog.cs
+END
+BrushPaletteSelectionDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/BrushPaletteSelectionDialog.Designer.cs
+END
+ScriptEditor.resx
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/ScriptEditor.resx
+END
+BrushPaletteSelectionDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/BrushPaletteSelectionDialog.cs
+END
+BaseDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/BaseDialog.Designer.cs
+END
+BaseDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/BaseDialog.cs
+END
+HDRColorDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/HDRColorDialog.Designer.cs
+END
+ShaderSelectionDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/ShaderSelectionDialog.Designer.cs
+END
+HDRColorDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/HDRColorDialog.cs
+END
+ShaderSelectionDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/ShaderSelectionDialog.cs
+END
+DetailCastDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/s_kevinb/codesafe/!svn/ver/321/Trunk/ProjectBX/DotNet/Editor/Dialogs/DetailCastDialog.cs
+END
+Settings.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/Settings.Designer.cs
+END
+Settings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/Settings.cs
+END
+UberizeDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/319/Trunk/ProjectBX/DotNet/Editor/Dialogs/UberizeDialog.resx
+END
+TextureSelectionDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/TextureSelectionDialog.resx
+END
+UberTextureEditDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/s_kevinb/codesafe/!svn/ver/262/Trunk/ProjectBX/DotNet/Editor/Dialogs/UberTextureEditDialog.Designer.cs
+END
+BrushCreationDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/BrushCreationDialog.resx
+END
+UberTextureEditDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/s_kevinb/codesafe/!svn/ver/306/Trunk/ProjectBX/DotNet/Editor/Dialogs/UberTextureEditDialog.cs
+END
+BrushSelectionDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Dialogs/BrushSelectionDialog.Designer.cs
+END
+ImportModelDialog.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/s_kevinb/codesafe/!svn/ver/311/Trunk/ProjectBX/DotNet/Editor/Dialogs/ImportModelDialog.Designer.cs
+END

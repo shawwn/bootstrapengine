@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/Engine/UberTexture
+END
+UTMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTMessage.h
+END
+UTEncode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTEncode.cpp
+END
+UTEncode.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTEncode.h
+END
+ubertexture_afx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/307/Trunk/ProjectBX/Engine/UberTexture/ubertexture_afx.cpp
+END
+UTServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/Engine/UberTexture/UTServer.cpp
+END
+UTNetUtils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTNetUtils.cpp
+END
+UTX.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTX.cpp
+END
+ubertexture_afx.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/307/Trunk/ProjectBX/Engine/UberTexture/ubertexture_afx.h
+END
+UTConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTConfig.h
+END
+UTServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTServer.h
+END
+UTNetUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTNetUtils.h
+END
+UTX.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTX.h
+END
+UTClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTClient.cpp
+END
+files.mk
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/UberTexture/files.mk
+END
+UTClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTClient.h
+END
+UTMessage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/UberTexture/UTMessage.cpp
+END

@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/Editor/Controls
+END
+TransformControl.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/Editor/Controls/TransformControl.Designer.cs
+END
+TransformControl.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/Editor/Controls/TransformControl.cs
+END
+MaterialPassControlGroup.resx
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/MaterialPassControlGroup.resx
+END
+StageControlGroup.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/s_kevinb/codesafe/!svn/ver/307/Trunk/ProjectBX/DotNet/Editor/Controls/StageControlGroup.Designer.cs
+END
+StageControlGroup.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/s_kevinb/codesafe/!svn/ver/326/Trunk/ProjectBX/DotNet/Editor/Controls/StageControlGroup.cs
+END
+Thumbnail.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/Thumbnail.Designer.cs
+END
+ThumbnailSelector.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/ThumbnailSelector.Designer.cs
+END
+Thumbnail.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/Thumbnail.cs
+END
+ThumbnailSelector.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/s_kevinb/codesafe/!svn/ver/311/Trunk/ProjectBX/DotNet/Editor/Controls/ThumbnailSelector.cs
+END
+PackageComboBox.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/s_kevinb/codesafe/!svn/ver/356/Trunk/ProjectBX/DotNet/Editor/Controls/PackageComboBox.cs
+END
+VectorEditor.resx
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/Editor/Controls/VectorEditor.resx
+END
+TransformControl.resx
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/TransformControl.resx
+END
+TrackBar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/TrackBar.cs
+END
+BrushAttributes.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/s_kevinb/codesafe/!svn/ver/259/Trunk/ProjectBX/DotNet/Editor/Controls/BrushAttributes.Designer.cs
+END
+HDRColorControl.resx
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/HDRColorControl.resx
+END
+OpaqueMiniToolbar.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/OpaqueMiniToolbar.cs
+END
+BrushAttributes.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/s_kevinb/codesafe/!svn/ver/259/Trunk/ProjectBX/DotNet/Editor/Controls/BrushAttributes.cs
+END
+LabeledSliderControl.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/LabeledSliderControl.Designer.cs
+END
+LabeledSliderControl.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/LabeledSliderControl.cs
+END
+StageControlGroup.resx
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/StageControlGroup.resx
+END
+Thumbnail.resx
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/Thumbnail.resx
+END
+ThumbnailSelector.resx
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/ThumbnailSelector.resx
+END
+MaterialPassControlGroup.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/DotNet/Editor/Controls/MaterialPassControlGroup.Designer.cs
+END
+MaterialPassControlGroup.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/Editor/Controls/MaterialPassControlGroup.cs
+END
+ColoredToolStripPanelItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/ColoredToolStripPanelItem.cs
+END
+BrushAttributes.resx
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/BrushAttributes.resx
+END
+LabeledSliderControl.resx
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/LabeledSliderControl.resx
+END
+VectorEditor.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/Editor/Controls/VectorEditor.Designer.cs
+END
+VectorEditor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/Editor/Controls/VectorEditor.cs
+END
+ToolStripBrushEditor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/Editor/Controls/ToolStripBrushEditor.cs
+END

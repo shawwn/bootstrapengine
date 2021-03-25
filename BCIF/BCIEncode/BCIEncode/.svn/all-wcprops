@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/BCIEncode
+END
+archive.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/BCIEncode/archive.cpp
+END
+bci.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/BCIEncode/bci.h
+END
+zip.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/BCIEncode/zip.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/BCIEncode/main.cpp
+END
+archive.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/BCIEncode/archive.h
+END
+zip.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/BCIEncode/zip.h
+END
+bci.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/BCIEncode/bci.cpp
+END

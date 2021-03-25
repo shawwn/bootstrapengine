@@ -1,0 +1,495 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0CBD58C-B79A-4F58-B5E7-09937917D354}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Editor</RootNamespace>
+    <AssemblyName>Editor</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseQuickBuild|AnyCPU' ">
+    <OutputPath>bin\ReleaseQuickBuild\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EngineManaged, Version=1.0.3110.37692, Culture=neutral, PublicKeyToken=5b650a862c21751b, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SDK\Assemblies\EngineManaged.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Core, Version=6.102.0.34, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base, Version=6.102.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=6.102.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=6.102.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=6.102.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=6.102.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=6.102.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Syncfusion.Core">
+      <Name>Syncfusion.Core</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\BrushAttributes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BrushAttributes.Designer.cs">
+      <DependentUpon>BrushAttributes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackageComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ColoredToolStripPanelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LabeledSliderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LabeledSliderControl.Designer.cs">
+      <DependentUpon>LabeledSliderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Misc\DoubleBufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\OpaqueMiniToolbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ThumbnailSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ThumbnailSelector.Designer.cs">
+      <DependentUpon>ThumbnailSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Thumbnail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Thumbnail.Designer.cs">
+      <DependentUpon>Thumbnail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MaterialPassControlGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialPassControlGroup.Designer.cs">
+      <DependentUpon>MaterialPassControlGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StageControlGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StageControlGroup.Designer.cs">
+      <DependentUpon>StageControlGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ToolStripBrushEditor.cs" />
+    <Compile Include="Controls\TransformControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TransformControl.Designer.cs">
+      <DependentUpon>TransformControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VectorEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\VectorEditor.Designer.cs">
+      <DependentUpon>VectorEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BaseDialog.Designer.cs">
+      <DependentUpon>BaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BrushCreationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BrushCreationDialog.Designer.cs">
+      <DependentUpon>BrushCreationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BrushSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BrushSelectionDialog.Designer.cs">
+      <DependentUpon>BrushSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BrushPaletteSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BrushPaletteSelectionDialog.Designer.cs">
+      <DependentUpon>BrushPaletteSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DetailCastDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DetailCastDialog.Designer.cs">
+      <DependentUpon>DetailCastDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DetailCastProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DetailCastProgressDialog.Designer.cs">
+      <DependentUpon>DetailCastProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ModelSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ModelSelectionDialog.Designer.cs">
+      <DependentUpon>ModelSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ScriptEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ScriptEditor.Designer.cs">
+      <DependentUpon>ScriptEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TextEntryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TextEntryDialog.Designer.cs">
+      <DependentUpon>TextEntryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TextureSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TextureSelectionDialog.Designer.cs">
+      <DependentUpon>TextureSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\HDRColorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\HDRColorDialog.Designer.cs">
+      <DependentUpon>HDRColorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ImportModelDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ImportModelDialog.Designer.cs">
+      <DependentUpon>ImportModelDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ImportSceneDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ImportSceneDialog.Designer.cs">
+      <DependentUpon>ImportSceneDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MaterialSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MaterialSelectionDialog.Designer.cs">
+      <DependentUpon>MaterialSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MaterialPassBlendDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MaterialPassBlendDialog.Designer.cs">
+      <DependentUpon>MaterialPassBlendDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ShaderSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ShaderSelectionDialog.Designer.cs">
+      <DependentUpon>ShaderSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UberizeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UberizeDialog.Designer.cs">
+      <DependentUpon>UberizeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UberTextureCreationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UberTextureCreationDialog.Designer.cs">
+      <DependentUpon>UberTextureCreationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UberTextureEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UberTextureEditDialog.Designer.cs">
+      <DependentUpon>UberTextureEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\BrushEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\BrushEditor.Designer.cs">
+      <DependentUpon>BrushEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\LightEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\LightEditor.Designer.cs">
+      <DependentUpon>LightEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\MaterialEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\MaterialEditor.Designer.cs">
+      <DependentUpon>MaterialEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\BrushPaletteEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\BrushPaletteEditor.Designer.cs">
+      <DependentUpon>BrushPaletteEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\ModelEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\ModelEditor.Designer.cs">
+      <DependentUpon>ModelEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reference.cs" />
+    <Compile Include="UberTexturePainter.cs" />
+    <Compile Include="Utils\ThumbnailMgr.cs" />
+    <Compile Include="Viewport\DialogMgr.cs" />
+    <Compile Include="Viewport\LookState.cs" />
+    <Compile Include="Controls\TrackBar.cs">
+    </Compile>
+    <Compile Include="Util.cs" />
+    <Compile Include="Viewport\GizmoMgr.cs" />
+    <Compile Include="Viewport\OutputWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewport\OutputWindow.Designer.cs">
+      <DependentUpon>OutputWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewport\PaintState.cs" />
+    <Compile Include="Viewport\SceneManager.cs" />
+    <Compile Include="Viewport\Viewport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewport\Viewport.Designer.cs">
+      <DependentUpon>Viewport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\BrushAttributes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrushAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LabeledSliderControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LabeledSliderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StageControlGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StageControlGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Thumbnail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Thumbnail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ThumbnailSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ThumbnailSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TransformControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TransformControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\VectorEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VectorEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BaseDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BrushCreationDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrushCreationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BrushSelectionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrushSelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetailCastDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailCastDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DetailCastProgressDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailCastProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\HDRColorDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HDRColorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportModelDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportModelDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ImportSceneDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportSceneDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MaterialSelectionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaterialSelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MaterialPassBlendDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaterialPassBlendDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MaterialPassControlGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaterialPassControlGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BrushPaletteSelectionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrushPaletteSelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ModelSelectionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModelSelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ScriptEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScriptEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Settings.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TextEntryDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextEntryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TextureSelectionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextureSelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\UberizeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UberizeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\UberTextureCreationDialog.resx">
+      <DependentUpon>UberTextureCreationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\UberTextureEditDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UberTextureEditDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\BrushEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrushEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\BrushPaletteEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrushPaletteEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\LightEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LightEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\MaterialEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaterialEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\ModelEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModelEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewport\OutputWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OutputWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewport\Viewport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Viewport.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toolStripButton3.Image.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName)==Debug. (
+ xcopy "$(TargetPath)" C:\bin\editor\*D.* /Y
+) ELSE (
+ xcopy "$(TargetPath)" C:\bin\editor\*.* /Y
+)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

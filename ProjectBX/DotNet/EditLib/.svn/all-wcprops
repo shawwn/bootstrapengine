@@ -1,0 +1,353 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/s_kevinb/codesafe/!svn/ver/406/Trunk/ProjectBX/DotNet/EditLib
+END
+EdUberTexBuilder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdUberTexBuilder.cpp
+END
+EdImportDAEMaterials.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdImportDAEMaterials.cpp
+END
+EdBrushImage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/DotNet/EditLib/EdBrushImage.cpp
+END
+EdPick.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdPick.h
+END
+EdBrushMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBrushMgr.h
+END
+EdUberTexRasterizer.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdUberTexRasterizer.h
+END
+EdBITreeStack.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBITreeStack.cpp
+END
+EdDrawUberTexture.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdDrawUberTexture.h
+END
+EdSimplePolygon.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdSimplePolygon.cpp
+END
+EdImportDAEScene.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdImportDAEScene.cpp
+END
+EdSave.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdSave.h
+END
+EdSettings.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdSettings.h
+END
+editlib_afx.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/EditLib/editlib_afx.h
+END
+EdBrushPalette.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBrushPalette.h
+END
+EdImportDAEGeometries.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdImportDAEGeometries.cpp
+END
+EdModelUberizer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/319/Trunk/ProjectBX/DotNet/EditLib/EdModelUberizer.cpp
+END
+EdParse.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdParse.cpp
+END
+EdImportOBJ.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdImportOBJ.h
+END
+EdImportDAEAnims.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/EditLib/EdImportDAEAnims.cpp
+END
+EdUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/401/Trunk/ProjectBX/DotNet/EditLib/EdUtil.cpp
+END
+EdBrushPaletteMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBrushPaletteMgr.h
+END
+EdSimplePolygonGroup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/DotNet/EditLib/EdSimplePolygonGroup.cpp
+END
+EdExprCompiler.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdExprCompiler.h
+END
+EdBITree.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBITree.h
+END
+EdBITreeInterval.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBITreeInterval.h
+END
+EdPick.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdPick.cpp
+END
+EdScriptModifier.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdScriptModifier.h
+END
+EdBrush.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBrush.h
+END
+EdUberTexRasterizer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdUberTexRasterizer.cpp
+END
+EdBrushMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBrushMgr.cpp
+END
+EdImportDAE.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/DotNet/EditLib/EdImportDAE.h
+END
+EdUberTexBuilder.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdUberTexBuilder.h
+END
+EdImportDAEMaterials.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/DotNet/EditLib/EdImportDAEMaterials.h
+END
+EdBrushImage.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/DotNet/EditLib/EdBrushImage.h
+END
+EdDrawUberTexture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/DotNet/EditLib/EdDrawUberTexture.cpp
+END
+EdSave.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdSave.cpp
+END
+EdSettings.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdSettings.cpp
+END
+editlib_afx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/EditLib/editlib_afx.cpp
+END
+EdBrushPalette.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBrushPalette.cpp
+END
+EdImportOBJ.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdImportOBJ.cpp
+END
+EdBITreeStack.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBITreeStack.h
+END
+EdSimplePolygon.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdSimplePolygon.h
+END
+EdImportDAEScene.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/361/Trunk/ProjectBX/DotNet/EditLib/EdImportDAEScene.h
+END
+EdBrushPaletteMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBrushPaletteMgr.cpp
+END
+EdExprCompiler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdExprCompiler.cpp
+END
+EdConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdConfig.h
+END
+EdBITree.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBITree.cpp
+END
+EdImportDAEGeometries.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/DotNet/EditLib/EdImportDAEGeometries.h
+END
+EdModelUberizer.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdModelUberizer.h
+END
+EdBITreeInterval.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdBITreeInterval.cpp
+END
+EdParse.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdParse.h
+END
+EdImportDAEAnims.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdImportDAEAnims.h
+END
+ReadMe.txt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/EditLib/ReadMe.txt
+END
+EdUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/401/Trunk/ProjectBX/DotNet/EditLib/EdUtil.h
+END
+EdBrush.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/DotNet/EditLib/EdBrush.cpp
+END
+EdScriptModifier.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/399/Trunk/ProjectBX/DotNet/EditLib/EdScriptModifier.cpp
+END
+EdSimplePolygonGroup.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EditLib/EdSimplePolygonGroup.h
+END
+EdImportDAE.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/406/Trunk/ProjectBX/DotNet/EditLib/EdImportDAE.cpp
+END

@@ -1,0 +1,1499 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/s_kevinb/codesafe/!svn/ver/409/Trunk/ProjectBX/Engine/Graphics
+END
+GrBSPSplit.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrBSPSplit.h
+END
+GrUberTileAtlas.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUberTileAtlas.h
+END
+GrShader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrShader.cpp
+END
+GrTextureMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrTextureMgr.cpp
+END
+GrRenderLight.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrRenderLight.cpp
+END
+GrConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrConfig.h
+END
+graphics_afx.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/graphics_afx.h
+END
+GrQueryMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrQueryMgr.cpp
+END
+GrPolygonEdgeList.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrPolygonEdgeList.h
+END
+GrPixelBufferMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPixelBufferMgr.cpp
+END
+GrPolygonUberMapping.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonUberMapping.cpp
+END
+GrImage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrImage.cpp
+END
+GrLightMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrLightMgr.h
+END
+GrAnim.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrAnim.cpp
+END
+GrAnimXFormCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrAnimXFormCache.h
+END
+GrUTSysTileCache.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrUTSysTileCache.cpp
+END
+GrPolygonUberUVMapper.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonUberUVMapper.h
+END
+GrDeformWave.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrDeformWave.cpp
+END
+GrPolygonBSPPortalSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPolygonBSPPortalSet.h
+END
+GrDebugSwitches.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrDebugSwitches.cpp
+END
+GrSceneRender.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrSceneRender.h
+END
+enums.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/254/Trunk/ProjectBX/Engine/Graphics/enums.h
+END
+GrSkin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrSkin.cpp
+END
+GrKFAnimData.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrKFAnimData.h
+END
+GrQuery.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrQuery.cpp
+END
+GrRenderAmbience.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderAmbience.h
+END
+GrKFInterpolator.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrKFInterpolator.h
+END
+GrTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/Engine/Graphics/GrTypes.h
+END
+GrStreamingIB.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrStreamingIB.h
+END
+GrMaterialMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrMaterialMgr.h
+END
+GrPolygonMesh.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrPolygonMesh.h
+END
+GrKFAnimMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrKFAnimMgr.cpp
+END
+GrSoftwareTexture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSoftwareTexture.cpp
+END
+GrPolygonBSPSplit.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonBSPSplit.h
+END
+GrRenderList.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrRenderList.h
+END
+GrLightSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrLightSet.cpp
+END
+GrUberTexture.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUberTexture.h
+END
+GrShadowBuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrShadowBuffer.h
+END
+GrMaterialPass.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMaterialPass.cpp
+END
+GrPixelBufferMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPixelBufferMgr.h
+END
+GrPolygonUberMapping.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonUberMapping.h
+END
+GrFramebuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/393/Trunk/ProjectBX/Engine/Graphics/GrFramebuffer.h
+END
+GrPolygonBSPPortalSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/GrPolygonBSPPortalSet.cpp
+END
+GrSceneTraverser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSceneTraverser.cpp
+END
+GLAux.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/GLAux.h
+END
+GrPolygonNode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPolygonNode.cpp
+END
+GrCamera.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/404/Trunk/ProjectBX/Engine/Graphics/GrCamera.h
+END
+GrUTSysTileCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/384/Trunk/ProjectBX/Engine/Graphics/GrUTSysTileCache.h
+END
+GrVirtualShadowSegmentSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrVirtualShadowSegmentSet.h
+END
+GrMeshBufferMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrMeshBufferMgr.h
+END
+GrTextureCube.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrTextureCube.h
+END
+GrUTCompress.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrUTCompress.cpp
+END
+GrUberDetailCache.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUberDetailCache.cpp
+END
+GrKFAnim.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrKFAnim.cpp
+END
+GrSoftwareRasterizer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSoftwareRasterizer.cpp
+END
+GrMeshIB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrMeshIB.cpp
+END
+GrLight.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrLight.cpp
+END
+GrPolygonUberPatchGroup.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonUberPatchGroup.h
+END
+GrPolygonBINode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPolygonBINode.cpp
+END
+GrQuery.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrQuery.h
+END
+GrModelNode.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrModelNode.h
+END
+GrModelMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/360/Trunk/ProjectBX/Engine/Graphics/GrModelMgr.h
+END
+GrProjection.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrProjection.cpp
+END
+GrShaderMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/Engine/Graphics/GrShaderMgr.cpp
+END
+GrTextureSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrTextureSet.cpp
+END
+GrUberTexture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUberTexture.cpp
+END
+GrSoftwareTextureMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrSoftwareTextureMgr.cpp
+END
+GrSoftwareSampler.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSoftwareSampler.h
+END
+GrTextureStage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrTextureStage.cpp
+END
+GrTSGen.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/GrTSGen.h
+END
+wglext.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/wglext.h
+END
+GrPolygonBITree.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPolygonBITree.h
+END
+GrSubsys.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/402/Trunk/ProjectBX/Engine/Graphics/GrSubsys.cpp
+END
+GrMaterialPass.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMaterialPass.h
+END
+GrTextureBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrTextureBase.cpp
+END
+GrSoftwareRTBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSoftwareRTBase.cpp
+END
+GrRenderTargetMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderTargetMgr.cpp
+END
+GrPolygon.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygon.h
+END
+files.mk
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/files.mk
+END
+GrTexGen.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrTexGen.h
+END
+GrMeshInst.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMeshInst.h
+END
+GrModel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrModel.cpp
+END
+GrPolygonUberPatchGroup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonUberPatchGroup.cpp
+END
+GrPolygonNode.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/361/Trunk/ProjectBX/Engine/Graphics/GrPolygonNode.h
+END
+GrMaterial.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMaterial.h
+END
+GrBSPTree.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrBSPTree.cpp
+END
+GrTexture.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrTexture.h
+END
+GrFrustum.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrFrustum.cpp
+END
+GrAnimXForm.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrAnimXForm.h
+END
+GrModelMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrModelMgr.cpp
+END
+GrModelNode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrModelNode.cpp
+END
+GrSoftwareRasterizer.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSoftwareRasterizer.h
+END
+GrKFAnim.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrKFAnim.h
+END
+GrRenderer.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderer.h
+END
+GrCalcTangents.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrCalcTangents.h
+END
+GrUTAtlas.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrUTAtlas.cpp
+END
+GrRenderUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/Engine/Graphics/GrRenderUtil.cpp
+END
+GrSoftwareSampler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/362/Trunk/ProjectBX/Engine/Graphics/GrSoftwareSampler.cpp
+END
+GrMeshCombiner.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMeshCombiner.h
+END
+GrPolygonBITree.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/361/Trunk/ProjectBX/Engine/Graphics/GrPolygonBITree.cpp
+END
+GrAfterEffect.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrAfterEffect.h
+END
+GrRenderInteraction.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/GrRenderInteraction.h
+END
+GrMeshVB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/Engine/Graphics/GrMeshVB.cpp
+END
+grrendertarget.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/grrendertarget.cpp
+END
+GrSoftwareTextureMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSoftwareTextureMgr.h
+END
+GrVirtualShadowPage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrVirtualShadowPage.cpp
+END
+GrAnim.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrAnim.h
+END
+GrNodeController.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/GrNodeController.cpp
+END
+GrMeshInst.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMeshInst.cpp
+END
+GrDebug.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrDebug.h
+END
+GrTexture3D.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrTexture3D.h
+END
+GrPolygonUVAtlas.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPolygonUVAtlas.h
+END
+GrMaterial.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMaterial.cpp
+END
+GrKFAnimData.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrKFAnimData.cpp
+END
+GrRenderAmbience.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrRenderAmbience.cpp
+END
+GrKFInterpolator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrKFInterpolator.cpp
+END
+GLU.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/GLU.h
+END
+GrDXT.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrDXT.h
+END
+GrPolygonGroup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonGroup.cpp
+END
+GrDebugSwitches.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrDebugSwitches.h
+END
+GrRenderer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrRenderer.cpp
+END
+GrCalcTangents.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/Engine/Graphics/GrCalcTangents.cpp
+END
+GrDeformer.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrDeformer.h
+END
+GrSkin.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSkin.h
+END
+GrFrustum.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrFrustum.h
+END
+GrRenderList.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrRenderList.cpp
+END
+GrPolygonBSPTree.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonBSPTree.cpp
+END
+GL.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/GL.h
+END
+GrAfterEffect.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrAfterEffect.cpp
+END
+GrShadowBuffer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrShadowBuffer.cpp
+END
+GrPixelBuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPixelBuffer.h
+END
+GrFrustumSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrFrustumSet.cpp
+END
+GrRenderUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/Engine/Graphics/GrRenderUtil.h
+END
+GrUTAtlas.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrUTAtlas.h
+END
+GrPolygonBSPPortal.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPolygonBSPPortal.h
+END
+GrColor.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrColor.h
+END
+GrCoplanarPolygonGroup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrCoplanarPolygonGroup.cpp
+END
+GrRenderPostProcess.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderPostProcess.cpp
+END
+GrUTLoader.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUTLoader.h
+END
+GrUberTextureMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUberTextureMgr.cpp
+END
+GrRenderShadow.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrRenderShadow.cpp
+END
+GrDebug.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrDebug.cpp
+END
+GLSubsys.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GLSubsys.h
+END
+GrVirtualShadowSegmentSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrVirtualShadowSegmentSet.cpp
+END
+GrMesh.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMesh.cpp
+END
+GrNodeController.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/GrNodeController.h
+END
+GrVirtualShadowPage.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrVirtualShadowPage.h
+END
+GrTextureCube.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrTextureCube.cpp
+END
+GrBSPSplit.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrBSPSplit.cpp
+END
+GrUberTileAtlas.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUberTileAtlas.cpp
+END
+GrMaterialUserParams.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrMaterialUserParams.cpp
+END
+GrPolygonEdgeList.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrPolygonEdgeList.cpp
+END
+GrRenderbuffer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderbuffer.cpp
+END
+GrUTCompress.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/384/Trunk/ProjectBX/Engine/Graphics/GrUTCompress.h
+END
+GrUberDetailCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUberDetailCache.h
+END
+GrRenderLight.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderLight.h
+END
+GrPolygonBINode.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPolygonBINode.h
+END
+GrBSPArea.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrBSPArea.cpp
+END
+GrUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrUtil.cpp
+END
+GrPolygonBSPPortal.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPolygonBSPPortal.cpp
+END
+GrColor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrColor.cpp
+END
+GrQueryMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrQueryMgr.h
+END
+GrProjection.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrProjection.h
+END
+GrShaderMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrShaderMgr.h
+END
+GrTextureSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrTextureSet.h
+END
+GLSubsys.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GLSubsys.cpp
+END
+GrAnimXFormCache.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrAnimXFormCache.cpp
+END
+GrFrustumSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrFrustumSet.h
+END
+GrPolygon.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygon.cpp
+END
+GrDeformMorph.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrDeformMorph.h
+END
+GrTextureStage.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrTextureStage.h
+END
+GrRenderShadow.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderShadow.h
+END
+GrScene.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrScene.cpp
+END
+GrSubsys.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrSubsys.h
+END
+GrBounds.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrBounds.h
+END
+glext.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/glext.h
+END
+GrAnimPlayer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrAnimPlayer.cpp
+END
+GrRenderTargetMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderTargetMgr.h
+END
+GrPolygonMesh.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrPolygonMesh.cpp
+END
+GrMaterialMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMaterialMgr.cpp
+END
+GrDeformWave.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrDeformWave.h
+END
+GrStreamingIB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrStreamingIB.cpp
+END
+GrTypes.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrTypes.cpp
+END
+GrModel.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/Engine/Graphics/GrModel.h
+END
+GrMaterialUserParams.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrMaterialUserParams.h
+END
+GrPolygonBSPSplit.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonBSPSplit.cpp
+END
+GrBSPTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrBSPTree.h
+END
+GrMeshCombiner.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMeshCombiner.cpp
+END
+glext_bak.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/glext_bak.h
+END
+GrRenderbuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderbuffer.h
+END
+GrParse.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrParse.h
+END
+GrRenderInteraction.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/GrRenderInteraction.cpp
+END
+GrKFAnimMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrKFAnimMgr.h
+END
+GrSoftwareTexture.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSoftwareTexture.h
+END
+GrBSPArea.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrBSPArea.h
+END
+GrDeformMorph.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrDeformMorph.cpp
+END
+GrUtil.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrUtil.h
+END
+GrTextureRect.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrTextureRect.h
+END
+GrFramebuffer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/394/Trunk/ProjectBX/Engine/Graphics/GrFramebuffer.cpp
+END
+GrPolygonBSPArea.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrPolygonBSPArea.cpp
+END
+GrPolygonUberPatch.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonUberPatch.cpp
+END
+GrPolygonUVAtlas.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrPolygonUVAtlas.cpp
+END
+GrTexture3D.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrTexture3D.cpp
+END
+GrLightSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrLightSet.h
+END
+GrCamera.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/388/Trunk/ProjectBX/Engine/Graphics/GrCamera.cpp
+END
+GrModelSkinController.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrModelSkinController.cpp
+END
+GrMeshVB.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/Engine/Graphics/GrMeshVB.h
+END
+GrUberPatchSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUberPatchSet.cpp
+END
+GrBounds.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrBounds.cpp
+END
+grtexgen.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/grtexgen.cpp
+END
+GrMeshBufferMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/Engine/Graphics/GrMeshBufferMgr.cpp
+END
+GrDXT.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrDXT.cpp
+END
+GrSoftwareRTBuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSoftwareRTBuffer.h
+END
+GrSceneTraverser.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSceneTraverser.h
+END
+GrScene.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/Graphics/GrScene.h
+END
+GrDeformer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrDeformer.cpp
+END
+graphics_afx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/graphics_afx.cpp
+END
+GrAnimPlayer.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrAnimPlayer.h
+END
+GrSkinInst.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/360/Trunk/ProjectBX/Engine/Graphics/GrSkinInst.h
+END
+GrPolygonGroup.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrPolygonGroup.h
+END
+GrParse.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrParse.cpp
+END
+GrPixelBuffer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPixelBuffer.cpp
+END
+GrShader.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrShader.h
+END
+GrTextureMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrTextureMgr.h
+END
+GrMeshIB.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrMeshIB.h
+END
+GrLight.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrLight.h
+END
+GrLightMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrLightMgr.cpp
+END
+GrTextureRect.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrTextureRect.cpp
+END
+GrUTLoader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUTLoader.cpp
+END
+GrTSGen.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/235/Trunk/ProjectBX/Engine/Graphics/GrTSGen.cpp
+END
+GrPolygonBSPTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonBSPTree.h
+END
+GrPolygonUberUVMapper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonUberUVMapper.cpp
+END
+GrImage.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrImage.h
+END
+GrCoplanarPolygonGroup.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrCoplanarPolygonGroup.h
+END
+GrRenderPostProcess.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderPostProcess.h
+END
+GrUberTextureMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUberTextureMgr.h
+END
+GrPolygonBSPArea.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/386/Trunk/ProjectBX/Engine/Graphics/GrPolygonBSPArea.h
+END
+GrPolygonUberPatch.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrPolygonUberPatch.h
+END
+GrSoftwareRTBuffer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSoftwareRTBuffer.cpp
+END
+GrRenderTarget.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrRenderTarget.h
+END
+GrSceneRender.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrSceneRender.cpp
+END
+GrModelSkinController.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrModelSkinController.h
+END
+GrUberPatchSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrUberPatchSet.h
+END
+GrAnimXForm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrAnimXForm.cpp
+END
+GrSoftwareRTBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/Engine/Graphics/GrSoftwareRTBase.h
+END
+GrTexture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/409/Trunk/ProjectBX/Engine/Graphics/GrTexture.cpp
+END
+GrTextureBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrTextureBase.h
+END
+GrMesh.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrMesh.h
+END
+GrSkinInst.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/Graphics/GrSkinInst.cpp
+END

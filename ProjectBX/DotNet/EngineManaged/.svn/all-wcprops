@@ -1,0 +1,581 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/s_kevinb/codesafe/!svn/ver/405/Trunk/ProjectBX/DotNet/EngineManaged
+END
+TimeKeeper.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/TimeKeeper.h
+END
+SceneEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/SceneEntity.h
+END
+AABox.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/AABox.h
+END
+MeshInst.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/363/Trunk/ProjectBX/DotNet/EngineManaged/MeshInst.h
+END
+EMAfx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/EMAfx.cpp
+END
+Time.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/EngineManaged/Time.h
+END
+Material.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/Material.h
+END
+Settings.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Settings.h
+END
+Engine.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/DotNet/EngineManaged/Engine.cpp
+END
+Light.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/DotNet/EngineManaged/Light.cpp
+END
+LineSegment.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/LineSegment.cpp
+END
+TextureSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/TextureSet.h
+END
+Projection.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Projection.h
+END
+Expr.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Expr.h
+END
+Color.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/DotNet/EngineManaged/Color.h
+END
+MeshVB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/MeshVB.cpp
+END
+MaterialPass.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/MaterialPass.cpp
+END
+Module.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Module.h
+END
+Vector3.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/EngineManaged/Vector3.h
+END
+Camera.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Camera.h
+END
+UberTextureRasterizer.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/UberTextureRasterizer.h
+END
+Ray.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Ray.h
+END
+Model.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/Model.cpp
+END
+Mesh.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Mesh.h
+END
+BrushPalette.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/BrushPalette.cpp
+END
+ScaleGizmo.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/ScaleGizmo.h
+END
+Matrix.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/359/Trunk/ProjectBX/DotNet/EngineManaged/Matrix.cpp
+END
+EMAfx.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/EMAfx.h
+END
+ModelNode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/359/Trunk/ProjectBX/DotNet/EngineManaged/ModelNode.cpp
+END
+Shader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Shader.cpp
+END
+LineSegment.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/LineSegment.h
+END
+Vector2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/EngineManaged/Vector2.cpp
+END
+TextureStage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/TextureStage.cpp
+END
+Vector3.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/EngineManaged/Vector3.cpp
+END
+Module.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Module.cpp
+END
+Vector4.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/EngineManaged/Vector4.cpp
+END
+Sphere.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Sphere.cpp
+END
+Brush.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Brush.h
+END
+UberTextureRasterizer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/UberTextureRasterizer.cpp
+END
+MeshVB.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/MeshVB.h
+END
+ReadMe.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/EngineManaged/ReadMe.txt
+END
+AssemblyInfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/s_kevinb/codesafe/!svn/ver/249/Trunk/ProjectBX/DotNet/EngineManaged/AssemblyInfo.cpp
+END
+Ray.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Ray.cpp
+END
+ScaleGizmo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/DotNet/EngineManaged/ScaleGizmo.cpp
+END
+Utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Utils.cpp
+END
+Plane.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Plane.h
+END
+RotateGizmo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/RotateGizmo.cpp
+END
+Model.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/DotNet/EngineManaged/Model.h
+END
+BrushPalette.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/BrushPalette.h
+END
+Matrix.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/359/Trunk/ProjectBX/DotNet/EngineManaged/Matrix.h
+END
+Frustum.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/DotNet/EngineManaged/Frustum.h
+END
+Shader.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Shader.h
+END
+ModelNode.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/359/Trunk/ProjectBX/DotNet/EngineManaged/ModelNode.h
+END
+MeshIB.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/MeshIB.h
+END
+MoveGizmo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/DotNet/EngineManaged/MoveGizmo.cpp
+END
+OBox.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/OBox.h
+END
+Image.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/DotNet/EngineManaged/Image.cpp
+END
+Brush.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Brush.cpp
+END
+Render.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Render.h
+END
+Vector2.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/EngineManaged/Vector2.h
+END
+TextureStage.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/TextureStage.h
+END
+Gizmo.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Gizmo.h
+END
+AABox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/377/Trunk/ProjectBX/DotNet/EngineManaged/AABox.cpp
+END
+MeshInst.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/363/Trunk/ProjectBX/DotNet/EngineManaged/MeshInst.cpp
+END
+SceneEntity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/355/Trunk/ProjectBX/DotNet/EngineManaged/SceneEntity.cpp
+END
+TimeKeeper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/TimeKeeper.cpp
+END
+EngineManaged.snk
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/s_kevinb/codesafe/!svn/ver/257/Trunk/ProjectBX/DotNet/EngineManaged/EngineManaged.snk
+END
+Sphere.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Sphere.h
+END
+Vector4.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/389/Trunk/ProjectBX/DotNet/EngineManaged/Vector4.h
+END
+Line.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Line.h
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/257/Trunk/ProjectBX/DotNet/EngineManaged/resource.h
+END
+Material.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/Material.cpp
+END
+Time.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/239/Trunk/ProjectBX/DotNet/EngineManaged/Time.cpp
+END
+Plane.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Plane.cpp
+END
+Settings.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/s_kevinb/codesafe/!svn/ver/355/Trunk/ProjectBX/DotNet/EngineManaged/Settings.cpp
+END
+Scene.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/Scene.h
+END
+Frustum.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/DotNet/EngineManaged/Frustum.cpp
+END
+Utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Utils.h
+END
+OBox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/351/Trunk/ProjectBX/DotNet/EngineManaged/OBox.cpp
+END
+MeshIB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/MeshIB.cpp
+END
+RotateGizmo.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/RotateGizmo.h
+END
+Engine.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/DotNet/EngineManaged/Engine.h
+END
+Projection.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Projection.cpp
+END
+Light.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/DotNet/EngineManaged/Light.h
+END
+TextureSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/TextureSet.cpp
+END
+Color.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/391/Trunk/ProjectBX/DotNet/EngineManaged/Color.cpp
+END
+Expr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Expr.cpp
+END
+Render.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Render.cpp
+END
+MoveGizmo.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/MoveGizmo.h
+END
+Gizmo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Gizmo.cpp
+END
+Image.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Image.h
+END
+Line.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Line.cpp
+END
+Camera.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/s_kevinb/codesafe/!svn/ver/357/Trunk/ProjectBX/DotNet/EngineManaged/Camera.cpp
+END
+MaterialPass.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/MaterialPass.h
+END
+Mesh.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/Mesh.cpp
+END
+Scene.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/398/Trunk/ProjectBX/DotNet/EngineManaged/Scene.cpp
+END

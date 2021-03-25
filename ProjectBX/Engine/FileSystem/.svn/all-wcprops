@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/FileSystem
+END
+FSDiskServ_W32.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/FileSystem/FSDiskServ_W32.cpp
+END
+filesystem_afx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/FileSystem/filesystem_afx.cpp
+END
+FSConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/FileSystem/FSConfig.h
+END
+filesystem_afx.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/s_kevinb/codesafe/!svn/ver/383/Trunk/ProjectBX/Engine/FileSystem/filesystem_afx.h
+END
+FSDiskServ.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/s_kevinb/codesafe/!svn/ver/397/Trunk/ProjectBX/Engine/FileSystem/FSDiskServ.h
+END

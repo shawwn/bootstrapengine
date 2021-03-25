@@ -1,0 +1,59 @@
+*************************************************
+****** Bootstrap engine setup instructions ******
+*************************************************
+
+============================
+I. Graphics Engine Setup
+
+The graphics engine and common libraries are rather simple
+to set up.  They have no external dependencies and should
+build immediately as is.  The easiest way to begin using the
+graphics engine in your own project is to simply add
+"Trunk/ProjectBX/Common/Common.vcproj" and
+"Trunk/ProjectBX/Graphics/Graphics.vcproj" to your own
+visual studio solution.  Make sure you add the paths
+'Trunk/ProjectBX/Common' and 'Trunk/ProjectBX/Graphics' to
+Visual Studio's C++ include paths.
+
+============================
+II. Bootstrap Editor Setup
+
+The editor relies on two specially configured libraries to
+compile: wxWidgets and FCollada.  Both of these libraries
+can be found in the Libs folder in respective archives.
+
+To setup wxWidgets, do as follows:
+
+1. Extract wxWidgets to where ever you choose, and then
+   browse to the folder where you extracted wxWidgets.
+   From here on out, this folder will be referred to as
+   ($wxWidgets).
+2. Open the '($wxWidgets)/build/MSW' folder and open
+   "wx.sln".
+3. In Visual Studio, add '($wxWidgets)/include' and 
+   '($wxWidgets)/include/msvc' to the C++ include paths.
+4. In Visual Studio, add '($wxWidgets)/lib/vc_lib' to the
+   C++ library paths.
+5. Build the project under both the Debug and Release 
+   build configurations.
+ 
+To setup FCollada, do as follows:
+
+1. Extract FCollada to where ever you choose, and then
+   browse to the folder where you extracted FCollada.
+   From here on out, this folder will be referred to as
+   ($FCollada).
+2. Open the '($FCollada)' folder and open "FCollada.sln".
+3. In Visual Studio, add '($FCollada)' and
+   '($FCollada)/LibXML/include' to the C++ include paths.
+4. In Visual Studio, add '($FCollada)/Output' to the C++
+   library paths.
+5. Build the project under both the Debug and Release
+   build configurations.
+
+At this point, you should be able to build the editor.  To
+do so, simply open "engine.sln" in the 'Trunk/ProjectBX'
+folder.  See the editor documentation for information on
+how to setup and use the editor.
+
+Well, hope that all helps!

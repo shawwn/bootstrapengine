@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib
+END
+inffast.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/inffast.h
+END
+inffixed.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/inffixed.h
+END
+deflate.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/deflate.c
+END
+zlib.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/zlib.h
+END
+zutil.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/zutil.c
+END
+gzio.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/gzio.c
+END
+deflate.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/deflate.h
+END
+zutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/zutil.h
+END
+crc32.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/crc32.c
+END
+inftrees.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/inftrees.c
+END
+crc32.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/crc32.h
+END
+inflate.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/inflate.c
+END
+trees.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/trees.c
+END
+uncompr.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/uncompr.c
+END
+zconf.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/zconf.h
+END
+inftrees.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/inftrees.h
+END
+inflate.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/inflate.h
+END
+trees.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/trees.h
+END
+inffast.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/inffast.c
+END
+compress.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/compress.c
+END
+adler32.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/adler32.c
+END
+infback.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/3/Trunk/BCIF/BCIEncode/zlib/infback.c
+END

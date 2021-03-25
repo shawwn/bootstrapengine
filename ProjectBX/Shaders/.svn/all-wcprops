@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/s_kevinb/codesafe/!svn/ver/408/Trunk/ProjectBX/Shaders
+END
+Blinn.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/408/Trunk/ProjectBX/Shaders/Blinn.fsh
+END
+Blinn.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/Blinn.vsh
+END
+Metal.gls
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/279/Trunk/ProjectBX/Shaders/Metal.gls
+END
+Glass_amb.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/Glass_amb.fsh
+END
+Glass_amb.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/Glass_amb.vsh
+END
+Glass.fsh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/298/Trunk/ProjectBX/Shaders/Glass.fsh
+END
+Glass.vsh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/s_kevinb/codesafe/!svn/ver/376/Trunk/ProjectBX/Shaders/Glass.vsh
+END
