@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		EMAfx.h
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        EMAfx.h
+// Author:      Shawn Presser
+// Created:     09-23-08
 //
-// Purpose:		To precompile headers for the managed layer.
+// Purpose:     To precompile headers for the managed layer.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -24,5 +24,5 @@
 inline float 
 LerpF( float v0, float v1, float t )
 {
-	return ( 1.0f - t ) * v0 + t * v1;
+    return ( 1.0f - t ) * v0 + t * v1;
 }

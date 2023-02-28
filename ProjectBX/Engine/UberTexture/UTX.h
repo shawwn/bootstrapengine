@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		UTX.h
-// Author:		Kevin Bray
-// Created:		11-25-07
+// File:        UTX.h
+// Author:      Kevin Bray
+// Created:     11-25-07
 //
-// Purpose:		To provide the entry point for the ubertexture server.
+// Purpose:     To provide the entry point for the ubertexture server.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -23,23 +23,23 @@ typedef unsigned int UTFlags;
 
 // UTX_FLAGS_RGBA means the channels contain raw RGBA data.  The way the channels
 // are interpreted depends on how many channels are present.  
-// 1 channel:	intensity
-// 2 channels:	luminance, alpha
+// 1 channel:   intensity
+// 2 channels:  luminance, alpha
 // 3 channels:  blue, green, red
 // 4 channels:  blue, green, red, alpha
 //
 // If this flag is not present, it means the channels contain HSLA data.
 // The way the channels are interpreted depends on how many channels are
 // present.
-// 1 channel:	luminance, hue = 0, saturation = 0
-// 2 channels:	luminance, hue, saturation = 1
+// 1 channel:   luminance, hue = 0, saturation = 0
+// 2 channels:  luminance, hue, saturation = 1
 // 3 channels:  luminance, hue, saturation
-// 4 channels:	luminance, hue, saturation, alpha
-#define UTX_FLAGS_RGBA					1
+// 4 channels:  luminance, hue, saturation, alpha
+#define UTX_FLAGS_RGBA                  1
 
 // UTX_FLAGS_FINALIZED means that the texture is compressed and subsequently read
 // only.
-#define	UTX_FLAGS_FINALIZED				2
+#define UTX_FLAGS_FINALIZED             2
 
 //----------------------------------------------------------
 // UTChannelFlags:  these are flags that a present on a per-channel basis.
@@ -48,11 +48,11 @@ typedef unsigned int UTChannelFlags;
 
 // kSubSampled means that the channel is half the width and height
 // of the texture.
-#define UTX_CHANNELFLAGS_SUBSAMPLED		1
+#define UTX_CHANNELFLAGS_SUBSAMPLED     1
 
 // UTX_kDCT means that the tiles in the channel are compressed using
 // an 8x8 block DCT compression scheme.
-#define UTX_CHANNELFLAGS_DCT			2
+#define UTX_CHANNELFLAGS_DCT            2
 
 #ifndef _MSC_VER
 #  define __int64 long long
@@ -62,21 +62,21 @@ typedef unsigned int UTChannelFlags;
 //----------------------------------------------------------
 struct UTX_stream_t
 {
-	// file info.
-	void* file;
-	char* fileName;
-	int widthInTiles;
-	int heightInTiles;
-	int mipLevels;
-	UTHeader* header;
-	UTStageHeader* stageHeaders;
-	UTChannelHeader** channelHeaders;
+    // file info.
+    void* file;
+    char* fileName;
+    int widthInTiles;
+    int heightInTiles;
+    int mipLevels;
+    UTHeader* header;
+    UTStageHeader* stageHeaders;
+    UTChannelHeader** channelHeaders;
 
-	// internal caches.
-	UTTileAddrMap* tileAddrMaps;
+    // internal caches.
+    UTTileAddrMap* tileAddrMaps;
 
-	// current file offset.
-	__int64 offset;
+    // current file offset.
+    __int64 offset;
 };
 
 // UTX_InitStream: fills out the stream to valid default values.
@@ -87,7 +87,7 @@ extern bool UTX_IsStream( UTX_stream_t* stream );
 
 // UTX_CreateStream: creates an ubertexture for reading and writing.
 extern bool UTX_CreateStream( UTX_stream_t* stream, const char* fileName, int width, int height, int stageCount,
-							  UTFlags* flags, int* channels );
+                              UTFlags* flags, int* channels );
 
 // UTX_OpenStream: opens an ubertexture for reading and writing.
 extern bool UTX_OpenStream( UTX_stream_t* stream, const char* fileName );

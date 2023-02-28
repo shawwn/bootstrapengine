@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		ThRingBuffer.cpp
-// Author:		Kevin Bray
-// Created:		09-01-08
+// File:        ThRingBuffer.cpp
+// Author:      Kevin Bray
+// Created:     09-01-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "common_afx.h"
@@ -26,13 +26,13 @@ ThRingBuffer::ThRingBuffer( unsigned int regionSize, unsigned int regionCount, u
 , _readSignal( false, false )
 , _writeSignal( true, false )
 {
-	_buffer = ( unsigned char* )AlignedAlloc( alignment, regionCount * regionSize );
+    _buffer = ( unsigned char* )AlignedAlloc( alignment, regionCount * regionSize );
 }
 
 //----------------------------------------------------------
 ThRingBuffer::~ThRingBuffer()
 {
-	AlignedFree( _buffer );
+    AlignedFree( _buffer );
 }
 
 
@@ -44,128 +44,128 @@ ThRingBuffer::~ThRingBuffer()
 unsigned int
 ThRingBuffer::GetCurrentUsage()
 {
-	// calculate the total number of regions in use.
-	_guard.Enter();
-	unsigned int count = _curWriteRegion - _curReadRegion + 1;
-	_guard.Leave();
-	return count;
+    // calculate the total number of regions in use.
+    _guard.Enter();
+    unsigned int count = _curWriteRegion - _curReadRegion + 1;
+    _guard.Leave();
+    return count;
 }
 
 //----------------------------------------------------------
 void*
 ThRingBuffer::GetWriteRegion( bool wait )
 {
-	// wait for a write region to become available.
-	if ( wait )
-		_writeSignal.Wait();
+    // wait for a write region to become available.
+    if ( wait )
+        _writeSignal.Wait();
 
-	// calculate the region's starting address.
-	unsigned int localRegion = ( _curWriteRegion % _regionCount );
-	unsigned int localOffset = localRegion * _regionSize;
+    // calculate the region's starting address.
+    unsigned int localRegion = ( _curWriteRegion % _regionCount );
+    unsigned int localOffset = localRegion * _regionSize;
 
-	// return the starting address to indicate success.
-	return _buffer + localOffset;
+    // return the starting address to indicate success.
+    return _buffer + localOffset;
 }
 
 //----------------------------------------------------------
 const void*
 ThRingBuffer::GetReadRegion( bool wait )
 {
-	// wait for data to become available.
-	if ( wait )
-		_readSignal.Wait();
+    // wait for data to become available.
+    if ( wait )
+        _readSignal.Wait();
 
-	// calculate the region's starting address.
-	unsigned int localRegion = ( _curReadRegion % _regionCount );
-	unsigned int localOffset = localRegion * _regionSize;
+    // calculate the region's starting address.
+    unsigned int localRegion = ( _curReadRegion % _regionCount );
+    unsigned int localOffset = localRegion * _regionSize;
 
-	// return the starting address to indicate success.
-	return _buffer + localOffset;
+    // return the starting address to indicate success.
+    return _buffer + localOffset;
 }
 
 //----------------------------------------------------------
 void*
 ThRingBuffer::NextWriteRegion( bool wait )
 {
-	// wait if necessary.
-	if ( wait )
-		_writeSignal.Wait();
+    // wait if necessary.
+    if ( wait )
+        _writeSignal.Wait();
 
-	// enter the region.
-	_guard.Enter();
+    // enter the region.
+    _guard.Enter();
 
-	// determine if there is room to advance.
-	void* returnValue = 0;
-	unsigned int usage = _curWriteRegion - _curReadRegion;
-	if ( usage < _regionCount )
-	{
-		// if the read signal is lowered, raise it.
-		if ( usage == 0 )
-			_readSignal.Raise();
+    // determine if there is room to advance.
+    void* returnValue = 0;
+    unsigned int usage = _curWriteRegion - _curReadRegion;
+    if ( usage < _regionCount )
+    {
+        // if the read signal is lowered, raise it.
+        if ( usage == 0 )
+            _readSignal.Raise();
 
-		// increment the current write region and the usage
-		// count.
-		_curWriteRegion += 1;
-		usage += 1;
+        // increment the current write region and the usage
+        // count.
+        _curWriteRegion += 1;
+        usage += 1;
 
-		// calculate the region's starting address.
-		unsigned int localRegion = ( _curReadRegion % _regionCount );
-		unsigned int localOffset = localRegion * _regionSize;
+        // calculate the region's starting address.
+        unsigned int localRegion = ( _curReadRegion % _regionCount );
+        unsigned int localOffset = localRegion * _regionSize;
 
-		// if we're in the last writable region, lower the
-		// write signal.  Otherwise, return the start of the
-		// current region.
-		if ( usage == _regionCount )
-			_writeSignal.Lower();
-		else
-			returnValue = _buffer + localOffset;
-	}
+        // if we're in the last writable region, lower the
+        // write signal.  Otherwise, return the start of the
+        // current region.
+        if ( usage == _regionCount )
+            _writeSignal.Lower();
+        else
+            returnValue = _buffer + localOffset;
+    }
 
-	_guard.Leave();
+    _guard.Leave();
 
-	// wait if need be.
-	if ( wait && returnValue == 0 )
-		returnValue = GetWriteRegion( true );
+    // wait if need be.
+    if ( wait && returnValue == 0 )
+        returnValue = GetWriteRegion( true );
 
-	// return the buffer.
-	return returnValue;
+    // return the buffer.
+    return returnValue;
 }
 
 //----------------------------------------------------------
 const void*
 ThRingBuffer::NextReadRegion( bool wait )
 {
-	_guard.Enter();
+    _guard.Enter();
 
-	// determine if we can allow the read region to advance.
-	const void* returnValue = 0;
-	if ( _curReadRegion < _curWriteRegion )
-	{
-		// advance the read region.
-		_curReadRegion += 1;
+    // determine if we can allow the read region to advance.
+    const void* returnValue = 0;
+    if ( _curReadRegion < _curWriteRegion )
+    {
+        // advance the read region.
+        _curReadRegion += 1;
 
-		// calculate the region's starting address.
-		unsigned int localRegion = ( _curReadRegion % _regionCount );
-		unsigned int localOffset = localRegion * _regionSize;
+        // calculate the region's starting address.
+        unsigned int localRegion = ( _curReadRegion % _regionCount );
+        unsigned int localOffset = localRegion * _regionSize;
 
-		// check to see if we need to raise the write signal.
-		unsigned int usage = _curWriteRegion - _curReadRegion;
-		if ( usage < _regionCount )
-			_writeSignal.Raise();
+        // check to see if we need to raise the write signal.
+        unsigned int usage = _curWriteRegion - _curReadRegion;
+        if ( usage < _regionCount )
+            _writeSignal.Raise();
 
-		// check to see if we need to lower the read signal.
-		if ( usage == 0 )
-			_readSignal.Lower();
-		else
-			returnValue = _buffer + localOffset;
-	}
+        // check to see if we need to lower the read signal.
+        if ( usage == 0 )
+            _readSignal.Lower();
+        else
+            returnValue = _buffer + localOffset;
+    }
 
-	_guard.Leave();
+    _guard.Leave();
 
-	// wait if necessary.
-	if ( wait && returnValue == 0 )
-		returnValue = GetReadRegion( true );
+    // wait if necessary.
+    if ( wait && returnValue == 0 )
+        returnValue = GetReadRegion( true );
 
-	// return the buffer.
-	return returnValue;
+    // return the buffer.
+    return returnValue;
 }

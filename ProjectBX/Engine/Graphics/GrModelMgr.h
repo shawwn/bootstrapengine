@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrModelMgr.h
-// Author:		Kevin Bray
-// Created:		01-31-06
+// File:        GrModelMgr.h
+// Author:      Kevin Bray
+// Created:     01-31-06
 //
-// Purpose:		To manage models.
+// Purpose:     To manage models.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -25,28 +25,28 @@ class GrModel;
 class GrModelMgr
 {
 public:
-	GrModelMgr();
-	~GrModelMgr();
+    GrModelMgr();
+    ~GrModelMgr();
 
-	// this should be called once per frame.
-	void			Update( unsigned int timeDelta );
+    // this should be called once per frame.
+    void            Update( unsigned int timeDelta );
 
-	// gets a model or it's clone.
-	URef< GrModel >	GetModel( const UPath& filePath, const UPath& instanceName, bool clone, bool cloneLights );
-	void			AddModel( URef< GrModel > model );
+    // gets a model or it's clone.
+    URef< GrModel > GetModel( const UPath& filePath, const UPath& instanceName, bool clone, bool cloneLights );
+    void            AddModel( URef< GrModel > model );
 
 private:
-	struct SModelEntry
-	{
-		URef< GrModel > model;
-		unsigned int lastUsed;
-	};
-	typedef std::map< UPath, SModelEntry > ModelMap;
+    struct SModelEntry
+    {
+        URef< GrModel > model;
+        unsigned int lastUsed;
+    };
+    typedef std::map< UPath, SModelEntry > ModelMap;
 
-	void			CollectGarbage();
+    void            CollectGarbage();
 
-	ModelMap		_models;
-	unsigned int	_curTime;
-	unsigned int	_lastCleanTime;
+    ModelMap        _models;
+    unsigned int    _curTime;
+    unsigned int    _lastCleanTime;
 };
 extern GrModelMgr* gGrModelMgr;

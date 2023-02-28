@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrDXT.h
-// Author:		Kevin Bray
-// Created:		04-03-08
+// File:        GrDXT.h
+// Author:      Kevin Bray
+// Created:     04-03-08
 //
-// Purpose:		To perform DXT compression in realtime.
+// Purpose:     To perform DXT compression in realtime.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------

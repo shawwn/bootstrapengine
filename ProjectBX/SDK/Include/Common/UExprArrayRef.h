@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		UExprArrayRef.h
-// Author:		Kevin Bray
-// Created:		07-05-05
+// File:        UExprArrayRef.h
+// Author:      Kevin Bray
+// Created:     07-05-05
 //
-// Purpose:		To dereference an array.
+// Purpose:     To dereference an array.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -23,22 +23,22 @@ class UExprArray;
 //**********************************************************
 class UExprArrayRef : public UExprTerm
 {
-	friend class UExprMgr;
+    friend class UExprMgr;
 
-	UExprArrayRef( URef< UExprArray > array, URef< UExprTerm > index );
+    UExprArrayRef( URef< UExprArray > array, URef< UExprTerm > index );
 public:
-	~UExprArrayRef();
+    ~UExprArrayRef();
 
-	float				GetValue() const;
-	bool				IsDynamic() const;
-	ETYPE				GetType() const			{	return ET_ARRAYREF;	}
+    float               GetValue() const;
+    bool                IsDynamic() const;
+    ETYPE               GetType() const         {   return ET_ARRAYREF; }
 
-	URef< UExprArray >	GetArray() const		{	return _array;		}
-	URef< UExprTerm >	GetIndex() const		{	return _index;		}
+    URef< UExprArray >  GetArray() const        {   return _array;      }
+    URef< UExprTerm >   GetIndex() const        {   return _index;      }
 
 private:
-	URef< UExprArray >	_array;
-	URef< UExprTerm >	_index;
-	bool				_dynamic;
+    URef< UExprArray >  _array;
+    URef< UExprTerm >   _index;
+    bool                _dynamic;
 };
 

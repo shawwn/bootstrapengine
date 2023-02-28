@@ -32,6 +32,6 @@ namespace Editor.Dialogs
             // store the dialog result and close the form.
             this.DialogResult = DialogResult.OK;
             this.Close();
-		}
+        }
     }
 }

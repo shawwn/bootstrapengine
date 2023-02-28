@@ -17,23 +17,23 @@ namespace Editor.Controls
         Bitmap _image;
 
         // events.
-		public event EventHandler Deleted;
+        public event EventHandler Deleted;
 
         public Thumbnail()
         {
             InitializeComponent();
 
-			SetStyle( ControlStyles.Selectable, false );
+            SetStyle( ControlStyles.Selectable, false );
 
-			// hide the delete button.
-			pDelete.Visible = false;
+            // hide the delete button.
+            pDelete.Visible = false;
 
-			// attach some event handlers that only affect the label and the image, 
-			// but not the surrounding space.
-			pImageTarget.MouseClick += new MouseEventHandler( HandleClick );
-			lblCaption.MouseClick += new MouseEventHandler( HandleClick );
-			pImageTarget.MouseDoubleClick += new MouseEventHandler( HandleDoubleClick );
-			lblCaption.MouseDoubleClick += new MouseEventHandler( HandleDoubleClick );
+            // attach some event handlers that only affect the label and the image, 
+            // but not the surrounding space.
+            pImageTarget.MouseClick += new MouseEventHandler( HandleClick );
+            lblCaption.MouseClick += new MouseEventHandler( HandleClick );
+            pImageTarget.MouseDoubleClick += new MouseEventHandler( HandleDoubleClick );
+            lblCaption.MouseDoubleClick += new MouseEventHandler( HandleDoubleClick );
         }
 
         ~Thumbnail()
@@ -53,18 +53,18 @@ namespace Editor.Controls
             set { _userText = value; }
         }
 
-		public bool ShowDeleteButton
-		{
-			get { return _showDeleteButton; }
-			set 
-			{ 
-				if( _showDeleteButton == value ) 
-					return;
-				_showDeleteButton = value;
-				pDelete.Visible = value;
-			}
-		}
-		bool _showDeleteButton;
+        public bool ShowDeleteButton
+        {
+            get { return _showDeleteButton; }
+            set 
+            { 
+                if( _showDeleteButton == value ) 
+                    return;
+                _showDeleteButton = value;
+                pDelete.Visible = value;
+            }
+        }
+        bool _showDeleteButton;
 
         public Size ImageSize
         {
@@ -87,64 +87,64 @@ namespace Editor.Controls
             set { _image = value; }
         }
 
-		protected override void OnGotFocus( EventArgs e )
-		{
-			// if this thumbnail is a member of a ThumbnailSelector,
-			// focus the ThumbnailSelector.
-			if( this.Parent is ThumbnailSelector )
-			{
-				ThumbnailSelector thumbnailSelector = (ThumbnailSelector)this.Parent;
-				thumbnailSelector.EnsureFocused();
-			}
-			base.OnGotFocus( e );
-		}
+        protected override void OnGotFocus( EventArgs e )
+        {
+            // if this thumbnail is a member of a ThumbnailSelector,
+            // focus the ThumbnailSelector.
+            if( this.Parent is ThumbnailSelector )
+            {
+                ThumbnailSelector thumbnailSelector = (ThumbnailSelector)this.Parent;
+                thumbnailSelector.EnsureFocused();
+            }
+            base.OnGotFocus( e );
+        }
 
-		protected override void OnMouseClick( MouseEventArgs e )
-		{
-			// if this thumbnail is a member of a ThumbnailSelector,
-			// focus the ThumbnailSelector.
-			if( this.Parent is ThumbnailSelector )
-			{
-				ThumbnailSelector thumbnailSelector = (ThumbnailSelector)this.Parent;
-				thumbnailSelector.EnsureFocused();
-			}
+        protected override void OnMouseClick( MouseEventArgs e )
+        {
+            // if this thumbnail is a member of a ThumbnailSelector,
+            // focus the ThumbnailSelector.
+            if( this.Parent is ThumbnailSelector )
+            {
+                ThumbnailSelector thumbnailSelector = (ThumbnailSelector)this.Parent;
+                thumbnailSelector.EnsureFocused();
+            }
 
-			base.OnMouseClick( e );
-		}
+            base.OnMouseClick( e );
+        }
 
         private void HandleClick(object sender, MouseEventArgs e)
         {
             // issue the OnSelect event.
-			this.OnMouseClick( e );
+            this.OnMouseClick( e );
         }
 
         private void HandleDoubleClick(object sender, EventArgs e)
         {
-			this.OnDoubleClick( e );
+            this.OnDoubleClick( e );
         }
 
         private void pImageTarget_Paint(object sender, PaintEventArgs e)
         {
-			Graphics g = e.Graphics;
+            Graphics g = e.Graphics;
 
-			if( this.Enabled )
-			{
-	            if( _image != null )
-	                g.DrawImageUnscaled( _image, new Point(0, 0) );
-	            else
-	                g.Clear(Color.FromArgb(255, 0, 0, 0));
-			}
-			else
-			{
-				// if the Thumbnail is disabled, just fill with a "disabled" pattern.
-				Util.Drawing.FillDisabled( g, g.VisibleClipBounds );
-			}
+            if( this.Enabled )
+            {
+                if( _image != null )
+                    g.DrawImageUnscaled( _image, new Point(0, 0) );
+                else
+                    g.Clear(Color.FromArgb(255, 0, 0, 0));
+            }
+            else
+            {
+                // if the Thumbnail is disabled, just fill with a "disabled" pattern.
+                Util.Drawing.FillDisabled( g, g.VisibleClipBounds );
+            }
         }
 
-		private void pDelete_Click( object sender, EventArgs e )
-		{
-			if( Deleted != null )
-				Deleted( this, new EventArgs() );
-		}
+        private void pDelete_Click( object sender, EventArgs e )
+        {
+            if( Deleted != null )
+                Deleted( this, new EventArgs() );
+        }
     }
 }

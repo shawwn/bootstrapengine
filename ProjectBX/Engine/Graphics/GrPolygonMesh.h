@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrPolygonMesh.h
-// Author:		Kevin Bray
-// Created:		01-16-06
+// File:        GrPolygonMesh.h
+// Author:      Kevin Bray
+// Created:     01-16-06
 //
-// Purpose:		To represent a polygonal mesh.
+// Purpose:     To represent a polygonal mesh.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -22,21 +22,21 @@ class GrPolygonGroupUberData;
 class GrPolygonMesh : public URefCount
 {
 public:
-	GrPolygonMesh( const tstring& name );
-	GrPolygonMesh( const tstring& name, const GrPolygonGroup& polygons );
-	~GrPolygonMesh();
+    GrPolygonMesh( const tstring& name );
+    GrPolygonMesh( const tstring& name, const GrPolygonGroup& polygons );
+    ~GrPolygonMesh();
 
-	// mesh name
-	const tstring&			GetName() const				{	return _name;		}
+    // mesh name
+    const tstring&          GetName() const             {   return _name;       }
 
-	// polygon management.
-	GrPolygonGroup&			GetPolygons()				{	return _polygons;	}
-	const GrPolygonGroup&	GetPolygons() const			{	return _polygons;	}
+    // polygon management.
+    GrPolygonGroup&         GetPolygons()               {   return _polygons;   }
+    const GrPolygonGroup&   GetPolygons() const         {   return _polygons;   }
 
-	void					GenMeshes( std::vector< GrMeshInst* >& meshes );
+    void                    GenMeshes( std::vector< GrMeshInst* >& meshes );
 
 private:
-	tstring					_name;
-	GrPolygonGroup			_polygons;
-	GrPolygonGroupUberData*	_uberData;
+    tstring                 _name;
+    GrPolygonGroup          _polygons;
+    GrPolygonGroupUberData* _uberData;
 };

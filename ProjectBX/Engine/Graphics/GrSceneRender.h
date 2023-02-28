@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrSceneRender.h
-// Author:		Kevin Bray
-// Created:		11-27-05 ( happy bday to me! )
+// File:        GrSceneRender.h
+// Author:      Kevin Bray
+// Created:     11-27-05 ( happy bday to me! )
 //
-// Purpose:		To pass scene information to the renderer.
+// Purpose:     To pass scene information to the renderer.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -33,21 +33,21 @@ class GrTerrain;
 class GrSceneRender
 {
 public:
-	static const unsigned int kMaxLOD = 5U;
+    static const unsigned int kMaxLOD = 5U;
 
-	GrSceneRender();
-	~GrSceneRender();
+    GrSceneRender();
+    ~GrSceneRender();
 
-	void				RenderAmbience( const GrCamera* camera, const MVec3& pvsEyePos, const GrBSPTree* bspRoot, const GrModel* modelRoot,
-										const GrModel* skyboxRoot, const GrColor& ambColor, unsigned int frameId );
-	void				RenderLight( const GrCamera* camera, const GrLight* light, const GrBSPTree* bspRoot, const GrModel* modelRoot,
-									 unsigned int frameId );
+    void                RenderAmbience( const GrCamera* camera, const MVec3& pvsEyePos, const GrBSPTree* bspRoot, const GrModel* modelRoot,
+                                        const GrModel* skyboxRoot, const GrColor& ambColor, unsigned int frameId );
+    void                RenderLight( const GrCamera* camera, const GrLight* light, const GrBSPTree* bspRoot, const GrModel* modelRoot,
+                                     unsigned int frameId );
 
 private:
-	GrShadowBuffer*		_shadowBuffers[ kMaxLOD ];	// shadow buffers at different LODs.
-	GrRenderList		_lightReceivers;
-	GrRenderList		_shadowCasters;
+    GrShadowBuffer*     _shadowBuffers[ kMaxLOD ];  // shadow buffers at different LODs.
+    GrRenderList        _lightReceivers;
+    GrRenderList        _shadowCasters;
 
-	bool				_shadowEnable;
+    bool                _shadowEnable;
 };
 extern GrSceneRender* gGrSceneRender;

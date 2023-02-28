@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		MeshInst.h
-// Author:		Shawn Presser
-// Created:		10-15-08
+// File:        MeshInst.h
+// Author:      Shawn Presser
+// Created:     10-15-08
 //
-// Purpose:		To manage a mesh instance.
+// Purpose:     To manage a mesh instance.
 //
 // Copyright © 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -21,15 +21,15 @@ using namespace System::Collections::Generic;
 
 namespace Bootstrap
 {
-	// .NET forward declarations.
-	ref class Mesh;
-	ref class Material;
-	value class RangeInfo;
+    // .NET forward declarations.
+    ref class Mesh;
+    ref class Material;
+    value class RangeInfo;
     value class OBox;
 
-	//***********************
-	// enum VertexComponents
-	//***********************
+    //***********************
+    // enum VertexComponents
+    //***********************
     public enum VertexComponents
     {
         None            = 0x00,
@@ -43,30 +43,30 @@ namespace Bootstrap
         All             = 0x3F
     };
 
-	//***********************
-	// ref class MeshInst
-	//***********************
-	public ref class MeshInst : public SceneEntity
-	{
-		MeshInst( GrMeshInst* meshInst );
+    //***********************
+    // ref class MeshInst
+    //***********************
+    public ref class MeshInst : public SceneEntity
+    {
+        MeshInst( GrMeshInst* meshInst );
 
-	internal:
+    internal:
         // creates a MeshInst reference.
-		static MeshInst^                    Create( GrMeshInst* meshInst );
+        static MeshInst^                    Create( GrMeshInst* meshInst );
 
-		GrMeshInst*		                    _meshInst;
+        GrMeshInst*                         _meshInst;
 
-	public:
-		~MeshInst();
-		!MeshInst();
+    public:
+        ~MeshInst();
+        !MeshInst();
 
         // clones a mesh instance.  If deep is true, then the mesh and materials are also cloned.
         // Generally, this should be false.
         MeshInst^                           Clone( bool deep );
 
         // assignment for the mesh instance data.
-        void					            SetMesh( Bootstrap::Mesh^ mesh, IList< Material^ >^ materials );
-        void					            SetMaterial( int range, Material^ material );
+        void                                SetMesh( Bootstrap::Mesh^ mesh, IList< Material^ >^ materials );
+        void                                SetMaterial( int range, Material^ material );
 
         property int                        RangeCount
         {     
@@ -108,16 +108,16 @@ namespace Bootstrap
 
         void                                RenderRange( int range, VertexComponents vertexComponents, unsigned int frameTime );
 
-		virtual bool                        Equals( System::Object^ obj ) override;
-		virtual int                         GetHashCode() override;
+        virtual bool                        Equals( System::Object^ obj ) override;
+        virtual int                         GetHashCode() override;
 
-	protected:		
-		// inherited from SceneEntity.
-		virtual void	                    ApplyTransform( Matrix mat ) sealed override;
-		virtual Matrix                      GetTransform() sealed override;
+    protected:      
+        // inherited from SceneEntity.
+        virtual void                        ApplyTransform( Matrix mat ) sealed override;
+        virtual Matrix                      GetTransform() sealed override;
 
-	private:
-		static Dictionary< System::UInt64, MeshInst^ >^ _meshInstCache;
-	};
+    private:
+        static Dictionary< System::UInt64, MeshInst^ >^ _meshInstCache;
+    };
 }
 

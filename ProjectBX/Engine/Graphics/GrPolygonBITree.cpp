@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		GrPolygonBITree.cpp
-// Author:		Kevin Bray
-// Created:		09-15-08
+// File:        GrPolygonBITree.cpp
+// Author:      Kevin Bray
+// Created:     09-15-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
@@ -29,7 +29,7 @@ GrPolygonBITree::GrPolygonBITree( const GrPolygonGroup& polygons )
 , _root( 0 )
 , _ownPolygons( true )
 {
-	Init();
+    Init();
 }
 
 //----------------------------------------------------------
@@ -38,20 +38,20 @@ GrPolygonBITree::GrPolygonBITree( const GrPolygonGroup* polygons, bool takeOwner
 , _root( 0 )
 , _ownPolygons( takeOwnership )
 {
-	// make sure that a valid polygon group was passed in.
-	B_ASSERT( polygons != 0 );
-	Init();
+    // make sure that a valid polygon group was passed in.
+    B_ASSERT( polygons != 0 );
+    Init();
 }
 
 //----------------------------------------------------------
 GrPolygonBITree::~GrPolygonBITree()
 {
-	if ( _ownPolygons )
-	{
-		delete _polygons;
-		_polygons = 0;
-	}
-	delete _root;
+    if ( _ownPolygons )
+    {
+        delete _polygons;
+        _polygons = 0;
+    }
+    delete _root;
 }
 
 
@@ -63,15 +63,15 @@ GrPolygonBITree::~GrPolygonBITree()
 const GrPolygon&
 GrPolygonBITree::GetPolygon( unsigned int idx )
 {
-	return _polygons->GetPolygon( idx );
+    return _polygons->GetPolygon( idx );
 }
 
 //----------------------------------------------------------
 void
 GrPolygonBITree::GetPolygons( UFastArray< unsigned int >& polygonIndices,
-							  const SVec3& boxMin, const SVec3& boxMax )
+                              const SVec3& boxMin, const SVec3& boxMax )
 {
-	_root->GetPolygons( polygonIndices, boxMin, boxMax );
+    _root->GetPolygons( polygonIndices, boxMin, boxMax );
 }
 
 
@@ -83,7 +83,7 @@ GrPolygonBITree::GetPolygons( UFastArray< unsigned int >& polygonIndices,
 void
 GrPolygonBITree::Init()
 {
-	// build the tree.
-	unsigned int treeDepth = 0;
-	_root = new GrPolygonBINode( treeDepth, this, *_polygons );
+    // build the tree.
+    unsigned int treeDepth = 0;
+    _root = new GrPolygonBINode( treeDepth, this, *_polygons );
 }

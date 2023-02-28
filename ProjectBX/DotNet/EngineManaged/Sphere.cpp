@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		Sphere.cpp
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        Sphere.cpp
+// Author:      Shawn Presser
+// Created:     09-23-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -43,46 +43,46 @@ Bootstrap::Sphere::Sphere( Vector3 center, float radius )
 bool
 Bootstrap::Sphere::Intersect( Sphere sphere )
 {
-	float maxDistSqr = Radius + sphere.Radius;
-	maxDistSqr *= maxDistSqr;
-	return ( Center.DistSqr( sphere.Center ) < maxDistSqr );
+    float maxDistSqr = Radius + sphere.Radius;
+    maxDistSqr *= maxDistSqr;
+    return ( Center.DistSqr( sphere.Center ) < maxDistSqr );
 }
 
 //----------------------------------------------------------
 bool
 Bootstrap::Sphere::IsInside( Sphere sphere )
 {
-	return ( ( Center.Dist( sphere.Center ) + sphere.Radius ) < Radius );
+    return ( ( Center.Dist( sphere.Center ) + sphere.Radius ) < Radius );
 }
 
 //----------------------------------------------------------
 int
 Bootstrap::Sphere::GetSide( Plane plane )
 {
-	float dist = plane.Dist( Center );
+    float dist = plane.Dist( Center );
     if ( ::Abs( dist ) > Radius )
-		return dist >= 0.0f ? 1 : -1;
-	return 0;
+        return dist >= 0.0f ? 1 : -1;
+    return 0;
 }
 
 //----------------------------------------------------------
 int 
 Bootstrap::Sphere::GetSection( Plane plane, [Out] Vector3% center, [Out] float% radius )
 {
-	// get the distance to the plane.  If we're entirely on one side, return
-	// the indication as such.
-	float dist = plane.Dist( Center );
+    // get the distance to the plane.  If we're entirely on one side, return
+    // the indication as such.
+    float dist = plane.Dist( Center );
     if ( ::Abs( dist ) > Radius )
-		return dist > 0.0f ? 1 : -1;
+        return dist > 0.0f ? 1 : -1;
 
-	// determine the radius of our cross section.
-	radius = Sqrt( Radius*Radius - dist*dist );
+    // determine the radius of our cross section.
+    radius = Sqrt( Radius*Radius - dist*dist );
 
-	// determine the point of intersection along the plane normal.
-	center = Center - dist * plane.Normal;
+    // determine the point of intersection along the plane normal.
+    center = Center - dist * plane.Normal;
 
-	// we intersect and are returning a valid section.
-	return 0;
+    // we intersect and are returning a valid section.
+    return 0;
 }
 
 //----------------------------------------------------------
@@ -91,13 +91,13 @@ Bootstrap::Sphere::Transform( Matrix transform )
 {
     Sphere sphere;
 
-	Vector3 scales = transform.ScaleSqr;
+    Vector3 scales = transform.ScaleSqr;
 
-	// determine the maximum scale.
+    // determine the maximum scale.
     sphere.Radius = ::Sqrt( scales.Max() ) * Radius;
 
-	// transform the center.
-	sphere.Center = transform.TransformCoord( Center );
+    // transform the center.
+    sphere.Center = transform.TransformCoord( Center );
 
     return sphere;
 }
@@ -106,18 +106,18 @@ Bootstrap::Sphere::Transform( Matrix transform )
 void 
 Bootstrap::Sphere::TransformFast( Matrix transform )
 {
-	Vector3 scales = transform.ScaleSqr;
+    Vector3 scales = transform.ScaleSqr;
 
-	// determine the maximum scale.
+    // determine the maximum scale.
     Radius = ::Sqrt( scales.Max() ) * Radius;
 
-	// transform the center.
-	Center = transform.TransformCoord( Center );
+    // transform the center.
+    Center = transform.TransformCoord( Center );
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Sphere::ToString()
 {
-	return "Center " + Center + " Radius " + Radius;
+    return "Center " + Center + " Radius " + Radius;
 }

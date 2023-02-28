@@ -13,7 +13,7 @@ namespace Editor.Dialogs
     public partial class UberizeDialog : BaseDialog
     {
         string _uberTexture;
-		static Dialogs.TextureSelectionDialog _textureSelector;
+        static Dialogs.TextureSelectionDialog _textureSelector;
         Dictionary<MeshInstRange, int> _uberizeItems;
         Dictionary<string, Model> _models;
         Matrix _viewMatrix;
@@ -104,8 +104,8 @@ namespace Editor.Dialogs
         private void btnUbertexture_Click(object sender, EventArgs e)
         {
             // present the texture dialog to the user.
-			if( _textureSelector == null )
-				_textureSelector = new Dialogs.TextureSelectionDialog(true);
+            if( _textureSelector == null )
+                _textureSelector = new Dialogs.TextureSelectionDialog(true);
             DialogResult result = _textureSelector.ShowDialog();
             if (result == DialogResult.Cancel)
                 return;
@@ -204,13 +204,13 @@ namespace Editor.Dialogs
 
             // iterate through mesh instance's ranges.
             int rangeIndex = 0;
-			Mesh mesh = inst.Mesh;
-			for ( int i = 0; i < inst.RangeCount; ++i )
+            Mesh mesh = inst.Mesh;
+            for ( int i = 0; i < inst.RangeCount; ++i )
             {
-				// get the range info.
-				RangeInfo range;
-				if ( !mesh.GetRange( out range, i ) )
-					continue;
+                // get the range info.
+                RangeInfo range;
+                if ( !mesh.GetRange( out range, i ) )
+                    continue;
 
                 TreeNodeAdv rangeNode = new TreeNodeAdv(range.Name);
                 meshNode.Nodes.Add(rangeNode);

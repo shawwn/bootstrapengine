@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GmEntity.h
-// Author:		Shawn Presser
-// Created:		12-15-08
+// File:        GmEntity.h
+// Author:      Shawn Presser
+// Created:     12-15-08
 //
-// Purpose:		To represent a visual entity.
+// Purpose:     To represent a visual entity.
 //
 // Copyright © 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -28,23 +28,23 @@ class GmEntityMgr;
 //**********************************************************
 class GmEntity
 {
-	friend class GmEntityMgr;
+    friend class GmEntityMgr;
 
 protected:
-	GmEntity( const tstring& name, URef< GrModel > model );
-	virtual ~GmEntity();
+    GmEntity( const tstring& name, URef< GrModel > model );
+    virtual ~GmEntity();
 
 public:
 
-	// accessors.
-	URef< GrModel >		GetModel() const				{	return _model;	}
+    // accessors.
+    URef< GrModel >     GetModel() const                {   return _model;  }
 
-	// updates the entity.
-	virtual void		Update()=0;
+    // updates the entity.
+    virtual void        Update()=0;
 
 protected:
-	URef< GrModel >		_model;
+    URef< GrModel >     _model;
 
 private:
-	tstring				_name;
+    tstring             _name;
 };

@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		UBuffer.cpp
-// Author:		Kevin Bray
-// Created:		10-09-06
+// File:        UBuffer.cpp
+// Author:      Kevin Bray
+// Created:     10-09-06
 // Copyright © 2005 Bootstrap Studios
 //----------------------------------------------------------
 #include "common_afx.h"
@@ -22,13 +22,13 @@ UBuffer::UBuffer( size_t initSize )
 : _ptr( 0 )
 , _size( 0 )
 {
-	ReAlloc( initSize );
+    ReAlloc( initSize );
 }
 
 //----------------------------------------------------------
 UBuffer::~UBuffer()
 {
-	Free();
+    Free();
 }
 
 
@@ -40,18 +40,18 @@ UBuffer::~UBuffer()
 void
 UBuffer::ReAlloc( size_t size )
 {
-	if ( size > _size )
-	{
-		delete[] _ptr;
-		_ptr = new char[ size ];
-		_size = size;
-	}
+    if ( size > _size )
+    {
+        delete[] _ptr;
+        _ptr = new char[ size ];
+        _size = size;
+    }
 }
 
 //----------------------------------------------------------
 void
 UBuffer::Free()
 {
-	delete[] _ptr;
-	_ptr = 0;
+    delete[] _ptr;
+    _ptr = 0;
 }

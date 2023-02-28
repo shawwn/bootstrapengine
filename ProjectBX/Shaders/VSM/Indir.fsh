@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		vsm.fsh
-// Author:		Kevin Bray
-// Created:		02-07-06
+// File:        vsm.fsh
+// Author:      Kevin Bray
+// Created:     02-07-06
 // Copyright © 2004 Bootstrap Games.  All rights reserved.
 //----------------------------------------------------------
 
@@ -13,6 +13,6 @@ uniform vec4 u_IndirModAdd;
 // main
 void main()
 {
-	// output the result.
-	gl_FragColor = u_IndirModAdd;
+    // output the result.
+    gl_FragColor = u_IndirModAdd;
 }

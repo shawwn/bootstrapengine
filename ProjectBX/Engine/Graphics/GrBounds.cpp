@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		GrBounds.cpp
-// Author:		Kevin Bray
-// Created:		12-10-06
+// File:        GrBounds.cpp
+// Author:      Kevin Bray
+// Created:     12-10-06
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
@@ -29,10 +29,10 @@ GrBounds::GrBounds( const GrBounds& bounds )
 , _sphere( 0 )
 , _frustum( 0 )
 {
-	if ( bounds._sphere )
-		_sphere = new( _mem ) MSphere( *bounds._sphere );
-	else
-		_frustum = new( _mem ) GrFrustum( *bounds._frustum );
+    if ( bounds._sphere )
+        _sphere = new( _mem ) MSphere( *bounds._sphere );
+    else
+        _frustum = new( _mem ) GrFrustum( *bounds._frustum );
 }
 
 //----------------------------------------------------------
@@ -41,8 +41,8 @@ GrBounds::GrBounds( const MSphere& sphere )
 , _sphere( 0 )
 , _frustum( 0 )
 {
-	// copy the sphere passed in.
-	_sphere = new( _mem ) MSphere( sphere );
+    // copy the sphere passed in.
+    _sphere = new( _mem ) MSphere( sphere );
 }
 
 //----------------------------------------------------------
@@ -51,18 +51,18 @@ GrBounds::GrBounds( const GrFrustum& frustum )
 , _sphere( 0 )
 , _frustum( 0 )
 {
-	// copy the frustum passed in.
-	_frustum = new( _mem ) GrFrustum( frustum );
+    // copy the frustum passed in.
+    _frustum = new( _mem ) GrFrustum( frustum );
 }
 
 //----------------------------------------------------------
 GrBounds::~GrBounds()
 {
-	// call the appropriate destructor.
-	Destroy();
+    // call the appropriate destructor.
+    Destroy();
 
-	// free our memory.
-	delete[] ( char * )_mem;
+    // free our memory.
+    delete[] ( char * )_mem;
 }
 
 
@@ -74,81 +74,81 @@ GrBounds::~GrBounds()
 bool
 GrBounds::Intersects( const GrBounds& bounds )
 {
-	if ( _sphere )
-	{
-		// sphere-sphere.
-		if ( bounds._sphere )
-			return _sphere->Intersect( *bounds._sphere );
+    if ( _sphere )
+    {
+        // sphere-sphere.
+        if ( bounds._sphere )
+            return _sphere->Intersect( *bounds._sphere );
 
-		// sphere-frustum
-		return bounds._frustum->IsSphereInside( *_sphere );
-	}
+        // sphere-frustum
+        return bounds._frustum->IsSphereInside( *_sphere );
+    }
 
-	// frustum-sphere...
-	if ( bounds._sphere )
-		return _frustum->IsSphereInside( *bounds._sphere );
+    // frustum-sphere...
+    if ( bounds._sphere )
+        return _frustum->IsSphereInside( *bounds._sphere );
 
-	// frustum-frustum
-	return _frustum->IsFrustumInside( *bounds._frustum );
+    // frustum-frustum
+    return _frustum->IsFrustumInside( *bounds._frustum );
 }
 
 //----------------------------------------------------------
 bool
 GrBounds::Intersects( const MSphere& bounds )
 {
-	// sphere-sphere.
-	if ( _sphere )
-		return _sphere->Intersect( bounds );
+    // sphere-sphere.
+    if ( _sphere )
+        return _sphere->Intersect( bounds );
 
-	// frustum-sphere.
-	return _frustum->IsSphereInside( bounds );
+    // frustum-sphere.
+    return _frustum->IsSphereInside( bounds );
 }
 
 //----------------------------------------------------------
 bool
 GrBounds::Intersects( const GrFrustum& bounds )
 {
-	// sphere-frustum.
-	if ( _sphere )
-		return bounds.IsSphereInside( *_sphere );
+    // sphere-frustum.
+    if ( _sphere )
+        return bounds.IsSphereInside( *_sphere );
 
-	// frustum-frustum.
-	return _frustum->IsFrustumInside( bounds );
+    // frustum-frustum.
+    return _frustum->IsFrustumInside( bounds );
 }
 
 //----------------------------------------------------------
 GrBounds&
 GrBounds::operator = ( const GrBounds& bounds )
 {
-	// call the approprate destructor.
-	Destroy();
+    // call the approprate destructor.
+    Destroy();
 
-	// assign.
-	if ( bounds._sphere )
-		_sphere = new( _mem ) MSphere( *bounds._sphere );
-	else
-		_frustum = new( _mem ) GrFrustum( *bounds._frustum );
-	return *this;
+    // assign.
+    if ( bounds._sphere )
+        _sphere = new( _mem ) MSphere( *bounds._sphere );
+    else
+        _frustum = new( _mem ) GrFrustum( *bounds._frustum );
+    return *this;
 }
 
 //----------------------------------------------------------
 GrBounds&
 GrBounds::operator = ( const MSphere& sphere )
 {
-	// call the approprate destructor.
-	Destroy();
-	_sphere = new( _mem ) MSphere( sphere );
-	return *this;
+    // call the approprate destructor.
+    Destroy();
+    _sphere = new( _mem ) MSphere( sphere );
+    return *this;
 }
 
 //----------------------------------------------------------
 GrBounds&
 GrBounds::operator = ( const GrFrustum& frustum )
 {
-	// call the approprate destructor.
-	Destroy();
-	_frustum = new( _mem ) GrFrustum( frustum );
-	return *this;
+    // call the approprate destructor.
+    Destroy();
+    _frustum = new( _mem ) GrFrustum( frustum );
+    return *this;
 }
 
 
@@ -160,9 +160,9 @@ GrBounds::operator = ( const GrFrustum& frustum )
 void
 GrBounds::Destroy()
 {
-	// call the appropriate destructor.
-	if ( _sphere )
-		_sphere->~MSphere();
-	else
-		_frustum->~GrFrustum();
+    // call the appropriate destructor.
+    if ( _sphere )
+        _sphere->~MSphere();
+    else
+        _frustum->~GrFrustum();
 }

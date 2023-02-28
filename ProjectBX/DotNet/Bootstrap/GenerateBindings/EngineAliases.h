@@ -1,1 +1,1 @@
-typedef GrCamera	Camera;
+typedef GrCamera    Camera;

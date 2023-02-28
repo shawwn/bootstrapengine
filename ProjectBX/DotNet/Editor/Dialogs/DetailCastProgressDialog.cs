@@ -72,7 +72,7 @@ namespace Editor.Dialogs
             lblStatus.Text = "Done!\n";
             bnOK.Enabled = true;
 
-			GC.KeepAlive( progressCallback );
+            GC.KeepAlive( progressCallback );
         }
 
         

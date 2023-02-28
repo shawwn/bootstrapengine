@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		GmSubsys.cpp
-// Author:		Shawn Presser
-// Created:		12-20-08
+// File:        GmSubsys.cpp
+// Author:      Shawn Presser
+// Created:     12-20-08
 // Copyright © 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 
@@ -24,118 +24,118 @@
 #include "PhSubsys.h"
 
 // global variables.
-GmSubsys*					gGmSubsys;
+GmSubsys*                   gGmSubsys;
 
 //----------------------------------------------------------
 GmSubsys::GmSubsys()
 {
-	B_ASSERT( !gGmSubsys );
+    B_ASSERT( !gGmSubsys );
 
-	// initialize managers.
-	new UExprMgr();
-	new RFileMgr( "C:\\bin\\game\\" );
-	new RRsrcMgr();
+    // initialize managers.
+    new UExprMgr();
+    new RFileMgr( "C:\\bin\\game\\" );
+    new RRsrcMgr();
 
-	// initialize physics.
-	new PhSubsys();
+    // initialize physics.
+    new PhSubsys();
 
-	// initialize game managers.
-	new GmEntityMgr();
+    // initialize game managers.
+    new GmEntityMgr();
 
-	gGmSubsys = this;
+    gGmSubsys = this;
 }
 
 //----------------------------------------------------------
 GmSubsys::~GmSubsys()
 {
-	B_ASSERT( gGmSubsys );
+    B_ASSERT( gGmSubsys );
 
-	// unload the current scene.
-	Clear();
+    // unload the current scene.
+    Clear();
 
-	// shutdown game managers.
-	delete gGmEntityMgr;
+    // shutdown game managers.
+    delete gGmEntityMgr;
 
-	// shutdown physics.
-	delete gPhSubsys;
+    // shutdown physics.
+    delete gPhSubsys;
 
-	// shutdown managers.
-	delete gRRsrcMgr;
-	delete gRFileMgr;
-	delete gUExprMgr;
+    // shutdown managers.
+    delete gRRsrcMgr;
+    delete gRFileMgr;
+    delete gUExprMgr;
 
-	gGmSubsys = 0;
+    gGmSubsys = 0;
 }
 
 //----------------------------------------------------------
 bool
 GmSubsys::LoadScene( const UPath& scenePath )
 {
-	// unload the current scene.
-	Clear();
+    // unload the current scene.
+    Clear();
 
-	// load the new scene.
-	tstring errors;
-	if ( !gRRsrcMgr->LoadScript( scenePath + GR_SCENEDEF_FILENAME, GR_KW_SCENEDEF, errors ) )
-	{
-		B_ASSERT( false );
-		return false;
-	}
+    // load the new scene.
+    tstring errors;
+    if ( !gRRsrcMgr->LoadScript( scenePath + GR_SCENEDEF_FILENAME, GR_KW_SCENEDEF, errors ) )
+    {
+        B_ASSERT( false );
+        return false;
+    }
 
-	// create a physics triangle mesh representation of the scene.
-	if ( !gPhSubsys->CreateStaticModelActors( _staticActors, gGrScene->GetRootModel() ) )
-	{
-		B_ASSERT( false );
-		Clear();
-		return false;
-	}
+    // create a physics triangle mesh representation of the scene.
+    if ( !gPhSubsys->CreateStaticModelActors( _staticActors, gGrScene->GetRootModel() ) )
+    {
+        B_ASSERT( false );
+        Clear();
+        return false;
+    }
 
-	return true;
+    return true;
 }
 
 //----------------------------------------------------------
 void
 GmSubsys::Update( unsigned int dt )
 {
-	const float t = dt / 1000.0f;
+    const float t = dt / 1000.0f;
 
-	// simulate a physics step (non blocking).
-	gPhScene->simulate( t );
+    // simulate a physics step (non blocking).
+    gPhScene->simulate( t );
 
-	// fetch physics simulation results.
-	gPhScene->flushStream();
-	gPhScene->fetchResults( NX_RIGID_BODY_FINISHED, true );
+    // fetch physics simulation results.
+    gPhScene->flushStream();
+    gPhScene->fetchResults( NX_RIGID_BODY_FINISHED, true );
 
-	NxReal maxTimestep;
-	NxTimeStepMethod method;
-	NxU32 maxIter;
-	NxU32 numSubSteps;
-	gPhScene->getTiming( maxTimestep, maxIter, method, &numSubSteps );
-	if( numSubSteps )
-		gPhCharMgr->updateControllers();
+    NxReal maxTimestep;
+    NxTimeStepMethod method;
+    NxU32 maxIter;
+    NxU32 numSubSteps;
+    gPhScene->getTiming( maxTimestep, maxIter, method, &numSubSteps );
+    if( numSubSteps )
+        gPhCharMgr->updateControllers();
 
-	// update the entities.
-	gGmEntityMgr->Update( dt );
+    // update the entities.
+    gGmEntityMgr->Update( dt );
 }
 
 //----------------------------------------------------------
 void
 GmSubsys::Clear()
 {
-	// clear all game entities.
-	gGmEntityMgr->ClearEntities();
+    // clear all game entities.
+    gGmEntityMgr->ClearEntities();
 
-	// remove all static actors from the physics scene.
-	for ( unsigned int i = 0; i < _staticActors.GetElemCount(); ++i )
-	{
-		NxActor* actor = _staticActors[i];
-		gPhScene->releaseActor( *actor );
-	}
-	_staticActors.Clear();
+    // remove all static actors from the physics scene.
+    for ( unsigned int i = 0; i < _staticActors.GetElemCount(); ++i )
+    {
+        NxActor* actor = _staticActors[i];
+        gPhScene->releaseActor( *actor );
+    }
+    _staticActors.Clear();
 
-	// remove any unreferenced triangle meshes.
-	gPhSubsys->CollectGarbage();
+    // remove any unreferenced triangle meshes.
+    gPhSubsys->CollectGarbage();
 
-	// unload the current scene.
-	gGrScene->Clear();
+    // unload the current scene.
+    gGrScene->Clear();
 }

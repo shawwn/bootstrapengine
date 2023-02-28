@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrRenderPostProcess.h
-// Author:		Kevin Bray
-// Created:		07-05-08
+// File:        GrRenderPostProcess.h
+// Author:      Kevin Bray
+// Created:     07-05-08
 //
-// Purpose:		To render post process passes.
+// Purpose:     To render post process passes.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -18,8 +18,8 @@
 class GrRenderPostProcess
 {
 public:
-	GrRenderPostProcess();
-	~GrRenderPostProcess();
+    GrRenderPostProcess();
+    ~GrRenderPostProcess();
 
 private:
 };

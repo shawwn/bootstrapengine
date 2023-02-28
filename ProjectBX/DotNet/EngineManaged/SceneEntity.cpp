@@ -19,11 +19,11 @@
 Bootstrap::SceneEntity::SceneEntity( const MMat4x4& matrix, bool scalable )
 : _scalable( scalable )
 {
-	// get the rotation angles.
-	Vector3 rot = Matrix( matrix ).Rotate.EulerAngles;
+    // get the rotation angles.
+    Vector3 rot = Matrix( matrix ).Rotate.EulerAngles;
 
-	// convert them to degrees and store 'em.
-	_rotation = Vector3( RadToDeg( rot.X ), RadToDeg( rot.Y ), RadToDeg( rot.Z ) );
+    // convert them to degrees and store 'em.
+    _rotation = Vector3( RadToDeg( rot.X ), RadToDeg( rot.Y ), RadToDeg( rot.Z ) );
 }
 
 //----------------------------------------------------------
@@ -37,25 +37,25 @@ Bootstrap::SceneEntity::SceneEntity( Vector3 position, Vector3 rotation, Vector3
 Bootstrap::Matrix 
 Bootstrap::SceneEntity::Transform::get()
 {
-	return GetTransform();
+    return GetTransform();
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::SceneEntity::Transform::set( Matrix mat )
 {
-	// get the rotation angles.
-	Vector3 rot = mat.Rotate.EulerAngles;
+    // get the rotation angles.
+    Vector3 rot = mat.Rotate.EulerAngles;
 
-	// convert them to degrees and store 'em.
-	_rotation = Vector3( RadToDeg( rot.X ), RadToDeg( rot.Y ), RadToDeg( rot.Z ) );
+    // convert them to degrees and store 'em.
+    _rotation = Vector3( RadToDeg( rot.X ), RadToDeg( rot.Y ), RadToDeg( rot.Z ) );
 
-	// apply the transform.
-	ApplyTransform( mat );
-	TransformChanged( this );
-	PositionChanged( this );
-	RotationChanged( this );
-	ScaleChanged( this );
+    // apply the transform.
+    ApplyTransform( mat );
+    TransformChanged( this );
+    PositionChanged( this );
+    RotationChanged( this );
+    ScaleChanged( this );
 }
 
 //----------------------------------------------------------
@@ -77,15 +77,15 @@ Bootstrap::SceneEntity::Position::set( Vector3 value )
 Bootstrap::Vector3 
 Bootstrap::SceneEntity::Rotation::get()
 {
-	return _rotation;
+    return _rotation;
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::SceneEntity::Rotation::set( Vector3 value )
 {
-	// set the transform with that rotation.
-	SetTransform( Position, value, Scale );
+    // set the transform with that rotation.
+    SetTransform( Position, value, Scale );
 }
 
 //----------------------------------------------------------
@@ -110,14 +110,14 @@ Bootstrap::SceneEntity::Scale::set( Vector3 value )
 void 
 Bootstrap::SceneEntity::SetTransform( Vector3 position, Vector3 rotation, Vector3 scale )
 {
-	_rotation = rotation;
+    _rotation = rotation;
 
-	Matrix trans( Matrix3x3( DegToRad( _rotation.Y ), DegToRad( _rotation.X ), DegToRad( _rotation.Z ) ),
-		position,
-		scale );
-	ApplyTransform( trans );
-	TransformChanged( this );
-	PositionChanged( this );
-	RotationChanged( this );
-	ScaleChanged( this );
+    Matrix trans( Matrix3x3( DegToRad( _rotation.Y ), DegToRad( _rotation.X ), DegToRad( _rotation.Z ) ),
+        position,
+        scale );
+    ApplyTransform( trans );
+    TransformChanged( this );
+    PositionChanged( this );
+    RotationChanged( this );
+    ScaleChanged( this );
 }

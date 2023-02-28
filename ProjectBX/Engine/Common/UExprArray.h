@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		UExprArray.h
-// Author:		Kevin Bray
-// Created:		07-05-05
+// File:        UExprArray.h
+// Author:      Kevin Bray
+// Created:     07-05-05
 //
-// Purpose:		To contain an array that is dereferenced by UExprArrayTerm.
+// Purpose:     To contain an array that is dereferenced by UExprArrayTerm.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -23,29 +23,29 @@ class UExprTerm;
 //**********************************************************
 class UExprArray : public URefCount
 {
-	// friend.
-	friend class UExprMgr;
+    // friend.
+    friend class UExprMgr;
 
-	// ctor.
-	UExprArray( const tstring& name, float indexScale, bool smooth, bool clamp );
+    // ctor.
+    UExprArray( const tstring& name, float indexScale, bool smooth, bool clamp );
 public:
-	~UExprArray();
+    ~UExprArray();
 
-	const tstring&	GetName() const							{	return _name;			}
+    const tstring&  GetName() const                         {   return _name;           }
 
-	void			SetAddressScale( float scale )			{	_indexScale = scale;	}
-	void			AddElement( URef< UExprTerm > term );
+    void            SetAddressScale( float scale )          {   _indexScale = scale;    }
+    void            AddElement( URef< UExprTerm > term );
 
-	float			GetValue( float index ) const;
-	bool			IsDynamic( float index ) const;
+    float           GetValue( float index ) const;
+    bool            IsDynamic( float index ) const;
 
 private:
-	typedef std::vector< URef< UExprTerm > > TermVector;
+    typedef std::vector< URef< UExprTerm > > TermVector;
 
-	tstring			_name;
-	TermVector		_terms;
-	float			_indexScale;
-	bool			_smooth;
-	bool			_clamp;
+    tstring         _name;
+    TermVector      _terms;
+    float           _indexScale;
+    bool            _smooth;
+    bool            _clamp;
 };
 

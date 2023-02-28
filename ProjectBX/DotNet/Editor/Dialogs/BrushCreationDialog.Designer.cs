@@ -109,7 +109,7 @@ namespace Editor.Dialogs
         #endregion
 
         private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox tbName;
         public System.Windows.Forms.ComboBox cbCategory;
     }

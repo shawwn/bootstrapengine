@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		UTNetUtils.cpp
-// Author:		Kevin Bray
-// Created:		11-24-07
+// File:        UTNetUtils.cpp
+// Author:      Kevin Bray
+// Created:     11-24-07
 //
-// Purpose:		To provide a networking utility library.
+// Purpose:     To provide a networking utility library.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -20,7 +20,7 @@ typedef __w64 unsigned int SOCKET;
 
 enum SOCKETTYPE
 {
-	ST_STREAMING
+    ST_STREAMING
 };
 
 //**********************************************************

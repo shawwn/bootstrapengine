@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrSoftwareTexture.h
-// Author:		Shawn Presser
-// Created:		09-13-08
+// File:        GrSoftwareTexture.h
+// Author:      Shawn Presser
+// Created:     09-13-08
 //
-// Purpose:		To manage a GrImage for software rasterization purposes;
+// Purpose:     To manage a GrImage for software rasterization purposes;
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------

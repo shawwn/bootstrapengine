@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GLSubsys.h
-// Author:		Kevin Bray
-// Created:		10-05-04
+// File:        GLSubsys.h
+// Author:      Kevin Bray
+// Created:     10-05-04
 //
-// Purpose:		OpenGL subsystem initialization.
+// Purpose:     OpenGL subsystem initialization.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -18,7 +18,7 @@
 
 #ifdef _DEBUG
  #if 0
-  #define CHECK_GL()		_DbgCheckGL( __FILE__, __LINE__ )
+  #define CHECK_GL()        _DbgCheckGL( __FILE__, __LINE__ )
  #else
   #define CHECK_GL()
  #endif
@@ -28,27 +28,27 @@
 
 //enum EGLPROFILE
 //{
-//	EGLP_2_0,
-//	EGLP_2_1,
-//	EGLP_3_0,
+//  EGLP_2_0,
+//  EGLP_2_1,
+//  EGLP_3_0,
 //};
 
-extern void			StartGL( HDC device );
-extern void			StopGL();
+extern void         StartGL( HDC device );
+extern void         StopGL();
 
-extern EGLPROFILE	GetGLProfile();
+extern EGLPROFILE   GetGLProfile();
 
-extern bool			IsGLGammaSupported();
-extern void			SetGLGamma( float gamma );
-extern void			SetGLGamma( unsigned short* red, unsigned short* green, unsigned short* blue );
+extern bool         IsGLGammaSupported();
+extern void         SetGLGamma( float gamma );
+extern void         SetGLGamma( unsigned short* red, unsigned short* green, unsigned short* blue );
 
-extern bool			IsExtSupported( const char* ext );
+extern bool         IsExtSupported( const char* ext );
 
-extern void			_DbgCheckGL( const char *file, long line );
+extern void         _DbgCheckGL( const char *file, long line );
 
 #ifdef _MONITOR_GL_STATS
 
-extern void			ClearGLStats();
+extern void         ClearGLStats();
 
 extern unsigned int _bglDrawCount;
 extern unsigned int _bglDrawRangeCount;

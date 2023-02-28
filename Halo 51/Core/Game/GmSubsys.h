@@ -1,10 +1,10 @@
 //----------------------------------------------------------
-// File:		GmSubsys.h
-// Author:		Shawn Presser
-// Created:		12-20-08
+// File:        GmSubsys.h
+// Author:      Shawn Presser
+// Created:     12-20-08
 //
-// Purpose:		To manage the game's singletons and the physics
-//				singletons.
+// Purpose:     To manage the game's singletons and the physics
+//              singletons.
 //
 // Copyright © 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -24,16 +24,16 @@
 class GmSubsys
 {
 public:
-	GmSubsys();
-	~GmSubsys();
+    GmSubsys();
+    ~GmSubsys();
 
-	bool				LoadScene( const UPath& scenePath );
+    bool                LoadScene( const UPath& scenePath );
 
-	void				Update( unsigned int dt );
+    void                Update( unsigned int dt );
 
 private:
-	void				Clear();
+    void                Clear();
 
-	NxActorContainer	_staticActors;
+    NxActorContainer    _staticActors;
 };
-extern GmSubsys*		gGmSubsys;
+extern GmSubsys*        gGmSubsys;

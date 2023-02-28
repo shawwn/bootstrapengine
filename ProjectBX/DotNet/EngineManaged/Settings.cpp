@@ -19,91 +19,91 @@
 //----------------------------------------------------------
 Bootstrap::Settings::Settings()
 {
-	new EdSettings( "settings.xml", "defaults.xml" );
+    new EdSettings( "settings.xml", "defaults.xml" );
 }
 
 //----------------------------------------------------------
 Bootstrap::Settings::~Settings()
 {
-	this->!Settings();
+    this->!Settings();
 }
 
 //----------------------------------------------------------
 Bootstrap::Settings::!Settings()
 {
-	delete gEdSettings;
+    delete gEdSettings;
 }
 
 //----------------------------------------------------------
 Bootstrap::Settings^ 
 Bootstrap::Settings::Get()
 {
-	if ( !_singleton )
-		_singleton = gcnew Settings();
-	return _singleton;
+    if ( !_singleton )
+        _singleton = gcnew Settings();
+    return _singleton;
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Settings::Save()
 {
-	gEdSettings->SaveSettings();
+    gEdSettings->SaveSettings();
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Settings::GetWorkingFolder()
 {
-	return TStrToStr( gEdSettings->GetWorkingFolder() );
+    return TStrToStr( gEdSettings->GetWorkingFolder() );
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Settings::GetPackageFolder()
 {
-	return TStrToStr( gEdSettings->GetWorkingFolder() + "/data" );
+    return TStrToStr( gEdSettings->GetWorkingFolder() + "/data" );
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Settings::GetShaderFolder()
 {
-	return TStrToStr( gEdSettings->GetWorkingFolder() + "/"GR_PATH_SHADERS );
+    return TStrToStr( gEdSettings->GetWorkingFolder() + "/"GR_PATH_SHADERS );
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Settings::GetBrushFolder()
 {
-	return TStrToStr( gEdSettings->GetUserSetting( "brushfolder" ) );
+    return TStrToStr( gEdSettings->GetUserSetting( "brushfolder" ) );
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Settings::GetCopyrightNotice()
 {
-	return TStrToStr( gEdSettings->GetCopyrightNotice() );
+    return TStrToStr( gEdSettings->GetCopyrightNotice() );
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Settings::GetSoftwareUser()
 {
-	return TStrToStr( gEdSettings->GetSoftwareUser() );
+    return TStrToStr( gEdSettings->GetSoftwareUser() );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Settings::SetWorkingFolder( System::String^ value )
 {
-	gEdSettings->SetWorkingFolder( StrToTStr( value ) );
+    gEdSettings->SetWorkingFolder( StrToTStr( value ) );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Settings::SetBrushFolder( System::String^ value )
 {
-	gEdSettings->SetUserSetting( "brushfolder", StrToTStr( value ) );
+    gEdSettings->SetUserSetting( "brushfolder", StrToTStr( value ) );
 }
 
 //----------------------------------------------------------

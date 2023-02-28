@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		EdUberTexBuilder.h
-// Author:		Kevin Bray
-// Created:		12-20-07
+// File:        EdUberTexBuilder.h
+// Author:      Kevin Bray
+// Created:     12-20-07
 //
-// Purpose:		To build a thumbnail from a texture.
+// Purpose:     To build a thumbnail from a texture.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -31,18 +31,18 @@ enum ESTAGE;
 class EdUberTexBuilder
 {
 public:
-	EdUberTexBuilder();
-	~EdUberTexBuilder();
+    EdUberTexBuilder();
+    ~EdUberTexBuilder();
 
-	// converts a texture into an ubertexture.
-	void					CreateUberTexture( const UPath& fileName, GrTexture* fillBump, GrTexture* fillDiffuse,
-											   GrTexture* fillSpecular );
+    // converts a texture into an ubertexture.
+    void                    CreateUberTexture( const UPath& fileName, GrTexture* fillBump, GrTexture* fillDiffuse,
+                                               GrTexture* fillSpecular );
 
 private:
-	// contains UV information for a mesh.
-	struct SMeshUVInfo
-	{
-		SVec2 min;
-		SVec2 max;
-	};
+    // contains UV information for a mesh.
+    struct SMeshUVInfo
+    {
+        SVec2 min;
+        SVec2 max;
+    };
 };

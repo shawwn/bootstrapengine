@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		MeshIB.h
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        MeshIB.h
+// Author:      Shawn Presser
+// Created:     09-23-08
 //
-// Purpose:		To manage an index buffer object.
+// Purpose:     To manage an index buffer object.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -19,29 +19,29 @@ namespace Bootstrap
     //**********************************************************
     // ref class MeshIB
     //**********************************************************
-	public ref class MeshIB
-	{
-	internal:
-		MeshIB( GrMeshIB* meshIB );
+    public ref class MeshIB
+    {
+    internal:
+        MeshIB( GrMeshIB* meshIB );
 
-	public:
-		~MeshIB();
-		!MeshIB();
+    public:
+        ~MeshIB();
+        !MeshIB();
 
-		property int				        IndexCount 
+        property int                        IndexCount 
         { 
             int                                 get(); 
         }
-		property array< UInt16 >^	        Indices 
+        property array< UInt16 >^           Indices 
         { 
             array< UInt16 >^                    get(); 
         }
 
-	private:
-		array< UInt16 >^	                _indices;
+    private:
+        array< UInt16 >^                    _indices;
 
-	internal:
-		// model.
-		GrMeshIB*			                _meshIB;
-	};
+    internal:
+        // model.
+        GrMeshIB*                           _meshIB;
+    };
 }

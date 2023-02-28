@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrKFAnimMgr.h
-// Author:		Kevin Bray
-// Created:		04-30-06
+// File:        GrKFAnimMgr.h
+// Author:      Kevin Bray
+// Created:     04-30-06
 //
-// Purpose:		To manage keyframe animations.
+// Purpose:     To manage keyframe animations.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -24,15 +24,15 @@ class GrKFAnim;
 class GrKFAnimMgr
 {
 public:
-	GrKFAnimMgr();
-	~GrKFAnimMgr();
+    GrKFAnimMgr();
+    ~GrKFAnimMgr();
 
-	GrKFAnim*			GetKFAnim( const UPath& name );
-	void				SaveKFAnim( GrKFAnim* anim );
+    GrKFAnim*           GetKFAnim( const UPath& name );
+    void                SaveKFAnim( GrKFAnim* anim );
 
 private:
-	typedef std::map< UPath, GrKFAnim* > AnimMap;
+    typedef std::map< UPath, GrKFAnim* > AnimMap;
 
-	AnimMap				_animMap;
+    AnimMap             _animMap;
 };
 extern GrKFAnimMgr* gGrKFAnimMgr;

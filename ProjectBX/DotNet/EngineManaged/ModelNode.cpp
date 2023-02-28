@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		ModelNode.cpp
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        ModelNode.cpp
+// Author:      Shawn Presser
+// Created:     09-23-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -41,7 +41,7 @@ Bootstrap::ModelNode::ModelNode( GrModelNode* modelNode )
 //----------------------------------------------------------
 Bootstrap::ModelNode::~ModelNode()
 {
-	this->!ModelNode();
+    this->!ModelNode();
 }
 
 //----------------------------------------------------------
@@ -53,7 +53,7 @@ Bootstrap::ModelNode::!ModelNode()
 System::String^ 
 Bootstrap::ModelNode::Name::get()
 {
-	return TStrToStr( _modelNode->GetName() );
+    return TStrToStr( _modelNode->GetName() );
 }
 
 //----------------------------------------------------------
@@ -126,16 +126,16 @@ Bootstrap::ModelNode::WorldTransform::set( Matrix mat )
 int 
 Bootstrap::ModelNode::ChildCount::get()
 {
-	return ( int )_modelNode->GetChildCount();
+    return ( int )_modelNode->GetChildCount();
 }
 
 //----------------------------------------------------------
 Bootstrap::ModelNode^ 
 Bootstrap::ModelNode::GetChild( int idx )
 {
-	if ( ( unsigned int )idx > _modelNode->GetChildCount() )
-		return nullptr;
-	return gcnew ModelNode( _modelNode->GetChild( idx ) );
+    if ( ( unsigned int )idx > _modelNode->GetChildCount() )
+        return nullptr;
+    return gcnew ModelNode( _modelNode->GetChild( idx ) );
 }
 
 //----------------------------------------------------------
@@ -172,15 +172,15 @@ Bootstrap::ModelNode::Parent::get()
 int 
 Bootstrap::ModelNode::MeshInstCount::get()
 {
-	return ( int )_modelNode->GetMeshInstCount();
+    return ( int )_modelNode->GetMeshInstCount();
 }
 
 //----------------------------------------------------------
 Bootstrap::MeshInst^ 
 Bootstrap::ModelNode::GetMeshInst( int idx )
 {
-	if ( ( unsigned int )idx > _modelNode->GetMeshInstCount() )
-		return nullptr;
+    if ( ( unsigned int )idx > _modelNode->GetMeshInstCount() )
+        return nullptr;
     return MeshInst::Create( _modelNode->GetMeshInst( idx ) );
 }
 
@@ -266,5 +266,5 @@ Bootstrap::Matrix
 Bootstrap::ModelNode::GetTransform()
 {
     // return the model node's worldspace transform.
-	return Matrix( _modelNode->GetWorld() );
+    return Matrix( _modelNode->GetWorld() );
 }

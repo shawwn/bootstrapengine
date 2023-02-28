@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		Vector3.cpp
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        Vector3.cpp
+// Author:      Shawn Presser
+// Created:     09-23-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -23,17 +23,17 @@
 //----------------------------------------------------------
 Bootstrap::Vector3::Vector3( const MVec3& vec )
 {
-	X = vec.GetX();
-	Y = vec.GetY();
-	Z = vec.GetZ();
+    X = vec.GetX();
+    Y = vec.GetY();
+    Z = vec.GetZ();
 }
 
 //----------------------------------------------------------
 Bootstrap::Vector3::Vector3( const SVec3& vec )
 {
-	X = vec.x;
-	Y = vec.y;
-	Z = vec.z;
+    X = vec.x;
+    Y = vec.y;
+    Z = vec.z;
 }
 
 //----------------------------------------------------------
@@ -44,7 +44,7 @@ Bootstrap::Vector3::ToMVec3()
 }
 
 //----------------------------------------------------------
-SVec3	
+SVec3   
 Bootstrap::Vector3::ToSVec3() 
 { 
     return SVec3( X, Y, Z ); 
@@ -53,9 +53,9 @@ Bootstrap::Vector3::ToSVec3()
 //----------------------------------------------------------
 Bootstrap::Vector3::Vector3( float x, float y, float z )
 {
-	X = x;
-	Y = y;
-	Z = z;
+    X = x;
+    Y = y;
+    Z = z;
 }
 
 //----------------------------------------------------------
@@ -72,12 +72,12 @@ Bootstrap::Vector3::Abs::get()
 Bootstrap::Vector3 
 Bootstrap::Vector3::Normalized::get()
 {
-	float mag = Sqrt( X*X + Y*Y + Z*Z );
-	if ( mag < 0.0001f )
-		return Vector3( 0.0f, 1.0f, 0.0f );
+    float mag = Sqrt( X*X + Y*Y + Z*Z );
+    if ( mag < 0.0001f )
+        return Vector3( 0.0f, 1.0f, 0.0f );
 
     float invMag = 1.0f / mag;
-	return Vector3( 
+    return Vector3( 
         invMag * X,
         invMag * Y,
         invMag * Z );
@@ -152,27 +152,27 @@ Bootstrap::Vector3::DistSqr( Vector3 point )
 float 
 Bootstrap::Vector3::Dot( Vector3 v )
 {
-	return X*v.X + Y*v.Y + Z*v.Z;
+    return X*v.X + Y*v.Y + Z*v.Z;
 }
 
 //----------------------------------------------------------
 Bootstrap::Vector3 
 Bootstrap::Vector3::Cross( Vector3 v ) 
 {
-	return Vector3( 
+    return Vector3( 
         Y*v.Z - Z*v.Y, 
-		Z*v.X - X*v.Z, 
-		X*v.Y - Y*v.X );
+        Z*v.X - X*v.Z, 
+        X*v.Y - Y*v.X );
 }
 
 //----------------------------------------------------------
 Bootstrap::Vector3 
 Bootstrap::Vector3::Lerp( Vector3 v, float t )
 {
-	return Vector3(
-		::Lerp( X, v.X, t ),
-		::Lerp( Y, v.Y, t ),
-		::Lerp( Z, v.Z, t ) );
+    return Vector3(
+        ::Lerp( X, v.X, t ),
+        ::Lerp( Y, v.Y, t ),
+        ::Lerp( Z, v.Z, t ) );
 }
 
 //----------------------------------------------------------
@@ -240,26 +240,26 @@ Bootstrap::Vector3::operator / ( Vector3 vector, float scale )
 System::String^ 
 Bootstrap::Vector3::ToString() 
 {
-	return "( " + X + ", " + Y + ", " + Z + " )";
+    return "( " + X + ", " + Y + ", " + Z + " )";
 }
 
 //----------------------------------------------------------
 bool 
 Bootstrap::Vector3::Equals( System::Object^ obj )
 {
-	if ( obj != nullptr && obj->GetType() == Vector3::GetType() )
-	{
-		Vector3 val = (Vector3)obj;
-		return X == val.X && Y == val.Y && Z == val.Z;
-	}
-	return false;
+    if ( obj != nullptr && obj->GetType() == Vector3::GetType() )
+    {
+        Vector3 val = (Vector3)obj;
+        return X == val.X && Y == val.Y && Z == val.Z;
+    }
+    return false;
 }
 
 //----------------------------------------------------------
 int 
 Bootstrap::Vector3::GetHashCode()
 {
-	return X.GetHashCode() + Y.GetHashCode() + Z.GetHashCode();
+    return X.GetHashCode() + Y.GetHashCode() + Z.GetHashCode();
 }
 
 //----------------------------------------------------------

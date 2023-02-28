@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		EImportDAEAnims.h
-// Author:		Kevin Bray
-// Created:		01-18-07
+// File:        EImportDAEAnims.h
+// Author:      Kevin Bray
+// Created:     01-18-07
 //
-// Purpose:		To import collada animations.
+// Purpose:     To import collada animations.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -23,10 +23,10 @@ class FCDocument;
 class EdImportDAEAnims
 {
 public:
-	EdImportDAEAnims();
-	~EdImportDAEAnims();
+    EdImportDAEAnims();
+    ~EdImportDAEAnims();
 
-	GrKFAnim*		ImportAnim( FCDocument* doc, const UPath& outputPath );
+    GrKFAnim*       ImportAnim( FCDocument* doc, const UPath& outputPath );
 
 private:
 

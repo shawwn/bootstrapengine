@@ -1,10 +1,10 @@
 //----------------------------------------------------------
-// File:		GrPolygonBITree.h
-// Author:		Kevin Bray
-// Created:		09-15-08
+// File:        GrPolygonBITree.h
+// Author:      Kevin Bray
+// Created:     09-15-08
 //
-// Purpose:		To partition a group of polygons for fast spacial
-//				indexing.
+// Purpose:     To partition a group of polygons for fast spacial
+//              indexing.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -28,24 +28,24 @@ class GrPolygon;
 class GrPolygonBITree
 {
 public:
-	GrPolygonBITree( const GrPolygonGroup& polygons );
-	GrPolygonBITree( const GrPolygonGroup* polygons, bool takeOwnership );
-	~GrPolygonBITree();
+    GrPolygonBITree( const GrPolygonGroup& polygons );
+    GrPolygonBITree( const GrPolygonGroup* polygons, bool takeOwnership );
+    ~GrPolygonBITree();
 
-	// polygon group access.
-	const GrPolygon&			GetPolygon( unsigned int idx );
+    // polygon group access.
+    const GrPolygon&            GetPolygon( unsigned int idx );
 
-	// returns all polygons that touch the bounding volume specified.
-	void						GetPolygons( UFastArray< unsigned int >& polygonIndices,
-											 const SVec3& boxMin, const SVec3& boxMax );
+    // returns all polygons that touch the bounding volume specified.
+    void                        GetPolygons( UFastArray< unsigned int >& polygonIndices,
+                                             const SVec3& boxMin, const SVec3& boxMax );
 
-	// gets the polygon group.
-	const GrPolygonGroup&		GetPolygonGroup() const		{	return *_polygons;		}
+    // gets the polygon group.
+    const GrPolygonGroup&       GetPolygonGroup() const     {   return *_polygons;      }
 
 private:
-	void						Init();
+    void                        Init();
 
-	const GrPolygonGroup*		_polygons;
-	GrPolygonBINode*			_root;
-	bool						_ownPolygons;
+    const GrPolygonGroup*       _polygons;
+    GrPolygonBINode*            _root;
+    bool                        _ownPolygons;
 };

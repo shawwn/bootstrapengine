@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		GmEntity.cpp
-// Author:		Shawn Presser
-// Created:		12-15-08
+// File:        GmEntity.cpp
+// Author:      Shawn Presser
+// Created:     12-15-08
 // Copyright © 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 
@@ -25,9 +25,9 @@ GmEntity::GmEntity( const tstring& name, URef< GrModel > model )
 //----------------------------------------------------------
 GmEntity::~GmEntity()
 {
-	// remove the model from the scene.
-	if ( _model && _model->GetParent() )
-	{
-		_model->GetParent()->RemoveChild( _model );
-	}
+    // remove the model from the scene.
+    if ( _model && _model->GetParent() )
+    {
+        _model->GetParent()->RemoveChild( _model );
+    }
 }

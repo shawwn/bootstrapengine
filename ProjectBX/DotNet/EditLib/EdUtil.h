@@ -1,10 +1,10 @@
 //----------------------------------------------------------
-// File:		EdUtil.h
-// Author:		Shawn Presser
-// Created:		12-23-08
+// File:        EdUtil.h
+// Author:      Shawn Presser
+// Created:     12-23-08
 //
-// Purpose:		To expose useful editlib-related utility functions
-//				referenced from multiple places.
+// Purpose:     To expose useful editlib-related utility functions
+//              referenced from multiple places.
 //
 // Copyright © 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -20,7 +20,7 @@ struct SVec3;
 // EdUtils
 //**********************************************************
 
-extern UPath			EdFixupTexturePath( const UPath& outputPath, const UPath& filePath );
+extern UPath            EdFixupTexturePath( const UPath& outputPath, const UPath& filePath );
 
 // returns whether the three points are colinear.
-extern bool				EdIsTriDegenerate( const SVec3& p0, const SVec3& p1, const SVec3& p2, float epsilon );
+extern bool             EdIsTriDegenerate( const SVec3& p0, const SVec3& p1, const SVec3& p2, float epsilon );

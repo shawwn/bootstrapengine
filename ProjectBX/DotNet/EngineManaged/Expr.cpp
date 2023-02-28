@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		Expr.cpp
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        Expr.cpp
+// Author:      Shawn Presser
+// Created:     09-23-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -29,65 +29,65 @@ using namespace System;
 
 //----------------------------------------------------------
 Bootstrap::Expr::Expr( UExprTerm* exprTerm )
-	: _exprTerm( exprTerm )
+    : _exprTerm( exprTerm )
 {
-	if ( _exprTerm )
-		_exprTerm->IncRef();
+    if ( _exprTerm )
+        _exprTerm->IncRef();
 }
 
 //----------------------------------------------------------
 Bootstrap::Expr::Expr( String^ exprScript )
-	: _exprTerm( 0 )
+    : _exprTerm( 0 )
 {
-	tstring errors;
-	_exprTerm = gUExprMgr->ParseExpr( StrToTStr( exprScript ), errors );
-	if ( _exprTerm )
-		_exprTerm->IncRef();
-	if ( errors.length() )
-		_errors = TStrToStr( errors );
+    tstring errors;
+    _exprTerm = gUExprMgr->ParseExpr( StrToTStr( exprScript ), errors );
+    if ( _exprTerm )
+        _exprTerm->IncRef();
+    if ( errors.length() )
+        _errors = TStrToStr( errors );
 }
 
 //----------------------------------------------------------
 Bootstrap::Expr::Expr( float value )
-	: _exprTerm( 0 )
+    : _exprTerm( 0 )
 {
-	_exprTerm = gUExprMgr->CreateNumber( value );
-	_exprTerm->IncRef();
+    _exprTerm = gUExprMgr->CreateNumber( value );
+    _exprTerm->IncRef();
 }
 
 //----------------------------------------------------------
 Bootstrap::Expr::~Expr()
 {
-	this->!Expr();
+    this->!Expr();
 }
 
 //----------------------------------------------------------
 Bootstrap::Expr::!Expr()
 {
-	if ( _exprTerm )
-		_exprTerm->DecRef();
+    if ( _exprTerm )
+        _exprTerm->DecRef();
 }
 
 //----------------------------------------------------------
 bool 
 Bootstrap::Expr::Valid::get()
 {
-	return ( _exprTerm != 0 );
+    return ( _exprTerm != 0 );
 }
 
 //----------------------------------------------------------
 String^ 
 Bootstrap::Expr::Decompile()
 {
-	// simply return an empty string if there is nothing to decompile.
-	if ( !_exprTerm )
-		return "";
+    // simply return an empty string if there is nothing to decompile.
+    if ( !_exprTerm )
+        return "";
 
-	// decompile the script and return it's source text.
-	tstring source;
-	EdExprCompiler exprCompiler;
-	exprCompiler.Decompile( source, _exprTerm );
+    // decompile the script and return it's source text.
+    tstring source;
+    EdExprCompiler exprCompiler;
+    exprCompiler.Decompile( source, _exprTerm );
 
-	// return the source.
-	return TStrToStr( source );
+    // return the source.
+    return TStrToStr( source );
 }

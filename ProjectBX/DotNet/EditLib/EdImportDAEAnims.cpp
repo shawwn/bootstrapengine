@@ -43,31 +43,31 @@ GrKFAnim*
 EdImportDAEAnims::ImportAnim( FCDocument* doc, const UPath& outputPath )
 {
 /*
-	// get the animation library from the DAE file.
-	FCDAnimationLibrary* animLib = doc->GetAnimationLibrary();
+    // get the animation library from the DAE file.
+    FCDAnimationLibrary* animLib = doc->GetAnimationLibrary();
 
-	// go through all animations in the lib.
-	unsigned int entityCount = ( unsigned int )animLib->GetEntityCount();
-	for ( unsigned int i = 0; i < entityCount; ++i )
-	{
-		// get the current animation.
-		FCDAnimation* curAnim = animLib->GetEntity( i );
+    // go through all animations in the lib.
+    unsigned int entityCount = ( unsigned int )animLib->GetEntityCount();
+    for ( unsigned int i = 0; i < entityCount; ++i )
+    {
+        // get the current animation.
+        FCDAnimation* curAnim = animLib->GetEntity( i );
 
-		// go through curves in the animation.
-		unsigned int animChannelCount = ( unsigned int )curAnim->GetChannelCount();
-		for ( unsigned int j = 0; j < animChannelCount; ++j )
-		{
-			// get the current animation channel.
-			FCDAnimationChannel* curChannel = curAnim->GetChannel( j );
+        // go through curves in the animation.
+        unsigned int animChannelCount = ( unsigned int )curAnim->GetChannelCount();
+        for ( unsigned int j = 0; j < animChannelCount; ++j )
+        {
+            // get the current animation channel.
+            FCDAnimationChannel* curChannel = curAnim->GetChannel( j );
 
-			// read in the target qualifier.
-			const fm::string& channelTarget = curChannel->GetTargetPointer();
-			const fm::string& channelTargetQualifier = curChannel->GetTargetQualifier();
+            // read in the target qualifier.
+            const fm::string& channelTarget = curChannel->GetTargetPointer();
+            const fm::string& channelTargetQualifier = curChannel->GetTargetQualifier();
 
-			// now sample the curve information.
-			
-		}
-	}
+            // now sample the curve information.
+            
+        }
+    }
 */
-	return 0;
+    return 0;
 }

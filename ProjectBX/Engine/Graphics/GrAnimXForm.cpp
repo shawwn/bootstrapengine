@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		GrAnimXForm.h
-// Author:		Kevin Bray
-// Created:		04-08-06
+// File:        GrAnimXForm.h
+// Author:      Kevin Bray
+// Created:     04-08-06
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
@@ -56,74 +56,74 @@ GrAnimXForm::GrAnimXForm( const MMat4x4& xform )
 GrAnimXForm&
 GrAnimXForm::operator = ( const MMat4x4& xform )
 {
-	_rotate = xform.GetRotate();
-	_translate = xform.GetTranslate();
-	_scale = xform.GetScale();
-	return *this;
+    _rotate = xform.GetRotate();
+    _translate = xform.GetTranslate();
+    _scale = xform.GetScale();
+    return *this;
 }
 
 //----------------------------------------------------------
 void
 GrAnimXForm::SetRotate( const MQuat& rotate )
 {
-	_rotate = rotate;
+    _rotate = rotate;
 }
 
 //----------------------------------------------------------
 void
 GrAnimXForm::SetTranslate( const MVec3& translate )
 {
-	_translate = translate;
+    _translate = translate;
 }
 
 //----------------------------------------------------------
 void
 GrAnimXForm::SetScale( const MVec3& scale )
 {
-	_scale = scale;
+    _scale = scale;
 }
 
 //----------------------------------------------------------
 void
 GrAnimXForm::SetToIdentity()
 {
-	_rotate.SetX( 0.0f );
-	_rotate.SetY( 0.0f );
-	_rotate.SetZ( 0.0f );
-	_rotate.SetW( 1.0f );
-	_translate.SetX( 0.0f );
-	_translate.SetY( 0.0f );
-	_translate.SetZ( 0.0f );
-	_scale.SetX( 0.0f );
-	_scale.SetY( 0.0f );
-	_scale.SetZ( 0.0f );
+    _rotate.SetX( 0.0f );
+    _rotate.SetY( 0.0f );
+    _rotate.SetZ( 0.0f );
+    _rotate.SetW( 1.0f );
+    _translate.SetX( 0.0f );
+    _translate.SetY( 0.0f );
+    _translate.SetZ( 0.0f );
+    _scale.SetX( 0.0f );
+    _scale.SetY( 0.0f );
+    _scale.SetZ( 0.0f );
 }
 
 //----------------------------------------------------------
 void
 GrAnimXForm::BlendToFast( const GrAnimXForm& xform, float t )
 {
-	float oneMinusT = ( 1.0f - t );
-	_rotate.SlerpToFast( xform._rotate, t );
-	_translate = oneMinusT * _translate + t * xform._translate;
-	_scale = oneMinusT * _scale + t * xform._scale;
+    float oneMinusT = ( 1.0f - t );
+    _rotate.SlerpToFast( xform._rotate, t );
+    _translate = oneMinusT * _translate + t * xform._translate;
+    _scale = oneMinusT * _scale + t * xform._scale;
 }
 
 //----------------------------------------------------------
 void
 GrAnimXForm::Accumulate( const GrAnimXForm& xform )
 {
-	_rotate = _rotate * xform._rotate;
-	_translate = _translate + xform._translate;
-	_scale += xform._scale;
+    _rotate = _rotate * xform._rotate;
+    _translate = _translate + xform._translate;
+    _scale += xform._scale;
 }
 
 //----------------------------------------------------------
 void
 GrAnimXForm::BuildMatrix( MMat4x4& mat )
 {
-	static const MVec3 kOne( 1.0f, 1.0f, 1.0f );
-	_rotate.SetMatrixRot( mat );
-	mat.SetTranslate( _translate );
-	mat.SetScale( _scale + kOne );
+    static const MVec3 kOne( 1.0f, 1.0f, 1.0f );
+    _rotate.SetMatrixRot( mat );
+    mat.SetTranslate( _translate );
+    mat.SetScale( _scale + kOne );
 }

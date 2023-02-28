@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		Sphere.h
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        Sphere.h
+// Author:      Shawn Presser
+// Created:     09-23-08
 //
-// Purpose:		To represent a sphere in 3D space.
+// Purpose:     To represent a sphere in 3D space.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -27,16 +27,16 @@ namespace Bootstrap
     //**********************************************************
     // value class Sphere
     //**********************************************************
-	public value class Sphere
-	{
-	internal:
+    public value class Sphere
+    {
+    internal:
         // constructs a sphere from an MSphere.
-		Sphere( const MSphere& sphere );
+        Sphere( const MSphere& sphere );
 
         // converts the sphere to an MSphere.
-		MSphere                     ToMSphere();
+        MSphere                     ToMSphere();
 
-	public:
+    public:
         // constructs a sphere with the specified center point 
         // and radius.
         Sphere( Vector3 center, float radius );
@@ -49,28 +49,28 @@ namespace Bootstrap
 
         // returns true if the sphere passed in is inside this sphere or if it
         // intersects this sphere in anyway.
-        bool			            Intersect( Sphere sphere );
+        bool                        Intersect( Sphere sphere );
 
         // returns true if the sphere passed in is inside this sphere.
-        bool			            IsInside( Sphere sphere );
+        bool                        IsInside( Sphere sphere );
 
         // determines which side of the plane this sphere is on.
-        int				            GetSide( Plane plane );
+        int                         GetSide( Plane plane );
 
         // returns the center and radius of the cross-section formed by 
         // the intersection of the plane and this sphere.  If the plane
         // doesn't intersect this sphere, then the method returns 
         // which side of the plane this sphere is on.
-        int				            GetSection( Plane plane, [Out] Vector3% center, [Out] float% radius );
+        int                         GetSection( Plane plane, [Out] Vector3% center, [Out] float% radius );
 
         // transforms the sphere, returning the transformed sphere 
         // without modifying this one.
-        Sphere			            Transform( Matrix transform );
+        Sphere                      Transform( Matrix transform );
 
         // transforms this sphere.
-        void			            TransformFast( Matrix transform );
+        void                        TransformFast( Matrix transform );
 
         // pretty-prints the sphere.
-		virtual System::String^     ToString() override;
-	};
+        virtual System::String^     ToString() override;
+    };
 }

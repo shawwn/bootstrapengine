@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		BscArrayTable.h
-// Author:		Kevin Bray
-// Created:		07-03-05
+// File:        BscArrayTable.h
+// Author:      Kevin Bray
+// Created:     07-03-05
 //
-// Purpose:		A table that maps array names to the actual array.
+// Purpose:     A table that maps array names to the actual array.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -24,16 +24,16 @@ class UExprArray;
 class BscArrayTable
 {
 public:
-	typedef std::map< tstring, URef< UExprArray > > ArrayMap;
+    typedef std::map< tstring, URef< UExprArray > > ArrayMap;
 
-	BscArrayTable();
-	BscArrayTable( const ArrayMap& predefinedArrays );
-	virtual ~BscArrayTable();
+    BscArrayTable();
+    BscArrayTable( const ArrayMap& predefinedArrays );
+    virtual ~BscArrayTable();
 
-	// add or find an array.
-	void					AddArray( const tstring& name, URef< UExprArray > array );
-	URef< UExprArray >		FindArray( const tstring& name ) const;
+    // add or find an array.
+    void                    AddArray( const tstring& name, URef< UExprArray > array );
+    URef< UExprArray >      FindArray( const tstring& name ) const;
 
 private:
-	ArrayMap				_arrays;
+    ArrayMap                _arrays;
 };

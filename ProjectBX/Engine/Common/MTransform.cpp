@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		MTransform.cpp
-// Author:		Kevin Bray
-// Created:		01-12-07
+// File:        MTransform.cpp
+// Author:      Kevin Bray
+// Created:     01-12-07
 //
-// Purpose:		To manage a transform.
+// Purpose:     To manage a transform.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -67,5 +67,5 @@ SetTranslate( const MVec3& translate )
 void
 MTransform::Update() const
 {
-	
+    
 }

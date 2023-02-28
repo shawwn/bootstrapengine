@@ -16,25 +16,25 @@ namespace Editor.Dialogs
         {
             InitializeComponent();
 
-			// populate the brush categories.
+            // populate the brush categories.
             DirectoryInfo brushDir = new DirectoryInfo( Bootstrap.Settings.Get().GetBrushFolder() );
-			foreach( DirectoryInfo directory in brushDir.GetDirectories() )
-			{
-				// each folder within the brush folder is a category.
-				cbCategory.Items.Add( directory.Name );
-			}
+            foreach( DirectoryInfo directory in brushDir.GetDirectories() )
+            {
+                // each folder within the brush folder is a category.
+                cbCategory.Items.Add( directory.Name );
+            }
 
-			if( !cbCategory.Items.Contains( "default" ) )
-			{
-				// add the default category.
-				cbCategory.Items.Add( "default" );
-			}
+            if( !cbCategory.Items.Contains( "default" ) )
+            {
+                // add the default category.
+                cbCategory.Items.Add( "default" );
+            }
 
-			// select the default category.
-			cbCategory.SelectedItem = "default";
+            // select the default category.
+            cbCategory.SelectedItem = "default";
 
-			// highlight and focus on the brush name text box.
-			tbName.SelectAll();
+            // highlight and focus on the brush name text box.
+            tbName.SelectAll();
         }
 
         protected override bool ProcessDialogKey(Keys keyData)

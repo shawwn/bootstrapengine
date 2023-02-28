@@ -4,7 +4,7 @@
 #pragma once
 
 // define our minimum windows version as Windows XP.
-#define _WIN32_WINNT			0x0500
+#define _WIN32_WINNT            0x0500
 
 // exclude rarely-used stuff from Windows headers
 #define WIN32_LEAN_AND_MEAN
@@ -27,8 +27,8 @@
 #if 0
 namespace __INTERNAL_MATH_IMPL
 {
-	#include <math.h>
-	#include <float.h>
+    #include <math.h>
+    #include <float.h>
 };
 #else
 #include <math.h>
@@ -46,55 +46,55 @@ namespace __INTERNAL_MATH_IMPL
 #include <mmintrin.h>
 #include <xmmintrin.h>
 #ifdef _MSC_VER
-typedef int				__declspec( align( 16 ) )		int_aligned_16;
-typedef unsigned int	__declspec( align( 16 ) )		uint_aligned_16;
-typedef float			__declspec( align( 16 ) )		float_aligned_16;
-typedef double			__declspec( align( 16 ) )		double_aligned_16;
-#define DECLARE_ALIGNED( type, name, alignment )		type __declspec( align( alignment ) ) name
-#define DECLARE_ALIGNED_16( type, name )				type __declspec( align( 16 ) ) name
+typedef int             __declspec( align( 16 ) )       int_aligned_16;
+typedef unsigned int    __declspec( align( 16 ) )       uint_aligned_16;
+typedef float           __declspec( align( 16 ) )       float_aligned_16;
+typedef double          __declspec( align( 16 ) )       double_aligned_16;
+#define DECLARE_ALIGNED( type, name, alignment )        type __declspec( align( alignment ) ) name
+#define DECLARE_ALIGNED_16( type, name )                type __declspec( align( 16 ) ) name
 #elif __GNUC__
-typedef int				int_aligned_16					__attribute__ (( aligned( 16 ) ));
-typedef unsigned int	uint_aligned_16					__attribute__ (( aligned( 16 ) ));
-typedef float			float_aligned_16				__attribute__ (( aligned( 16 ) ));
-typedef double			double_aligned_16				__attribute__ (( aligned( 16 ) ));
-#define DECLARE_ALIGNED( type, name, alignment )		type name __attribute__ (( aligned( alignment ) ));
-#define DECLARE_ALIGNED_16( type, name )				type name __attribute__ (( aligned( 16 ) ));
+typedef int             int_aligned_16                  __attribute__ (( aligned( 16 ) ));
+typedef unsigned int    uint_aligned_16                 __attribute__ (( aligned( 16 ) ));
+typedef float           float_aligned_16                __attribute__ (( aligned( 16 ) ));
+typedef double          double_aligned_16               __attribute__ (( aligned( 16 ) ));
+#define DECLARE_ALIGNED( type, name, alignment )        type name __attribute__ (( aligned( alignment ) ));
+#define DECLARE_ALIGNED_16( type, name )                type name __attribute__ (( aligned( 16 ) ));
 #endif
 
 typedef std::string tstring;
 
 // A macro that can be used to append one value to another.
-#define BOOTSTRAP_MACRO_APPEND_DO_IT( x, y )				x##y
-#define BOOTSTRAP_MACRO_APPEND( x, y )					BOOTSTRAP_MACRO_APPEND_DO_IT( x, y )
+#define BOOTSTRAP_MACRO_APPEND_DO_IT( x, y )                x##y
+#define BOOTSTRAP_MACRO_APPEND( x, y )                  BOOTSTRAP_MACRO_APPEND_DO_IT( x, y )
 
 // template class that's used for our static assertions.  Note that
 // it has this ridiculously long name to avoid the chance of any name
 // collisions.
-#define BOOTSTRAP_STATIC_ASSERT_MANGLE_LINE_NUMBER( x )		BOOTSTRAP_MACRO_APPEND( x, __LINE__ )
+#define BOOTSTRAP_STATIC_ASSERT_MANGLE_LINE_NUMBER( x )     BOOTSTRAP_MACRO_APPEND( x, __LINE__ )
 
 template < bool success > class BootstrapStaticAssertFail;
 template <> class BootstrapStaticAssertFail< true > { };
 
 // static assertion macro.
-#define B_STATIC_ASSERT( x )								\
-	class BOOTSTRAP_STATIC_ASSERT_MANGLE_LINE_NUMBER( bootstrap_static_assert_fail_class ) { \
-		inline void fail()									\
-		{													\
-			BootstrapStaticAssertFail< ( x ) > failure;		\
-			failure = failure;								\
-		}													\
-	};
+#define B_STATIC_ASSERT( x )                                \
+    class BOOTSTRAP_STATIC_ASSERT_MANGLE_LINE_NUMBER( bootstrap_static_assert_fail_class ) { \
+        inline void fail()                                  \
+        {                                                   \
+            BootstrapStaticAssertFail< ( x ) > failure;     \
+            failure = failure;                              \
+        }                                                   \
+    };
 
 // static assertion macro.
-#define B_GLOBAL_STATIC_ASSERT( x )						\
-		typedef BootstrapStaticAssertFail< ( x ) > bootstrap_static_assert_fail_type
+#define B_GLOBAL_STATIC_ASSERT( x )                     \
+        typedef BootstrapStaticAssertFail< ( x ) > bootstrap_static_assert_fail_type
 
 #ifdef _DEBUG
 # ifdef _MSC_VER
 void BootstrapDebugBreak();
-#  define B_ASSERT( x )	{ if ( !( x ) ) { BootstrapDebugBreak(); } }
+#  define B_ASSERT( x ) { if ( !( x ) ) { BootstrapDebugBreak(); } }
 # else
-#  define B_ASSERT( x )	{ if ( !( x ) ) { DebugBreak(); } }
+#  define B_ASSERT( x ) { if ( !( x ) ) { DebugBreak(); } }
 # endif
 #else
 #define B_ASSERT( x )
@@ -111,50 +111,50 @@ extern void ( *HandleError )( const char *fmt, ... );
 #include "URef.h"
 #include "UConstRef.h"
 
-#define B_ERROR( msg )	{	B_ASSERT( false );	HandleError( "%s, line %d:\n\n%s", __FILE__, __LINE__, ( tstring( "" ) + msg ).c_str() );	}
+#define B_ERROR( msg )  {   B_ASSERT( false );  HandleError( "%s, line %d:\n\n%s", __FILE__, __LINE__, ( tstring( "" ) + msg ).c_str() );   }
 
-#define PI				3.141592f
-#define HALF_PI			1.570796f
-#define TWO_PI			6.283184f
-#define ONE_OVER_PI		0.318309f
-#define ONE_OVER_TWO_PI	0.1591545f
-#define SQRT2			1.414213f
-#define COS_45			0.707106f
+#define PI              3.141592f
+#define HALF_PI         1.570796f
+#define TWO_PI          6.283184f
+#define ONE_OVER_PI     0.318309f
+#define ONE_OVER_TWO_PI 0.1591545f
+#define SQRT2           1.414213f
+#define COS_45          0.707106f
 
-#define E				2.71828183f
+#define E               2.71828183f
 
 // MS specific type.
 #if !defined( _MSC_VER )
 typedef long long __int64;
 #endif
 
-inline bool	IsPow2( unsigned int i )	{	return ( !( ( i-1 )&i ) )&&( i!=0 );	}
+inline bool IsPow2( unsigned int i )    {   return ( !( ( i-1 )&i ) )&&( i!=0 );    }
 inline unsigned int FindPow2( unsigned int v )
 {
-	// if v == 0, simply return 1.
-	if ( !v )
-		return 1;
+    // if v == 0, simply return 1.
+    if ( !v )
+        return 1;
 
-	// find a power of 2.
-	if ( !IsPow2( v ) )
-	{
-		while ( !IsPow2( v ) )
-			v = v & ( v - 1 );
-		v <<= 1;
-	}
-	return v;
+    // find a power of 2.
+    if ( !IsPow2( v ) )
+    {
+        while ( !IsPow2( v ) )
+            v = v & ( v - 1 );
+        v <<= 1;
+    }
+    return v;
 }
-template < typename _T > _T Min( const _T& a, const _T& b )		{	return a < b ? a : b;		}
-template < typename _T > _T Max( const _T& a, const _T& b )		{	return a > b ? a : b;		}
-template < typename _T > _T Min3( const _T& a, const _T& b, const _T& c )	{	return Min( a, Min( b, c ) );	}
-template < typename _T > _T Max3( const _T& a, const _T& b, const _T& c )	{	return Max( a, Max( b, c ) );	}
+template < typename _T > _T Min( const _T& a, const _T& b )     {   return a < b ? a : b;       }
+template < typename _T > _T Max( const _T& a, const _T& b )     {   return a > b ? a : b;       }
+template < typename _T > _T Min3( const _T& a, const _T& b, const _T& c )   {   return Min( a, Min( b, c ) );   }
+template < typename _T > _T Max3( const _T& a, const _T& b, const _T& c )   {   return Max( a, Max( b, c ) );   }
 template < typename _T > _T Clamp( const _T& a, const _T& min, const _T& max )
 {
-	_T t = ( a > max ? max : a );
-	return ( t < min ? min : t );
+    _T t = ( a > max ? max : a );
+    return ( t < min ? min : t );
 }
-template < typename _T > void Swap( _T& a, _T& b )				{	_T c = a; a = b; b = c;		}
-template < typename _T > _T Sqr( const _T& v )					{	return v*v;					}
+template < typename _T > void Swap( _T& a, _T& b )              {   _T c = a; a = b; b = c;     }
+template < typename _T > _T Sqr( const _T& v )                  {   return v*v;                 }
 
 // string functions.
 inline tstring& operator << ( tstring& s, float f ) { std::ostringstream ss; ss << std::fixed << f; s += ss.str(); return s; }
@@ -179,31 +179,31 @@ inline float Log( float v ) { return __INTERNAL_MATH_IMPL::logf( v ); }
 inline float Log2( float v ) { return __INTERNAL_MATH_IMPL::log10f( v ) * 3.3219280948873623478703194294894f; }
 inline unsigned int Log2( unsigned int v )
 {
-	unsigned int i = 0;
-	while ( v != 0 )
-	{
-		v >>= 1;
-		++i;
-	}
-	return ( i-1 );
+    unsigned int i = 0;
+    while ( v != 0 )
+    {
+        v >>= 1;
+        ++i;
+    }
+    return ( i-1 );
 }
 inline float Log10( float v ) { return __INTERNAL_MATH_IMPL::log10f( v ); }
 inline float InvSqrtFast( float v )
 {
-	// newton approximation.
+    // newton approximation.
 #ifdef __GNUC__
-	// new GCC is picky about aliasing pointers of different types, so
-	// use a union instead
-	union { float f; int i; } f = { v };
-	f.i = 0x5F3759DF - ( f.i >> 1 );
-	return ( 3.0f - v * f.f * f.f ) * f.f * 0.5f;
+    // new GCC is picky about aliasing pointers of different types, so
+    // use a union instead
+    union { float f; int i; } f = { v };
+    f.i = 0x5F3759DF - ( f.i >> 1 );
+    return ( 3.0f - v * f.f * f.f ) * f.f * 0.5f;
 #else
-	float vHalf = 0.5f*v;
-	int i = *(int*)&v;
-	i = 0x5F3759DF - (i>>1);	// initial guess.
-	v = *(float*)&i;
-	v = v*(1.5f-vHalf*v*v);		// newton step.
-	return v;
+    float vHalf = 0.5f*v;
+    int i = *(int*)&v;
+    i = 0x5F3759DF - (i>>1);    // initial guess.
+    v = *(float*)&i;
+    v = v*(1.5f-vHalf*v*v);     // newton step.
+    return v;
 #endif
 }
 inline float Pow( float v, float exp ) { return __INTERNAL_MATH_IMPL::powf( v, exp ); }
@@ -218,16 +218,16 @@ inline bool ApproxEqual( float x, float y, float epsilon = 0.0001f ) { return Ab
 
 // UTF8 functions.
 size_t StrLenUTF8( const char* str );
-const char* NextCharUTF8( const char* str );	// returns NULL if the terminating char was hit.
+const char* NextCharUTF8( const char* str );    // returns NULL if the terminating char was hit.
 unsigned int GetCharLenUTF8( const char* chr );
 
 // helpful function for solving a quadratic equation.
 template < typename _T > void SolveQuadratic( float& posInt, float& negInt, const _T& a, const _T& b, const _T& c )
 {
-	// returns the y intercept.
-	float underSqrt = Sqrt( b*b - 4.0f * a * c );
-	posInt = ( -b + underSqrt ) / ( 2.0f * a );
-	negInt = ( -b - underSqrt ) / ( 2.0f * a );
+    // returns the y intercept.
+    float underSqrt = Sqrt( b*b - 4.0f * a * c );
+    posInt = ( -b + underSqrt ) / ( 2.0f * a );
+    negInt = ( -b - underSqrt ) / ( 2.0f * a );
 }
 
 // memory functions.
@@ -249,14 +249,14 @@ void TempFree( void* mem );
 // to the _T macro in tchar.h
 template < typename _TT > _TT* AlignedNew( unsigned int alignmentPow2, const _TT& prototype )
 {
-	void* mem = AlignedAlloc( alignmentPow2, sizeof( _TT ) );
-	return new( mem ) _TT( prototype );
+    void* mem = AlignedAlloc( alignmentPow2, sizeof( _TT ) );
+    return new( mem ) _TT( prototype );
 }
 
 template < typename T > void AlignedDelete( T* object )
 {
-	( *object ).~T();
-	AlignedFree( ( void* )object );
+    ( *object ).~T();
+    AlignedFree( ( void* )object );
 }
 
 // hash functions.
@@ -268,31 +268,31 @@ unsigned __int64 HashMem64( const void* mem, unsigned int size, unsigned __int64
 
 template < typename _T > _T Align16( _T v )
 {
-	// determine the 16-byte aligned pointer.
-	size_t offset = ( size_t )v;
-	offset = ( offset + 0xF ) & 0xFFFFFFF0;
-	return ( _T )offset;
+    // determine the 16-byte aligned pointer.
+    size_t offset = ( size_t )v;
+    offset = ( offset + 0xF ) & 0xFFFFFFF0;
+    return ( _T )offset;
 }
 
 template < typename _T > _T Lerp( const _T& v0, const _T& v1, float t )
 {
-	return ( _T )( ( 1.0f - t ) * v0 + t * v1 );
+    return ( _T )( ( 1.0f - t ) * v0 + t * v1 );
 }
 
 template < typename _T > _T Bezier3( const _T& v0, const _T& cp1, const _T& cp2, const _T& v2, float t )
 {
-	float t2 = t*t;
-	float t3 = t*t2;
-	float oneMinusT = (1.0f-t);
-	float oneMinusT2 = oneMinusT * oneMinusT;
-	float oneMinusT3 = oneMinusT * oneMinusT2;
-	return oneMinusT3*v0 + 3.0f*t*oneMinusT2*cp1 + 3.0f*t2*oneMinusT*cp2 + t3*v2;
+    float t2 = t*t;
+    float t3 = t*t2;
+    float oneMinusT = (1.0f-t);
+    float oneMinusT2 = oneMinusT * oneMinusT;
+    float oneMinusT3 = oneMinusT * oneMinusT2;
+    return oneMinusT3*v0 + 3.0f*t*oneMinusT2*cp1 + 3.0f*t2*oneMinusT*cp2 + t3*v2;
 }
 
 #ifdef _MSC_VER
 
-#define LOCK_FREE			0
-#define LOCK_TAKEN			1
+#define LOCK_FREE           0
+#define LOCK_TAKEN          1
 
 #ifndef B_NO_INTERLOCKED_INTRINSICS
 #include <intrin.h>
@@ -300,27 +300,27 @@ template < typename _T > _T Bezier3( const _T& v0, const _T& cp1, const _T& cp2,
 
 inline int LockSwap( volatile int* dst, int src )
 {
-	return ( int )_InterlockedExchange( ( volatile long* )dst, ( long )src );
+    return ( int )_InterlockedExchange( ( volatile long* )dst, ( long )src );
 }
 
 inline int LockCompareAndSwap( volatile int* dst, int src, int cmp )
 {
-	return ( int )_InterlockedCompareExchange( ( volatile long* )dst, ( long )src, ( long )cmp );
+    return ( int )_InterlockedCompareExchange( ( volatile long* )dst, ( long )src, ( long )cmp );
 }
 
 inline int LockDecrement( volatile int* dst )
 {
-	return ( int )_InterlockedDecrement( ( volatile long* )dst );
+    return ( int )_InterlockedDecrement( ( volatile long* )dst );
 }
 
 inline int LockIncrement( volatile int* dst )
 {
-	return ( int )_InterlockedIncrement( ( volatile long* )dst );
+    return ( int )_InterlockedIncrement( ( volatile long* )dst );
 }
 
 inline void LockPause()
 {
-	__asm pause;
+    __asm pause;
 }
 #else
 inline int LockSwap( volatile int* dst, int src ) { return 0; }
@@ -332,47 +332,47 @@ inline void LockPause() { }
 
 inline volatile int* InitLock( volatile int* dst )
 {
-	LockSwap( dst, LOCK_FREE );
-	return dst;
+    LockSwap( dst, LOCK_FREE );
+    return dst;
 }
 
 inline void TakeLockWait( volatile int* dst )
 {
-	// wait until a lock is freed.
-	while ( LockSwap( dst, LOCK_TAKEN ) == LOCK_TAKEN )
-		LockPause();
+    // wait until a lock is freed.
+    while ( LockSwap( dst, LOCK_TAKEN ) == LOCK_TAKEN )
+        LockPause();
 }
 
 inline bool TryTakeLock( volatile int* dst )
 {
-	// return true if the lock was taken, false if not.
-	return ( LockSwap( dst, LOCK_TAKEN ) != LOCK_TAKEN );
+    // return true if the lock was taken, false if not.
+    return ( LockSwap( dst, LOCK_TAKEN ) != LOCK_TAKEN );
 }
 
 inline void FreeLock( volatile int* dst )
 {
-	LockSwap( dst, LOCK_FREE );
+    LockSwap( dst, LOCK_FREE );
 }
 
 inline bool IsLockFree( volatile int* dst )
 {
-	if ( LockSwap( dst, LOCK_TAKEN ) == LOCK_FREE )
-	{
-		LockSwap( dst, LOCK_FREE );
-		return true;
-	}
-	return true;
+    if ( LockSwap( dst, LOCK_TAKEN ) == LOCK_FREE )
+    {
+        LockSwap( dst, LOCK_FREE );
+        return true;
+    }
+    return true;
 }
 
 inline bool IsLockTaken( volatile int* dst )
 {
-	return !IsLockFree( dst );
+    return !IsLockFree( dst );
 }
 
 inline void WaitLockFree( volatile int* dst )
 {
-	TakeLockWait( dst );
-	FreeLock( dst );
+    TakeLockWait( dst );
+    FreeLock( dst );
 }
 
 #endif
@@ -380,7 +380,7 @@ inline void WaitLockFree( volatile int* dst )
 class StrLessPred
 {
 public:
-	void operator () ( const tstring& a, const tstring& b ) const {	return ( stricmp( a.c_str(), b.c_str() ) < 0 ); }
+    void operator () ( const tstring& a, const tstring& b ) const { return ( stricmp( a.c_str(), b.c_str() ) < 0 ); }
 };
 */
 
@@ -393,8 +393,8 @@ tstring& StrToLower( tstring& str );
 template < typename _T, class iterator >
 void FastVectorErase( std::vector< _T >& vec, iterator iter )
 {
-	*iter = vec.back();
-	vec.pop_back();
+    *iter = vec.back();
+    vec.pop_back();
 }
 
 // portability defines

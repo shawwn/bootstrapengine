@@ -9,29 +9,29 @@ using Syncfusion.Windows.Forms;
 
 namespace Editor.Dialogs
 {
-	public partial class BaseDialog : Office2007Form
-	{
-		public BaseDialog()
-		{
-			InitializeComponent();
-		}
+    public partial class BaseDialog : Office2007Form
+    {
+        public BaseDialog()
+        {
+            InitializeComponent();
+        }
 
-		protected override bool ProcessDialogKey( Keys keyData )
-		{
-			if( keyData == Keys.Enter )
-			{
-				this.DialogResult = DialogResult.OK;
-				this.Close();
-				return true;
-			}
-			else if( keyData == Keys.Escape )
-			{
-				this.DialogResult = DialogResult.Cancel;
-				this.Close();
-				return true;
-			}
+        protected override bool ProcessDialogKey( Keys keyData )
+        {
+            if( keyData == Keys.Enter )
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                return true;
+            }
+            else if( keyData == Keys.Escape )
+            {
+                this.DialogResult = DialogResult.Cancel;
+                this.Close();
+                return true;
+            }
 
-			return base.ProcessDialogKey( keyData );
-		}
-	}
+            return base.ProcessDialogKey( keyData );
+        }
+    }
 }

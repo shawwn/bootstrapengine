@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrQueryMgr.h
-// Author:		Kevin Bray
-// Created:		09-10-06
+// File:        GrQueryMgr.h
+// Author:      Kevin Bray
+// Created:     09-10-06
 //
-// Purpose:		To manage graphics card queries.
+// Purpose:     To manage graphics card queries.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -19,19 +19,19 @@
 class GrQueryMgr
 {
 public:
-	GrQueryMgr();
-	~GrQueryMgr();
+    GrQueryMgr();
+    ~GrQueryMgr();
 
-	// gets or creates an unused query.
-	URef< GrQuery >		GetQuery( GrQuery::EQUERYTYPE type );
+    // gets or creates an unused query.
+    URef< GrQuery >     GetQuery( GrQuery::EQUERYTYPE type );
 
-	// context reset notification.
-	void				PreContextReset();
-	void				PostContextReset();
+    // context reset notification.
+    void                PreContextReset();
+    void                PostContextReset();
 
 private:
-	typedef UFastArray< URef< GrQuery > > QueryArray;
+    typedef UFastArray< URef< GrQuery > > QueryArray;
 
-	// array of queries.
-	QueryArray			_queries[ GrQuery::EQT_COUNT ];
+    // array of queries.
+    QueryArray          _queries[ GrQuery::EQT_COUNT ];
 };

@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrUberPatchSet.h
-// Author:		Kevin Bray
-// Created:		12-09-08
+// File:        GrUberPatchSet.h
+// Author:      Kevin Bray
+// Created:     12-09-08
 //
-// Purpose:		To manage a set of ubertexture patches.
+// Purpose:     To manage a set of ubertexture patches.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -27,56 +27,56 @@ class UPath;
 class GrUberPatchSet
 {
 public:
-	GrUberPatchSet( GrPolygonUberPatchGroup* uberData, const GrPolygonUberUVMapper& uberMapper );
-	GrUberPatchSet( UReader& reader );
-	~GrUberPatchSet();
+    GrUberPatchSet( GrPolygonUberPatchGroup* uberData, const GrPolygonUberUVMapper& uberMapper );
+    GrUberPatchSet( UReader& reader );
+    ~GrUberPatchSet();
 
-	// sets the world transform.
-	void					SetWorldXForm( const MMat4x4& worldXForm, const MMat3x3& worldNormalRot,
-										   const MMat4x4& invWorldXForm );
+    // sets the world transform.
+    void                    SetWorldXForm( const MMat4x4& worldXForm, const MMat3x3& worldNormalRot,
+                                           const MMat4x4& invWorldXForm );
 
-	// calculates tile LOD and then caches tiles.
-	void					CacheTiles( const GrCamera* camera, unsigned int screenWidth, unsigned int screenHeight );
+    // calculates tile LOD and then caches tiles.
+    void                    CacheTiles( const GrCamera* camera, unsigned int screenWidth, unsigned int screenHeight );
 
-	// load/save functionality.
-	void					Load( UReader& reader );
-	void					Save( UWriter& writer );
+    // load/save functionality.
+    void                    Load( UReader& reader );
+    void                    Save( UWriter& writer );
 
 private:
-	struct SPatchTileInfo
-	{
-		unsigned short uberTexIndex;
-		unsigned short startTileX;
-		unsigned short startTileY;
-		unsigned short endTileX;
-		unsigned short endTileY;
-	};
+    struct SPatchTileInfo
+    {
+        unsigned short uberTexIndex;
+        unsigned short startTileX;
+        unsigned short startTileY;
+        unsigned short endTileX;
+        unsigned short endTileY;
+    };
 
-	void					Build( GrPolygonUberPatchGroup* uberData, const GrPolygonUberUVMapper& uberMapper );
-	void					AllocArrays();
-	void					Clean();
+    void                    Build( GrPolygonUberPatchGroup* uberData, const GrPolygonUberUVMapper& uberMapper );
+    void                    AllocArrays();
+    void                    Clean();
 
-	// ubertexture.
-	URef< GrUberTexture >*	_uberTextures;
-	unsigned int			_uberTextureCount;
+    // ubertexture.
+    URef< GrUberTexture >*  _uberTextures;
+    unsigned int            _uberTextureCount;
 
-	// patch data.
-	MMat4x4					_invWorldXForm;
-	unsigned int			_patchCount;
+    // patch data.
+    MMat4x4                 _invWorldXForm;
+    unsigned int            _patchCount;
 
-	// ubertexture tiles per meter.
-	float					_tilesPerMeter;
+    // ubertexture tiles per meter.
+    float                   _tilesPerMeter;
 
-	// local space data for each patch.
-	MAABox*					_localBounds;
-	MPlane*					_localPlanes;
-	MMat4x4*				_localToTextureMatrices;
+    // local space data for each patch.
+    MAABox*                 _localBounds;
+    MPlane*                 _localPlanes;
+    MMat4x4*                _localToTextureMatrices;
 
-	// world space data for each patch.
-	MAABox*					_worldBounds;
-	MPlane*					_worldPlanes;
-	MMat4x4*				_worldToTextureMatrices;
+    // world space data for each patch.
+    MAABox*                 _worldBounds;
+    MPlane*                 _worldPlanes;
+    MMat4x4*                _worldToTextureMatrices;
 
-	// patch tile info.
-	SPatchTileInfo*			_patchTileInfo;
+    // patch tile info.
+    SPatchTileInfo*         _patchTileInfo;
 };

@@ -1,10 +1,10 @@
 //----------------------------------------------------------
-// File:		UTEncode.h
-// Author:		Kevin Bray
-// Created:		09-05-08
+// File:        UTEncode.h
+// Author:      Kevin Bray
+// Created:     09-05-08
 //
-// Purpose:		To provide a thread for encoding and decoding
-//				uber-tiles.
+// Purpose:     To provide a thread for encoding and decoding
+//              uber-tiles.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------

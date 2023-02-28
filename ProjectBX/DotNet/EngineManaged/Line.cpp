@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		Line.cpp
-// Author:		Shawn Presser
-// Created:		09-20-08
+// File:        Line.cpp
+// Author:      Shawn Presser
+// Created:     09-20-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -19,30 +19,30 @@
 //----------------------------------------------------------
 Bootstrap::Line::Line( const MLine& line )
 {
-	_point = line.GetPt();
-	_dir = line.GetDir();
+    _point = line.GetPt();
+    _dir = line.GetDir();
 }
 
 //----------------------------------------------------------
 MLine 
 Bootstrap::Line::ToMLine()
 {
-	return MLine( _point.ToMVec3(), _dir.ToMVec3() );
+    return MLine( _point.ToMVec3(), _dir.ToMVec3() );
 }
 
 //----------------------------------------------------------
 Bootstrap::Line::Line( Vector3 point, Vector3 dir )
 {
-	_point = point;
-	_dir = dir.Normalized;
+    _point = point;
+    _dir = dir.Normalized;
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Line::ToString()
 {
-	return "Pt " + _point.ToString() + " Dir " + _dir.ToString();
-}		
+    return "Pt " + _point.ToString() + " Dir " + _dir.ToString();
+}       
 
 //----------------------------------------------------------
 Bootstrap::Line::operator MLine( Line v )

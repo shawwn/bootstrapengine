@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		GrRenderInteraction.cpp
-// Author:		Kevin Bray
-// Created:		11-14-05
+// File:        GrRenderInteraction.cpp
+// Author:      Kevin Bray
+// Created:     11-14-05
 // Copyright © 2004 Bootstrap Games
 //----------------------------------------------------------
 #include "engine_afx.h"
@@ -23,14 +23,14 @@ GrRenderInteraction* gGrRenderInteraction = 0;
 GrRenderInteraction::GrRenderInteraction()
 : _inRender( false )
 {
-	B_ASSERT( gGrRenderInteraction == 0 );
-	gGrRenderInteraction = this;
+    B_ASSERT( gGrRenderInteraction == 0 );
+    gGrRenderInteraction = this;
 }
 
 //----------------------------------------------------------
 GrRenderInteraction::~GrRenderInteraction()
 {
-	gGrRenderInteraction = 0;
+    gGrRenderInteraction = 0;
 }
 
 
@@ -42,31 +42,31 @@ GrRenderInteraction::~GrRenderInteraction()
 void
 GrRenderInteraction::BeginRender()
 {
-	// make sure BeginRender() hasn't already been called!
-	B_ASSERT( _inRender == false );
-	_inRender = true;
+    // make sure BeginRender() hasn't already been called!
+    B_ASSERT( _inRender == false );
+    _inRender = true;
 }
 
 //----------------------------------------------------------
 void
 GrRenderInteraction::EndRender()
 {
-	// make sure BeginRender() was called first!
-	B_ASSERT( _inRender == true );
-	_inRender = false;
+    // make sure BeginRender() was called first!
+    B_ASSERT( _inRender == true );
+    _inRender = false;
 
-	_camera = 0;
-	_vertexProg = 0;
-	_fragmentProg = 0;
-	_light = 0;
-	_pass = 0;
+    _camera = 0;
+    _vertexProg = 0;
+    _fragmentProg = 0;
+    _light = 0;
+    _pass = 0;
 }
 
 //----------------------------------------------------------
 void
 GrRenderInteraction::SetRenderMode( ERENDERMODE mode )
 {
-	
+    
 }
 
 //----------------------------------------------------------

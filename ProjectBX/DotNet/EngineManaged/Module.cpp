@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		Module.cpp
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        Module.cpp
+// Author:      Shawn Presser
+// Created:     09-23-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -25,23 +25,23 @@
 void 
 Bootstrap::Module::Startup()
 {
-	// DLL initialization.
-	__crt_dll_initialize();
-	_EngineStarted = true;
+    // DLL initialization.
+    __crt_dll_initialize();
+    _EngineStarted = true;
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Module::Shutdown()
 {
-	// DLL shutdown.
-	__crt_dll_terminate();
-	_EngineStarted = false;
+    // DLL shutdown.
+    __crt_dll_terminate();
+    _EngineStarted = false;
 }
 
 //----------------------------------------------------------
 bool 
 Bootstrap::Module::IsActive()
 {
-	return _EngineStarted;
+    return _EngineStarted;
 }

@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		BscArrayTable.cpp
-// Author:		Kevin Bray
-// Created:		07-03-05
+// File:        BscArrayTable.cpp
+// Author:      Kevin Bray
+// Created:     07-03-05
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "common_afx.h"
@@ -48,17 +48,17 @@ BscArrayTable::~BscArrayTable()
 void
 BscArrayTable::AddArray( const tstring& name, URef< UExprArray > array )
 {
-	B_ASSERT( array != 0 );
-	_arrays[ name ] = array;
+    B_ASSERT( array != 0 );
+    _arrays[ name ] = array;
 }
 
 //----------------------------------------------------------
 URef< UExprArray >
 BscArrayTable::FindArray( const tstring& name ) const
 {
-	// find the array.
-	ArrayMap::const_iterator iter = _arrays.find( name );
-	if ( iter == _arrays.end() )
-		return 0;
-	return iter->second;
+    // find the array.
+    ArrayMap::const_iterator iter = _arrays.find( name );
+    if ( iter == _arrays.end() )
+        return 0;
+    return iter->second;
 }

@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		depth.vsh
-// Author:		Kevin Bray
-// Created:		02-07-06
+// File:        depth.vsh
+// Author:      Kevin Bray
+// Created:     02-07-06
 // Copyright © 2004 Bootstrap Games.  All rights reserved.
 //----------------------------------------------------------
 
@@ -23,24 +23,24 @@ varying vec2 v_TexCoord;
 //----------------------------------------------------------
 // uniforms
 uniform mat4 u_ModelViewProjectionMatrix;
-uniform vec4 u_ViewPos;				// X,Y,Z,undef
+uniform vec4 u_ViewPos;             // X,Y,Z,undef
 uniform mat4x2 u_TextureMatrix;
 
 //----------------------------------------------------------
 // main
 void main()
 {
-	// calculate the outgoing position.
-	gl_Position = u_ModelViewProjectionMatrix * vec4( a_Position.xyz, 1.0 );
+    // calculate the outgoing position.
+    gl_Position = u_ModelViewProjectionMatrix * vec4( a_Position.xyz, 1.0 );
 
-	// calculate the eye vector.
-	vec3 localEyeVec = u_ViewPos.xyz - a_Position.xyz;
+    // calculate the eye vector.
+    vec3 localEyeVec = u_ViewPos.xyz - a_Position.xyz;
 
-	// transform the eye vector into tangent space.
-	v_LocalEyeVec.x = dot( localEyeVec, a_Tangent.xyz );
-	v_LocalEyeVec.y = dot( localEyeVec, a_Binormal.xyz );
-	v_LocalEyeVec.z = dot( localEyeVec, a_Normal.xyz );
-	
-	// calculate the bump map lookup.
-	v_TexCoord = u_TextureMatrix * vec4( a_TexCoord.xy, 0.0, 1.0 );
+    // transform the eye vector into tangent space.
+    v_LocalEyeVec.x = dot( localEyeVec, a_Tangent.xyz );
+    v_LocalEyeVec.y = dot( localEyeVec, a_Binormal.xyz );
+    v_LocalEyeVec.z = dot( localEyeVec, a_Normal.xyz );
+    
+    // calculate the bump map lookup.
+    v_TexCoord = u_TextureMatrix * vec4( a_TexCoord.xy, 0.0, 1.0 );
 }

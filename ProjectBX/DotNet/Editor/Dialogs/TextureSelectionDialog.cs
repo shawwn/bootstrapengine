@@ -31,8 +31,8 @@ namespace Editor.Dialogs
             // ubertexture dialog.
             bnCreate.Visible = _uberTextures;
 
-			// focus the thumbnail selector.
-			thumbnailSelector.Focus();
+            // focus the thumbnail selector.
+            thumbnailSelector.Focus();
         }
 
 
@@ -95,28 +95,28 @@ namespace Editor.Dialogs
         }
 
         //-----------------------
-		protected override bool ProcessDialogKey(Keys keyData)
-		{
-			switch( keyData )
-			{
-				case Keys.Enter:
-					if( !tbFilter.Focused )
-					{
-						this.DialogResult = DialogResult.OK;
-						this.Close();
-						return true;
-					}
-					break;
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            switch( keyData )
+            {
+                case Keys.Enter:
+                    if( !tbFilter.Focused )
+                    {
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                        return true;
+                    }
+                    break;
 
-				case Keys.Escape:
-					{
-						this.DialogResult = DialogResult.Cancel;
-						this.Close();
-					}
-					return true;
-			}
-			return base.ProcessDialogKey( keyData );
-		}
+                case Keys.Escape:
+                    {
+                        this.DialogResult = DialogResult.Cancel;
+                        this.Close();
+                    }
+                    return true;
+            }
+            return base.ProcessDialogKey( keyData );
+        }
 
         //-----------------------
         private void cbPackage_SelectedIndexChanged(object sender, EventArgs e)
@@ -142,9 +142,9 @@ namespace Editor.Dialogs
                     FileInfo[] imageFiles = texFolder.GetFiles(tbFilter.Text);
                     foreach (FileInfo file in imageFiles)
                     {
-						// ignore files that are not .tga or .dds files.
-	                    if( file.Extension != ".tga" && file.Extension != ".dds" )
-	                        continue;
+                        // ignore files that are not .tga or .dds files.
+                        if( file.Extension != ".tga" && file.Extension != ".dds" )
+                            continue;
 
                         // get the thumbnail from the thumbnail manager.
                         Bitmap image = Program.ThumbnailMgr.GetThumbnail(file.FullName);

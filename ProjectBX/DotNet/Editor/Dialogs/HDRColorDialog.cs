@@ -19,7 +19,7 @@ namespace Editor.Dialogs
         private float _alpha;
         private const float maxIntensity = 4.0f;
         private bool _localUpdate;
-		private bool _colorChanging;
+        private bool _colorChanging;
         private bool _hideOnClose;
 
 
@@ -61,31 +61,31 @@ namespace Editor.Dialogs
         // public interface.
         //================================
 
-		//--------------------------------
-		public event EventHandler ColorChanged;
+        //--------------------------------
+        public event EventHandler ColorChanged;
 
-		//--------------------------------
-		public Bootstrap.Color Color
-		{
-			get 
-			{
-				float r, g, b;
-				CalcRGB( out r, out g, out b,
-					_hue, _saturation, _intensity );
-				return new Bootstrap.Color( r, g, b, _alpha );
-			}
-			set
-			{
-				_alpha = value.A;
-				CalcHSV( out _hue, out _saturation, out _intensity, 
-					value.R, value.G, value.B );
-	            GenSaturationBitmap();
-	            GenFinalColorBitmap();
+        //--------------------------------
+        public Bootstrap.Color Color
+        {
+            get 
+            {
+                float r, g, b;
+                CalcRGB( out r, out g, out b,
+                    _hue, _saturation, _intensity );
+                return new Bootstrap.Color( r, g, b, _alpha );
+            }
+            set
+            {
+                _alpha = value.A;
+                CalcHSV( out _hue, out _saturation, out _intensity, 
+                    value.R, value.G, value.B );
+                GenSaturationBitmap();
+                GenFinalColorBitmap();
                 UpdateControls();
-				if( !_colorChanging )
-					RaiseColorChangedEvent();
-			}
-		}
+                if( !_colorChanging )
+                    RaiseColorChangedEvent();
+            }
+        }
 
         //--------------------------------
         public bool HideOnClose
@@ -101,37 +101,37 @@ namespace Editor.Dialogs
         
         private void hueImageBox_MouseEvent(object sender, MouseEventArgs e)
         {
-			if( e.Button == MouseButtons.Left )
-			{
-	            // figure out where in the image box the user clicked.  That
-	            // will let us select the hue.
-	            MouseEventArgs args = e as MouseEventArgs;
-	            _hue = 1.0f - Util.WhereInRange( args.Y, 0, hueImageBox.Height );
-	            hueTextBox.Text = _hue.ToString();
+            if( e.Button == MouseButtons.Left )
+            {
+                // figure out where in the image box the user clicked.  That
+                // will let us select the hue.
+                MouseEventArgs args = e as MouseEventArgs;
+                _hue = 1.0f - Util.WhereInRange( args.Y, 0, hueImageBox.Height );
+                hueTextBox.Text = _hue.ToString();
 
-	            // update the saturation image box with the new hue.
-	            GenSaturationBitmap();
-	            GenFinalColorBitmap();
-	            UpdateRGBControls();
-				RaiseColorChangedEvent();
-			}
+                // update the saturation image box with the new hue.
+                GenSaturationBitmap();
+                GenFinalColorBitmap();
+                UpdateRGBControls();
+                RaiseColorChangedEvent();
+            }
         }
 
         private void saturationImageBox_MouseEvent(object sender, MouseEventArgs e)
         {
-			if( e.Button == MouseButtons.Left )
-			{
-	            // figure out where in the image box the user clicked.  That
-	            // will let us select the saturation.
-	            MouseEventArgs args = e as MouseEventArgs;
-	            _saturation = Util.WhereInRange( args.Y, 0, saturationImageBox.Height );
-	            saturationTextBox.Text = _saturation.ToString();
-	            
-	            // update the RGB color bitmap.
-	            UpdateRGBControls();
-	            GenFinalColorBitmap();
-				RaiseColorChangedEvent();
-			}
+            if( e.Button == MouseButtons.Left )
+            {
+                // figure out where in the image box the user clicked.  That
+                // will let us select the saturation.
+                MouseEventArgs args = e as MouseEventArgs;
+                _saturation = Util.WhereInRange( args.Y, 0, saturationImageBox.Height );
+                saturationTextBox.Text = _saturation.ToString();
+                
+                // update the RGB color bitmap.
+                UpdateRGBControls();
+                GenFinalColorBitmap();
+                RaiseColorChangedEvent();
+            }
         }
 
         private void hueTextBox_TextChanged(object sender, EventArgs e)
@@ -145,7 +145,7 @@ namespace Editor.Dialogs
             UpdateRGBControls();
             GenSaturationBitmap();
             GenFinalColorBitmap();
-			RaiseColorChangedEvent();
+            RaiseColorChangedEvent();
         }
 
         private void saturationTextBox_TextChanged(object sender, EventArgs e)
@@ -157,7 +157,7 @@ namespace Editor.Dialogs
             _saturation = GetTextBoxValue(saturationTextBox, 0.0f, 1.0f, 1.0f);
             UpdateRGBControls();
             GenFinalColorBitmap();
-			RaiseColorChangedEvent();
+            RaiseColorChangedEvent();
         }
 
         private void redTextBox_TextChanged(object sender, EventArgs e)
@@ -179,7 +179,7 @@ namespace Editor.Dialogs
             UpdateHSVControls();
             GenSaturationBitmap();
             GenFinalColorBitmap();
-			RaiseColorChangedEvent();
+            RaiseColorChangedEvent();
         }
 
         private void greenTextBox_TextChanged(object sender, EventArgs e)
@@ -201,7 +201,7 @@ namespace Editor.Dialogs
             UpdateHSVControls();
             GenSaturationBitmap();
             GenFinalColorBitmap();
-			RaiseColorChangedEvent();
+            RaiseColorChangedEvent();
         }
 
         private void blueTextBox_TextChanged(object sender, EventArgs e)
@@ -223,7 +223,7 @@ namespace Editor.Dialogs
             UpdateHSVControls();
             GenSaturationBitmap();
             GenFinalColorBitmap();
-			RaiseColorChangedEvent();
+            RaiseColorChangedEvent();
         }
 
         private void intensityTextBox_TextChanged(object sender, EventArgs e)
@@ -237,7 +237,7 @@ namespace Editor.Dialogs
             UpdateRGBControls();
             UpdateIntensityTrackBar();
             GenFinalColorBitmap();
-			RaiseColorChangedEvent();
+            RaiseColorChangedEvent();
         }
 
         private void intensityTrackBar_Scroll(object sender, EventArgs e)
@@ -258,13 +258,13 @@ namespace Editor.Dialogs
             _localUpdate = false;
             UpdateRGBControls();
             GenFinalColorBitmap();
-			RaiseColorChangedEvent();
+            RaiseColorChangedEvent();
         }
 
         private void alphaTextBox_TextChanged(object sender, EventArgs e)
         {
             _alpha = GetTextBoxValue(alphaTextBox, 0.0f, 4.0f, 1.0f);
-			RaiseColorChangedEvent();
+            RaiseColorChangedEvent();
         }
 
 
@@ -272,13 +272,13 @@ namespace Editor.Dialogs
         // private methods.
         //================================
 
-		private void RaiseColorChangedEvent()
-		{
-			_colorChanging = true;
-			if( ColorChanged != null )
-				ColorChanged( this, new EventArgs() );
-			_colorChanging = false;
-		}
+        private void RaiseColorChangedEvent()
+        {
+            _colorChanging = true;
+            if( ColorChanged != null )
+                ColorChanged( this, new EventArgs() );
+            _colorChanging = false;
+        }
 
         private void UpdateControls()
         {
@@ -599,46 +599,46 @@ namespace Editor.Dialogs
             return v;
         }
 
-		private void saturationImageBox_Paint( object sender, PaintEventArgs e )
-		{
-			// paint the ImageBox bitmap.
-			base.OnPaint( e );
+        private void saturationImageBox_Paint( object sender, PaintEventArgs e )
+        {
+            // paint the ImageBox bitmap.
+            base.OnPaint( e );
 
-			// paint a black border.
-			Util.DrawBorder( e.Graphics, Pens.Black );
-		}
+            // paint a black border.
+            Util.DrawBorder( e.Graphics, Pens.Black );
+        }
 
-		private void hueImageBox_Paint( object sender, PaintEventArgs e )
-		{
-			// paint the ImageBox bitmap.
-			base.OnPaint( e );
+        private void hueImageBox_Paint( object sender, PaintEventArgs e )
+        {
+            // paint the ImageBox bitmap.
+            base.OnPaint( e );
 
-			// paint a black border.
-			Util.DrawBorder( e.Graphics, Pens.Black );
-		}
+            // paint a black border.
+            Util.DrawBorder( e.Graphics, Pens.Black );
+        }
 
-		private void finalColorImageBox_Paint( object sender, PaintEventArgs e )
-		{
-			// paint the ImageBox bitmap.
-			base.OnPaint( e );
+        private void finalColorImageBox_Paint( object sender, PaintEventArgs e )
+        {
+            // paint the ImageBox bitmap.
+            base.OnPaint( e );
 
-			// paint a black border.
-			Util.DrawBorder( e.Graphics, Pens.Black );
-		}
+            // paint a black border.
+            Util.DrawBorder( e.Graphics, Pens.Black );
+        }
 
-		protected override void OnPaintBackground( PaintEventArgs e )
-		{
-			// paint the necessities.
-			base.OnPaintBackground( e );
+        protected override void OnPaintBackground( PaintEventArgs e )
+        {
+            // paint the necessities.
+            base.OnPaintBackground( e );
 
-			// paint some dropshadows.
-			Graphics g = e.Graphics;
-			Util.FillDropshadows( g, Brushes.Black, 2.0f, 2.0f,
-			  new Control[] { 
-	            saturationImageBox, hueImageBox, finalColorImageBox,
-	            saturationTextBox, hueTextBox,
-	            redTextBox, greenTextBox, blueTextBox, alphaTextBox } );
-		}
+            // paint some dropshadows.
+            Graphics g = e.Graphics;
+            Util.FillDropshadows( g, Brushes.Black, 2.0f, 2.0f,
+              new Control[] { 
+                saturationImageBox, hueImageBox, finalColorImageBox,
+                saturationTextBox, hueTextBox,
+                redTextBox, greenTextBox, blueTextBox, alphaTextBox } );
+        }
 
         private void HDRColorDialog_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -648,5 +648,5 @@ namespace Editor.Dialogs
                 e.Cancel = true;
             }
         }
-	}
+    }
 }

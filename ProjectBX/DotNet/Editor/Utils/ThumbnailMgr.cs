@@ -123,38 +123,38 @@ namespace Editor.Utils
         }
 
         public Bitmap GetThumbnail( Bootstrap.Brush brush )
-		{
-			// get the diffuse image and use that to display the brush.
-			Bitmap image = null;
-			string imageFile = brush.GetImageName( Bootstrap.Brush.Stage.Diffuse );
+        {
+            // get the diffuse image and use that to display the brush.
+            Bitmap image = null;
+            string imageFile = brush.GetImageName( Bootstrap.Brush.Stage.Diffuse );
 
             // if there is no diffuse image, try to use the mask as our image.
             if (imageFile == "")
                 imageFile = brush.GetMaskName();
 
             // now try to create a valid thumbnail.
-			if (imageFile != "")	
+            if (imageFile != "")    
                 image = GetThumbnail( imageFile );
 
-			// if we couldn't find a decent thumbnail, give it an error
-			// image.
-			if( image == null )
-				image = GetErrorThumbnail();
+            // if we couldn't find a decent thumbnail, give it an error
+            // image.
+            if( image == null )
+                image = GetErrorThumbnail();
 
-			return image;
-		}
+            return image;
+        }
 
         public Bitmap GetThumbnail( Bootstrap.BrushPalette palette )
-		{
-			// if there are no brushes, use the error thumbnail.
-			if( palette.GetBrushCount() == 0 )
-			{
-				return GetErrorThumbnail();
-			}
+        {
+            // if there are no brushes, use the error thumbnail.
+            if( palette.GetBrushCount() == 0 )
+            {
+                return GetErrorThumbnail();
+            }
 
-			// otherwise return the thumbnail of the first brush.
-			return GetThumbnail( palette.GetBrush( 0 ) );
-		}
+            // otherwise return the thumbnail of the first brush.
+            return GetThumbnail( palette.GetBrush( 0 ) );
+        }
 
         public Bitmap GetErrorThumbnail()
         {

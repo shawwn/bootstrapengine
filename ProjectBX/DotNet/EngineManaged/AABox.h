@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		AABox.h
-// Author:		Shawn Presser
-// Created:		09-20-08
+// File:        AABox.h
+// Author:      Shawn Presser
+// Created:     09-20-08
 //
-// Purpose:		To represent an axis aligned box in 3D space.
+// Purpose:     To represent an axis aligned box in 3D space.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -25,19 +25,19 @@ namespace Bootstrap
     //**********************************************************
     // value class AABox
     //**********************************************************
-	public value class AABox
-	{
-	internal:
+    public value class AABox
+    {
+    internal:
         // constructs an axis-aligned box from an MAABox.
-		AABox( const MAABox& aaBox );
+        AABox( const MAABox& aaBox );
 
         // converts the axis-aligned box to an MAABox.
-		MAABox                      ToMAABox();
+        MAABox                      ToMAABox();
 
-	public:
+    public:
         // constructs an axis-aligned box with the specified center 
         // and half-extents.
-		AABox( Vector3 center, Vector3 halfExtents );
+        AABox( Vector3 center, Vector3 halfExtents );
 
         // constructs an axis-aligned box that encompasses the
         // specified oriented box.
@@ -49,8 +49,8 @@ namespace Bootstrap
         // gets or sets the half-extents of the axis-aligned box.
         property Vector3            HalfExtents;
 
-		// computes the 8 world space corners of the axis-aligned box.
-		property array< Vector3 >^	Corners
+        // computes the 8 world space corners of the axis-aligned box.
+        property array< Vector3 >^  Corners
         {
             array< Vector3 >^           get();
         }
@@ -66,17 +66,17 @@ namespace Bootstrap
         //bool                      Intersect( Sphere sphere );
 
         // expands the axis-aligned box by the box passed in.
-        bool			            AddBoxToVolume( AABox box );
-        bool			            AddBoxToVolume( OBox box );
+        bool                        AddBoxToVolume( AABox box );
+        bool                        AddBoxToVolume( OBox box );
 
         // returns whether the specified point is inside the axis-aligned box.
-        bool			            IsInside( Vector3 point );
+        bool                        IsInside( Vector3 point );
 
         // returns whether the axis-aligned box is in front of, intersects with,
         // or is behind the specified plane. 
-        int				            GetSide( Plane plane );
+        int                         GetSide( Plane plane );
 
         // pretty-prints the axis-aligned box.
-		virtual System::String^     ToString() override;
-	};
+        virtual System::String^     ToString() override;
+    };
 }

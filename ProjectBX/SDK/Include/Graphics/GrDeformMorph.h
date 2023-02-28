@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrDeformMorph.h
-// Author:		Kevin Bray
-// Created:		05-12-06
+// File:        GrDeformMorph.h
+// Author:      Kevin Bray
+// Created:     05-12-06
 //
-// Purpose:		To blend from one mesh to another.
+// Purpose:     To blend from one mesh to another.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -18,10 +18,10 @@
 class GrDeformMorph : public GrDeformer
 {
 public:
-	GrDeformMorph();
-	~GrDeformMorph();
+    GrDeformMorph();
+    ~GrDeformMorph();
 
-	
+    
 
 private:
 };

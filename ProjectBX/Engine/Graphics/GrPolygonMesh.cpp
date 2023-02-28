@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		GrPolygonMesh.cpp
-// Author:		Kevin Bray
-// Created:		01-16-06
+// File:        GrPolygonMesh.cpp
+// Author:      Kevin Bray
+// Created:     01-16-06
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
@@ -50,5 +50,5 @@ GrPolygonMesh::~GrPolygonMesh()
 void
 GrPolygonMesh::GenMeshes( std::vector< GrMeshInst* >& meshes )
 {
-	_polygons.GenMeshes( meshes, _name, false );
+    _polygons.GenMeshes( meshes, _name, false );
 }

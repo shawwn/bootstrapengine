@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		EdBITreeStack.cpp
-// Author:		Kevin Bray
-// Created:		08-15-08
+// File:        EdBITreeStack.cpp
+// Author:      Kevin Bray
+// Created:     08-15-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "editlib_afx.h"
@@ -24,16 +24,16 @@ EdBITreeStack::EdBITreeStack( unsigned int depth )
 , _depth( depth )
 , _top( 0 )
 {
-	// allocate the stack.
-	_stack = ( SEntry* )AlignedAlloc( 16, depth * sizeof( SEntry ) );
+    // allocate the stack.
+    _stack = ( SEntry* )AlignedAlloc( 16, depth * sizeof( SEntry ) );
 }
 
 //----------------------------------------------------------
 EdBITreeStack::~EdBITreeStack()
 {
-	AlignedFree( _stack );
+    AlignedFree( _stack );
 }
-	
+    
 
 //==========================================================
 // public methods
@@ -43,24 +43,24 @@ EdBITreeStack::~EdBITreeStack()
 EdBITreeStack::SEntry&
 EdBITreeStack::Push()
 {
-	B_ASSERT( _top < _depth );
+    B_ASSERT( _top < _depth );
 
-	// get the new entry.
-	SEntry& curTop = _stack[ _top++ ];
-	return curTop;
+    // get the new entry.
+    SEntry& curTop = _stack[ _top++ ];
+    return curTop;
 }
 
 //----------------------------------------------------------
 const EdBITreeStack::SEntry&
 EdBITreeStack::Pop()
 {
-	return _stack[ --_top ];
+    return _stack[ --_top ];
 }
 
 //----------------------------------------------------------
 const EdBITreeStack::SEntry&
 EdBITreeStack::Top()
 {
-	B_ASSERT( _top > 0 );
-	return _stack[ _top - 1 ];
+    B_ASSERT( _top > 0 );
+    return _stack[ _top - 1 ];
 }

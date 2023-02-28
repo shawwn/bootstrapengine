@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		UFixed.h
-// Author:		Kevin Bray
-// Created:		12-18-05
+// File:        UFixed.h
+// Author:      Kevin Bray
+// Created:     12-18-05
 //
-// Purpose:		To represent a 20.12 fixed point number.
+// Purpose:     To represent a 20.12 fixed point number.
 //
 // Copyright © 2005 Bootstrap Studios
 //----------------------------------------------------------
@@ -29,41 +29,41 @@ fixed_t __fastcall FixedFloor( fixed_t a );
 
 /*
 // these are faster than floating point.
-#define FIXED_BEGIN( value )			__asm mov eax, value
+#define FIXED_BEGIN( value )            __asm mov eax, value
 
-#define FIXED_ADD( a )					__asm add eax, a
+#define FIXED_ADD( a )                  __asm add eax, a
 
-#define FIXED_SUB( a )					__asm sub eax, a
+#define FIXED_SUB( a )                  __asm sub eax, a
 
-#define FIXED_MUL( a )					__asm imul a \
-										__asm sal edx, 16 \
-										__asm shr eax, 16 \
-										__asm or eax, edx
+#define FIXED_MUL( a )                  __asm imul a \
+                                        __asm sal edx, 16 \
+                                        __asm shr eax, 16 \
+                                        __asm or eax, edx
 
-#define FIXED_NEG()						__asm neg eax;
+#define FIXED_NEG()                     __asm neg eax;
 
 // These are currently *slower* than floating point!
-#define FIXED_INV()						__asm mov edx, 1 \
-										__asm mov ebx, eax \
-										__asm xor eax, eax \
-										__asm idiv ebx
+#define FIXED_INV()                     __asm mov edx, 1 \
+                                        __asm mov ebx, eax \
+                                        __asm xor eax, eax \
+                                        __asm idiv ebx
 
-#define FIXED_DIV( b )					__asm push eax \
-										__asm mov edx, 1 \
-										__asm xor eax, eax \
-										__asm idiv b \
-										__asm pop ebx \
-										__asm imul ebx \
-										__asm sal edx, 16 \
-										__asm shr eax, 16 \
-										__asm or eax, edx
+#define FIXED_DIV( b )                  __asm push eax \
+                                        __asm mov edx, 1 \
+                                        __asm xor eax, eax \
+                                        __asm idiv b \
+                                        __asm pop ebx \
+                                        __asm imul ebx \
+                                        __asm sal edx, 16 \
+                                        __asm shr eax, 16 \
+                                        __asm or eax, edx
 
-#define FIXED_STORE( target )			__asm mov target, eax
+#define FIXED_STORE( target )           __asm mov target, eax
 
-#define FIXED_STORE_PTR( target )		__asm mov edx, target \
-										__asm mov [edx], eax
+#define FIXED_STORE_PTR( target )       __asm mov edx, target \
+                                        __asm mov [edx], eax
 
-#define FIXED_PUSH()					__asm push eax
+#define FIXED_PUSH()                    __asm push eax
 
-#define FIXED_POP()						__asm pop eax
+#define FIXED_POP()                     __asm pop eax
 */

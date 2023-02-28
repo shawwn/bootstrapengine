@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		Ray.cpp
-// Author:		Shawn Presser
-// Created:		09-20-08
+// File:        Ray.cpp
+// Author:      Shawn Presser
+// Created:     09-20-08
 //
-// Purpose:		To represent a ray in 3D space.
+// Purpose:     To represent a ray in 3D space.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -30,22 +30,22 @@
 //----------------------------------------------------------
 Bootstrap::Ray::Ray( const MRay& ray )
 {
-	_start = ray.GetStart();
-	_dir = ray.GetDir();
+    _start = ray.GetStart();
+    _dir = ray.GetDir();
 }
 
 //----------------------------------------------------------
 MRay 
 Bootstrap::Ray::ToMRay()
 {
-	return MRay( _start.ToMVec3(), _dir.ToMVec3() );
+    return MRay( _start.ToMVec3(), _dir.ToMVec3() );
 }
 
 //----------------------------------------------------------
 Bootstrap::Ray::Ray( Vector3 start, Vector3 dir )
 {
-	_start = start;
-	_dir = dir;
+    _start = start;
+    _dir = dir;
 }
 
 //----------------------------------------------------------
@@ -76,7 +76,7 @@ Bootstrap::Ray::Intersect( Sphere sphere )
 Bootstrap::Ray 
 Bootstrap::Ray::Transform( Matrix transform, Matrix3x3 normalRot )
 {
-	return Ray( transform.TransformCoord( _start ), normalRot.RotatePoint( _dir ) );
+    return Ray( transform.TransformCoord( _start ), normalRot.RotatePoint( _dir ) );
 }
 
 //----------------------------------------------------------
@@ -91,11 +91,11 @@ Bootstrap::Ray::Intersect( [Out] Vector3% hitPos, Plane plane, float maxDist )
 }
 
 //----------------------------------------------------------
-bool			            
+bool                        
 Bootstrap::Ray::Intersect( [Out] Vector3% point, 
                            [Out] float% u, [Out] float% v, 
                            Vector3 pt0, Vector3 pt1, Vector3 pt2,
-			               bool twoSided )
+                           bool twoSided )
 {
     // forward the implementation to MRay.
     MVec3 nativePoint( 0.0f, 0.0f, 0.0f );
@@ -109,7 +109,7 @@ Bootstrap::Ray::Intersect( [Out] Vector3% point,
 }
 
 //----------------------------------------------------------
-bool			            
+bool                        
 Bootstrap::Ray::Intersect( [Out] float% dist, [Out] Vector3% point, 
                            [Out] float% u, [Out] float% v, 
                            Vector3 pt0, Vector3 pt1, Vector3 pt2, 
@@ -129,11 +129,11 @@ Bootstrap::Ray::Intersect( [Out] float% dist, [Out] Vector3% point,
 }
 
 //----------------------------------------------------------
-bool			            
+bool                        
 Bootstrap::Ray::Intersect( [Out] Vector3% point, 
                            [Out] float% u, [Out] float% v, 
                            Vector3 pt0, Vector3 pt1, Vector3 pt2,
-					       Vector3 faceNormal, bool twoSided )
+                           Vector3 faceNormal, bool twoSided )
 {
     // forward the implementation to MRay.
     MVec3 nativePoint( 0.0f, 0.0f, 0.0f );
@@ -151,7 +151,7 @@ float
 Bootstrap::Ray::Dist( Vector3 point )
 {
     // forward the implementation to MRay.
-	return ToMRay().Dist( point.ToMVec3() );
+    return ToMRay().Dist( point.ToMVec3() );
 }
 
 //----------------------------------------------------------
@@ -159,7 +159,7 @@ float
 Bootstrap::Ray::Dist( LineSegment segment, float epsilon )
 {
     // forward the implementation to MRay.
-	return ToMRay().Dist( segment.ToMLineSegment(), epsilon );
+    return ToMRay().Dist( segment.ToMLineSegment(), epsilon );
 }
 
 //----------------------------------------------------------
@@ -180,7 +180,7 @@ Bootstrap::Ray::Dist( LineSegment segment,
     // forward the implementation to MRay.
     float nativeRayMu = 0.0f;
     float nativeSegMu = 0.0f;
-	float result = ToMRay().Dist( segment.ToMLineSegment(), nativeRayMu, nativeSegMu, epsilon );
+    float result = ToMRay().Dist( segment.ToMLineSegment(), nativeRayMu, nativeSegMu, epsilon );
     rayMu = nativeRayMu;
     segMu = nativeSegMu;
     return result;

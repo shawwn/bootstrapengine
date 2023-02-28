@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		MeshInst.cpp
-// Author:		Shawn Presser
-// Created:		10-15-08
+// File:        MeshInst.cpp
+// Author:      Shawn Presser
+// Created:     10-15-08
 // Copyright © 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -22,41 +22,41 @@
 
 //----------------------------------------------------------
 Bootstrap::MeshInst::MeshInst( GrMeshInst* meshInst )
-	: SceneEntity( meshInst->GetTransform(), true )
-	, _meshInst( meshInst )
+    : SceneEntity( meshInst->GetTransform(), true )
+    , _meshInst( meshInst )
 {
-	B_ASSERT( meshInst != 0 );
+    B_ASSERT( meshInst != 0 );
 
-	// TODO: increment a GrMeshInst's ref count?
+    // TODO: increment a GrMeshInst's ref count?
 }
 
 //----------------------------------------------------------
 Bootstrap::MeshInst^
 Bootstrap::MeshInst::Create( GrMeshInst* meshInst )
 {
-	if( _meshInstCache == nullptr )
-		_meshInstCache = gcnew Dictionary< System::UInt64, MeshInst^ >();
+    if( _meshInstCache == nullptr )
+        _meshInstCache = gcnew Dictionary< System::UInt64, MeshInst^ >();
 
-	size_t key = (size_t)meshInst;
+    size_t key = (size_t)meshInst;
 
-	// if a managed MeshInst that corresponds to this unmanaged MeshInst 
-	// doesn't exist, cache it.
-	if( !_meshInstCache->ContainsKey( key ) )
-		_meshInstCache[ key ] = gcnew MeshInst( meshInst );
+    // if a managed MeshInst that corresponds to this unmanaged MeshInst 
+    // doesn't exist, cache it.
+    if( !_meshInstCache->ContainsKey( key ) )
+        _meshInstCache[ key ] = gcnew MeshInst( meshInst );
 
-	return _meshInstCache[ key ];
+    return _meshInstCache[ key ];
 }
 
 //----------------------------------------------------------
 Bootstrap::MeshInst::~MeshInst()
 {
-	this->!MeshInst();
+    this->!MeshInst();
 }
 
 //----------------------------------------------------------
 Bootstrap::MeshInst::!MeshInst()
 {
-	// TODO: decrement a GrMeshInst's ref count?
+    // TODO: decrement a GrMeshInst's ref count?
 }
 
 //----------------------------------------------------------
@@ -210,32 +210,32 @@ Bootstrap::MeshInst::Equals( System::Object^ obj )
     if ( obj == nullptr )
         return false;
 
-	if( obj->GetType() == MeshInst::GetType() )
-	{
-		MeshInst^ meshInst = (MeshInst^)obj;
-		return (_meshInst == meshInst->_meshInst);
-	}
-	return false;
+    if( obj->GetType() == MeshInst::GetType() )
+    {
+        MeshInst^ meshInst = (MeshInst^)obj;
+        return (_meshInst == meshInst->_meshInst);
+    }
+    return false;
 }
 
 //----------------------------------------------------------
 int
 Bootstrap::MeshInst::GetHashCode()
 {
-	// TODO-64: This may not work on 64-bit systems.
-	return (int)_meshInst;
+    // TODO-64: This may not work on 64-bit systems.
+    return (int)_meshInst;
 }
 
 //----------------------------------------------------------
 void
 Bootstrap::MeshInst::ApplyTransform( Matrix mat )
 {
-	_meshInst->SetTransform( mat.ToMMat4x4() );
+    _meshInst->SetTransform( mat.ToMMat4x4() );
 }
 
 //----------------------------------------------------------
 Bootstrap::Matrix
 Bootstrap::MeshInst::GetTransform()
 {
-	return Matrix( _meshInst->GetTransform() );
+    return Matrix( _meshInst->GetTransform() );
 }

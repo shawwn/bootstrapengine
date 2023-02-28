@@ -1,10 +1,10 @@
 //----------------------------------------------------------
-// File:		EdDrawUberTexture.h
-// Author:		Kevin Bray
-// Created:		07-05-08
+// File:        EdDrawUberTexture.h
+// Author:      Kevin Bray
+// Created:     07-05-08
 //
-// Purpose:		To render a region of an ubertexture to the currently
-//				bound render target.
+// Purpose:     To render a region of an ubertexture to the currently
+//              bound render target.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -30,43 +30,43 @@ class GrMaterial;
 class EdDrawUberTexture
 {
 public:
-	EdDrawUberTexture();
-	~EdDrawUberTexture();
+    EdDrawUberTexture();
+    ~EdDrawUberTexture();
 
-	// set the target window.
-	bool					SetTarget( HWND window );
+    // set the target window.
+    bool                    SetTarget( HWND window );
 
-	// renders an ubertexture from the coordinates specified.
-	void					Render( GrUberTexture* uberTexture, float startU, float startV, float endU, float endV );
+    // renders an ubertexture from the coordinates specified.
+    void                    Render( GrUberTexture* uberTexture, float startU, float startV, float endU, float endV );
 
 private:
-	void					UpdateTargetSize();
+    void                    UpdateTargetSize();
 
-	// rendering services.
-	GrRenderAmbience		_renderAmbience;
-//	GrRenderUberTexture		_renderUberTexture;
-	GrStreamingIB			_streamingIB;
+    // rendering services.
+    GrRenderAmbience        _renderAmbience;
+//  GrRenderUberTexture     _renderUberTexture;
+    GrStreamingIB           _streamingIB;
 
-	// rendering resources.
-	GrRenderList			_renderList;
-	GrRenderList			_postRenderList;
-	GrMeshInst*				_meshInst;
-	URef< GrMaterial >		_uberMaterial;
-	URef< GrMesh >			_mesh;
+    // rendering resources.
+    GrRenderList            _renderList;
+    GrRenderList            _postRenderList;
+    GrMeshInst*             _meshInst;
+    URef< GrMaterial >      _uberMaterial;
+    URef< GrMesh >          _mesh;
 
-	// temporary buffer.
-	URef< GrRenderTarget >	_tempTarget;
+    // temporary buffer.
+    URef< GrRenderTarget >  _tempTarget;
 
-	// target window information.
-	HWND					_target;
-	HDC						_targetDC;
-	HGLRC					_targetRC;
-	unsigned int			_targetWidth;
-	unsigned int			_targetHeight;
+    // target window information.
+    HWND                    _target;
+    HDC                     _targetDC;
+    HGLRC                   _targetRC;
+    unsigned int            _targetWidth;
+    unsigned int            _targetHeight;
 
-	// primary window information.
-	HDC						_primaryDC;
-	HGLRC					_primaryRC;
+    // primary window information.
+    HDC                     _primaryDC;
+    HGLRC                   _primaryRC;
 };
 extern EdDrawUberTexture* gEdDrawUberTexture;
 #endif

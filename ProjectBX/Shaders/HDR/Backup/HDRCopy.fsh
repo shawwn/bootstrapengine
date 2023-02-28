@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		HDRCopy.fsh
-// Author:		Kevin Bray
-// Created:		02-07-06
+// File:        HDRCopy.fsh
+// Author:      Kevin Bray
+// Created:     02-07-06
 // Copyright © 2004 Bootstrap Games.  All rights reserved.
 //----------------------------------------------------------
 
@@ -21,5 +21,5 @@ uniform sampler2D s_HDRTex;
 // main
 void main()
 {
-	gl_FragColor = texture2D( s_HDRTex, v_HDRTexCoord ) - u_BloomStart;
+    gl_FragColor = texture2D( s_HDRTex, v_HDRTexCoord ) - u_BloomStart;
 }

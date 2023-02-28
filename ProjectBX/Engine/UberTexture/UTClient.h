@@ -1,10 +1,10 @@
 //----------------------------------------------------------
-// File:		UTClient.h
-// Author:		Kevin Bray
-// Created:		11-23-07
+// File:        UTClient.h
+// Author:      Kevin Bray
+// Created:     11-23-07
 //
-// Purpose:		To provide a common interface for communicating with
-//				a UTServer.
+// Purpose:     To provide a common interface for communicating with
+//              a UTServer.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------

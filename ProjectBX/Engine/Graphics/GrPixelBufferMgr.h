@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrPixelBufferMgr.h
-// Author:		Kevin Bray
-// Created:		04-11-08
+// File:        GrPixelBufferMgr.h
+// Author:      Kevin Bray
+// Created:     04-11-08
 //
-// Purpose:		To manage pixel buffers.
+// Purpose:     To manage pixel buffers.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -19,24 +19,24 @@
 class GrPixelBufferMgr
 {
 public:
-	GrPixelBufferMgr();
-	~GrPixelBufferMgr();
+    GrPixelBufferMgr();
+    ~GrPixelBufferMgr();
 
-	// creates a pixel buffer of a given size.
-	URef< GrPixelBuffer >	CreatePixelBuffer( unsigned int width, unsigned int height,
-											   GrPixelBuffer::EFORMAT format, GrPixelBuffer::EUSAGE usage );
+    // creates a pixel buffer of a given size.
+    URef< GrPixelBuffer >   CreatePixelBuffer( unsigned int width, unsigned int height,
+                                               GrPixelBuffer::EFORMAT format, GrPixelBuffer::EUSAGE usage );
 
-	// forces garbage collection.
-	void					CollectGarbage();
+    // forces garbage collection.
+    void                    CollectGarbage();
 
-	// context reset notification.
-	void					PreContextReset();
-	void					PostContextReset();
+    // context reset notification.
+    void                    PreContextReset();
+    void                    PostContextReset();
 
 private:
-	typedef URefArray< GrPixelBuffer > PixelBufferArray;
+    typedef URefArray< GrPixelBuffer > PixelBufferArray;
 
-	// pixel buffers.
-	PixelBufferArray		_pixelBuffers;
+    // pixel buffers.
+    PixelBufferArray        _pixelBuffers;
 };
 extern GrPixelBufferMgr* gGrPixelBufferMgr;

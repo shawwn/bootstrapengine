@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		ModelNode.h
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        ModelNode.h
+// Author:      Shawn Presser
+// Created:     09-23-08
 //
-// Purpose:		To manage a node in a model.
+// Purpose:     To manage a node in a model.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -18,8 +18,8 @@ class GrModel;
 
 namespace Bootstrap
 {
-	// .NET forward declarations.
-	ref class MeshInst;
+    // .NET forward declarations.
+    ref class MeshInst;
     ref class Mesh;
     ref class Model;
     ref class Light;
@@ -30,18 +30,18 @@ namespace Bootstrap
     // ref class ModelNode
     //**********************************************************
     public ref class ModelNode : public SceneEntity
-	{
-	internal:
-		ModelNode( GrModelNode* modelNode );
+    {
+    internal:
+        ModelNode( GrModelNode* modelNode );
 
-		// model node.
-		GrModelNode*	                    _modelNode;
+        // model node.
+        GrModelNode*                        _modelNode;
 
-	public:
-		~ModelNode();
-		!ModelNode();
+    public:
+        ~ModelNode();
+        !ModelNode();
 
-		property System::String^            Name           
+        property System::String^            Name           
         { 
             System::String^                     get();        
         }
@@ -69,12 +69,12 @@ namespace Bootstrap
         }
 
         // child management.
-		property int                        ChildCount              
+        property int                        ChildCount              
         { 
             int                                 get();          
         }
 
-		ModelNode^		                    GetChild( int idx );
+        ModelNode^                          GetChild( int idx );
 
         ModelNode^                          FindNode( System::String^ name, bool ignoreCase );
 
@@ -85,12 +85,12 @@ namespace Bootstrap
         }
 
         // mesh instance management.
-		property int                        MeshInstCount           
+        property int                        MeshInstCount           
         { 
             int                                 get();          
         }
 
-		MeshInst^		                    GetMeshInst( int idx );
+        MeshInst^                           GetMeshInst( int idx );
 
         // calculates an AABB from geometry that includes the origin.
         property AABox                      Bounds 
@@ -114,11 +114,11 @@ namespace Bootstrap
         void                                Optimize();
 
         // comparator.
-		virtual bool                        Equals( System::Object^ obj ) override;
+        virtual bool                        Equals( System::Object^ obj ) override;
 
     protected:
-		// inherited from SceneEntity.
-		virtual void	                    ApplyTransform( Matrix mat ) override;
-		virtual Matrix	                    GetTransform() sealed override;
-	};
+        // inherited from SceneEntity.
+        virtual void                        ApplyTransform( Matrix mat ) override;
+        virtual Matrix                      GetTransform() sealed override;
+    };
 }

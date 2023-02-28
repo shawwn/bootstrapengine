@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrRenderShadow.h
-// Author:		Kevin Bray
-// Created:		04-07-07
+// File:        GrRenderShadow.h
+// Author:      Kevin Bray
+// Created:     04-07-07
 //
-// Purpose:		To render a set of objects to a shadow.
+// Purpose:     To render a set of objects to a shadow.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -30,70 +30,70 @@ struct SVec2;
 class GrRenderShadow
 {
 public:
-	GrRenderShadow( GrStreamingIB* streamingIB, unsigned int maxIndexBatchSize );
-	~GrRenderShadow();
+    GrRenderShadow( GrStreamingIB* streamingIB, unsigned int maxIndexBatchSize );
+    ~GrRenderShadow();
 
-	// this renders the shadow.
-	URef< GrTextureBase >	RenderShadow( GrVirtualShadowPage::SRenderData& shadowData, const GrRenderList& shadowCasters,
-										  const GrCamera& shadowCamera, const GrLight& light, unsigned int time, EGRQUALITY quality );
+    // this renders the shadow.
+    URef< GrTextureBase >   RenderShadow( GrVirtualShadowPage::SRenderData& shadowData, const GrRenderList& shadowCasters,
+                                          const GrCamera& shadowCamera, const GrLight& light, unsigned int time, EGRQUALITY quality );
 
-	// returns the data needed for no shadow.
-	const GrVirtualShadowPage::SRenderData&		GetNoShadowData() const			{	return _shadowPage.GetNoShadowData();	}
+    // returns the data needed for no shadow.
+    const GrVirtualShadowPage::SRenderData&     GetNoShadowData() const         {   return _shadowPage.GetNoShadowData();   }
 
 private:
-	typedef std::vector< GrVirtualShadowPage::SShadowInfo > ShadowInfoVec;
+    typedef std::vector< GrVirtualShadowPage::SShadowInfo > ShadowInfoVec;
 
-	void					RenderShadowCasters( const GrRenderList& shadowCasters, const GrCamera& shadowCamera,
-												 unsigned int time, EGRQUALITY quality );
-	void					RenderShadowReceivers( const GrRenderList& shadowCasters, const GrCamera& shadowCamera,
-												   unsigned int time, EGRQUALITY quality );
-
-
-	void					RenderShadowMap( const GrRenderList& shadowCasters, const GrCamera& shadowCamera,
-											 GrShader* depthShader, GrShader* alphaTestShader, unsigned int writeMask,
-											 unsigned int time, EGRQUALITY quality, bool honorCastShadow );
-	void					RenderShadowFaces( const GrRenderList& shadowCasters, const GrCamera& shadowCamera,
-											   GrShader* depthShader, GrShader* alphaTestShader, unsigned int writeMask,
-											   unsigned int time, EGRQUALITY quality, bool honorCastShadow );
+    void                    RenderShadowCasters( const GrRenderList& shadowCasters, const GrCamera& shadowCamera,
+                                                 unsigned int time, EGRQUALITY quality );
+    void                    RenderShadowReceivers( const GrRenderList& shadowCasters, const GrCamera& shadowCamera,
+                                                   unsigned int time, EGRQUALITY quality );
 
 
-	void					RenderObjects( const GrRenderList& shadowCasters, unsigned int start, unsigned int end,
-										   const GrCamera& shadowCamera, GrShader* curShader, unsigned int time, bool alphaTest );
-	void					CalcShadowMidpoint( EGRQUALITY quality );
+    void                    RenderShadowMap( const GrRenderList& shadowCasters, const GrCamera& shadowCamera,
+                                             GrShader* depthShader, GrShader* alphaTestShader, unsigned int writeMask,
+                                             unsigned int time, EGRQUALITY quality, bool honorCastShadow );
+    void                    RenderShadowFaces( const GrRenderList& shadowCasters, const GrCamera& shadowCamera,
+                                               GrShader* depthShader, GrShader* alphaTestShader, unsigned int writeMask,
+                                               unsigned int time, EGRQUALITY quality, bool honorCastShadow );
 
-	void					SetShadowPageViewport( unsigned int page );
-	const GrMaterial*		GetShadowSpan( unsigned int& endObj, const GrRenderList& list, unsigned int startObj );
-	bool					IsCompatibleShadow( const GrMaterial* material1, const GrMaterial* material2 );
-	unsigned int			BatchRender( const GrRenderList& renderableArray, unsigned int startIdx, unsigned int endIdx,
-										 unsigned int time, unsigned int vertexComponents );
-	void					SetActiveShadowMap( unsigned int shadowMapIdx );
-	void					CalcMapUVs( float x, float y, unsigned int idx );
 
-	// the virtual shadow page used to render shadows.
-	GrVirtualShadowPage		_shadowPage;
+    void                    RenderObjects( const GrRenderList& shadowCasters, unsigned int start, unsigned int end,
+                                           const GrCamera& shadowCamera, GrShader* curShader, unsigned int time, bool alphaTest );
+    void                    CalcShadowMidpoint( EGRQUALITY quality );
 
-	// cache of shadow info from the last shadows generated.
-	ShadowInfoVec			_virtualShadowCache;
+    void                    SetShadowPageViewport( unsigned int page );
+    const GrMaterial*       GetShadowSpan( unsigned int& endObj, const GrRenderList& list, unsigned int startObj );
+    bool                    IsCompatibleShadow( const GrMaterial* material1, const GrMaterial* material2 );
+    unsigned int            BatchRender( const GrRenderList& renderableArray, unsigned int startIdx, unsigned int endIdx,
+                                         unsigned int time, unsigned int vertexComponents );
+    void                    SetActiveShadowMap( unsigned int shadowMapIdx );
+    void                    CalcMapUVs( float x, float y, unsigned int idx );
 
-	// streaming data.
-	GrStreamingIB*			_streamingIB;
-	unsigned int			_maxIndexBatchSize;
+    // the virtual shadow page used to render shadows.
+    GrVirtualShadowPage     _shadowPage;
 
-	// shadow map info.
-	unsigned int			_shadowMapSize;
-	unsigned int			_shadowPageSize;
+    // cache of shadow info from the last shadows generated.
+    ShadowInfoVec           _virtualShadowCache;
 
-	// render targets.
-	URef< GrRenderTarget >	_shadowCasterPage;
-	URef< GrRenderTarget >	_shadowReceiverPage;
-	URef< GrRenderTarget >	_shadowMidpointPage;
+    // streaming data.
+    GrStreamingIB*          _streamingIB;
+    unsigned int            _maxIndexBatchSize;
 
-	// textures.
-	URef< GrTextureBase >	_defaultBump;
+    // shadow map info.
+    unsigned int            _shadowMapSize;
+    unsigned int            _shadowPageSize;
 
-	// shaders.
-	URef< GrShader >		_depth;
-	URef< GrShader >		_depthPeel;
-	URef< GrShader >		_depthPeelAlpha;
-	URef< GrShader >		_mergeDepth;
+    // render targets.
+    URef< GrRenderTarget >  _shadowCasterPage;
+    URef< GrRenderTarget >  _shadowReceiverPage;
+    URef< GrRenderTarget >  _shadowMidpointPage;
+
+    // textures.
+    URef< GrTextureBase >   _defaultBump;
+
+    // shaders.
+    URef< GrShader >        _depth;
+    URef< GrShader >        _depthPeel;
+    URef< GrShader >        _depthPeelAlpha;
+    URef< GrShader >        _mergeDepth;
 };

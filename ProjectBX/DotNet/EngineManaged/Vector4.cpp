@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		Vector4.h
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        Vector4.h
+// Author:      Shawn Presser
+// Created:     09-23-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -23,19 +23,19 @@
 //----------------------------------------------------------
 Bootstrap::Vector4::Vector4( const MVec4& vec )
 {
-	X = vec.GetX();
-	Y = vec.GetY();
-	Z = vec.GetZ();
-	W = vec.GetW();
+    X = vec.GetX();
+    Y = vec.GetY();
+    Z = vec.GetZ();
+    W = vec.GetW();
 }
 
 //----------------------------------------------------------
 Bootstrap::Vector4::Vector4( const SVec4& vec )
 {
-	X = vec.x;
-	Y = vec.y;
-	Z = vec.z;
-	W = vec.w;
+    X = vec.x;
+    Y = vec.y;
+    Z = vec.z;
+    W = vec.w;
 }
 
 //----------------------------------------------------------
@@ -55,17 +55,17 @@ Bootstrap::Vector4::ToSVec4()
 //----------------------------------------------------------
 Bootstrap::Vector4::Vector4( float x, float y, float z, float w )
 {
-	X = x;
-	Y = y;
-	Z = z;
-	W = w;
+    X = x;
+    Y = y;
+    Z = z;
+    W = w;
 }
 
 //----------------------------------------------------------
 float 
 Bootstrap::Vector4::Dot( Vector4 v )
 {
-	return X*v.X + Y*v.Y + Z*v.Z * W*v.W;
+    return X*v.X + Y*v.Y + Z*v.Z * W*v.W;
 }
 
 //----------------------------------------------------------
@@ -139,26 +139,26 @@ Bootstrap::Vector4::operator / ( Vector4 vector, float scale )
 System::String^ 
 Bootstrap::Vector4::ToString() 
 {
-	return "( " + X + ", " + Y + ", " + Z + ", " + W + " )";
+    return "( " + X + ", " + Y + ", " + Z + ", " + W + " )";
 }
 
 //----------------------------------------------------------
 bool 
 Bootstrap::Vector4::Equals( System::Object^ obj )
 {
-	if ( obj != nullptr && obj->GetType() == Vector4::GetType() )
-	{
-		Vector4 val = (Vector4)obj;
-		return X == val.X && Y == val.Y && Z == val.Z && W == val.W;
-	}
-	return false;
+    if ( obj != nullptr && obj->GetType() == Vector4::GetType() )
+    {
+        Vector4 val = (Vector4)obj;
+        return X == val.X && Y == val.Y && Z == val.Z && W == val.W;
+    }
+    return false;
 }
 
 //----------------------------------------------------------
 int 
 Bootstrap::Vector4::GetHashCode()
 {
-	return X.GetHashCode() + Y.GetHashCode() + Z.GetHashCode() + W.GetHashCode();
+    return X.GetHashCode() + Y.GetHashCode() + Z.GetHashCode() + W.GetHashCode();
 }
 
 //----------------------------------------------------------

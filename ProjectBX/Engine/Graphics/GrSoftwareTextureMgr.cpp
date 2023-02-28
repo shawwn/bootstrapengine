@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		GrSoftwareTextureMgr.cpp
-// Author:		Shawn Presser
-// Created:		09-13-08
+// File:        GrSoftwareTextureMgr.cpp
+// Author:      Shawn Presser
+// Created:     09-13-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
@@ -44,19 +44,19 @@ GrSoftwareTextureMgr::GetTexture( const UPath& filePath )
     if ( it != _textures.end() )
         return it->second;
 
-	// read the entire file.
-	URef< RFile > file = gRFileMgr->GetFile( filePath, RFileMgr::kFlagRead );
-	if ( !file )
-		return false;
+    // read the entire file.
+    URef< RFile > file = gRFileMgr->GetFile( filePath, RFileMgr::kFlagRead );
+    if ( !file )
+        return false;
 
-	const void *fileData = file->GetData();
-	unsigned int fileSize = ( unsigned int )file->GetSize();
+    const void *fileData = file->GetData();
+    unsigned int fileSize = ( unsigned int )file->GetSize();
 
-	// read in the image data.
-	GrImage* image = new GrImage( filePath, UReader( fileData, fileSize, false ) );
+    // read in the image data.
+    GrImage* image = new GrImage( filePath, UReader( fileData, fileSize, false ) );
 
-	// purge the data from the file so that we don't keep it loaded.
-	file->Purge();
+    // purge the data from the file so that we don't keep it loaded.
+    file->Purge();
 
     // construct the software texture and insert it into the map.
     URef< GrSoftwareTexture > texture( new GrSoftwareTexture( image ) );

@@ -44,9 +44,9 @@ namespace Editor
         // constructor & finalizer
         //=======================
 
-   		//-----------------------
-		public DialogMgr(Form parent)
-		{
+        //-----------------------
+        public DialogMgr(Form parent)
+        {
             _parent = parent;
 
             _dialogsActive = new int[(int)Viewport.UserMode.Count];

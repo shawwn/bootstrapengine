@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		EdImportDAEMaterials.h
-// Author:		Kevin Bray
-// Created:		11-24-06
+// File:        EdImportDAEMaterials.h
+// Author:      Kevin Bray
+// Created:     11-24-06
 //
-// Purpose:		To implement importing of collada materials.
+// Purpose:     To implement importing of collada materials.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -31,23 +31,23 @@ namespace FUDaeTextureChannel { enum Channel; };
 class EdImportDAEMaterials
 {
 public:
-	EdImportDAEMaterials();
-	~EdImportDAEMaterials();
+    EdImportDAEMaterials();
+    ~EdImportDAEMaterials();
 
-	bool				ImportMaterials( FCDocument* doc, const UPath& outputPath, bool findNormalMaps, bool overwriteExisting );
-	bool				GetImportedMaterialName( tstring& name, FCDMaterial* material ) const;
+    bool                ImportMaterials( FCDocument* doc, const UPath& outputPath, bool findNormalMaps, bool overwriteExisting );
+    bool                GetImportedMaterialName( tstring& name, FCDMaterial* material ) const;
 
 private:
-	typedef std::map< FCDMaterial*, tstring > MaterialMap;
+    typedef std::map< FCDMaterial*, tstring > MaterialMap;
 
-	FCDEffectStandard*	FindProfile( FCDMaterial* material );
-	FCDTexture*			GetTexture( FCDEffectStandard* profile, FUDaeTextureChannel::Channel channel );
-	tstring				GetTextureFilePath( FCDTexture* texture );
-	void				ProcessTexStage( tstring& materialTxt, const tstring& stageName, const tstring& mapName, FCDTexture* texture,
-										 const FMVector4& colorMod, const FMVector4& colorAdd, const GrColor& defaultMod,
-										 const GrColor& defaultAdd, const UPath& outputPath );
-	bool				IsApproxEqual( const GrColor& color, const FMVector4& fmColor );
-	void				CopyTexture( const UPath& dstFileName, const UPath& srcFileName );
+    FCDEffectStandard*  FindProfile( FCDMaterial* material );
+    FCDTexture*         GetTexture( FCDEffectStandard* profile, FUDaeTextureChannel::Channel channel );
+    tstring             GetTextureFilePath( FCDTexture* texture );
+    void                ProcessTexStage( tstring& materialTxt, const tstring& stageName, const tstring& mapName, FCDTexture* texture,
+                                         const FMVector4& colorMod, const FMVector4& colorAdd, const GrColor& defaultMod,
+                                         const GrColor& defaultAdd, const UPath& outputPath );
+    bool                IsApproxEqual( const GrColor& color, const FMVector4& fmColor );
+    void                CopyTexture( const UPath& dstFileName, const UPath& srcFileName );
 
-	MaterialMap			_materialNames;
+    MaterialMap         _materialNames;
 };

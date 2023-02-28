@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		EdBrushImage.h
-// Author:		Kevin Bray
-// Created:		08-07-05
+// File:        EdBrushImage.h
+// Author:      Kevin Bray
+// Created:     08-07-05
 //
-// Purpose:		To manage an image that's used a source for a brush.
+// Purpose:     To manage an image that's used a source for a brush.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -23,20 +23,20 @@ class RFile;
 class EdBrushImage : public URefCount
 {
 public:
-	EdBrushImage( const UPath& filePath );
-	~EdBrushImage();
+    EdBrushImage( const UPath& filePath );
+    ~EdBrushImage();
 
-	// returns true if the image is a valid file.
-	bool				Exists() const;
+    // returns true if the image is a valid file.
+    bool                Exists() const;
 
-	GrImage*			GetImage();
-	const UPath&		GetFilePath() const		{	return _filePath;	}
+    GrImage*            GetImage();
+    const UPath&        GetFilePath() const     {   return _filePath;   }
 
-	void				PreCache();
-	void				Evict();
+    void                PreCache();
+    void                Evict();
 
 private:
-	UPath				_filePath;
-	URef< RFile	>		_file;
-	GrImage*			_image;
+    UPath               _filePath;
+    URef< RFile >       _file;
+    GrImage*            _image;
 };

@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		UUTF8.h
-// Author:		Kevin Bray
-// Created:		10-21-04
+// File:        UUTF8.h
+// Author:      Kevin Bray
+// Created:     10-21-04
 //
-// Purpose:		A library for handling UTF8 characters.
+// Purpose:     A library for handling UTF8 characters.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------

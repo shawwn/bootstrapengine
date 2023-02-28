@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		Model.cpp
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        Model.cpp
+// Author:      Shawn Presser
+// Created:     09-23-08
 // Copyright © 2004 Bootstrap Games.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -39,65 +39,65 @@ Bootstrap::Model::Model( GrModel* model )
 : SceneEntity( model->GetRootNode()->GetWorld(), true )
 , _model( model )
 {
-	B_ASSERT( model != 0 );
+    B_ASSERT( model != 0 );
 
-	_model->IncRef();
+    _model->IncRef();
 }
 
 //----------------------------------------------------------
 Bootstrap::Model^ 
 Bootstrap::Model::Create( System::String^ filePath, System::String^ instName, bool clone )
 {
-	// if there is no active scene, fail.
-	if( !gGrScene )
-		return nullptr;
+    // if there is no active scene, fail.
+    if( !gGrScene )
+        return nullptr;
 
-	// try to create the model.
-	UPath uFilePath( StrToTStr( filePath ) );
-	UPath uInstName( StrToTStr( instName ) );
-	URef< GrModel > model = gGrModelMgr->GetModel( uFilePath, uInstName, clone, true );
+    // try to create the model.
+    UPath uFilePath( StrToTStr( filePath ) );
+    UPath uInstName( StrToTStr( instName ) );
+    URef< GrModel > model = gGrModelMgr->GetModel( uFilePath, uInstName, clone, true );
 
     // force the model to be updated.
     model->Update( true );
 
-	// if the model couldn't be created, fail.
-	if( !model )
-		return nullptr;
+    // if the model couldn't be created, fail.
+    if( !model )
+        return nullptr;
 
-	return gcnew Model( model );
+    return gcnew Model( model );
 }
 
 //----------------------------------------------------------
 Bootstrap::Model::~Model()
 {
-	this->!Model();
+    this->!Model();
 }
 
 //----------------------------------------------------------
 Bootstrap::Model::!Model()
 {
-	_model->DecRef();
+    _model->DecRef();
 }
 
 //----------------------------------------------------------
 Bootstrap::AABox 
 Bootstrap::Model::Bounds::get()
 {
-	return AABox( _model->GetBounds() );
+    return AABox( _model->GetBounds() );
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Model::FileName::get()
 {
-	return TStrToStr( _model->GetFileName().GetPathString() );		
+    return TStrToStr( _model->GetFileName().GetPathString() );      
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Model::InstanceName::get()
 {
-	return TStrToStr( _model->GetInstName().GetPathString() );
+    return TStrToStr( _model->GetInstName().GetPathString() );
 }
 
 //----------------------------------------------------------
@@ -134,7 +134,7 @@ Bootstrap::Model^
 Bootstrap::Model::CloneFile( System::String^ fileName, System::String^ instName )
 {
     // try to clone the model and the file it originated from.
-	URef< GrModel > model = _model->CloneFile( StrToTStr( fileName ), StrToTStr( instName ) );
+    URef< GrModel > model = _model->CloneFile( StrToTStr( fileName ), StrToTStr( instName ) );
 
     // if the clone was successful, return a reference to the cloned model.
     if ( model )
@@ -149,16 +149,16 @@ bool
 Bootstrap::Model::InSkybox::get()
 {
     // walk the chain of parents.
-	GrModel* parent = _model->GetParent();
-	while ( parent != 0 )
-	{
+    GrModel* parent = _model->GetParent();
+    while ( parent != 0 )
+    {
         // if the current parent is the skybox model, return true.
-		if ( parent == gGrScene->GetSkyboxModel() )
+        if ( parent == gGrScene->GetSkyboxModel() )
             return true;
 
         // otherwise, move to the next parent.
         parent = parent->GetParent();
-	}
+    }
 
     // no parent was the skybox model, so return false.
     return false;
@@ -243,14 +243,14 @@ Bootstrap::Model::RootNode::get()
 int 
 Bootstrap::Model::ChildCount::get()
 {
-	return _model->GetChildCount();
+    return _model->GetChildCount();
 }
 
 //----------------------------------------------------------
 int 
 Bootstrap::Model::LightCount::get()
 {
-	return _model->GetLightCount();
+    return _model->GetLightCount();
 }
 
 //----------------------------------------------------------
@@ -275,55 +275,55 @@ Bootstrap::Model::AddChild( Model^ model, ModelNode^ attachTo )
 void
 Bootstrap::Model::AddLight( Light^ light, ModelNode^ attachTo )
 {
-	B_ASSERT( light != nullptr );
-	_model->AddLight( light->_light, ( attachTo != nullptr ) ? attachTo->_modelNode : 0 );
+    B_ASSERT( light != nullptr );
+    _model->AddLight( light->_light, ( attachTo != nullptr ) ? attachTo->_modelNode : 0 );
 }
 
 //----------------------------------------------------------
 Bootstrap::Light^
 Bootstrap::Model::GetLight( int idx )
 {
-	URef< GrLight > light = _model->GetLight( idx );
+    URef< GrLight > light = _model->GetLight( idx );
 
-	if ( light )
-		return gcnew Light( light );
+    if ( light )
+        return gcnew Light( light );
 
-	return nullptr;
+    return nullptr;
 }
 
 //----------------------------------------------------------
 Bootstrap::ModelNode^
 Bootstrap::Model::GetLightParent( int idx )
 {
-	GrModelNode* parent = _model->GetLightParent( idx );
+    GrModelNode* parent = _model->GetLightParent( idx );
 
-	if ( parent )
-		return gcnew ModelNode( parent );
+    if ( parent )
+        return gcnew ModelNode( parent );
 
-	return nullptr;
+    return nullptr;
 }
 
 //----------------------------------------------------------
 bool
 Bootstrap::Model::RemoveLight( Light^ light )
 {
-	return _model->RemoveLight( light->_light );
+    return _model->RemoveLight( light->_light );
 }
 
 //----------------------------------------------------------
 void
 Bootstrap::Model::RemoveLights()
 {
-	_model->RemoveLights();
+    _model->RemoveLights();
 }
 
 //----------------------------------------------------------
 Bootstrap::Model^ 
 Bootstrap::Model::GetChild( int idx )
 {
-	if ( idx >= ( int )_model->GetChildCount() )
-		return nullptr;
-	return gcnew Model( _model->GetChild( idx ) );
+    if ( idx >= ( int )_model->GetChildCount() )
+        return nullptr;
+    return gcnew Model( _model->GetChild( idx ) );
 }
 
 //----------------------------------------------------------
@@ -354,8 +354,8 @@ Bootstrap::Model::AddToSkybox()
     if ( this->Parent != nullptr )
         this->Parent->RemoveChild( this );
 
-	if ( gGrScene && !InSkybox )
-		gGrScene->GetSkyboxModel()->AddChild( _model );		
+    if ( gGrScene && !InSkybox )
+        gGrScene->GetSkyboxModel()->AddChild( _model );     
 }
 
 //----------------------------------------------------------
@@ -382,7 +382,7 @@ Bootstrap::Model::FindModelsByFileName( System::String^ fileName )
     _model->FindModelsByFileName( models, StrToTStr( fileName ) );
 
     // convert the list of models into a .NET array and return it.
-	unsigned int count = models.GetElemCount();
+    unsigned int count = models.GetElemCount();
     array< Model^ >^ result = gcnew array< Model^ >( count );
     for ( unsigned int i = 0; i < count; ++i )
     {
@@ -402,14 +402,14 @@ Bootstrap::Model::FindModelsByFileName( System::String^ fileName )
 array< Bootstrap::MeshInst^ >^ 
 Bootstrap::Model::MeshInsts::get()
 { 
-	// get all mesh instances from the model.
-	UFastArray< GrMeshInst* > meshInsts;
-	_model->GetMeshInsts( meshInsts );
+    // get all mesh instances from the model.
+    UFastArray< GrMeshInst* > meshInsts;
+    _model->GetMeshInsts( meshInsts );
 
-	// add them to a .NET array and return it.
-	unsigned int count = meshInsts.GetElemCount();
-	array< MeshInst^ >^ result = gcnew array< MeshInst^ >( count );
-	for( unsigned int i = 0; i < count; ++i )
+    // add them to a .NET array and return it.
+    unsigned int count = meshInsts.GetElemCount();
+    array< MeshInst^ >^ result = gcnew array< MeshInst^ >( count );
+    for( unsigned int i = 0; i < count; ++i )
     {
         GrMeshInst* inst = meshInsts[ i ];
 
@@ -422,9 +422,9 @@ Bootstrap::Model::MeshInsts::get()
         B_ASSERT( meshInst != nullptr );
 
         // assign the meshIsnt.
-		result[ i ] = meshInst;
+        result[ i ] = meshInst;
     }
-	return result;
+    return result;
 }
 
 //----------------------------------------------------------
@@ -439,13 +439,13 @@ Bootstrap::Model::DbgDrawHierarchy()
 void 
 Bootstrap::Model::Save()
 {
-	// grab the save data.
-	UWriter writer;
-	_model->Save( writer );
+    // grab the save data.
+    UWriter writer;
+    _model->Save( writer );
 
-	// write the file to disk.
-	URef< RFile > file = gRFileMgr->GetFile( _model->GetFileName(), RFileMgr::kFlagWrite );
-	file->WriteData( 0, writer.GetBufferPtr(), writer.GetBytesWritten() );
+    // write the file to disk.
+    URef< RFile > file = gRFileMgr->GetFile( _model->GetFileName(), RFileMgr::kFlagWrite );
+    file->WriteData( 0, writer.GetBufferPtr(), writer.GetBytesWritten() );
 }
 
 //----------------------------------------------------------
@@ -467,8 +467,8 @@ Bootstrap::Model::Equals( System::Object^ obj )
 void 
 Bootstrap::Model::ApplyTransform( Matrix mat )
 {
-	// apply the worldspace transform to the model.
-	_model->SetWorld( mat.ToMMat4x4() );
+    // apply the worldspace transform to the model.
+    _model->SetWorld( mat.ToMMat4x4() );
 }
 
 //----------------------------------------------------------
@@ -476,5 +476,5 @@ Bootstrap::Matrix
 Bootstrap::Model::GetTransform()
 {
     // return the model's worldspace transform.
-	return Matrix( _model->GetWorld() );
+    return Matrix( _model->GetWorld() );
 }

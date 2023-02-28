@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		UTMessage.h
-// Author:		Kevin Bray
-// Created:		11-23-07
+// File:        UTMessage.h
+// Author:      Kevin Bray
+// Created:     11-23-07
 //
-// Purpose:		To provide an interface for simple networking.
+// Purpose:     To provide an interface for simple networking.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -23,31 +23,31 @@ typedef int ( __stdcall *IoctlProc )( SOCKET s, long cmd, unsigned long* argp );
 // message structure.
 struct UT_message_t
 {
-	unsigned int code;
-	unsigned int dataSize;
-	unsigned int transactionId;
-	char buffer[ UT_MAX_MESSAGE_SIZE ];
-	unsigned int offset;
+    unsigned int code;
+    unsigned int dataSize;
+    unsigned int transactionId;
+    char buffer[ UT_MAX_MESSAGE_SIZE ];
+    unsigned int offset;
 };
 
 // circular message queue structure.
 struct UT_message_queue_t
 {
-	UT_message_t* messages;
-	size_t head;
-	size_t tail;
-	size_t size;
+    UT_message_t* messages;
+    size_t head;
+    size_t tail;
+    size_t size;
 };
 
 // buffered message queue.
 struct UT_buffered_message_queue_t
 {
-	UT_message_queue_t queue;
-	void* buffer;
+    UT_message_queue_t queue;
+    void* buffer;
 };
 
 // this is an invalid message code and should never occur.
-#define UTMSG_INVALID					0
+#define UTMSG_INVALID                   0
 
 //----------------------------------------------------------
 // Client to server message codes.
@@ -56,167 +56,167 @@ struct UT_buffered_message_queue_t
 // UTMSG_CLIENT_CREATE: creates an uber-texture.
 //
 // Parameters:
-//		Width
-//		Height
-//		Stage count
-//		Flags (1 per stage)
-//		Channel counts (1 per stage)
-//		File name string length
-//		File name string
+//      Width
+//      Height
+//      Stage count
+//      Flags (1 per stage)
+//      Channel counts (1 per stage)
+//      File name string length
+//      File name string
 //
 // Acknowledgement:
-//		Uber texture ID
+//      Uber texture ID
 //
-#define UTMSG_CLIENT_CREATE				1
+#define UTMSG_CLIENT_CREATE             1
 /*
 // UTMSG_CLIENT_IMPORT: imports an uber-texture.
 //
 // Parameters:
-//		source TGA file name string length
-//		source TGA file name string
-//		destination file name string length
-//		destination file name string
-//		Channel count
-//		Flags
+//      source TGA file name string length
+//      source TGA file name string
+//      destination file name string length
+//      destination file name string
+//      Channel count
+//      Flags
 //
 // Acknowledgement:
-//		Uber texture ID
-//		Width
-//		Height
-//		Channel count
-//		Flags
+//      Uber texture ID
+//      Width
+//      Height
+//      Channel count
+//      Flags
 //
-#define UTMSG_CLIENT_IMPORT				2
+#define UTMSG_CLIENT_IMPORT             2
 */
 // UTMSG_CLIENT_OPEN: opens an uber-texture.
 //
 // Parameters:
-//		Transaction ID
-//		File name string length
-//		File name string
+//      Transaction ID
+//      File name string length
+//      File name string
 //
 // Acknowledgement:
-//		Uber texture ID
-//		Width
-//		Height
-//		Flags
-//		Stage count
-//		Channel counts (1 per stage)
+//      Uber texture ID
+//      Width
+//      Height
+//      Flags
+//      Stage count
+//      Channel counts (1 per stage)
 //
-#define UTMSG_CLIENT_OPEN				3
+#define UTMSG_CLIENT_OPEN               3
 
 // UTMSG_CLIENT_FINALIZE: finalizes an uber-texture.
 //
 // Parameters:
-//		Uber texture ID
-//		Compression Quality
-//		Channel flags (one for each channel in each stage).
+//      Uber texture ID
+//      Compression Quality
+//      Channel flags (one for each channel in each stage).
 //
 // Acknowledgement:
-//		Transaction ID
+//      Transaction ID
 //
-#define UTMSG_CLIENT_FINALIZE			4
+#define UTMSG_CLIENT_FINALIZE           4
 
 // UTMSG_CLIENT_CLOSE: closes an uber-texture.
 //
 // Parameters:
-//		Uber texture ID
+//      Uber texture ID
 //
 // Acknowledgement:
-//		None
-//		
-#define UTMSG_CLIENT_CLOSE				5
+//      None
+//      
+#define UTMSG_CLIENT_CLOSE              5
 
 // UTMSG_CLIENT_READ: reads a tile from an ubertexture.
 //
 // Parameters:
-//		Uber texture ID
-//		Tile X
-//		Tile Y
-//		Mip Level
+//      Uber texture ID
+//      Tile X
+//      Tile Y
+//      Mip Level
 //
 // Acknowledgement:
-//		Uber texture ID
-//		Tile X
-//		Tile Y
-//		Mip Level
-//		Compressed tileset data (LZ77 or S3TC)
+//      Uber texture ID
+//      Tile X
+//      Tile Y
+//      Mip Level
+//      Compressed tileset data (LZ77 or S3TC)
 //
-#define UTMSG_CLIENT_READ				6
+#define UTMSG_CLIENT_READ               6
 
 // UTMSG_CLIENT_READCANCEL: cancels a read from an ubertexture.
 //
 // Parameters:
-//		Transaction ID of read to cancel.
+//      Transaction ID of read to cancel.
 //
 // Acknowledgement:
-//		None
+//      None
 //
-#define UTMSG_CLIENT_READCANCEL			7
+#define UTMSG_CLIENT_READCANCEL         7
 
 // UTMSG_CLIENT_MULTI_READ: reads multiple tiles from an ubertexture.
 //
 // Parameters:
-//		Uber texture ID
-//		Tile count
-//		STRUCT
-//			Mip level	:  8-bits
-//			Tile X		: 12-bits
-//			Tile Y		: 12-bits
-//		END (1 per tile)
+//      Uber texture ID
+//      Tile count
+//      STRUCT
+//          Mip level   :  8-bits
+//          Tile X      : 12-bits
+//          Tile Y      : 12-bits
+//      END (1 per tile)
 //
 // Acknowledgement:
-//		Same as UTMSG_CLIENT_READ.  However, one response is sent for
-//		every tile requested.
+//      Same as UTMSG_CLIENT_READ.  However, one response is sent for
+//      every tile requested.
 //
-#define UTMSG_CLIENT_MULTI_READ			8
+#define UTMSG_CLIENT_MULTI_READ         8
 
 // UTMSG_CLIENT_WRITE: reads a tile from an ubertexture.
 //
 // Parameters:
-//		Uber texture ID
-//		Tile X
-//		Tile Y
-//		Mip Level
-//		Compressed tileset data
+//      Uber texture ID
+//      Tile X
+//      Tile Y
+//      Mip Level
+//      Compressed tileset data
 //
 // Acknowledgement:
-//		None
+//      None
 //
-#define UTMSG_CLIENT_WRITE				9
+#define UTMSG_CLIENT_WRITE              9
 
 // UTMSG_CLIENT_DIR_LISTING: returns a list of ubertextures in a given path.
 //
 // Parameters:
-//		Relative path name.
+//      Relative path name.
 //
 // Acknowledgement:
-//		Uber texture ID
+//      Uber texture ID
 //
-#define UTMSG_CLIENT_DIR_LISTING		10
+#define UTMSG_CLIENT_DIR_LISTING        10
 
 // UTMSG_ERROR: sent whenever a message request fails.
 //
 // Data:
 //
-#define UTMSG_ERROR						11
+#define UTMSG_ERROR                     11
 
 // UTMSG_MULTIREAD_ERROR: sent whenever a multi-read request fails.  Note
 //
 // Data:
-//		This message does not echo back any data other than the original
-//		read request.
+//      This message does not echo back any data other than the original
+//      read request.
 //
-#define UTMSG_MULTI_READ_ERROR			11
+#define UTMSG_MULTI_READ_ERROR          11
 
 // UTMSG_CLIENT_PING: pings the ubertexture server.
 //
 // Parameters:
 //
 // Acknowledgement:
-//		Transaction ID
+//      Transaction ID
 //
-#define UTMSG_CLIENT_PING				255
+#define UTMSG_CLIENT_PING               255
 
 //----------------------------------------------------------
 // Message handling.
@@ -230,7 +230,7 @@ extern int UTMessageSend( SOCKET socket, UT_message_t* message, SendProc recvPro
 // UTGetMessage() or UTSendMessage().
 // Returns 1 on success, 0 if not complete, and -1 on error.
 extern int UTMessageRecv( UT_message_t* message, SOCKET socket, RecvProc recvProc = recv,
-						  IoctlProc ioctlProc = ioctlsocket );
+                          IoctlProc ioctlProc = ioctlsocket );
 
 // UTMessageInit: initalizes the message passed in.
 extern void UTMessageInit( UT_message_t* message );
@@ -307,10 +307,10 @@ extern void UTMessageQueueClear( UT_message_queue_t* queue );
 // UTMessageQueueSend: sends as many messages in the queue as possible.
 // Returns 1 on success, 0 if not complete, and -1 on error.
 extern int UTMessageQueueSend( SOCKET socket, UT_message_queue_t* queue, char* buf,
-							   size_t bufSize,
-							   int* bytesSent = 0, SendProc sendProc = send );
+                               size_t bufSize,
+                               int* bytesSent = 0, SendProc sendProc = send );
 
 // UTMessageQueueSend: sends as many messages in the queue as possible.
 // Returns 1 on success, 0 if not complete, and -1 on error.
 extern void UTMessageQueueRecv( UT_message_queue_t* queue, SOCKET socket, int* bytesReceived = 0,
-							    RecvProc recvProc = recv, IoctlProc ioctlProc = ioctlsocket );
+                                RecvProc recvProc = recv, IoctlProc ioctlProc = ioctlsocket );

@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrShadowBuffer.h
-// Author:		Kevin Bray
-// Created:		11-27-05
+// File:        GrShadowBuffer.h
+// Author:      Kevin Bray
+// Created:     11-27-05
 //
-// Purpose:		To encapsulate/abstract shadow buffer functionality.
+// Purpose:     To encapsulate/abstract shadow buffer functionality.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -18,19 +18,19 @@ class GrTexture;
 class GrShadowBuffer
 {
 public:
-	GrShadowBuffer( unsigned int width, unsigned int height );
-	~GrShadowBuffer();
+    GrShadowBuffer( unsigned int width, unsigned int height );
+    ~GrShadowBuffer();
 
-	unsigned int			GetWidth() const;
-	unsigned int			GetHeight() const;
+    unsigned int            GetWidth() const;
+    unsigned int            GetHeight() const;
 
-	void					Bind();
-	URef< GrTexture >		Finish();
+    void                    Bind();
+    URef< GrTexture >       Finish();
 
 private:
-	void					BuildRenderTarget( unsigned int width, unsigned int height );
+    void                    BuildRenderTarget( unsigned int width, unsigned int height );
 
-	URef< GrRenderTarget >	_renderTarget;
-	URef< GrTexture >		_copyDepthTex;
-	GrRenderTarget*			_prevRT;
+    URef< GrRenderTarget >  _renderTarget;
+    URef< GrTexture >       _copyDepthTex;
+    GrRenderTarget*         _prevRT;
 };

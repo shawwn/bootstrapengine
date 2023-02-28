@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrSoftwareTextureMgr.h
-// Author:		Shawn Presser
-// Created:		09-13-08
+// File:        GrSoftwareTextureMgr.h
+// Author:      Shawn Presser
+// Created:     09-13-08
 //
-// Purpose:		To provide a centralized location to load GrSoftwareTextures.
+// Purpose:     To provide a centralized location to load GrSoftwareTextures.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------

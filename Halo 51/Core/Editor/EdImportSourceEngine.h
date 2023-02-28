@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		EdImportMD3.h
-// Author:		Shawn Presser
-// Created:		12-21-08
+// File:        EdImportMD3.h
+// Author:      Shawn Presser
+// Created:     12-21-08
 //
-// Purpose:		To import Source Engine art assets.
+// Purpose:     To import Source Engine art assets.
 //
 // Copyright © 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -19,7 +19,7 @@
 class EdImportSourceEngine
 {
 public:
-	EdImportSourceEngine();
+    EdImportSourceEngine();
 
-	bool			ImportModel( const char* name, const char* targetPackageName, const char* path, float scale );
+    bool            ImportModel( const char* name, const char* targetPackageName, const char* path, float scale );
 };

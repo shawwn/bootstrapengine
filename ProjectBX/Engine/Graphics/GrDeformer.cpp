@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		GrDeformer.cpp
-// Author:		Kevin Bray
-// Created:		05-12-06
+// File:        GrDeformer.cpp
+// Author:      Kevin Bray
+// Created:     05-12-06
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"

@@ -1,10 +1,10 @@
 //----------------------------------------------------------
-// File:		GrUTCompress.h
-// Author:		Kevin Bray
-// Created:		11-17-08
+// File:        GrUTCompress.h
+// Author:      Kevin Bray
+// Created:     11-17-08
 //
-// Purpose:		To provide compression services for the ubertexture
-//				worker thread.
+// Purpose:     To provide compression services for the ubertexture
+//              worker thread.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -24,7 +24,7 @@ extern void GrUTInitCompressor();
 // ubertexture compression services
 extern void GrUTCompressBGRX( UHuffman* encoder, const unsigned char* bgrx, unsigned char chop );
 extern void GrUTCompressA( UHuffman* encoder, const unsigned char* a, unsigned int bytesPerPel,
-						   unsigned char chop );
+                           unsigned char chop );
 
 // ubertexture decompression services.
 extern void GrUTDecompressBGRX( unsigned char* bgrx, UHuffman* decoder );

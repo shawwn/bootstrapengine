@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		MSVD.h
-// Author:		Kevin Bray
-// Created:		01-12-07
+// File:        MSVD.h
+// Author:      Kevin Bray
+// Created:     01-12-07
 //
-// Purpose:		To perform singular value decomposition.
+// Purpose:     To perform singular value decomposition.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -19,22 +19,22 @@
 class MSVD 
 {
 public:
-	MSVD( const MVec3* matrixMx3, unsigned int rowCount );
-	~MSVD();
+    MSVD( const MVec3* matrixMx3, unsigned int rowCount );
+    ~MSVD();
 
-	unsigned int	GetRowCount() const			{	return _rowCount;	}
+    unsigned int    GetRowCount() const         {   return _rowCount;   }
 
-	MVec3*			GetU() const				{	return _U;			}
-	const MMat3x3&	GetV() const				{	return _V;			}
+    MVec3*          GetU() const                {   return _U;          }
+    const MMat3x3&  GetV() const                {   return _V;          }
 
-	// gets the singular values.
-	MVec3			GetSingularValues() const	{	return _s;			}
+    // gets the singular values.
+    MVec3           GetSingularValues() const   {   return _s;          }
 
 private:
-	MVec3*			_U;
-	MMat3x3			_V;
-	MVec3			_s;
-	int				_rowCount;
+    MVec3*          _U;
+    MMat3x3         _V;
+    MVec3           _s;
+    int             _rowCount;
 };
 
 #if 0
@@ -44,7 +44,7 @@ private:
    */
 
    void getS (Array2D<Real> &A) {
-   	  A = Array2D<Real>(n,n);
+      A = Array2D<Real>(n,n);
       for (int i = 0; i < n; i++) {
          for (int j = 0; j < n; j++) {
             A[i][j] = 0.0;

@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		ThSection.cpp
-// Author:		Kevin Bray
-// Created:		09-01-08
+// File:        ThSection.cpp
+// Author:      Kevin Bray
+// Created:     09-01-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "common_afx.h"
@@ -23,15 +23,15 @@
 //----------------------------------------------------------
 ThSection::ThSection()
 {
-	_section = new CRITICAL_SECTION;
-	InitializeCriticalSection( ( CRITICAL_SECTION* )_section );
+    _section = new CRITICAL_SECTION;
+    InitializeCriticalSection( ( CRITICAL_SECTION* )_section );
 }
 
 //----------------------------------------------------------
 ThSection::~ThSection()
 {
-	DeleteCriticalSection( ( CRITICAL_SECTION* )_section );
-	delete ( CRITICAL_SECTION* )_section;
+    DeleteCriticalSection( ( CRITICAL_SECTION* )_section );
+    delete ( CRITICAL_SECTION* )_section;
 }
 
 
@@ -43,20 +43,20 @@ ThSection::~ThSection()
 void
 ThSection::Enter()
 {
-	EnterCriticalSection( ( CRITICAL_SECTION* )_section );
+    EnterCriticalSection( ( CRITICAL_SECTION* )_section );
 }
 
 //----------------------------------------------------------
 bool
 ThSection::TryEnter()
 {
-	BOOL result = TryEnterCriticalSection( ( CRITICAL_SECTION* )_section );
-	return ( result == TRUE );
+    BOOL result = TryEnterCriticalSection( ( CRITICAL_SECTION* )_section );
+    return ( result == TRUE );
 }
 
 //----------------------------------------------------------
 void
 ThSection::Leave()
 {
-	LeaveCriticalSection( ( CRITICAL_SECTION* )_section );
+    LeaveCriticalSection( ( CRITICAL_SECTION* )_section );
 }

@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		Engine.cpp
-// Author:		Shawn Presser
-// Created:		09-23-08
+// File:        Engine.cpp
+// Author:      Shawn Presser
+// Created:     09-23-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -85,21 +85,21 @@ tstring _EdPrintF_Text;
 int ( *PreviousPrintF )( const char *txt, ... ) = 0;
 static int OutputWindowPrintF( const char *fmt, ... )
 {
-	// allocate room for the new string on the stack.  
-	va_list marker;
-	va_start( marker, fmt );
-	int bufSize = _vscprintf( fmt, marker );
-	char *buf = ( char * )alloca( bufSize + 1 );
-	vsprintf_s( buf, bufSize + 1, fmt, marker );
-	va_end( marker );
+    // allocate room for the new string on the stack.  
+    va_list marker;
+    va_start( marker, fmt );
+    int bufSize = _vscprintf( fmt, marker );
+    char *buf = ( char * )alloca( bufSize + 1 );
+    vsprintf_s( buf, bufSize + 1, fmt, marker );
+    va_end( marker );
 
-	// first, output to the standard PrintF.
-	PreviousPrintF( "%s", buf );
+    // first, output to the standard PrintF.
+    PreviousPrintF( "%s", buf );
 
-	// then output to the output window.
-	_EdPrintF_Text.append( buf );
+    // then output to the output window.
+    _EdPrintF_Text.append( buf );
 
-	return 0;
+    return 0;
 }
 #pragma managed( pop ) 
 
@@ -117,84 +117,84 @@ static float        _scriptCallbackTime = 0.0f;
 static bool 
 BInternalSetup( HWND windowHandle )
 {
-	// setup the pixel format.
-	PIXELFORMATDESCRIPTOR pfd = {
-		sizeof(PIXELFORMATDESCRIPTOR),    
-		1,						/* version */
-		PFD_SUPPORT_OPENGL |
-		PFD_DRAW_TO_WINDOW |
-		PFD_DOUBLEBUFFER,       /* support double-buffering */
-		PFD_TYPE_RGBA,          /* framebuffer color type */
-		24,						/* preferred color depth */
-		8, 0, 8, 0, 8, 0,       /* color bits (ignored) */
-		8,						/* no alpha buffer */
-		0,						/* alpha bits (ignored) */
-		0,						/* no accumulation buffer */
-		0, 0, 0, 0,				/* accum bits (ignored) */
-		24,						/* depth buffer */
-		8,						/* no stencil buffer */
-		0,						/* no auxiliary buffers */
-		PFD_MAIN_PLANE,         /* main layer */
-		0,						/* reserved */
-		0, 0, 0,				/* no layer, visible, damage masks */
-	};
+    // setup the pixel format.
+    PIXELFORMATDESCRIPTOR pfd = {
+        sizeof(PIXELFORMATDESCRIPTOR),    
+        1,                      /* version */
+        PFD_SUPPORT_OPENGL |
+        PFD_DRAW_TO_WINDOW |
+        PFD_DOUBLEBUFFER,       /* support double-buffering */
+        PFD_TYPE_RGBA,          /* framebuffer color type */
+        24,                     /* preferred color depth */
+        8, 0, 8, 0, 8, 0,       /* color bits (ignored) */
+        8,                      /* no alpha buffer */
+        0,                      /* alpha bits (ignored) */
+        0,                      /* no accumulation buffer */
+        0, 0, 0, 0,             /* accum bits (ignored) */
+        24,                     /* depth buffer */
+        8,                      /* no stencil buffer */
+        0,                      /* no auxiliary buffers */
+        PFD_MAIN_PLANE,         /* main layer */
+        0,                      /* reserved */
+        0, 0, 0,                /* no layer, visible, damage masks */
+    };
 
-	// TODO: update the pixel format based on attributes.
-	pfd.iPixelType = PFD_TYPE_RGBA;
-	pfd.dwFlags |= PFD_DOUBLEBUFFER;
+    // TODO: update the pixel format based on attributes.
+    pfd.iPixelType = PFD_TYPE_RGBA;
+    pfd.dwFlags |= PFD_DOUBLEBUFFER;
 
-	// get the device context.
-	_BDC = GetDC( windowHandle );
-	if( !_BDC )
-		return false;
+    // get the device context.
+    _BDC = GetDC( windowHandle );
+    if( !_BDC )
+        return false;
 
-	// select the pixel format.
-	int pixelFormat = ChoosePixelFormat( _BDC, &pfd );
-	if( pixelFormat == 0 )
-		return false;
+    // select the pixel format.
+    int pixelFormat = ChoosePixelFormat( _BDC, &pfd );
+    if( pixelFormat == 0 )
+        return false;
 
-	if( !SetPixelFormat( _BDC, pixelFormat, &pfd ) )
-		return false;
+    if( !SetPixelFormat( _BDC, pixelFormat, &pfd ) )
+        return false;
 
-	// grab the device.
-	_BRC = wglCreateContext( _BDC );
-	if( !_BRC )
-	{
-		ReleaseDC( windowHandle, _BDC );
-		_BDC = 0;
-		return false;
-	}
+    // grab the device.
+    _BRC = wglCreateContext( _BDC );
+    if( !_BRC )
+    {
+        ReleaseDC( windowHandle, _BDC );
+        _BDC = 0;
+        return false;
+    }
 
-	if( !wglMakeCurrent( _BDC, _BRC ) )
-	{
-		ReleaseDC( windowHandle, _BDC );
-		_BDC = 0;
-		return false;
-	}
+    if( !wglMakeCurrent( _BDC, _BRC ) )
+    {
+        ReleaseDC( windowHandle, _BDC );
+        _BDC = 0;
+        return false;
+    }
 
-	// initialize OpenGL.
-	StartGL( _BDC );
+    // initialize OpenGL.
+    StartGL( _BDC );
 
-	return true;
+    return true;
 }
 
 //----------------------------------------------------------
 static void 
 BInternalTeardown( HWND windowHandle )
 {
-	// free the rendering context.
-	if( _BRC )
-	{
-		wglDeleteContext( _BRC ); 
-		_BRC = 0;
-	}
+    // free the rendering context.
+    if( _BRC )
+    {
+        wglDeleteContext( _BRC ); 
+        _BRC = 0;
+    }
 
-	// free the device context.
-	if( _BDC )
-	{
-		ReleaseDC( windowHandle, _BDC );
-		_BDC = 0;
-	}
+    // free the device context.
+    if( _BDC )
+    {
+        ReleaseDC( windowHandle, _BDC );
+        _BDC = 0;
+    }
 }
 
 //----------------------------------------------------------
@@ -202,14 +202,14 @@ BInternalTeardown( HWND windowHandle )
 static void 
 BAppTeardown( HWND windowHandle )
 {
-	delete gEdBrushPaletteMgr;
-	delete gEdBrushMgr;
-	delete gGrSubsys;
-	delete gRRsrcMgr;
-	delete gRFileMgr;
-	delete gUExprMgr;
+    delete gEdBrushPaletteMgr;
+    delete gEdBrushMgr;
+    delete gGrSubsys;
+    delete gRRsrcMgr;
+    delete gRFileMgr;
+    delete gUExprMgr;
 
-	return BInternalTeardown( windowHandle );
+    return BInternalTeardown( windowHandle );
 }
 
 //----------------------------------------------------------
@@ -217,22 +217,22 @@ BAppTeardown( HWND windowHandle )
 static bool 
 BAppSetup( HWND windowHandle, tstring workingFolder )
 {
-	RECT rect;
-	GetWindowRect( windowHandle, &rect );
+    RECT rect;
+    GetWindowRect( windowHandle, &rect );
 
-	// initialize OpenGL.
-	if( !BInternalSetup( windowHandle ) )
-		return false;
+    // initialize OpenGL.
+    if( !BInternalSetup( windowHandle ) )
+        return false;
 
-	// initialize the basics.
-	new UExprMgr;
-	new RFileMgr( workingFolder );
-	new RRsrcMgr;
-	new GrSubsys( rect.right - rect.left, rect.bottom - rect.top, false, true );
-	new EdBrushMgr( Bootstrap::StrToTStr( Bootstrap::Settings::Get()->GetBrushFolder() ) );
-	new EdBrushPaletteMgr( Bootstrap::StrToTStr( Bootstrap::Settings::Get()->GetBrushFolder() ) );
+    // initialize the basics.
+    new UExprMgr;
+    new RFileMgr( workingFolder );
+    new RRsrcMgr;
+    new GrSubsys( rect.right - rect.left, rect.bottom - rect.top, false, true );
+    new EdBrushMgr( Bootstrap::StrToTStr( Bootstrap::Settings::Get()->GetBrushFolder() ) );
+    new EdBrushPaletteMgr( Bootstrap::StrToTStr( Bootstrap::Settings::Get()->GetBrushFolder() ) );
 
-	return true;
+    return true;
 }
 
 //----------------------------------------------------------
@@ -240,24 +240,24 @@ BAppSetup( HWND windowHandle, tstring workingFolder )
 static void 
 BSwapBuffers()
 {
-	SwapBuffers( _BDC );
+    SwapBuffers( _BDC );
 }
 
 //----------------------------------------------------------
 static float 
 TimeCallback()
 {
-	return _scriptCallbackTime;
+    return _scriptCallbackTime;
 }
 
 //----------------------------------------------------------
 tstring 
 LowercaseString( const tstring& str )
 {
-	tstring result;
-	for( tstring::const_iterator it = str.begin(); it != str.end(); ++it )
-		result.append( 1, tolower( *it ) );
-	return result;
+    tstring result;
+    for( tstring::const_iterator it = str.begin(); it != str.end(); ++it )
+        result.append( 1, tolower( *it ) );
+    return result;
 
 }
 
@@ -277,97 +277,97 @@ Bootstrap::Engine::Engine( Control^ renderOnto, System::String^ workingFolder )
         useWorkingFolder = StrToTStr( workingFolder );
 
 
-	// initialize the engine.
-	if( !BAppSetup( ( HWND )renderOnto->Handle.ToPointer(), useWorkingFolder ) )
-		return;
+    // initialize the engine.
+    if( !BAppSetup( ( HWND )renderOnto->Handle.ToPointer(), useWorkingFolder ) )
+        return;
 
-	gUExprMgr->CreateScriptCallback( "_time", TimeCallback );
+    gUExprMgr->CreateScriptCallback( "_time", TimeCallback );
 
-	// finish initialization.
-	_renderWindow = renderOnto;
-	_scene = gcnew Bootstrap::Scene();
-	_timeKeeper = gcnew TimeKeeper();
+    // finish initialization.
+    _renderWindow = renderOnto;
+    _scene = gcnew Bootstrap::Scene();
+    _timeKeeper = gcnew TimeKeeper();
 }
 
 //----------------------------------------------------------
 Bootstrap::Engine::~Engine()
 {
-	this->!Engine();
-	_disposed = true;
+    this->!Engine();
+    _disposed = true;
 }
 
 //----------------------------------------------------------
 Bootstrap::Engine::!Engine()
 {
-	// force garbage collection.
-//		_drawUberTexture->~DrawUberTexture();
-	_scene->~Scene();
-	_singleton = nullptr;
-	_disposed = true;
-	if( Initialized )
-		BAppTeardown( ( HWND )_renderWindow->Handle.ToPointer() );
+    // force garbage collection.
+//      _drawUberTexture->~DrawUberTexture();
+    _scene->~Scene();
+    _singleton = nullptr;
+    _disposed = true;
+    if( Initialized )
+        BAppTeardown( ( HWND )_renderWindow->Handle.ToPointer() );
 
-	Module::Shutdown();
+    Module::Shutdown();
 }
 
 //----------------------------------------------------------
 Bootstrap::Engine^ 
 Bootstrap::Engine::Startup( Control^ renderOnto, OutputCallback^ outputCallback, System::String^ workingFolder )
 {
-	// store the output callback.
-	_outputCallback = outputCallback;
+    // store the output callback.
+    _outputCallback = outputCallback;
 
-	// assign the new PrintF function.
+    // assign the new PrintF function.
     // TODO: uncomment this for debug purposes.
-	PreviousPrintF = PrintF;
-	PrintF = OutputWindowPrintF;
-	EdPrintF = OutputWindowPrintF;
+    PreviousPrintF = PrintF;
+    PrintF = OutputWindowPrintF;
+    EdPrintF = OutputWindowPrintF;
 
-	B_ASSERT( Module::IsActive() );
+    B_ASSERT( Module::IsActive() );
 
-	// return the singleton if it's already been created.
-	if ( _singleton != nullptr )
-		return _singleton;
+    // return the singleton if it's already been created.
+    if ( _singleton != nullptr )
+        return _singleton;
 
-	// return the new engine.
-	_singleton = gcnew Engine( renderOnto, workingFolder );
-	return _singleton;
+    // return the new engine.
+    _singleton = gcnew Engine( renderOnto, workingFolder );
+    return _singleton;
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::PumpOutputMessages()
 {
-	// output any EdPrintF statements to the output callback.
-	if( _outputCallback != nullptr )
-	{
-		_outputCallback( TStrToStr( _EdPrintF_Text ) );
-		_EdPrintF_Text.clear();
-	}
+    // output any EdPrintF statements to the output callback.
+    if( _outputCallback != nullptr )
+    {
+        _outputCallback( TStrToStr( _EdPrintF_Text ) );
+        _EdPrintF_Text.clear();
+    }
 }
 
 //----------------------------------------------------------
 Bootstrap::Engine^ 
 Bootstrap::Engine::Get()
 {
-	return _singleton;
+    return _singleton;
 }
 
 //----------------------------------------------------------
 bool 
 Bootstrap::Engine::RenderWireframe::get()
 {
-	if ( !gGrRenderer )
-		return false;
-	return gGrRenderer->GetWireframeEnable();
+    if ( !gGrRenderer )
+        return false;
+    return gGrRenderer->GetWireframeEnable();
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::RenderWireframe::set( bool renderWireframe )
 {
-	if ( gGrRenderer )
-		gGrRenderer->SetWireframeEnable( renderWireframe );
+    if ( gGrRenderer )
+        gGrRenderer->SetWireframeEnable( renderWireframe );
 }
 
 //----------------------------------------------------------
@@ -388,120 +388,120 @@ Bootstrap::Engine::GameTimeDelta::get()
 bool 
 Bootstrap::Engine::IsReady()
 {
-	// if we're not initialized, fail.
-	return !_disposed && Initialized;
+    // if we're not initialized, fail.
+    return !_disposed && Initialized;
 }
 
 //----------------------------------------------------------
 bool 
 Bootstrap::Engine::ImportArtScene( String^ targetName, String^ pathToArtFile, bool findNormalMaps,
-								   bool uberTexture, bool overwriteMaterials, bool overwriteLights )
+                                   bool uberTexture, bool overwriteMaterials, bool overwriteLights )
 {
-	EdImportDAE importer;
-	if( !importer.ImportScene( StrToTStr( targetName ).c_str(), StrToTStr( pathToArtFile ).c_str(), findNormalMaps,
-		uberTexture, overwriteMaterials, overwriteLights ) )
-	{
-		// TODO: Improve this error message.
-		EdPrintF( "Failed to load scene %s.", StrToTStr( pathToArtFile + "/" + targetName ).c_str() );
-		return false;
-	}
-	return true;
+    EdImportDAE importer;
+    if( !importer.ImportScene( StrToTStr( targetName ).c_str(), StrToTStr( pathToArtFile ).c_str(), findNormalMaps,
+        uberTexture, overwriteMaterials, overwriteLights ) )
+    {
+        // TODO: Improve this error message.
+        EdPrintF( "Failed to load scene %s.", StrToTStr( pathToArtFile + "/" + targetName ).c_str() );
+        return false;
+    }
+    return true;
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::LoadBrushScript( System::String^ filePath, System::String^ outErrors )
 {
-	tstring errors;
-	gRRsrcMgr->LoadScript( UPath( StrToTStr( filePath ) ) + ED_BRUSH_FILENAME, ED_KW_BRUSH, errors );
-	outErrors = TStrToStr( errors );
+    tstring errors;
+    gRRsrcMgr->LoadScript( UPath( StrToTStr( filePath ) ) + ED_BRUSH_FILENAME, ED_KW_BRUSH, errors );
+    outErrors = TStrToStr( errors );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::LoadBrushPaletteScript( System::String^ filePath, System::String^ outErrors )
 {
-	tstring errors;
-	gRRsrcMgr->LoadScript( UPath( StrToTStr( filePath ) ) + ED_BRUSH_PALETTE_FILENAME, ED_KW_BRUSHPALETTE, errors );
-	outErrors = TStrToStr( errors );
+    tstring errors;
+    gRRsrcMgr->LoadScript( UPath( StrToTStr( filePath ) ) + ED_BRUSH_PALETTE_FILENAME, ED_KW_BRUSHPALETTE, errors );
+    outErrors = TStrToStr( errors );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::LoadMaterialScript( System::String^ filePath, System::String^ outErrors )
 {
-	tstring errors;
-	gRRsrcMgr->LoadScript( UPath( StrToTStr( filePath ) ) + GR_MATERIAL_FILENAME, GR_KW_MATERIAL, errors );
-	outErrors = TStrToStr( errors );
+    tstring errors;
+    gRRsrcMgr->LoadScript( UPath( StrToTStr( filePath ) ) + GR_MATERIAL_FILENAME, GR_KW_MATERIAL, errors );
+    outErrors = TStrToStr( errors );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::TimePause()
 {
-	_timeKeeper->Pause();
+    _timeKeeper->Pause();
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::TimeResume()
 {
-	_timeKeeper->Resume();
+    _timeKeeper->Resume();
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::Update()
 {
-	PumpOutputMessages();
+    PumpOutputMessages();
 
-	// if we're not initialized, fail.
-	if( !IsReady() )
-		return;
+    // if we're not initialized, fail.
+    if( !IsReady() )
+        return;
 
-	_timeKeeper->Update();
-	unsigned int sysTimeDelta = _timeKeeper->GetSysTimeDelta();
-	unsigned int gameTimeDelta = _timeKeeper->GetGameTimeDelta();
+    _timeKeeper->Update();
+    unsigned int sysTimeDelta = _timeKeeper->GetSysTimeDelta();
+    unsigned int gameTimeDelta = _timeKeeper->GetGameTimeDelta();
 
-	// update the script callback time.
-	static unsigned int intScriptCallbackTime = 0;
-	intScriptCallbackTime += gameTimeDelta;
-	if ( intScriptCallbackTime > 10000000 )
-		intScriptCallbackTime -= 10000000;
-	
-	// convert from milliseconds to seconds.
-	_scriptCallbackTime = ( float )( intScriptCallbackTime / 1000.0 );
+    // update the script callback time.
+    static unsigned int intScriptCallbackTime = 0;
+    intScriptCallbackTime += gameTimeDelta;
+    if ( intScriptCallbackTime > 10000000 )
+        intScriptCallbackTime -= 10000000;
+    
+    // convert from milliseconds to seconds.
+    _scriptCallbackTime = ( float )( intScriptCallbackTime / 1000.0 );
 
-	// update the engine.
-	gGrSubsys->Update( gameTimeDelta, sysTimeDelta );
+    // update the engine.
+    gGrSubsys->Update( gameTimeDelta, sysTimeDelta );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::BeginRender( Camera^ camera )
 {
-	// if we're not initialized, fail.
-	if( !IsReady() )
-		return;
+    // if we're not initialized, fail.
+    if( !IsReady() )
+        return;
 
-	// set the viewport.
-	GrViewport( 0, 0, _renderWindow->Width, _renderWindow->Height );
+    // set the viewport.
+    GrViewport( 0, 0, _renderWindow->Width, _renderWindow->Height );
 
-	// render the scene.
+    // render the scene.
 #if 0
-	gGrScene->Render( camera->_camera );
+    gGrScene->Render( camera->_camera );
 #else
-	// clear the previous frame's statistics.
-	ClearGLStats();
+    // clear the previous frame's statistics.
+    ClearGLStats();
 
-	// generate any procedural textures.
-	gGrTexGen->GenTextures( camera->_camera );
+    // generate any procedural textures.
+    gGrTexGen->GenTextures( camera->_camera );
 
-	// start rendering frame.
-	gGrFramebuffer->BeginFrame();
+    // start rendering frame.
+    gGrFramebuffer->BeginFrame();
 
-	// render the scene to the texture ( the framebuffer is a texture ).
-	gGrScene->RenderTexture( camera->_camera, camera->_camera->GetPos() );
+    // render the scene to the texture ( the framebuffer is a texture ).
+    gGrScene->RenderTexture( camera->_camera, camera->_camera->GetPos() );
 #endif
 }
 
@@ -510,46 +510,46 @@ void
 Bootstrap::Engine::EndRender()
 {
 
-	// end rendering frame.
-	gGrFramebuffer->EndFrame( gGrScene->GetSceneTime() );
+    // end rendering frame.
+    gGrFramebuffer->EndFrame( gGrScene->GetSceneTime() );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::Resize( unsigned int width, unsigned int height )
 {
-	gGrSubsys->Resize( width, height );
+    gGrSubsys->Resize( width, height );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::ClearDepthBuffer()
 {
-	// clear the depth buffer.
-	unsigned int mask = GrGetWriteEnable();
-	GrSetWriteEnable( GR_DEPTH );
-	GrClear();
-	GrSetWriteEnable( mask );
+    // clear the depth buffer.
+    unsigned int mask = GrGetWriteEnable();
+    GrSetWriteEnable( GR_DEPTH );
+    GrClear();
+    GrSetWriteEnable( mask );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::Present()
 {
-	// present the scene.
-	BSwapBuffers();
+    // present the scene.
+    BSwapBuffers();
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::SetupStates( Camera^ camera, bool wireframe, bool depthTest )
 {
-	gGrRenderUtil->SetupColoredRender( *camera->_camera, wireframe, false );
+    gGrRenderUtil->SetupColoredRender( *camera->_camera, wireframe, false );
 
-	if ( depthTest )
-		GrEnable( GR_DEPTHTEST );
-	else
-		GrDisable( GR_DEPTHTEST );
+    if ( depthTest )
+        GrEnable( GR_DEPTHTEST );
+    else
+        GrDisable( GR_DEPTHTEST );
 }
 
 //----------------------------------------------------------
@@ -563,60 +563,60 @@ Bootstrap::Engine::DrawSphere( const Vector3& pos, float radius, Color color )
 void 
 Bootstrap::Engine::DrawSphere( Vector3 pos, float radius, Color color, int slices )
 {
-	gGrRenderUtil->DrawColoredSphere( pos.ToMVec3(), radius, color.ToGrColor(), slices );
+    gGrRenderUtil->DrawColoredSphere( pos.ToMVec3(), radius, color.ToGrColor(), slices );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::DrawLine( Vector3 start, Vector3 end, Color color )
 {
-	gGrRenderUtil->DrawColoredLine( start.ToMVec3(), end.ToMVec3(), color.ToGrColor() );
+    gGrRenderUtil->DrawColoredLine( start.ToMVec3(), end.ToMVec3(), color.ToGrColor() );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::DrawAABox( AABox box, Color color )
 {
-	gGrRenderUtil->DrawColoredAABox( box.Center + box.HalfExtents, box.Center - box.HalfExtents, color );
+    gGrRenderUtil->DrawColoredAABox( box.Center + box.HalfExtents, box.Center - box.HalfExtents, color );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::DrawOBox( OBox box, Color color )
 {
-	gGrRenderUtil->DrawColoredOBox( box.Transform.ToMMat4x4(), box.HalfExtents.ToMVec3(), color.ToGrColor() );
+    gGrRenderUtil->DrawColoredOBox( box.Transform.ToMMat4x4(), box.HalfExtents.ToMVec3(), color.ToGrColor() );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::DrawPoint( Camera^ camera, Vector3 pos, Color color, int sizeInPixels )
 {
-	gGrRenderUtil->DrawColoredPoint( *camera->_camera, pos.ToMVec3(), color.ToGrColor(), sizeInPixels );
+    gGrRenderUtil->DrawColoredPoint( *camera->_camera, pos.ToMVec3(), color.ToGrColor(), sizeInPixels );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::ProcessConsoleMessage( String^ message )
 {
-	tstring msg = StrToTStr( message );
-	TokenContainer tokens;
-	StrTokenize( tokens, msg.c_str() );
-	HandleConsoleMessage( msg, tokens );
+    tstring msg = StrToTStr( message );
+    TokenContainer tokens;
+    StrTokenize( tokens, msg.c_str() );
+    HandleConsoleMessage( msg, tokens );
 }
 
 //----------------------------------------------------------
 void 
 Bootstrap::Engine::HandleConsoleMessage( const std::string& wholeMessage, const std::vector< tstring >& tokens )
 {
-	// if there are no tokens, disregard this.
-	if( tokens.size() == 0 )
-		return;
+    // if there are no tokens, disregard this.
+    if( tokens.size() == 0 )
+        return;
 
-	// try to issue the command to the various systems.
-	bool commandIssued = false;
-	commandIssued = commandIssued || gGrSubsys->IssueCommand( wholeMessage );
+    // try to issue the command to the various systems.
+    bool commandIssued = false;
+    commandIssued = commandIssued || gGrSubsys->IssueCommand( wholeMessage );
 
-	// was there an error?
-	if ( !commandIssued )
-		EdPrintF( "Unknown console command.", wholeMessage.c_str() );
+    // was there an error?
+    if ( !commandIssued )
+        EdPrintF( "Unknown console command.", wholeMessage.c_str() );
 }

@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		UExprTerm.h
-// Author:		Kevin Bray
-// Created:		07-05-05
+// File:        UExprTerm.h
+// Author:      Kevin Bray
+// Created:     07-05-05
 //
-// Purpose:		A term to evaluate in an expression.
+// Purpose:     A term to evaluate in an expression.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -17,16 +17,16 @@
 //**********************************************************
 class UExprNumber : public UExprTerm
 {
-	friend class UExprMgr;
+    friend class UExprMgr;
 
-	UExprNumber( float value ) : _value( value ) { }
+    UExprNumber( float value ) : _value( value ) { }
 public:
-	~UExprNumber() { }
+    ~UExprNumber() { }
 
-	float			GetValue() const		{	return _value;		}
-	bool			IsDynamic() const		{	return false;		}
-	ETYPE			GetType() const			{	return ET_NUMBER;	}
+    float           GetValue() const        {   return _value;      }
+    bool            IsDynamic() const       {   return false;       }
+    ETYPE           GetType() const         {   return ET_NUMBER;   }
 
 private:
-	float			_value;
+    float           _value;
 };

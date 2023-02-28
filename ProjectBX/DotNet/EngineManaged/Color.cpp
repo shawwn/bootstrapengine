@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		Color.cpp
-// Author:		Shawn Presser
-// Created:		09-20-08
+// File:        Color.cpp
+// Author:      Shawn Presser
+// Created:     09-20-08
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
@@ -19,34 +19,34 @@
 //----------------------------------------------------------
 Bootstrap::Color::Color( const GrColor& color )
 {
-	R = color.GetR();
-	G = color.GetG();
-	B = color.GetB();
-	A = color.GetA();
+    R = color.GetR();
+    G = color.GetG();
+    B = color.GetB();
+    A = color.GetA();
 }
 
 //----------------------------------------------------------
 GrColor 
 Bootstrap::Color::ToGrColor()
 {
-	return GrColor( R, G, B, A );
+    return GrColor( R, G, B, A );
 }
 
 //----------------------------------------------------------
 Bootstrap::Color::Color( float r, float g, float b, float a )
 {
-	R = r;
-	G = g;
-	B = b;
-	A = a;
+    R = r;
+    G = g;
+    B = b;
+    A = a;
 }
 
 //----------------------------------------------------------
 System::String^ 
 Bootstrap::Color::ToString()
 {
-	return "#( " + R + ", " + G + ", " + B + ", " + A + " )";
-}		
+    return "#( " + R + ", " + G + ", " + B + ", " + A + " )";
+}       
 
 //----------------------------------------------------------
 Bootstrap::Color::operator Color( System::Drawing::Color col )
@@ -73,33 +73,33 @@ Bootstrap::Color::operator System::Drawing::Color( Color col )
 Bootstrap::Color
 Bootstrap::Color::operator + ( Bootstrap::Color col1, Bootstrap::Color col2 )
 {
-	return Color(
-		col1.R + col2.R,
-		col1.G + col2.G,
-		col1.B + col2.B,
-		col1.A + col2.A );
+    return Color(
+        col1.R + col2.R,
+        col1.G + col2.G,
+        col1.B + col2.B,
+        col1.A + col2.A );
 }
 
 //----------------------------------------------------------
 Bootstrap::Color
 Bootstrap::Color::operator - ( Bootstrap::Color col1, Bootstrap::Color col2 )
 {
-	return Color(
-		col1.R - col2.R,
-		col1.G - col2.G,
-		col1.B - col2.B,
-		col1.A - col2.A );
+    return Color(
+        col1.R - col2.R,
+        col1.G - col2.G,
+        col1.B - col2.B,
+        col1.A - col2.A );
 }
 
 //----------------------------------------------------------
 Bootstrap::Color
 Bootstrap::Color::operator * ( float s, Bootstrap::Color col )
 {
-	return Color(
-		s * col.R,
-		s * col.G,
-		s * col.B,
-		s * col.A );
+    return Color(
+        s * col.R,
+        s * col.G,
+        s * col.B,
+        s * col.A );
 }
 
 //----------------------------------------------------------

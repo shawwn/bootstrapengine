@@ -1,33 +1,33 @@
 namespace Editor
 {
-	partial class OutputWindow
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class OutputWindow
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose( bool disposing )
-		{
-			if( disposing && ( components != null ) )
-			{
-				components.Dispose();
-			}
-			base.Dispose( disposing );
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose( bool disposing )
+        {
+            if( disposing && ( components != null ) )
+            {
+                components.Dispose();
+            }
+            base.Dispose( disposing );
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbOutput = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -130,15 +130,15 @@ namespace Editor
             this.toolStripEx3.PerformLayout();
             this.ResumeLayout( false );
 
-		}
+        }
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.TextBox tbOutput;
-		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.TextBox tbConsole;
-		private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx3;
-		private System.Windows.Forms.ToolStripButton btnSubmit;
-	}
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox tbOutput;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox tbConsole;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx3;
+        private System.Windows.Forms.ToolStripButton btnSubmit;
+    }
 }

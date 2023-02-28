@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrPolygonUberMapping.h
-// Author:		Kevin Bray
-// Created:		12-27-08
+// File:        GrPolygonUberMapping.h
+// Author:      Kevin Bray
+// Created:     12-27-08
 //
-// Purpose:		To place a UV group into an ubertexture.
+// Purpose:     To place a UV group into an ubertexture.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -20,26 +20,26 @@ class UPath;
 class GrPolygonUberMapping
 {
 public:
-	GrPolygonUberMapping( unsigned int uberTexIdx );
-	~GrPolygonUberMapping();
+    GrPolygonUberMapping( unsigned int uberTexIdx );
+    ~GrPolygonUberMapping();
 
-	// adds an ubertexture to the current patch.
-	bool					AddPatch( GrPolygonUberPatch* patch );
+    // adds an ubertexture to the current patch.
+    bool                    AddPatch( GrPolygonUberPatch* patch );
 
-	// patch accessors.
-	unsigned int			GetPatchCount() const;
-	GrPolygonUberPatch*		GetPatch( unsigned int idx ) const;
+    // patch accessors.
+    unsigned int            GetPatchCount() const;
+    GrPolygonUberPatch*     GetPatch( unsigned int idx ) const;
 
-	// builds an ubertexture out of the currently added geometry.
-	URef< GrUberTexture >	BuildUberTexture( const UPath& name ) const;
+    // builds an ubertexture out of the currently added geometry.
+    URef< GrUberTexture >   BuildUberTexture( const UPath& name ) const;
 
 private:
-	typedef std::vector< GrPolygonUberPatch* > PatchVector;
+    typedef std::vector< GrPolygonUberPatch* > PatchVector;
 
-	// mapping state.
-	PatchVector				_patches;
-	unsigned int			_curX;
-	unsigned int			_curY;
-	unsigned int			_maxY;
-	unsigned int			_uberTexIdx;
+    // mapping state.
+    PatchVector             _patches;
+    unsigned int            _curX;
+    unsigned int            _curY;
+    unsigned int            _maxY;
+    unsigned int            _uberTexIdx;
 };

@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		HDRHiPass.vsh
-// Author:		Kevin Bray
-// Created:		02-07-06
+// File:        HDRHiPass.vsh
+// Author:      Kevin Bray
+// Created:     02-07-06
 // Copyright © 2004 Bootstrap Games.  All rights reserved.
 //----------------------------------------------------------
 
@@ -18,6 +18,6 @@ uniform vec4 u_TexCoordOffset;
 // main
 void main()
 {
-	gl_Position = ftransform();
-	v_HDRTexCoord.xy = u_TexCoordScale.xy * gl_MultiTexCoord0.xy + u_TexCoordOffset.xy;
+    gl_Position = ftransform();
+    v_HDRTexCoord.xy = u_TexCoordScale.xy * gl_MultiTexCoord0.xy + u_TexCoordOffset.xy;
 }

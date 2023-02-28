@@ -10,114 +10,114 @@ using System.Runtime.InteropServices;
 
 namespace Editor
 {
-	public partial class OutputWindow : Office2007Form
-	{
-		// SetScrollPos
-		[DllImport( "user32.dll" )]
-		static extern int SetScrollPos( IntPtr hWnd, int nBar,
-									   int nPos, bool bRedraw );
+    public partial class OutputWindow : Office2007Form
+    {
+        // SetScrollPos
+        [DllImport( "user32.dll" )]
+        static extern int SetScrollPos( IntPtr hWnd, int nBar,
+                                       int nPos, bool bRedraw );
 
-		// GetScrollPos
-		[DllImport( "user32.dll" )]
-		static extern int GetScrollPos( IntPtr hWnd, int nBar );
+        // GetScrollPos
+        [DllImport( "user32.dll" )]
+        static extern int GetScrollPos( IntPtr hWnd, int nBar );
 
-		// SendMessage
-		[DllImport( "user32.dll" )]
-		static extern int SendMessage( IntPtr hWnd, int wMsg,
-									   int wParam, int lParam );
+        // SendMessage
+        [DllImport( "user32.dll" )]
+        static extern int SendMessage( IntPtr hWnd, int wMsg,
+                                       int wParam, int lParam );
 
-		const int EM_LINESCROLL = 0x00B6;
+        const int EM_LINESCROLL = 0x00B6;
 
-		public OutputWindow()
-		{
-			InitializeComponent();
+        public OutputWindow()
+        {
+            InitializeComponent();
 
-			// clear the default output text.
-			tbOutput.Text = "";
-		}
+            // clear the default output text.
+            tbOutput.Text = "";
+        }
 
-		public void Add( string text )
-		{
-			// if the text is empty, don't do anything.
-			if( text == "" )
-				return;
+        public void Add( string text )
+        {
+            // if the text is empty, don't do anything.
+            if( text == "" )
+                return;
 
-			// replace \r\n with \n, then \n with \r\n.  
-			// (This replaces any lone \n's with \r\n's, without affecting any \r\n's.)
-			text = text.Replace( "\r\n", "\n" ).Replace( "\n", "\r\n" );
+            // replace \r\n with \n, then \n with \r\n.  
+            // (This replaces any lone \n's with \r\n's, without affecting any \r\n's.)
+            text = text.Replace( "\r\n", "\n" ).Replace( "\n", "\r\n" );
 
-			// pump any engine messages.
-			Bootstrap.Engine.PumpOutputMessages();
+            // pump any engine messages.
+            Bootstrap.Engine.PumpOutputMessages();
 
-			// add a timestamp.
-			text = Timestamp + ": " + text;
+            // add a timestamp.
+            text = Timestamp + ": " + text;
 
-			// add the text.
-			WriteText( text );
-		}
+            // add the text.
+            WriteText( text );
+        }
 
-		public void AddLine( string line )
-		{
-			// if the line is empty, don't do anything.
-			if( line == "" )
-				return;
+        public void AddLine( string line )
+        {
+            // if the line is empty, don't do anything.
+            if( line == "" )
+                return;
 
-			Add( line + "\n" );
-		}
+            Add( line + "\n" );
+        }
 
-		internal void AddEngineMessage( string message )
-		{
-			// if the message is empty, don't do anything.
-			if( message == "" )
-				return;
+        internal void AddEngineMessage( string message )
+        {
+            // if the message is empty, don't do anything.
+            if( message == "" )
+                return;
 
-			// add each line in the message.
-			foreach( string line in message.Split( new char[] { '\n' } ) )
-			{
-				// append a timestamp and add the line.
-				// TODO: figure out why this is so slow!
-				//WriteText( Timestamp + ": " + line + "\r\n" );
-			}
-		}
+            // add each line in the message.
+            foreach( string line in message.Split( new char[] { '\n' } ) )
+            {
+                // append a timestamp and add the line.
+                // TODO: figure out why this is so slow!
+                //WriteText( Timestamp + ": " + line + "\r\n" );
+            }
+        }
 
-		protected override void OnFormClosing( FormClosingEventArgs e )
-		{
-			e.Cancel = true;
-		}
+        protected override void OnFormClosing( FormClosingEventArgs e )
+        {
+            e.Cancel = true;
+        }
 
-		void WriteText( string text )
-		{
-			// update the textbox.
-			tbOutput.AppendText( text );
-		}
+        void WriteText( string text )
+        {
+            // update the textbox.
+            tbOutput.AppendText( text );
+        }
 
-		string Timestamp
-		{
-			get
-			{
-				// get a timestamp like "8/4/2008 10:35:52 PM"
-				string timestamp = DateTime.Now.ToString();
+        string Timestamp
+        {
+            get
+            {
+                // get a timestamp like "8/4/2008 10:35:52 PM"
+                string timestamp = DateTime.Now.ToString();
 
-				// erase the date, so that we are left with "10:35:52 PM"
-				if( timestamp.Contains( " " ) )
-					timestamp = timestamp.Substring( timestamp.IndexOf( ' ' )+1 );
+                // erase the date, so that we are left with "10:35:52 PM"
+                if( timestamp.Contains( " " ) )
+                    timestamp = timestamp.Substring( timestamp.IndexOf( ' ' )+1 );
 
-				// return the formatted timestamp.
-				return timestamp;
-			}
-		}
+                // return the formatted timestamp.
+                return timestamp;
+            }
+        }
 
-		private void tbConsole_KeyDown( object sender, KeyEventArgs e )
-		{
-			if( e.KeyCode == Keys.Enter )
-			{
-				btnSubmit.PerformClick();
-				e.Handled = true;
-			}
-		}
+        private void tbConsole_KeyDown( object sender, KeyEventArgs e )
+        {
+            if( e.KeyCode == Keys.Enter )
+            {
+                btnSubmit.PerformClick();
+                e.Handled = true;
+            }
+        }
 
-		private void btnSubmit_Click( object sender, EventArgs e )
-		{
+        private void btnSubmit_Click( object sender, EventArgs e )
+        {
             // get the text from the console and make sure it doesn't
             // have a newline or white space prepended to the front.
             int strStart = 0;
@@ -151,6 +151,6 @@ namespace Editor
                 // clear the text box.
                 tbConsole.Text = "";
             }
-		}
-	}
+        }
+    }
 }

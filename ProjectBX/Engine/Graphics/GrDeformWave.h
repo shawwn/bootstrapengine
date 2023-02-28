@@ -1,9 +1,9 @@
 //----------------------------------------------------------
-// File:		GrDeformWave.h
-// Author:		Kevin Bray
-// Created:		05-12-06
+// File:        GrDeformWave.h
+// Author:      Kevin Bray
+// Created:     05-12-06
 //
-// Purpose:		To displace a mesh by a wave function.
+// Purpose:     To displace a mesh by a wave function.
 //
 // Copyright © 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
@@ -18,18 +18,18 @@
 class GrDeformWave : public GrDeformer
 {
 public:
-	static const unsigned int kWaveSourceCount = 1;
+    static const unsigned int kWaveSourceCount = 1;
 
-	GrDeformWave();
-	~GrDeformWave();
+    GrDeformWave();
+    ~GrDeformWave();
 
-	// cloning support.
-	GrDeformer*			Clone() const;
+    // cloning support.
+    GrDeformer*         Clone() const;
 
-	// parameters.
-	static const char*	StaticGetName()			{	return "wave";				}
-	const char*			GetName() const			{	return StaticGetName();		}
+    // parameters.
+    static const char*  StaticGetName()         {   return "wave";              }
+    const char*         GetName() const         {   return StaticGetName();     }
 
-	// deform the mesh.
-	void				Deform( GrMesh* dst, GrMesh* src, unsigned int srcRangeIdx, unsigned int time );
+    // deform the mesh.
+    void                Deform( GrMesh* dst, GrMesh* src, unsigned int srcRangeIdx, unsigned int time );
 };

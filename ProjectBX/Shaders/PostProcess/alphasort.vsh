@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		postrender/test.vsh
-// Author:		Kevin Bray
-// Created:		02-07-06
+// File:        postrender/test.vsh
+// Author:      Kevin Bray
+// Created:     02-07-06
 // Copyright © 2004 Bootstrap Games.  All rights reserved.
 //----------------------------------------------------------
 
@@ -26,5 +26,5 @@ uniform mat4 u_ModelViewProjectionMatrix;
 //==========================================================
 void main()
 {
-	gl_Position = u_ModelViewProjectionMatrix * vec4( a_Position.xyz, 1.0 );
+    gl_Position = u_ModelViewProjectionMatrix * vec4( a_Position.xyz, 1.0 );
 }

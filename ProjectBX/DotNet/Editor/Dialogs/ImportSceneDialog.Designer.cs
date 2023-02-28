@@ -1,33 +1,33 @@
 namespace Editor
 {
-	partial class ImportSceneDialog
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class ImportSceneDialog
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose( bool disposing )
-		{
-			if( disposing && ( components != null ) )
-			{
-				components.Dispose();
-			}
-			base.Dispose( disposing );
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose( bool disposing )
+        {
+            if( disposing && ( components != null ) )
+            {
+                components.Dispose();
+            }
+            base.Dispose( disposing );
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportSceneDialog));
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
@@ -317,28 +317,28 @@ namespace Editor
             ((System.ComponentModel.ISupportInitialize)(this.layoutContent)).EndInit();
             this.ResumeLayout(false);
 
-		}
+        }
 
-		#endregion
+        #endregion
 
-		private Syncfusion.Windows.Forms.Tools.RibbonControlAdv ribbonControlAdv1;
-		private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem1;
-		private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx2;
-		private System.Windows.Forms.ToolStripButton btnBrowse;
-		private Syncfusion.Windows.Forms.Tools.TextBoxExt txtSceneName;
-		private System.Windows.Forms.Label label1;
-		private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx3;
-		private System.Windows.Forms.ToolStripButton btnAccept;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-		private System.Windows.Forms.ToolStripButton btnCancel;
-		private Syncfusion.Windows.Forms.Tools.ToolStripCheckBox cbOverwriteLights;
-		private Syncfusion.Windows.Forms.Tools.GradientPanelExt gradientPanelExt1;
-		private Syncfusion.Windows.Forms.Tools.FlowLayout layoutNameScene;
-		public Syncfusion.Windows.Forms.Tools.ToolStripEx toolStrip;
-		public Syncfusion.Windows.Forms.Tools.ToolStripCheckBox cbOverwriteMaterials;
-		private System.Windows.Forms.Panel panel1;
-		private Syncfusion.Windows.Forms.Tools.FlowLayout layoutContent;
-		private System.Windows.Forms.Label lblError;
+        private Syncfusion.Windows.Forms.Tools.RibbonControlAdv ribbonControlAdv1;
+        private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem1;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx2;
+        private System.Windows.Forms.ToolStripButton btnBrowse;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtSceneName;
+        private System.Windows.Forms.Label label1;
+        private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx3;
+        private System.Windows.Forms.ToolStripButton btnAccept;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton btnCancel;
+        private Syncfusion.Windows.Forms.Tools.ToolStripCheckBox cbOverwriteLights;
+        private Syncfusion.Windows.Forms.Tools.GradientPanelExt gradientPanelExt1;
+        private Syncfusion.Windows.Forms.Tools.FlowLayout layoutNameScene;
+        public Syncfusion.Windows.Forms.Tools.ToolStripEx toolStrip;
+        public Syncfusion.Windows.Forms.Tools.ToolStripCheckBox cbOverwriteMaterials;
+        private System.Windows.Forms.Panel panel1;
+        private Syncfusion.Windows.Forms.Tools.FlowLayout layoutContent;
+        private System.Windows.Forms.Label lblError;
 
-	}
+    }
 }

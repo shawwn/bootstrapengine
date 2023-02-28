@@ -28,30 +28,30 @@ namespace Editor.Controls
         /// </summary>
         private void InitializeComponent()
         {
-			this.components = new System.ComponentModel.Container();
-			this.flowLayout1 = new Syncfusion.Windows.Forms.Tools.FlowLayout( this.components );
-			( ( System.ComponentModel.ISupportInitialize )( this.flowLayout1 ) ).BeginInit();
-			this.SuspendLayout();
-			// 
-			// flowLayout1
-			// 
-			this.flowLayout1.Alignment = Syncfusion.Windows.Forms.Tools.FlowAlignment.Near;
-			this.flowLayout1.BottomMargin = 5;
-			this.flowLayout1.ContainerControl = this;
-			this.flowLayout1.HorzFarMargin = 5;
-			this.flowLayout1.HorzNearMargin = 5;
-			this.flowLayout1.TopMargin = 5;
-			// 
-			// ThumbnailSelector
-			// 
-			this.AutoScroll = true;
-			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.BackColor = System.Drawing.Color.Black;
-			this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.Name = "ThumbnailSelector";
-			this.Size = new System.Drawing.Size( 370, 308 );
-			( ( System.ComponentModel.ISupportInitialize )( this.flowLayout1 ) ).EndInit();
-			this.ResumeLayout( false );
+            this.components = new System.ComponentModel.Container();
+            this.flowLayout1 = new Syncfusion.Windows.Forms.Tools.FlowLayout( this.components );
+            ( ( System.ComponentModel.ISupportInitialize )( this.flowLayout1 ) ).BeginInit();
+            this.SuspendLayout();
+            // 
+            // flowLayout1
+            // 
+            this.flowLayout1.Alignment = Syncfusion.Windows.Forms.Tools.FlowAlignment.Near;
+            this.flowLayout1.BottomMargin = 5;
+            this.flowLayout1.ContainerControl = this;
+            this.flowLayout1.HorzFarMargin = 5;
+            this.flowLayout1.HorzNearMargin = 5;
+            this.flowLayout1.TopMargin = 5;
+            // 
+            // ThumbnailSelector
+            // 
+            this.AutoScroll = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Name = "ThumbnailSelector";
+            this.Size = new System.Drawing.Size( 370, 308 );
+            ( ( System.ComponentModel.ISupportInitialize )( this.flowLayout1 ) ).EndInit();
+            this.ResumeLayout( false );
 
         }
 

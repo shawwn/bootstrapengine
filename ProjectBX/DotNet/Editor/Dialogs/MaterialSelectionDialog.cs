@@ -12,7 +12,7 @@ namespace Editor.Dialogs
 {
     public partial class MaterialSelectionDialog : Office2007Form
     {
-		public static bool NeedPopulate;
+        public static bool NeedPopulate;
 
         Bootstrap.Material _selection;
 
@@ -23,8 +23,8 @@ namespace Editor.Dialogs
             // set the selection panel to null by default.
             _selection = null;
 
-			// focus the thumbnail selector.
-			thumbnailSelector.Focus();
+            // focus the thumbnail selector.
+            thumbnailSelector.Focus();
         }
 
         ~MaterialSelectionDialog()
@@ -38,55 +38,55 @@ namespace Editor.Dialogs
             get { return _selection; }
         }
 
-		void Populate()
-		{
-			NeedPopulate = false;
+        void Populate()
+        {
+            NeedPopulate = false;
 
-			// clear the current thumbnails.
-			thumbnailSelector.Clear();
+            // clear the current thumbnails.
+            thumbnailSelector.Clear();
 
-			// populate the thumbnail control.
-			string[] materialNames = Bootstrap.Material.GetLoadedMaterialNames();
+            // populate the thumbnail control.
+            string[] materialNames = Bootstrap.Material.GetLoadedMaterialNames();
 
-			// iterate through each material and create an icon.
-			foreach( string materialName in materialNames )
-			{
-				// create a new material for the item.
-				Bootstrap.Material material = new Bootstrap.Material( materialName );
+            // iterate through each material and create an icon.
+            foreach( string materialName in materialNames )
+            {
+                // create a new material for the item.
+                Bootstrap.Material material = new Bootstrap.Material( materialName );
 
-				// try to get a decent thumbnail for the material.
-				Bitmap bitmap = null;
-				if( material.PassCount > 0 )
-				{
-					Bootstrap.MaterialPass pass = material.GetPass( 0 );
-					string textureName = pass.DiffuseStage.Texture;
-					if( textureName != null && textureName != "" )
-					{
-						bitmap = Program.ThumbnailMgr.GetThumbnail( textureName );
-					}
-					else
-					{
-						string uberTextureName = pass.UberTexture;
-						if( uberTextureName != null && uberTextureName != "" )
-						{
-							using( Bootstrap.UberTexture uberTexture = new Bootstrap.UberTexture( uberTextureName ) )
-							{
-								bitmap = uberTexture.MakeThumbnail();
-							}
-						}
-					}
-				}
+                // try to get a decent thumbnail for the material.
+                Bitmap bitmap = null;
+                if( material.PassCount > 0 )
+                {
+                    Bootstrap.MaterialPass pass = material.GetPass( 0 );
+                    string textureName = pass.DiffuseStage.Texture;
+                    if( textureName != null && textureName != "" )
+                    {
+                        bitmap = Program.ThumbnailMgr.GetThumbnail( textureName );
+                    }
+                    else
+                    {
+                        string uberTextureName = pass.UberTexture;
+                        if( uberTextureName != null && uberTextureName != "" )
+                        {
+                            using( Bootstrap.UberTexture uberTexture = new Bootstrap.UberTexture( uberTextureName ) )
+                            {
+                                bitmap = uberTexture.MakeThumbnail();
+                            }
+                        }
+                    }
+                }
 
-				// set the bitmap to the error bitmap if no usable preview could
-				// be found.
-				if( bitmap == null )
-					bitmap = Program.ThumbnailMgr.GetErrorThumbnail();
+                // set the bitmap to the error bitmap if no usable preview could
+                // be found.
+                if( bitmap == null )
+                    bitmap = Program.ThumbnailMgr.GetErrorThumbnail();
 
-				// add a new thumbnail and dispose the material.
-				thumbnailSelector.Add( material.ShortName, bitmap, materialName );
-				material.Dispose();
-			}
-		}
+                // add a new thumbnail and dispose the material.
+                thumbnailSelector.Add( material.ShortName, bitmap, materialName );
+                material.Dispose();
+            }
+        }
 
         private void thumbnailSelector_SelectionChanged(object sender, EventArgs e)
         {
@@ -110,14 +110,14 @@ namespace Editor.Dialogs
             if (this.Visible)
             {
                 if (thumbnailSelector.ThumbnailCount == 0 || NeedPopulate)
-					Populate();
+                    Populate();
             }
         }
 
-		private void bnReload_Click( object sender, EventArgs e )
-		{
-			Populate();
-		}
+        private void bnReload_Click( object sender, EventArgs e )
+        {
+            Populate();
+        }
 
         private void thumbnailSelector_SelectionMade(object sender, EventArgs e)
         {

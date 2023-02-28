@@ -1,7 +1,7 @@
 //----------------------------------------------------------
-// File:		HDRCombine.vsh
-// Author:		Kevin Bray
-// Created:		02-07-06
+// File:        HDRCombine.vsh
+// Author:      Kevin Bray
+// Created:     02-07-06
 // Copyright © 2004 Bootstrap Games.  All rights reserved.
 //----------------------------------------------------------
 
@@ -21,8 +21,8 @@ uniform vec4 u_BlurTexCoordScale;
 // main
 void main()
 {
-	gl_Position = ftransform();
+    gl_Position = ftransform();
 
-	v_CurRenderTexCoord.xy = u_TexCoordScale.xy * gl_MultiTexCoord0.xy + u_CurRenderTexCoordOffset.xy;
-	v_BloomTexCoord.xy = u_BlurTexCoordScale.xy * gl_MultiTexCoord0.xy + u_BlurTexCoordOffset.xy;
+    v_CurRenderTexCoord.xy = u_TexCoordScale.xy * gl_MultiTexCoord0.xy + u_CurRenderTexCoordOffset.xy;
+    v_BloomTexCoord.xy = u_BlurTexCoordScale.xy * gl_MultiTexCoord0.xy + u_BlurTexCoordOffset.xy;
 }
