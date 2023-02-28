@@ -5,7 +5,7 @@
 //
 // Purpose:		To provide parsers to load graphical resources.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

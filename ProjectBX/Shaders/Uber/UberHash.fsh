@@ -2,7 +2,7 @@
 // File:		UberHash.fsh
 // Author:		Kevin Bray
 // Created:		09-08-07
-// Copyright © 2004 Bootstrap Games.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Games.  All rights reserved.
 //----------------------------------------------------------
 #extension GL_ARB_texture_rectangle : require
 

@@ -5,7 +5,7 @@
 //
 // Purpose:		To manage a node in a model.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

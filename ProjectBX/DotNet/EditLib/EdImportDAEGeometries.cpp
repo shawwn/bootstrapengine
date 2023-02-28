@@ -2,7 +2,7 @@
 // File:		EdImportDAEGeometries.h
 // Author:		Kevin Bray
 // Created:		11-27-06
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "editlib_afx.h"
 

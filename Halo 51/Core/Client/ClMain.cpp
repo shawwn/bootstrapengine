@@ -5,7 +5,7 @@
 //
 // Purpose:		The entry point of the game client.
 //
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 
 #ifdef WIN32

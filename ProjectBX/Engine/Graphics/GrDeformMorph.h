@@ -5,7 +5,7 @@
 //
 // Purpose:		To blend from one mesh to another.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

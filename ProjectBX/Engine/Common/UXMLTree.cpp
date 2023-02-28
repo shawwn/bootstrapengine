@@ -2,7 +2,7 @@
 // File:		UXMLTree.cpp
 // Author:		Kevin Bray
 // Created:		12-18-05
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #include "common_afx.h"
 

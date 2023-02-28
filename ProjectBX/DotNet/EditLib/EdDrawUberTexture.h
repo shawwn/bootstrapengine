@@ -6,7 +6,7 @@
 // Purpose:		To render a region of an ubertexture to the currently
 //				bound render target.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

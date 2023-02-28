@@ -5,7 +5,7 @@
 //
 // Purpose:		To provide locked access to variables shared by threads.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

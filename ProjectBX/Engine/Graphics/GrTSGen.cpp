@@ -2,7 +2,7 @@
 // File:		GrTSGen.cpp
 // Author:		Kevin Bray
 // Created:		10-30-04
-// Copyright © 2004 Bootstrap Games
+// Copyright Â© 2004 Bootstrap Games
 //----------------------------------------------------------
 #include "engine_afx.h"
 

@@ -2,7 +2,7 @@
 // File:		GrLightMgr.cpp
 // Author:		Kevin Bray
 // Created:		03-12-06
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #include "graphics_afx.h"
 

@@ -6,7 +6,7 @@
 // Purpose:		To manage the game's singletons and the physics
 //				singletons.
 //
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

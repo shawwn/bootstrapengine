@@ -5,7 +5,7 @@
 //
 // Purpose:		A table that maps a variable name to a callback.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

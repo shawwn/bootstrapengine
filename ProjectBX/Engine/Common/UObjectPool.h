@@ -6,7 +6,7 @@
 // Purpose:		To provide a pool of objects that can be allocated
 //				one at a time and freed as a group.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

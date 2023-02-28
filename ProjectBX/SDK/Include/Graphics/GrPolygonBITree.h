@@ -6,7 +6,7 @@
 // Purpose:		To partition a group of polygons for fast spacial
 //				indexing.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

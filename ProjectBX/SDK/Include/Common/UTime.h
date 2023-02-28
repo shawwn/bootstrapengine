@@ -6,7 +6,7 @@
 // Purpose:		To represent a 32.32 fixed point time value.  This has a
 //				maximum limit of approx 136 years.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

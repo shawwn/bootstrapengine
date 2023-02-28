@@ -5,7 +5,7 @@
 //
 // Purpose:		To track reference counts.  Deletes when necessary.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

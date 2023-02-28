@@ -6,7 +6,7 @@
 // Purpose:		To provide compression services for the ubertexture
 //				worker thread.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

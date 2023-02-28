@@ -6,7 +6,7 @@
 // Purpose:		Cross-platform client code, such as creating a 
 //				window, getting keyboard/mouse/gamepad input, etc.
 //
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

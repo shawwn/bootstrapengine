@@ -5,7 +5,7 @@
 //
 // Purpose:		To track and update game entities.
 //
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

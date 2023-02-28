@@ -6,7 +6,7 @@
 // Purpose:		To provide a common interface for communicating with
 //				a UTServer.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

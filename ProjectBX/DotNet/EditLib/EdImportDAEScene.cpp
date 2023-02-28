@@ -2,7 +2,7 @@
 // File:		EdImportDAEScene.h
 // Author:		Kevin Bray
 // Created:		11-28-06
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "editlib_afx.h"
 
@@ -822,7 +822,7 @@ EdImportDAEScene::WriteLights( const UPath& outputPath, bool overwriteExisting )
 			"//----------------------------------------------------------\n"
 			"// File:		"GR_LIGHTS_FILENAME"\n"
 			"// Author:		DAE Importer (: Kevin Bray's proxy :)\n"
-			"// Copyright © 2005 Bootstrap Studios\n"
+			"// Copyright Â© 2005 Bootstrap Studios\n"
 			"//----------------------------------------------------------\n\n";
 	}
 	else

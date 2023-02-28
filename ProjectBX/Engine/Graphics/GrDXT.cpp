@@ -5,7 +5,7 @@
 //
 // Purpose:		To perform DXT compression in realtime.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
 

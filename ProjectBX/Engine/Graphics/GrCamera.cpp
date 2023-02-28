@@ -2,7 +2,7 @@
 // File:		GrCamera.cpp
 // Author:		Kevin Bray
 // Created:		10-28-04
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
 

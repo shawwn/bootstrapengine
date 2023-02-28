@@ -6,7 +6,7 @@
 // Purpose:		To provide a high performance, psuedo random number generator
 //				that exceeds rand() in both speed and randomness.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

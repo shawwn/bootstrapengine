@@ -7,7 +7,7 @@
 //              Any class that inherits from SceneEntity can then
 //              be manipulated with gizmos.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

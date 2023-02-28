@@ -5,7 +5,7 @@
 //
 // Purpose:		Contains a list of transforms and their targets.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

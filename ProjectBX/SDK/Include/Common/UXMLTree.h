@@ -7,7 +7,7 @@
 //				as simply walking the file in a linear fashion, however, this
 //				is much more intuitive.
 //
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #pragma once
 

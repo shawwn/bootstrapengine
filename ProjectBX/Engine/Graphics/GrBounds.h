@@ -6,7 +6,7 @@
 // Purpose:		To provide a generic bounds type.  Currently, this
 //				can only be used to represent a frustum or a sphere.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

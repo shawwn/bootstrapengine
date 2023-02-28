@@ -5,7 +5,7 @@
 //
 // Purpose:		To place a rectangle into a larger image.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

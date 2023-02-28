@@ -5,7 +5,7 @@
 //
 // Purpose:		To maintain an OpenGL 3D texture object.
 //
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #pragma once
 

@@ -5,7 +5,7 @@
 //
 // Purpose:		To describe how an object should be rendered.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

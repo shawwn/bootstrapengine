@@ -5,7 +5,7 @@
 //
 // Purpose:		To provide the entry point for the ubertexture server.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "ubertexture_afx.h"
 

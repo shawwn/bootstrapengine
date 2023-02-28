@@ -2,7 +2,7 @@
 // File:		UTServe.cpp
 // Author:		Kevin Bray
 // Created:		08-26-07
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "ubertexture_afx.h"
 

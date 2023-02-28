@@ -5,7 +5,7 @@
 //
 // Purpose:		A library for handling UTF8 characters.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

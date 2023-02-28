@@ -5,7 +5,7 @@
 //
 // Purpose:		To use inputs to drive entities.
 //
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

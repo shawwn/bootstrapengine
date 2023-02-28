@@ -5,7 +5,7 @@
 //
 // Purpose:		To present a box for viewing material stages.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "editlib_afx.h"
 

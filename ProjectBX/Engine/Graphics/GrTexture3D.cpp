@@ -2,7 +2,7 @@
 // File:		GrTexture3D.cpp
 // Author:		Kevin Bray
 // Created:		12-03-05
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #include "graphics_afx.h"
 

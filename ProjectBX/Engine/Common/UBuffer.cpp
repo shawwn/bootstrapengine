@@ -2,7 +2,7 @@
 // File:		UBuffer.cpp
 // Author:		Kevin Bray
 // Created:		10-09-06
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #include "common_afx.h"
 

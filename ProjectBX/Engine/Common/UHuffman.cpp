@@ -2,7 +2,7 @@
 // File:		UHuffman.cpp
 // Author:		Kevin Bray
 // Created:		10-03-08
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #include "common_afx.h"
 

@@ -6,7 +6,7 @@
 // Purpose:		To manage the primary rendering context and all
 //				graphics singletons.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

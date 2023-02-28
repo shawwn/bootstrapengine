@@ -2,7 +2,7 @@
 // File:		GrRenderInteraction.cpp
 // Author:		Kevin Bray
 // Created:		11-14-05
-// Copyright © 2004 Bootstrap Games
+// Copyright Â© 2004 Bootstrap Games
 //----------------------------------------------------------
 #include "engine_afx.h"
 

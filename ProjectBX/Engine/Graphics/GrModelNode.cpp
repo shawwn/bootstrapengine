@@ -2,7 +2,7 @@
 // File:		GrModelNode.cpp
 // Author:		Kevin Bray
 // Created:		04-02-06
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
 

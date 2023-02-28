@@ -5,7 +5,7 @@
 //
 // Purpose:		To precompile headers for the managed layer.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

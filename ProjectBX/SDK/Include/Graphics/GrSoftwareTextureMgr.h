@@ -5,7 +5,7 @@
 //
 // Purpose:		To provide a centralized location to load GrSoftwareTextures.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

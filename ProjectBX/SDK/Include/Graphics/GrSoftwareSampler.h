@@ -6,7 +6,7 @@
 // Purpose:		To sample textures when rendering using the software
 //				rasterizer.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

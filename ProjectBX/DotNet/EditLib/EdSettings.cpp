@@ -5,7 +5,7 @@
 //
 // Purpose:		To manage editor settings.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "editlib_afx.h"
 

@@ -5,7 +5,7 @@
 //
 // Purpose:		To provide a clean way to represent paths strings.
 //
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #pragma once
 

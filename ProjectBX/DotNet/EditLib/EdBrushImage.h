@@ -5,7 +5,7 @@
 //
 // Purpose:		To manage an image that's used a source for a brush.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

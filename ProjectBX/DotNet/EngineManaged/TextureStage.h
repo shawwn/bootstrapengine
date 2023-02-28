@@ -5,7 +5,7 @@
 //
 // Purpose:		To manage parameters to a texture stage.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

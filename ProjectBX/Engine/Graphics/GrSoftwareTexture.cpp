@@ -2,7 +2,7 @@
 // File:		GrSoftwareTexture.cpp
 // Author:		Shawn Presser
 // Created:		09-13-08
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
 

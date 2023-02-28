@@ -5,7 +5,7 @@
 //
 // Purpose:		A C-like lexer to tokenize text.
 //
-// Copyright © 2004 Bootstrap Studios
+// Copyright Â© 2004 Bootstrap Studios
 //----------------------------------------------------------
 #pragma once
 

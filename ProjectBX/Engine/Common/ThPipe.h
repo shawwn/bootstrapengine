@@ -6,7 +6,7 @@
 // Purpose:		To provide an abstract interface for inter-thread,
 //				inter-process, and network communication.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

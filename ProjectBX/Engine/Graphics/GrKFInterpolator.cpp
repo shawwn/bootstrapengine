@@ -2,7 +2,7 @@
 // File:		GrKFInterpolator.h
 // Author:		Kevin Bray
 // Created:		04-29-06
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
 

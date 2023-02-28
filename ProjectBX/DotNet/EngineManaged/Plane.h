@@ -5,7 +5,7 @@
 //
 // Purpose:		To represent a plane in 3D space.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

@@ -6,7 +6,7 @@
 // Purpose:		To manage a set of keyframe interpolators associated with
 //				named output targets.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

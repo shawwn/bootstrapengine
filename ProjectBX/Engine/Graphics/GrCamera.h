@@ -5,7 +5,7 @@
 //
 // Purpose:		To provide a camera in a 3D scene.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

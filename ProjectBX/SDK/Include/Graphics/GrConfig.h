@@ -6,7 +6,7 @@
 // Purpose:		To define constants that are used throughout the
 //				graphics engine.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

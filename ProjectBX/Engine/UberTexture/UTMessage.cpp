@@ -2,7 +2,7 @@
 // File:		UTClient.cpp
 // Author:		Kevin Bray
 // Created:		11-23-07
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "UTMessage.h"
 

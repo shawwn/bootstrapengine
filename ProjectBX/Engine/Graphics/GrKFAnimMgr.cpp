@@ -2,7 +2,7 @@
 // File:		GrKFAnimMgr.h
 // Author:		Kevin Bray
 // Created:		04-30-06
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
 

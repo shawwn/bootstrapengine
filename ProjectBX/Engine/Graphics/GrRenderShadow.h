@@ -5,7 +5,7 @@
 //
 // Purpose:		To render a set of objects to a shadow.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

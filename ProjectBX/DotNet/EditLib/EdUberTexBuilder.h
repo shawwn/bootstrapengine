@@ -5,7 +5,7 @@
 //
 // Purpose:		To build a thumbnail from a texture.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

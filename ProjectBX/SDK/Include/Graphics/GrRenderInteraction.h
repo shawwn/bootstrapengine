@@ -5,7 +5,7 @@
 //
 // Purpose:		To manage interaction rendering state.
 //
-// Copyright © 2004 Bootstrap Games
+// Copyright Â© 2004 Bootstrap Games
 //----------------------------------------------------------
 #pragma once
 

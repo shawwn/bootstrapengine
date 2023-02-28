@@ -2,7 +2,7 @@
 // File:		PhSubsys.cpp
 // Author:		Shawn Presser
 // Created:		12-15-08
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 
 // class header.

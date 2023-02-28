@@ -5,7 +5,7 @@
 //
 // Purpose:		To manage a text file.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "common_afx.h"
 

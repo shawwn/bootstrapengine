@@ -5,7 +5,7 @@
 //
 // Purpose:		To provide a pipe interface for reading files.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

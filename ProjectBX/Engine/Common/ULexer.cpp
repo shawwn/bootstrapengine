@@ -2,7 +2,7 @@
 // File:		ULexer.cpp
 // Author:		Kevin Bray
 // Created:		04-13-04
-// Copyright © 2004 Bootstrap Studios
+// Copyright Â© 2004 Bootstrap Studios
 //----------------------------------------------------------
 #include "common_afx.h"
 

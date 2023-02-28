@@ -2,7 +2,7 @@
 // File:		HDRHiPass.vsh
 // Author:		Kevin Bray
 // Created:		02-07-06
-// Copyright © 2004 Bootstrap Games.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Games.  All rights reserved.
 //----------------------------------------------------------
 
 //----------------------------------------------------------

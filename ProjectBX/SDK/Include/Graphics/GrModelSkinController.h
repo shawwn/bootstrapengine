@@ -5,7 +5,7 @@
 // Purpose:		To manage a model consisting of multiple meshes.
 //
 // Created:		05-26-06
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

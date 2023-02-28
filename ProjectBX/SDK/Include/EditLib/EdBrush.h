@@ -6,7 +6,7 @@
 // Purpose:		To provide an shading setup for painting to
 //				ubertextures.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

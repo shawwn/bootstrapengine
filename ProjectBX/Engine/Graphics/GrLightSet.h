@@ -5,7 +5,7 @@
 //
 // Purpose:		A utility to help manage a set of lights.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

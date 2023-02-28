@@ -5,7 +5,7 @@
 //
 // Purpose:		To manage a page of shadow maps.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

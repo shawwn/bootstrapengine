@@ -6,7 +6,7 @@
 // Purpose:		To act like a std::vector, only faster.  Avoids
 //				dynamic memory allocation if small enough.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

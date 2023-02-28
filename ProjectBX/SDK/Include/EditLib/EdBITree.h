@@ -6,7 +6,7 @@
 // Purpose:		Defines a bounding interval tree to allow for fast
 //				ray casting.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

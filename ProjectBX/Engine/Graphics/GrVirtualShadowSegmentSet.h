@@ -5,7 +5,7 @@
 //
 // Purpose:		To manage a shadow region of a viewer camera.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

@@ -5,7 +5,7 @@
 //
 // Purpose:		To drive a game character using an input controller.
 //
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

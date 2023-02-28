@@ -6,7 +6,7 @@
 // Purpose:		To expose useful editlib-related utility functions
 //				referenced from multiple places.
 //
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

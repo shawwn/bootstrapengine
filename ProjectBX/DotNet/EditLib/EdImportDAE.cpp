@@ -2,7 +2,7 @@
 // File:		EdImportDAE.cpp
 // Author:		Kevin Bray
 // Created:		11-23-06
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "editlib_afx.h"
 
@@ -510,7 +510,7 @@ EdImportDAE::WriteSceneDef( const UPath& targetPath, GrModel* sceneModel )
 		"//----------------------------------------------------------\n"
 		"// File:\t\tScene.sdf\n"
 		"// Author:\t\tKevin Bray\n"
-		"// Copyright © 2005 Bootstrap Studios\n"
+		"// Copyright Â© 2005 Bootstrap Studios\n"
 		"//----------------------------------------------------------\n\t\n";
 
 	sceneDef += targetPath.GetPathString();

@@ -2,7 +2,7 @@
 // File:		Model.cpp
 // Author:		Shawn Presser
 // Created:		09-23-08
-// Copyright © 2004 Bootstrap Games.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Games.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
 

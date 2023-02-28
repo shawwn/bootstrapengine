@@ -5,7 +5,7 @@
 //
 // Purpose:		To represent a 20.12 fixed point number.
 //
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #pragma once
 

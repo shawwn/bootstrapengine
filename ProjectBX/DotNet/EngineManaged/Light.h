@@ -6,7 +6,7 @@
 // Purpose:		To store effect information and pass that into
 //				shaders as necessary.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

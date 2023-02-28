@@ -5,7 +5,7 @@
 //
 // Purpose:		To provide configuration details for the client/server.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

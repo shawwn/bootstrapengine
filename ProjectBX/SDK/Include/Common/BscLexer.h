@@ -5,7 +5,7 @@
 //
 // Purpose:		A lexer specifically for BscScript.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

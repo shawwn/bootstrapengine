@@ -5,7 +5,7 @@
 //
 // Purpose:		To represent uber-texture data for a polygon group.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

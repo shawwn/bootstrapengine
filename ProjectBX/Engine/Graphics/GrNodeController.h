@@ -5,7 +5,7 @@
 //
 // Purpose:		To propagate transforms.
 //
-// Copyright © 2004 Bootstrap Games
+// Copyright Â© 2004 Bootstrap Games
 //----------------------------------------------------------
 #pragma once
 

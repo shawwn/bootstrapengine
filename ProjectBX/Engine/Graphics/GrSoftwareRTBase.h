@@ -6,7 +6,7 @@
 // Purpose:		To provide an interface for a software rendering
 //				target.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

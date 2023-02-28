@@ -6,7 +6,7 @@
 // Purpose:		To manage the 3D scene.  Essentially a spatially relational
 //				database.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

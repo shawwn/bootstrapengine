@@ -5,7 +5,7 @@
 //
 // Purpose:		To build and manage a projection matrix.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

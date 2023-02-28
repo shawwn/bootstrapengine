@@ -5,7 +5,7 @@
 //
 // Purpose:		A table that maps array names to the actual array.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

@@ -6,7 +6,7 @@
 // Purpose:		To provide a UI to enable an artist to scale a 
 //              scene entity.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

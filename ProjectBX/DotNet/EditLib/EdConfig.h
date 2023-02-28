@@ -5,7 +5,7 @@
 //
 // Purpose:		To provide various configuration defines.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 
 #define ED_SCRIPTCALLBACK_TIME			"_time"

@@ -2,7 +2,7 @@
 // File:		UExprTerm.cpp
 // Author:		Kevin Bray
 // Created:		07-05-05
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "common_afx.h"
 

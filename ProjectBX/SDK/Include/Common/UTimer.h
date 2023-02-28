@@ -5,7 +5,7 @@
 //
 // Purpose:		To provide a time using the engine clock.
 //
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #pragma once
 

@@ -2,7 +2,7 @@
 // File:		URLE.cpp
 // Author:		Kevin Bray
 // Created:		11-17-2008
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "common_afx.h"
 

@@ -5,7 +5,7 @@
 //
 // Purpose:		To perform huffman encoding and fast decoding.
 //
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #pragma once
 

@@ -7,7 +7,7 @@
 //				an array.  Note that this cannot be used with anything
 //				that has a programmer supplied constructor.
 //
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #pragma once
 

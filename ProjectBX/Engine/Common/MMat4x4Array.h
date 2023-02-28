@@ -5,7 +5,7 @@
 //
 // Purpose:		performs matrix operations on large arrays of matrices.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

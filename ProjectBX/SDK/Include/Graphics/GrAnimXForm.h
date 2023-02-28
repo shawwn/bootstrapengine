@@ -6,7 +6,7 @@
 // Purpose:		To represent a transform in an easily interpolatable
 //				form.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

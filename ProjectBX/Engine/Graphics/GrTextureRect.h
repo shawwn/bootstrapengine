@@ -5,7 +5,7 @@
 //
 // Purpose:		To manage a texture rectangle.
 //
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #pragma once
 

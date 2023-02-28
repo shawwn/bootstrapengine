@@ -2,7 +2,7 @@
 // File:		GrMaterialMgr.h
 // Author:		Kevin Bray
 // Created:		03-28-05
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "graphics_afx.h"
 
@@ -328,7 +328,7 @@ const char* kDefaultLightVP = "\
 // File:		blinn.vsh\n\
 // Author:		Kevin Bray\n\
 // Created:		02-07-06\n\
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.\n\
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.\n\
 //----------------------------------------------------------\n\
 \n\
 invariant gl_Position;\n\
@@ -402,7 +402,7 @@ const char* kDefaultLightFP = "\
 // File:		blinn.fsh\n\
 // Author:		Kevin Bray\n\
 // Created:		02-07-06\n\
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.\n\
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.\n\
 //----------------------------------------------------------\n\
 \n\
 // constants.\n\
@@ -598,7 +598,7 @@ const char* kDefaultAmbientVP = "\
 // File:		Ambient.vsh\n\
 // Author:		Kevin Bray\n\
 // Created:		02-07-06\n\
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.\n\
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.\n\
 //----------------------------------------------------------\n\
 \n\
 invariant gl_Position;\n\
@@ -647,7 +647,7 @@ const char* kDefaultAmbientFP = "\
 // File:		Ambient.fsh\n\
 // Author:		Kevin Bray\n\
 // Created:		02-07-06\n\
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.\n\
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.\n\
 //----------------------------------------------------------\n\
 \n\
 //----------------------------------------------------------\n\

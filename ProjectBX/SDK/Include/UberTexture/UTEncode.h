@@ -6,7 +6,7 @@
 // Purpose:		To provide a thread for encoding and decoding
 //				uber-tiles.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

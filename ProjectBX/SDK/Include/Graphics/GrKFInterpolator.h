@@ -6,7 +6,7 @@
 // Purpose:		To interpolate keyframe animation data and create an
 //				animation transform for an animation channel.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

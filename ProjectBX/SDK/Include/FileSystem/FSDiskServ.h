@@ -6,7 +6,7 @@
 // Purpose:		To provide a platform independent wrapper around a disk
 //				and file operations.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

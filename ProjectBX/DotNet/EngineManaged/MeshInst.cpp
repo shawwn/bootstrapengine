@@ -2,7 +2,7 @@
 // File:		MeshInst.cpp
 // Author:		Shawn Presser
 // Created:		10-15-08
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "EMAfx.h"
 

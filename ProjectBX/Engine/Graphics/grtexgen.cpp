@@ -2,7 +2,7 @@
 // File:		GrTexGen.cpp
 // Author:		Kevin Bray
 // Created:		07-17-05
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #include "graphics_afx.h"
 

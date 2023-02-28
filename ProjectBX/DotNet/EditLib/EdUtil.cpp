@@ -2,7 +2,7 @@
 // File:		EdImportUtils.cpp
 // Author:		Kevin Bray
 // Created:		12-23-08
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #include "editlib_afx.h"
 

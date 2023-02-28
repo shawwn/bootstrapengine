@@ -2,7 +2,7 @@
 // File:		GrAnimPlayer.h
 // Author:		Kevin Bray
 // Created:		04-08-06
-// Copyright © 2005 Bootstrap Studios
+// Copyright Â© 2005 Bootstrap Studios
 //----------------------------------------------------------
 #include "graphics_afx.h"
 

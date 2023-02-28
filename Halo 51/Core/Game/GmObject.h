@@ -6,7 +6,7 @@
 // Purpose:		To represent a game object, which has both 
 //				a graphical and a physical representation.
 //
-// Copyright © 2008 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2008 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 

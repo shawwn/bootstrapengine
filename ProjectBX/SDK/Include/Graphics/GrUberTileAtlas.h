@@ -5,7 +5,7 @@
 //
 // Purpose:		To manage a two-level tile atlas for an ubertexture.
 //
-// Copyright © 2004 Bootstrap Studios.  All rights reserved.
+// Copyright Â© 2004 Bootstrap Studios.  All rights reserved.
 //----------------------------------------------------------
 #pragma once
 
