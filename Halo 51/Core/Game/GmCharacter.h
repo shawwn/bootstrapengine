@@ -19,7 +19,7 @@
 #include "GmInputController.h"
 
 // forward declarations.
-class NxController;
+class PxController;
 
 class GmCharacter : public GmEntity, public IControllerListener
 {
@@ -98,7 +98,7 @@ protected:
 
 private:
     MMat3x3             _rot;
-    NxController*       _physicsController;
+    PxController*       _physicsController;
     GmInputController*  _inputController;
     SInputs*            _inputs;
     float               _speed;

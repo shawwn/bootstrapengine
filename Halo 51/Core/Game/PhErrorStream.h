@@ -13,10 +13,10 @@
 #include <windows.h>
 #endif
 
-class PhErrorStream : public NxUserOutputStream
+class PhErrorStream : public PxOutputStream
 {
 public:
-    void reportError( NxErrorCode e, const char* message, const char* file, int line )
+    void reportError( PxErrorCode e, const char* message, const char* file, int line )
     {
         PrintF( "%s (%d) :", file, line );
         switch ( e )
@@ -43,7 +43,7 @@ public:
         PrintF( " : %s\n", message );
     }
 
-    NxAssertResponse reportAssertViolation( const char* message, const char* file, int line )
+    PxAssertResponse reportAssertViolation( const char* message, const char* file, int line )
     {
         PrintF( "assert violation : %s (%s line %d)\n", message, file, line );
 #ifdef WIN32

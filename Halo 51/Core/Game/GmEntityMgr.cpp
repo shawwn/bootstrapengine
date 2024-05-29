@@ -64,7 +64,7 @@ GmEntityMgr::CreateDynamicObject( const tstring& name, const GmObject::SInfo& in
     URef< GrModel > model( GetModel( info.modelFilePath, name, info.transform ) );
 
     // create a physics representation for that entity.
-    NxActor* actor = gPhSubsys->CreateConvexDynamicModelActor( model, info.bodyDesc, info.density, PH_GROUP_COLLIDABLE_PUSHABLE );
+    PxActor* actor = gPhSubsys->CreateConvexDynamicModelActor( model, info.angularDamping, info.linearVelocity, info.density, PH_GROUP_COLLIDABLE_PUSHABLE );
     if ( !actor )
     {
         HandleError( "Failed to create a physics representation for entity %s model %s\n", 
@@ -99,7 +99,7 @@ GmEntityMgr::CreateCharacter( const tstring& name, const GmCharacter::SInfo& inf
     character->SetSpeed( info.speed );
 
     // create a character controller, storing the character instance in its userdata.
-    NxController* controller = gPhSubsys->CreateCharController( info.position, info.radius, info.height, character );
+    PxController* controller = gPhSubsys->CreateCharController( info.position, info.radius, info.height, character );
     if ( !controller )
     {
         // report the error.
@@ -165,14 +165,14 @@ void
 GmEntityMgr::Update( unsigned int dt )
 {
     // get a list of actors that were active.
-    NxU32 transformsCount = 0;
-    NxActiveTransform* activeTransforms = gPhScene->getActiveTransforms( transformsCount );
+    PxU32 transformsCount = 0;
+    PxActiveTransform* activeTransforms = gPhScene->getActiveTransforms( transformsCount );
 
     // update only those entities.
     if ( transformsCount )
     {
         B_ASSERT( activeTransforms );
-        for( NxU32 i = 0; i < transformsCount; ++i )
+        for( PxU32 i = 0; i < transformsCount; ++i )
         {
             // the user data of the actor holds the game entity pointer.
             GmEntity* entity = (GmEntity*)activeTransforms[i].userData;

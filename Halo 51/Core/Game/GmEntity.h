@@ -18,7 +18,8 @@
 #include "Graphics/GrModel.h"
 
 // PhysX headers.
-#include "NxBodyDesc.h"
+#include "PxRigidBody.h"
+using namespace physx;
 
 // forward declarations.
 class GmEntityMgr;

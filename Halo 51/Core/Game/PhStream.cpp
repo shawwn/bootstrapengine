@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "NxPhysics.h"
+#include "PxPhysics.h"
 #include "PhStream.h"
 
 UserStream::UserStream(const char* filename, bool load) : fp(NULL)
@@ -13,92 +13,92 @@ UserStream::~UserStream()
 }
 
 // Loading API
-NxU8 UserStream::readByte() const
+PxU8 UserStream::readByte() const
 {
-    NxU8 b;
-    size_t r = fread(&b, sizeof(NxU8), 1, fp);
-    NX_ASSERT(r);
+    PxU8 b;
+    size_t r = fread(&b, sizeof(PxU8), 1, fp);
+    PX_ASSERT(r);
     return b;
 }
 
-NxU16 UserStream::readWord() const
+PxU16 UserStream::readWord() const
 {
-    NxU16 w;
-    size_t r = fread(&w, sizeof(NxU16), 1, fp);
-    NX_ASSERT(r);
+    PxU16 w;
+    size_t r = fread(&w, sizeof(PxU16), 1, fp);
+    PX_ASSERT(r);
     return w;
 }
 
-NxU32 UserStream::readDword() const
+PxU32 UserStream::readDword() const
 {
-    NxU32 d;
-    size_t r = fread(&d, sizeof(NxU32), 1, fp);
-    NX_ASSERT(r);
+    PxU32 d;
+    size_t r = fread(&d, sizeof(PxU32), 1, fp);
+    PX_ASSERT(r);
     return d;
 }
 
 float UserStream::readFloat() const
 {
-    NxReal f;
-    size_t r = fread(&f, sizeof(NxReal), 1, fp);
-    NX_ASSERT(r);
+    PxReal f;
+    size_t r = fread(&f, sizeof(PxReal), 1, fp);
+    PX_ASSERT(r);
     return f;
 }
 
 double UserStream::readDouble() const
 {
-    NxF64 f;
-    size_t r = fread(&f, sizeof(NxF64), 1, fp);
-    NX_ASSERT(r);
+    PxF64 f;
+    size_t r = fread(&f, sizeof(PxF64), 1, fp);
+    PX_ASSERT(r);
     return f;
 }
 
-void UserStream::readBuffer(void* buffer, NxU32 size)   const
+void UserStream::readBuffer(void* buffer, PxU32 size)   const
 {
     size_t w = fread(buffer, size, 1, fp);
-    NX_ASSERT(w);
+    PX_ASSERT(w);
 }
 
 // Saving API
-NxStream& UserStream::storeByte(NxU8 b)
+PxStream& UserStream::storeByte(PxU8 b)
 {
-    size_t w = fwrite(&b, sizeof(NxU8), 1, fp);
-    NX_ASSERT(w);
+    size_t w = fwrite(&b, sizeof(PxU8), 1, fp);
+    PX_ASSERT(w);
     return *this;
 }
 
-NxStream& UserStream::storeWord(NxU16 w)
+PxStream& UserStream::storeWord(PxU16 w)
 {
-    size_t ww = fwrite(&w, sizeof(NxU16), 1, fp);
-    NX_ASSERT(ww);
+    size_t ww = fwrite(&w, sizeof(PxU16), 1, fp);
+    PX_ASSERT(ww);
     return *this;
 }
 
-NxStream& UserStream::storeDword(NxU32 d)
+PxStream& UserStream::storeDword(PxU32 d)
 {
-    size_t w = fwrite(&d, sizeof(NxU32), 1, fp);
-    NX_ASSERT(w);
+    size_t w = fwrite(&d, sizeof(PxU32), 1, fp);
+    PX_ASSERT(w);
     return *this;
 }
 
-NxStream& UserStream::storeFloat(NxReal f)
+PxStream& UserStream::storeFloat(PxReal f)
 {
-    size_t w = fwrite(&f, sizeof(NxReal), 1, fp);
-    NX_ASSERT(w);
+    size_t w = fwrite(&f, sizeof(PxReal), 1, fp);
+    PX_ASSERT(w);
     return *this;
 }
 
-NxStream& UserStream::storeDouble(NxF64 f)
+PxStream& UserStream::storeDouble(PxF64 f)
 {
-    size_t w = fwrite(&f, sizeof(NxF64), 1, fp);
-    NX_ASSERT(w);
+    size_t w = fwrite(&f, sizeof(PxF64), 1, fp);
+    PX_ASSERT(w);
     return *this;
 }
 
-NxStream& UserStream::storeBuffer(const void* buffer, NxU32 size)
+PxStream& UserStream::storeBuffer(const void* buffer, PxU32 size)
 {
     size_t w = fwrite(buffer, size, 1, fp);
-    NX_ASSERT(w);
+    PX_ASSERT(w);
     return *this;
 }
 
@@ -119,40 +119,40 @@ void MemoryWriteBuffer::clear()
     currentSize = 0;
 }
 
-NxStream& MemoryWriteBuffer::storeByte(NxU8 b)
+PxOutputStream& MemoryWriteBuffer::storeByte(PxU8 b)
 {
-    storeBuffer(&b, sizeof(NxU8));
+    storeBuffer(&b, sizeof(PxU8));
     return *this;
 }
-NxStream& MemoryWriteBuffer::storeWord(NxU16 w)
+PxOutputStream& MemoryWriteBuffer::storeWord(PxU16 w)
 {
-    storeBuffer(&w, sizeof(NxU16));
+    storeBuffer(&w, sizeof(PxU16));
     return *this;
 }
-NxStream& MemoryWriteBuffer::storeDword(NxU32 d)
+PxOutputStream& MemoryWriteBuffer::storeDword(PxU32 d)
 {
-    storeBuffer(&d, sizeof(NxU32));
+    storeBuffer(&d, sizeof(PxU32));
     return *this;
 }
-NxStream& MemoryWriteBuffer::storeFloat(NxReal f)
+PxOutputStream& MemoryWriteBuffer::storeFloat(PxReal f)
 {
-    storeBuffer(&f, sizeof(NxReal));
+    storeBuffer(&f, sizeof(PxReal));
     return *this;
 }
-NxStream& MemoryWriteBuffer::storeDouble(NxF64 f)
+PxOutputStream& MemoryWriteBuffer::storeDouble(PxF64 f)
 {
-    storeBuffer(&f, sizeof(NxF64));
+    storeBuffer(&f, sizeof(PxF64));
     return *this;
 }
-NxStream& MemoryWriteBuffer::storeBuffer(const void* buffer, NxU32 size)
+PxOutputStream& MemoryWriteBuffer::storeBuffer(const void* buffer, PxU32 size)
 {
-    NxU32 expectedSize = currentSize + size;
+    PxU32 expectedSize = currentSize + size;
     if(expectedSize > maxSize)
     {
         maxSize = expectedSize + 4096;
 
-        NxU8* newData = new NxU8[maxSize];
-        NX_ASSERT(newData!=NULL);
+        PxU8* newData = new PxU8[maxSize];
+        PX_ASSERT(newData!=NULL);
 
         if(data)
         {
@@ -167,7 +167,7 @@ NxStream& MemoryWriteBuffer::storeBuffer(const void* buffer, NxU32 size)
 }
 
 
-MemoryReadBuffer::MemoryReadBuffer(const NxU8* data) : buffer(data)
+MemoryReadBuffer::MemoryReadBuffer(const PxU8* data) : buffer(data)
 {
 }
 
@@ -176,27 +176,27 @@ MemoryReadBuffer::~MemoryReadBuffer()
     // We don't own the data => no delete
 }
 
-NxU8 MemoryReadBuffer::readByte() const
+PxU8 MemoryReadBuffer::readByte() const
 {
-    NxU8 b;
-    memcpy(&b, buffer, sizeof(NxU8));
-    buffer += sizeof(NxU8);
+    PxU8 b;
+    memcpy(&b, buffer, sizeof(PxU8));
+    buffer += sizeof(PxU8);
     return b;
 }
 
-NxU16 MemoryReadBuffer::readWord() const
+PxU16 MemoryReadBuffer::readWord() const
 {
-    NxU16 w;
-    memcpy(&w, buffer, sizeof(NxU16));
-    buffer += sizeof(NxU16);
+    PxU16 w;
+    memcpy(&w, buffer, sizeof(PxU16));
+    buffer += sizeof(PxU16);
     return w;
 }
 
-NxU32 MemoryReadBuffer::readDword() const
+PxU32 MemoryReadBuffer::readDword() const
 {
-    NxU32 d;
-    memcpy(&d, buffer, sizeof(NxU32));
-    buffer += sizeof(NxU32);
+    PxU32 d;
+    memcpy(&d, buffer, sizeof(PxU32));
+    buffer += sizeof(PxU32);
     return d;
 }
 
@@ -216,7 +216,7 @@ double MemoryReadBuffer::readDouble() const
     return f;
 }
 
-void MemoryReadBuffer::readBuffer(void* dest, NxU32 size) const
+void MemoryReadBuffer::readBuffer(void* dest, PxU32 size) const
 {
     memcpy(dest, buffer, size);
     buffer += size;

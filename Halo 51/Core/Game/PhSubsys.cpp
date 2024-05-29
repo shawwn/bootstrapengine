@@ -21,8 +21,14 @@
 #include "Graphics/GrColor.h"
 
 // PhysX headers.
-#include "NxCooking.h"
-#include "NxCapsuleController.h"
+#include "PxScene.h"
+#include "PxCooking.h"
+#include "PxCapsuleController.h"
+#include "PxRigidStatic.h"
+#include "PxRigidDynamic.h"
+#include "PxRigidBody.h"
+#include "PxRigidBodyExt.h"
+#include "PxRigidActorExt.h"
 
 // project headers.
 #include "GmConfig.h"
@@ -35,33 +41,34 @@
 // global variables.
 PhSubsys*               gPhSubsys;
 PhAllocator*            gPhAllocator;
-NxScene*                gPhScene;
-NxPhysicsSDK*           gPhSDK;
-NxControllerManager*    gPhCharMgr;
-NxCookingInterface*     gPhCooking;
+PxScene*                gPhScene;
+PxPhysicsSDK*           gPhSDK;
+PxControllerManager*    gPhCharMgr;
+PxCookingInterface*     gPhCooking;
+PxMaterial*             gPhDefaultMaterial;
 
 // forward declarations.
-const char*         getNxSDKCreateError( const NxSDKCreateError& errorCode );
+const char*         getPxSDKCreateError( const PxSDKCreateError& errorCode );
 
 //**********************************************************
 // class PhTriggerReport
 //**********************************************************
-class PhTriggerReport : public NxUserTriggerReport
+class PhTriggerReport : public PxUserTriggerReport
 {
-    virtual void onTrigger( NxShape& triggerShape, NxShape& otherShape, NxTriggerFlag status );
+    virtual void onTrigger( PxShape& triggerShape, PxShape& otherShape, PxTriggerFlag status );
 } gPhTriggerReport;
 
 //----------------------------------------------------------
 void
-PhTriggerReport::onTrigger( NxShape& triggerShape, NxShape& otherShape, NxTriggerFlag status )
+PhTriggerReport::onTrigger( PxShape& triggerShape, PxShape& otherShape, PxTriggerFlag status )
 {
-    NX_ASSERT( triggerShape.getFlag( NX_TRIGGER_ENABLE ) );
+    PX_ASSERT( triggerShape.getFlag( NX_TRIGGER_ENABLE ) );
     if ( status & NX_TRIGGER_ON_ENTER )
     {
-        NxActor& actor = otherShape.getActor();
+        PxActor& actor = otherShape.getActor();
         if ( actor.userData )
         {
-            NxActor& triggerActor = triggerShape.getActor();
+            PxActor& triggerActor = triggerShape.getActor();
             if ( triggerActor.isDynamic() && triggerActor.userData != NULL )
             {
                 //MyObject* Object = (MyObject*)triggerActor.userData;
@@ -71,10 +78,10 @@ PhTriggerReport::onTrigger( NxShape& triggerShape, NxShape& otherShape, NxTrigge
     }
     if( status & NX_TRIGGER_ON_LEAVE )
     {
-        NxActor& actor = otherShape.getActor();
+        PxActor& actor = otherShape.getActor();
         if ( actor.userData )
         {
-            NxActor& triggerActor = triggerShape.getActor();
+            PxActor& triggerActor = triggerShape.getActor();
             if ( triggerActor.isDynamic() && triggerActor.userData != NULL )
             {
                 //MyObject* Object = (MyObject*)triggerActor.userData;
@@ -87,24 +94,24 @@ PhTriggerReport::onTrigger( NxShape& triggerShape, NxShape& otherShape, NxTrigge
 //**********************************************************
 // class PhControllerHitReport
 //**********************************************************
-class PhControllerHitReport : public NxUserControllerHitReport
+class PhControllerHitReport : public PxUserControllerHitReport
 {
 public:
-    virtual NxControllerAction  onShapeHit(const NxControllerShapeHit& hit);
-    virtual NxControllerAction  onControllerHit( const NxControllersHit& hit );
+    virtual PxControllerAction  onShapeHit(const PxControllerShapeHit& hit);
+    virtual PxControllerAction  onControllerHit( const PxControllersHit& hit );
 
 } gPhControllerHitReport;
 
 //----------------------------------------------------------
-NxControllerAction
-PhControllerHitReport::onShapeHit( const NxControllerShapeHit& hit )
+PxControllerAction
+PhControllerHitReport::onShapeHit( const PxControllerShapeHit& hit )
 {
     if ( hit.shape )
     {
-        NxCollisionGroup group = hit.shape->getGroup();
+        PxCollisionGroup group = hit.shape->getGroup();
         if( group != PH_GROUP_COLLIDABLE_NON_PUSHABLE )
         {
-            NxActor& actor = hit.shape->getActor();
+            PxActor& actor = hit.shape->getActor();
             if ( actor.isDynamic() )
             {
                 // we only allow horizontal pushes. Vertical pushes when we stand on dynamic objects creates
@@ -112,8 +119,8 @@ PhControllerHitReport::onShapeHit( const NxControllerShapeHit& hit )
                 // particular objects, if the gameplay requires it.
                 if ( hit.dir.y == 0.0f )
                 {
-                    NxF32 coeff = 5.0f * actor.getMass() * hit.length;
-                    actor.addForceAtLocalPos( hit.dir*coeff, NxVec3( 0.0f, 0.0f, 0.0f ), NX_IMPULSE );
+                    PxF32 coeff = 5.0f * actor.getMass() * hit.length;
+                    actor.addForceAtLocalPos( hit.dir*coeff, PxVec3( 0.0f, 0.0f, 0.0f ), NX_IMPULSE );
                     //                      actor.addForceAtPos(hit.dir*coeff, hit.controller->getPosition(), NX_IMPULSE);
                     //                      actor.addForceAtPos(hit.dir*coeff, hit.worldPos, NX_IMPULSE);
                 }
@@ -125,8 +132,8 @@ PhControllerHitReport::onShapeHit( const NxControllerShapeHit& hit )
 }
 
 //----------------------------------------------------------
-NxControllerAction
-PhControllerHitReport::onControllerHit( const NxControllersHit& hit )
+PxControllerAction
+PhControllerHitReport::onControllerHit( const PxControllersHit& hit )
 {
     return NX_ACTION_NONE;
 }
@@ -143,14 +150,14 @@ PhSubsys::PhSubsys()
     gPhAllocator = new PhAllocator();
 
     // startup physics.
-    NxPhysicsSDKDesc desc;
+    PxPhysicsSDKDesc desc;
     desc.flags |= NX_SDKF_NO_HARDWARE; // don't use hardware acceleration, to prevent possible driver bugs.
-    NxSDKCreateError errorCode = NXCE_NO_ERROR;
+    PxSDKCreateError errorCode = NXCE_NO_ERROR;
     PhErrorStream* errorStream = new PhErrorStream();
-    gPhSDK = NxCreatePhysicsSDK( NX_PHYSICS_SDK_VERSION, gPhAllocator, errorStream, desc, &errorCode );
+    gPhSDK = PxCreatePhysicsSDK( NX_PHYSICS_SDK_VERSION, gPhAllocator, errorStream, desc, &errorCode );
     if ( !gPhSDK )
     {
-        HandleError( "Physics initialization failed.  (Wrong SDK DLL version?)  Error code %d - %s\n", errorCode, getNxSDKCreateError( errorCode ) );
+        HandleError( "Physics initialization failed.  (Wrong SDK DLL version?)  Error code %d - %s\n", errorCode, getPxSDKCreateError( errorCode ) );
         return;
     }
 
@@ -158,7 +165,7 @@ PhSubsys::PhSubsys()
     gPhSDK->setParameter( NX_SKIN_WIDTH, 0.01f );
 
     // create a physics scene.
-    NxSceneDesc sceneDesc;
+    PxSceneDesc sceneDesc;
     sceneDesc.flags |= NX_SF_ENABLE_ACTIVETRANSFORMS; // only update active entities each frame, rather than every entity.
     sceneDesc.gravity = ConvertVec3( GAME_GRAVITY );
     sceneDesc.userTriggerReport = &gPhTriggerReport;
@@ -170,19 +177,16 @@ PhSubsys::PhSubsys()
     }
 
     // set the default physics material.
-    NxMaterial* defaultMaterial = gPhScene->getMaterialFromIndex( 0 );
-    defaultMaterial->setRestitution( 0.0f );
-    defaultMaterial->setStaticFriction( 0.5f );
-    defaultMaterial->setDynamicFriction( 0.5f );
+    gPhDefaultMaterial = gPhSDK->createMaterial(0.5f, 0.5f, 0.0f);
 
     // create the physics cooking interface.
-    gPhCooking = NxGetCookingLib( NX_PHYSICS_SDK_VERSION );
+    gPhCooking = PxGetCookingLib( NX_PHYSICS_SDK_VERSION );
     B_ASSERT( gPhCooking );
-    bool success = gPhCooking->NxInitCooking( /*gPhAllocator*/ 0, errorStream );
+    bool success = gPhCooking->PxInitCooking( /*gPhAllocator*/ 0, errorStream );
     B_ASSERT( success );
 
     // initialize the character controller manager.
-    gPhCharMgr = NxCreateControllerManager( gPhAllocator );
+    gPhCharMgr = PxCreateControllerManager( gPhAllocator );
     B_ASSERT( gPhCharMgr );
 
     gPhSubsys = this;
@@ -196,7 +200,7 @@ PhSubsys::~PhSubsys()
     // release all triangle meshes.
     for ( TriangleMeshContainer::iterator it = _triangleMeshes.begin(); it != _triangleMeshes.end(); ++it )
     {
-        NxTriangleMesh* triMesh = *it;
+        PxTriangleMesh* triMesh = *it;
         gPhSDK->releaseTriangleMesh( *triMesh );
     }
     _triangleMeshes.clear();
@@ -204,12 +208,12 @@ PhSubsys::~PhSubsys()
     // release the character controller manager.
     if ( gPhCharMgr )
     {
-        NxReleaseControllerManager( gPhCharMgr );
+        PxReleaseControllerManager( gPhCharMgr );
         gPhCharMgr = 0;
     }
 
     // release the physics cooking interface.
-    gPhCooking->NxCloseCooking();
+    gPhCooking->PxCloseCooking();
 
     // release the physics scene.
     if ( gPhScene )
@@ -221,7 +225,7 @@ PhSubsys::~PhSubsys()
     // release the physics SDK.
     if ( gPhSDK )
     {
-        NxReleasePhysicsSDK( gPhSDK );
+        PxReleasePhysicsSDK( gPhSDK );
         gPhSDK = 0;
     }
 
@@ -236,29 +240,27 @@ PhSubsys::~PhSubsys()
 }
 
 //----------------------------------------------------------
-NxActor*
-PhSubsys::CreateCube( const MMat4x4& world, float size, const NxBodyDesc& bodyDesc, float density, EPHGROUP group, const MVec3* initialVelocity )
+PxActor*
+PhSubsys::CreateCube( const MMat4x4& world, float size, float density, EPHGROUP group, const MVec3* initialVelocity, float angularDamping )
 {
     B_ASSERT( gPhScene );
 
-    NxBoxShapeDesc boxDesc;
-    float half = 0.5f*size;
-    boxDesc.dimensions = NxVec3( half, half, half );
-    boxDesc.group = group;
+    PxShape* shape = gPhSDK->createShape(PxBoxGeometry(size, size, size), *gPhDefaultMaterial);
 
-    NxActorDesc actorDesc;
-    actorDesc.shapes.pushBack( &boxDesc );
-    actorDesc.body          = &bodyDesc;
-    actorDesc.density       = density;
-    actorDesc.globalPose.setRowMajor44( world );
+    PxRigidDynamic* body = gPhSDK->createRigidDynamic( PxTransform( ConvertMat4x4( world ) ) );
+    body->setAngularDamping(angularDamping);
+    if (initialVelocity)
+        body->setLinearVelocity( ConvertVec3( *initialVelocity ) );
+    body->attachShape(*shape);
+    PxRigidBodyExt::updateMassAndInertia(*body, density);
+    gPhScene->addActor(*body);
 
-    NxActor* result = gPhScene->createActor( actorDesc );
-    return result;
+    return body;
 }
 
 //----------------------------------------------------------
 bool
-PhSubsys::CreateStaticModelActors( NxActorContainer& results, GrModel* model )
+PhSubsys::CreateStaticModelActors( PxActorContainer& results, GrModel* model )
 {
     // force the model to update its transforms.
     if ( !model->Update( true ) )
@@ -282,15 +284,13 @@ PhSubsys::CreateStaticModelActors( NxActorContainer& results, GrModel* model )
         UFastArray< SVec3 > vertices;
 
         // fill out PhysX descriptors.
-        NxActorDesc actorDesc;
-        NxTriangleMeshShapeDesc meshShapeDesc;
-        NxTriangleMeshDesc meshDesc;
-        meshDesc.numVertices                = meshVB->GetVertexCount();
-        meshDesc.numTriangles               = meshIB->GetIndexCount()/3;
-        meshDesc.pointStrideBytes           = sizeof( SVec3 );
-        meshDesc.triangleStrideBytes        = 3*sizeof( unsigned short );
-        meshDesc.triangles                  = meshIB->GetIndices();
-        meshDesc.flags                      = NX_MF_16_BIT_INDICES;
+        PxTriangleMeshDesc meshDesc;
+        meshDesc.points.count               = meshVB->GetVertexCount();
+        meshDesc.triangles.count            = meshIB->GetIndexCount()/3;
+        meshDesc.points.stride              = sizeof( SVec3 );
+        meshDesc.triangles.stride           = 3*sizeof( unsigned short );
+        meshDesc.triangles.data             = meshIB->GetIndices();
+        meshDesc.flags                      = PxMeshFlag::e16_BIT_INDICES;
 
         // get the meshinst's transform data.
         MMat4x4 transform( meshInst->GetTransform() );
@@ -309,23 +309,24 @@ PhSubsys::CreateStaticModelActors( NxActorContainer& results, GrModel* model )
             transform.SetScale( MVec3( 1.0f, 1.0f, 1.0f ) );
 
             // submit the baked vertices to PhysX.
-            meshDesc.points = vertices.GetPtr();
+            meshDesc.points.data = vertices.GetPtr();
         }
         else
         {
             // otherwise, just submit the mesh vertices without modifying them.
-            meshDesc.points = meshVB->GetVertices();
+            meshDesc.points.data = meshVB->GetVertices();
         }
 
         // prepare the mesh for submission to PhysX.
         MemoryWriteBuffer writeBuffer;
-        if ( !gPhCooking->NxCookTriangleMesh( meshDesc, writeBuffer ) )
+        if ( !gPhCooking->cookTriangleMesh( meshDesc, writeBuffer ) )
         {
             HandleError( "Unable to cook a triangle mesh.\n" );
             return false;
         }
         // create the triangle mesh.
-        NxTriangleMesh* triMesh = gPhSDK->createTriangleMesh( MemoryReadBuffer( writeBuffer.data ) );
+        MemoryReadBuffer readBuffer( writeBuffer.data );
+        PxTriangleMesh* triMesh = gPhSDK->createTriangleMesh( readBuffer );
         if ( !triMesh )
         {
             HandleError( "Unable to create a triangle mesh.\n" );
@@ -335,10 +336,21 @@ PhSubsys::CreateStaticModelActors( NxActorContainer& results, GrModel* model )
         // add the triangle mesh to our global list of triangle meshes.
         _triangleMeshes.push_back( triMesh );
 
-        meshShapeDesc.meshData = triMesh;
+        PxRigidStatic* meshActor = gPhSDK->createRigidStatic(PxTransform(ConvertMat4x4( transform )));
+        if ( !meshActor )
+        {
+            HandleError( "Unable to create a triangle mesh actor.\n" );
+            return false;
+        }
 
-        // move and rotate the mesh to match the meshinst.
-        meshShapeDesc.localPose = ConvertMat4x4( transform );
+        PxTriangleMeshGeometry triGeom( triMesh );
+        PxShape* triangleMeshShape = PxRigidActorExt::createExclusiveShape(*meshActor, triGeom, *gPhDefaultMaterial);
+
+        if (!triangleMeshShape)
+        {
+            HandleError( "Unable to create a triangle mesh shape.\n" );
+            return false;
+        }
 
         //
         // Please note about the created Triangle Mesh, user needs to release it when no one uses it to save memory. It can be detected
@@ -347,21 +359,21 @@ PhSubsys::CreateStaticModelActors( NxActorContainer& results, GrModel* model )
         // TODO: don't leak memory.
 
         // flag the physics representation as "collidable, but not movable."
-        meshShapeDesc.group = PH_GROUP_COLLIDABLE_NON_PUSHABLE;
+        // TODO: How do we do this in the new 4.1 SDK?
+        // meshShapeDesc.group = PH_GROUP_COLLIDABLE_NON_PUSHABLE;
 
         // create one actor per meshinst.
-        // TODO: why can't there be multiple triangle mesh shapes for a single actor?
-        actorDesc.shapes.pushBack( &meshShapeDesc);
-        NxActor* actor = gPhScene->createActor( actorDesc );
-        results.Push( actor );
+        gPhScene->addActor( *meshActor );
+
+        results.Push( meshActor );
     }
 
     return true;
 }
 
 //----------------------------------------------------------
-NxActor*
-PhSubsys::CreateConvexDynamicModelActor( GrModel* model, const NxBodyDesc& bodyDesc, float density, EPHGROUP group )
+PxActor*
+PhSubsys::CreateConvexDynamicModelActor( GrModel* model, PxReal angularDamping, const PxVec3& linearVelocity, float density, EPHGROUP group )
 {
     // temporarily move the model to origin.
     MMat4x4 modelXForm( model->GetWorld() );
@@ -376,7 +388,7 @@ PhSubsys::CreateConvexDynamicModelActor( GrModel* model, const NxBodyDesc& bodyD
     model->GetAllMeshInsts( meshInsts );
 
     // fill out a PhysX actor descriptor.
-    NxActorDesc actorDesc;
+    PxActorDesc actorDesc;
     actorDesc.body          = &bodyDesc;
     actorDesc.density       = density;
     actorDesc.globalPose    = ConvertMat4x4( modelXForm );
@@ -392,10 +404,10 @@ PhSubsys::CreateConvexDynamicModelActor( GrModel* model, const NxBodyDesc& bodyD
         UFastArray< SVec3 > vertices;
 
         // fill out a PhysX convex hull descriptor.
-        NxConvexMeshDesc convexDesc;
-        convexDesc.numVertices          = meshVB->GetVertexCount();
-        convexDesc.pointStrideBytes     = sizeof( SVec3 );
-        convexDesc.flags                = NX_CF_COMPUTE_CONVEX;
+        PxConvexMeshDesc convexDesc;
+        convexDesc.points.count         = meshVB->GetVertexCount();
+        convexDesc.points.stride        = sizeof( SVec3 );
+        convexDesc.flags                = PxConvexFlag::eCOMPUTE_CONVEX;
 
         // get the meshinst's transform data.
         MMat4x4 transform( meshInst->GetTransform() );
@@ -414,24 +426,25 @@ PhSubsys::CreateConvexDynamicModelActor( GrModel* model, const NxBodyDesc& bodyD
             transform.SetScale( MVec3( 1.0f, 1.0f, 1.0f ) );
 
             // submit the baked vertices to PhysX.
-            convexDesc.points = vertices.GetPtr();
+            convexDesc.points.data = vertices.GetPtr();
         }
         else
         {
             // otherwise, just submit the mesh vertices without modifying them.
-            convexDesc.points = meshVB->GetVertices();
+            convexDesc.points.data = meshVB->GetVertices();
         }
     
         // cook the convex hull shape.
         MemoryWriteBuffer buf;
-        if ( !gPhCooking->NxCookConvexMesh( convexDesc, buf ) )
+        if ( !gPhCooking->cookConvexMesh( convexDesc, buf ) )
         {
             HandleError( "Failed to cook a convex mesh.\n" );
             return 0;
         }
 
         // create the convex hull shape.
-        NxConvexMesh* convexShape = gPhSDK->createConvexMesh( MemoryReadBuffer( buf.data ) );
+        MemoryReadBuffer readbuf( buf.data );
+        PxConvexMesh* convexShape = gPhSDK->createConvexMesh( readbuf );
         if ( !convexShape )
         {
             HandleError( "Failed to create a convex mesh.\n" );
@@ -439,7 +452,7 @@ PhSubsys::CreateConvexDynamicModelActor( GrModel* model, const NxBodyDesc& bodyD
         }
 
         // prepare to add the convex hull shape to the actor descriptor.
-        NxConvexShapeDesc convexShapeDesc;
+        PxConvexShapeDesc convexShapeDesc;
         convexShapeDesc.meshData = convexShape;
         convexShapeDesc.group = group;
 
@@ -455,18 +468,18 @@ PhSubsys::CreateConvexDynamicModelActor( GrModel* model, const NxBodyDesc& bodyD
     model->Update( true );
 
     // create and return the actor.
-    NxActor* result = gPhScene->createActor( actorDesc );
+    PxActor* result = gPhScene->createActor( actorDesc );
     return result;
 }
 
 //----------------------------------------------------------
-NxController*
+PxController*
 PhSubsys::CreateCharController( const MVec3& pos, float radius, float height, void* userData, EPHGROUP group )
 {
     // (Note: the below commented-out lines of code are from a PhysX SDK sample.  
     // I'm going to leave them in for now.)
 
-    NxCapsuleControllerDesc desc;
+    PxCapsuleControllerDesc desc;
     desc.position.x     = pos.GetX();
     desc.position.y     = pos.GetY();
     desc.position.z     = pos.GetZ();
@@ -474,7 +487,7 @@ PhSubsys::CreateCharController( const MVec3& pos, float radius, float height, vo
     desc.height         = height;
     desc.upDirection    = NX_Y;
     desc.userData       = userData;
-    //      desc.slopeLimit     = cosf(NxMath::degToRad(45.0f));
+    //      desc.slopeLimit     = cosf(PxMath::degToRad(45.0f));
     desc.slopeLimit     = 0;
     desc.skinWidth      = PH_SKIN_WIDTH;
     desc.stepOffset     = 0.5;
@@ -483,26 +496,26 @@ PhSubsys::CreateCharController( const MVec3& pos, float radius, float height, vo
     //      desc.stepOffset     = 0;    // Fixes some issues
     //      desc.stepOffset     = 10;
     desc.callback       = &gPhControllerHitReport;
-    NxController* result = gPhCharMgr->createController( gPhScene, desc );
+    PxController* result = gPhCharMgr->createController( gPhScene, desc );
     return result;
 }
 
 //----------------------------------------------------------
-NxU32
-PhSubsys::MoveChar( NxController* controller, const MVec3& displacement, unsigned int collisionGroups )
+PxU32
+PhSubsys::MoveChar( PxController* controller, const MVec3& displacement, unsigned int collisionGroups )
 {
-    const NxF32 sharpness = 1.0f;
-    NxVec3 disp( displacement );
-    NxU32 outCollisionFlags = 0;
+    const PxF32 sharpness = 1.0f;
+    PxVec3 disp( displacement );
+    PxU32 outCollisionFlags = 0;
     controller->move( disp, collisionGroups, 0.000001f, outCollisionFlags, sharpness );
     return outCollisionFlags;
 }
 
 //----------------------------------------------------------
 MVec3
-PhSubsys::GetCharPosition( NxController* controller )
+PhSubsys::GetCharPosition( PxController* controller )
 {
-    const NxExtendedVec3& pos = controller->getPosition();
+    const PxExtendedVec3& pos = controller->getPosition();
     return MVec3( (float)pos[ 0 ], (float)pos[ 1 ], (float)pos[ 2 ] );
 }
 
@@ -512,7 +525,7 @@ PhSubsys::CollectGarbage()
 {
     for ( TriangleMeshContainer::iterator it = _triangleMeshes.begin(); it != _triangleMeshes.end(); )
     {
-        NxTriangleMesh* triMesh = *it;
+        PxTriangleMesh* triMesh = *it;
         if ( triMesh->getReferenceCount() == 0 )
         {
             // if the triangle mesh is unreferenced, then release it.
@@ -527,31 +540,31 @@ PhSubsys::CollectGarbage()
 }
 
 //----------------------------------------------------------
-NxVec3
+PxVec3
 PhSubsys::ConvertVec3( const MVec3& vec )
 {
-    return NxVec3( vec.GetX(), vec.GetY(), vec.GetZ() );
+    return PxVec3( vec.GetX(), vec.GetY(), vec.GetZ() );
 }
 
 //----------------------------------------------------------
 MVec3
-PhSubsys::ConvertVec3( const NxVec3& vec )
+PhSubsys::ConvertVec3( const PxVec3& vec )
 {
     return MVec3( vec.x, vec.y, vec.z );
 }
 
 //----------------------------------------------------------
-NxMat33
+PxMat33
 PhSubsys::ConvertMat3x3( const MMat3x3& rot )
 {
-    return NxMat33( 
+    return PxMat33(
         ConvertVec3( rot.GetRow( 0 ) ), 
         ConvertVec3( rot.GetRow( 1 ) ),
         ConvertVec3( rot.GetRow( 2 ) ) );
 }
 
 //----------------------------------------------------------
-NxMat34
+PxMat44
 PhSubsys::ConvertMat4x4( const MMat4x4& mat )
 {
     // verify that the matrix doesn't contain projection.
@@ -561,7 +574,7 @@ PhSubsys::ConvertMat4x4( const MMat4x4& mat )
                 ApproxEqual( mat( 3, 3 ), 1.0f ) );
 
     // build an equivalent PhysX matrix, but without any scale.
-    NxMat34 result(
+    PxMat44 result(
         ConvertMat3x3( mat.GetRotate() ),
         ConvertVec3( mat.GetTranslate() ) );
 
@@ -579,7 +592,7 @@ PhSubsys::ConvertMat4x4( const MMat4x4& mat )
 
 //----------------------------------------------------------
 GrColor
-PhSubsys::ConvertColor( NxU32 col, float alpha )
+PhSubsys::ConvertColor( PxU32 col, float alpha )
 {
     GrColor result;
     result.SetB( ( ( col       ) & 0xff ) / 255.0f );
@@ -591,7 +604,7 @@ PhSubsys::ConvertColor( NxU32 col, float alpha )
 
 //----------------------------------------------------------
 const char*
-getNxSDKCreateError(const NxSDKCreateError& errorCode) 
+getPxSDKCreateError(const PxSDKCreateError& errorCode)
 {
     switch(errorCode) 
     {

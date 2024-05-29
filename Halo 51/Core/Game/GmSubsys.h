@@ -34,6 +34,6 @@ public:
 private:
     void                Clear();
 
-    NxActorContainer    _staticActors;
+    PxActorContainer    _staticActors;
 };
 extern GmSubsys*        gGmSubsys;

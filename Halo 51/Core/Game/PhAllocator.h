@@ -7,7 +7,7 @@
 #   include <xtl.h>
 #endif
 
-class PhAllocator : public NxUserAllocator
+class PhAllocator : public PxUserAllocator
 {
 public:
     PhAllocator();
@@ -16,22 +16,22 @@ public:
     void        reset();
 
     void*       malloc(size_t size);
-    void*       malloc(size_t size, NxMemoryType type);
+    void*       malloc(size_t size, PxMemoryType type);
     void*       mallocDEBUG(size_t size, const char* file, int line);
-    void*       mallocDEBUG(size_t size, const char* file, int line, const char* className, NxMemoryType type);
+    void*       mallocDEBUG(size_t size, const char* file, int line, const char* className, PxMemoryType type);
     void*       realloc(void* memory, size_t size);
     void        free(void* memory);
 
     size_t*     mMemBlockList;
-    NxU32       mMemBlockListSize;
-    NxU32       mMemBlockFirstFree;
-    NxU32       mMemBlockUsed;
+    PxU32       mMemBlockListSize;
+    PxU32       mMemBlockFirstFree;
+    PxU32       mMemBlockUsed;
 
-    NxI32       mNbAllocatedBytes;
-    NxI32       mHighWaterMark;
-    NxI32       mTotalNbAllocs;
-    NxI32       mNbAllocs;
-    NxI32       mNbReallocs;
+    PxI32       mNbAllocatedBytes;
+    PxI32       mHighWaterMark;
+    PxI32       mTotalNbAllocs;
+    PxI32       mNbAllocs;
+    PxI32       mNbReallocs;
 #if defined(WIN32) || defined(_XBOX)
     CRITICAL_SECTION allocatorLock;
 

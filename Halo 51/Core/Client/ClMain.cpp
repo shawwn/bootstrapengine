@@ -36,7 +36,7 @@
 #include "Graphics/GrColor.h"
 
 // PhysX headers.
-#include "NxPhysics.h"
+#include "PxPhysics.h"
 
 // game headers.
 #include "Game/GmConfig.h"
@@ -72,8 +72,8 @@
 #endif
 // PhysX.
 #pragma comment( lib, "PhysXLoader.lib" )
-#pragma comment( lib, "NxCooking.lib" )
-#pragma comment( lib, "NxCharacter.lib" )
+#pragma comment( lib, "PxCooking.lib" )
+#pragma comment( lib, "PxCharacter.lib" )
 #endif
 
 // constants.
@@ -466,12 +466,12 @@ ClShutdown()
 void
 ClRenderPhysicsVisualizers( const GrCamera& cam, float alpha )
 {
-    const NxDebugRenderable *dbgData = gPhScene->getDebugRenderable();
+    const PxDebugRenderable *dbgData = gPhScene->getDebugRenderable();
 
     // draw points.
     {{
-        NxU32 pointCount = dbgData->getNbPoints();
-        const NxDebugPoint* point = dbgData->getPoints();
+        PxU32 pointCount = dbgData->getNbPoints();
+        const PxDebugPoint* point = dbgData->getPoints();
         while ( pointCount-- )
         {
             gGrRenderUtil->DrawColoredPoint( cam, 
@@ -484,8 +484,8 @@ ClRenderPhysicsVisualizers( const GrCamera& cam, float alpha )
 
     // draw lines.
     {{
-        NxU32 lineCount = dbgData->getNbLines();
-        const NxDebugLine* line = dbgData->getLines();
+        PxU32 lineCount = dbgData->getNbLines();
+        const PxDebugLine* line = dbgData->getLines();
         while ( lineCount-- )
         {
             gGrRenderUtil->DrawColoredLine( 
@@ -498,8 +498,8 @@ ClRenderPhysicsVisualizers( const GrCamera& cam, float alpha )
 
     // draw triangles.
     {{
-        NxU32 triCount = dbgData->getNbTriangles();
-        const NxDebugTriangle* tri = dbgData->getTriangles();
+        PxU32 triCount = dbgData->getNbTriangles();
+        const PxDebugTriangle* tri = dbgData->getTriangles();
         while ( triCount-- )
         {
             gGrRenderUtil->DrawColoredTriangle( 
@@ -602,8 +602,8 @@ ClMouseDown( ClWindow* window, int button )
         objInfo.transform = MMat4x4( gGameCamera->GetRot(), gChar->GetPos() + MVec3( 0.0f, 1.5f, 0.0f ) + CHAR_RADIUS*MVec3( gGameCamera->GetLookDir().GetX(), 0.0f, gGameCamera->GetLookDir().GetZ() ).Normalized() );
 
         // set its initial physical parameters.
-        objInfo.bodyDesc.angularDamping = 0.5f;
-        objInfo.bodyDesc.linearVelocity = gPhSubsys->ConvertVec3( 15.0f*gGameCamera->GetLookDir() );
+        objInfo.angularDamping = 0.5f;
+        objInfo.linearVelocity = gPhSubsys->ConvertVec3( 15.0f*gGameCamera->GetLookDir() );
 
         // create the object.
         gGmEntityMgr->CreateDynamicObject( "box", objInfo );

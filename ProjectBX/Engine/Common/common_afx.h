@@ -24,6 +24,8 @@
 // with 3rdParty libraries such as PhysX, so disable that for now.
 #define __INTERNAL_MATH_IMPL
 
+#define PX_DOXYGEN 1 // prevent physx namespacing
+
 #if 0
 namespace __INTERNAL_MATH_IMPL
 {

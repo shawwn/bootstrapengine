@@ -14,7 +14,8 @@
 #include "GmEntity.h"
 
 // forward declarations.
-class NxActor;
+class PxActor;
+class PxRigidBody;
 
 //**********************************************************
 // class GmObject
@@ -24,7 +25,7 @@ class GmObject : public GmEntity
     friend class GmEntityMgr;
 
 protected:
-    GmObject( const tstring& name, URef< GrModel > model, NxActor* actor );
+    GmObject( const tstring& name, URef< GrModel > model, PxActor* actor );
     ~GmObject();
 
 public:
@@ -40,17 +41,18 @@ public:
         MMat4x4 transform;
 
         // physical properties.
-        NxBodyDesc bodyDesc;
+        PxReal angularDamping = 0.0;
+        PxVec3 linearVelocity = PxZero;
 
         // density.
         float density;
     };
 
-    NxActor*            GetActor() const                {   return _actor;  }
+    PxActor*            GetActor() const                {   return _actor;  }
 
     // updates the game object.
     virtual void        Update();
 
 private:
-    NxActor*            _actor;
+    PxActor*            _actor;
 };

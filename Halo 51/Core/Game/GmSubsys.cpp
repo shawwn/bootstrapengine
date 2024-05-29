@@ -106,10 +106,10 @@ GmSubsys::Update( unsigned int dt )
     gPhScene->flushStream();
     gPhScene->fetchResults( NX_RIGID_BODY_FINISHED, true );
 
-    NxReal maxTimestep;
-    NxTimeStepMethod method;
-    NxU32 maxIter;
-    NxU32 numSubSteps;
+    PxReal maxTimestep;
+    PxTimeStepMethod method;
+    PxU32 maxIter;
+    PxU32 numSubSteps;
     gPhScene->getTiming( maxTimestep, maxIter, method, &numSubSteps );
     if( numSubSteps )
         gPhCharMgr->updateControllers();
@@ -128,7 +128,7 @@ GmSubsys::Clear()
     // remove all static actors from the physics scene.
     for ( unsigned int i = 0; i < _staticActors.GetElemCount(); ++i )
     {
-        NxActor* actor = _staticActors[i];
+        PxActor* actor = _staticActors[i];
         gPhScene->releaseActor( *actor );
     }
     _staticActors.Clear();

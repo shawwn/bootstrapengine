@@ -14,18 +14,25 @@
 #include "Common/UFastArray.h"
 
 // PhysX headers.
-#include "NxPhysics.h"
-#include "NxControllerManager.h"
-#include "NxController.h"
+#include "PxPhysics.h"
+#include "PxControllerManager.h"
+#include "PxController.h"
+#include "PxCooking.h"
+#include "foundation/PxSimpleTypes.h"
+#include "foundation/PxTransform.h"
+#include "foundation/PxMat33.h"
+#include "foundation/PxMat44.h"
 
 // project headers.
 #include "PhAllocator.h"
+
+using namespace physx;
 
 // std c++ headers.
 #include <list>
 
 // global typedefs.
-typedef UFastArray< NxActor* >      NxActorContainer;
+typedef UFastArray< PxActor* >      PxActorContainer;
 
 // forward declarations.
 class MMat4x4;
@@ -33,7 +40,7 @@ class MMat3x3;
 class MVec3;
 class GrModel;
 class GrColor;
-class NxTriangleMesh;
+class PxTriangleMesh;
 
 //**********************************************************
 // enum EPHGROUP
@@ -58,47 +65,47 @@ public:
     ~PhSubsys();
 
     // creates a cube actor.
-    NxActor*                    CreateCube( const MMat4x4& world, float size, const NxBodyDesc& bodyDesc, float density, EPHGROUP group = PH_GROUP_COLLIDABLE_PUSHABLE, const MVec3* initialVelocity=0 );
+    PxActor*                    CreateCube( const MMat4x4& world, float size, float density, EPHGROUP group = PH_GROUP_COLLIDABLE_PUSHABLE, const MVec3* initialVelocity=0, float angularDamping = 0.0 );
 
     // creates an actor that represents a static model.
-    bool                        CreateStaticModelActors( NxActorContainer& results, GrModel* model );
+    bool                        CreateStaticModelActors( PxActorContainer& results, GrModel* model );
 
     // creates an actor that represents a dynamic, rigid model.
-    NxActor*                    CreateConvexDynamicModelActor( GrModel* model, const NxBodyDesc& bodyDesc, float density, EPHGROUP group = PH_GROUP_COLLIDABLE_PUSHABLE );
+    PxActor*                    CreateConvexDynamicModelActor( GrModel* model, PxReal angularDamping, const PxVec3& linearVelocity, float density, EPHGROUP group = PH_GROUP_COLLIDABLE_PUSHABLE );
 
     // creates a capsule character controller.
-    NxController*               CreateCharController( const MVec3& pos, float radius, float height, void* userData, EPHGROUP group = PH_GROUP_COLLIDABLE_PUSHABLE );
+    PxController*               CreateCharController( const MVec3& pos, float radius, float height, void* userData, EPHGROUP group = PH_GROUP_COLLIDABLE_PUSHABLE );
 
     // moves a character controller.
-    NxU32                       MoveChar( NxController* controller, const MVec3& displacement, unsigned int collisionGroups = PH_GROUP_COLLIDABLE );
+    PxU32                       MoveChar( PxController* controller, const MVec3& displacement, unsigned int collisionGroups = PH_GROUP_COLLIDABLE );
 
     // returns the position of a character controller.
-    MVec3                       GetCharPosition( NxController* controller );
+    MVec3                       GetCharPosition( PxController* controller );
 
     // releases any unreferenced triangle meshes.
     void                        CollectGarbage();
 
-    // converts an MVec3 into an NxVec3, or vice-versa.
-    static NxVec3               ConvertVec3( const MVec3& vec );
-    static MVec3                ConvertVec3( const NxVec3& vec );
+    // converts an MVec3 into an PxVec3, or vice-versa.
+    static PxVec3               ConvertVec3( const MVec3& vec );
+    static MVec3                ConvertVec3( const PxVec3& vec );
 
-    // converts an MMat3x3 into an NxMat33.
-    static NxMat33              ConvertMat3x3( const MMat3x3& rot );
+    // converts an MMat3x3 into an PxMat33.
+    static PxMat33              ConvertMat3x3( const MMat3x3& rot );
 
-    // converts an MMat4x4 into an NxMat34.
-    static NxMat34              ConvertMat4x4( const MMat4x4& mat );
+    // converts an MMat4x4 into an PxMat34.
+    static PxMat44              ConvertMat4x4( const MMat4x4& mat );
 
-    // converts an NxU32 into a GrColor.
-    static GrColor              ConvertColor( NxU32 col, float alpha = 1.0f );
+    // converts an PxU32 into a GrColor.
+    static GrColor              ConvertColor( PxU32 col, float alpha = 1.0f );
 
 private:
-    typedef std::list< NxTriangleMesh* >    TriangleMeshContainer;
+    typedef std::list< PxTriangleMesh* >    TriangleMeshContainer;
 
     TriangleMeshContainer       _triangleMeshes;
 };
 extern PhSubsys*                gPhSubsys;
 extern PhAllocator*             gPhAllocator;
-extern NxScene*                 gPhScene;
-extern NxPhysicsSDK*            gPhSDK;
-extern NxControllerManager*     gPhCharMgr;
-extern NxCookingInterface*      gPhCooking;
+extern PxScene*                 gPhScene;
+extern PxPhysics*               gPhSDK;
+extern PxControllerManager*     gPhCharMgr;
+extern PxCooking*      gPhCooking;

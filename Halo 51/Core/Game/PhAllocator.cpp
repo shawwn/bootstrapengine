@@ -5,7 +5,7 @@
 #endif
 
 #include <stdio.h>
-#include "NxPhysics.h"
+#include "PxPhysics.h"
 #include "PhAllocator.h"
 
 #define MEMBLOCKSTART 64
@@ -44,10 +44,10 @@ PhAllocator::~PhAllocator()
     // Scanning for memory leaks
     if(mMemBlockList && mMemBlockUsed)
     {
-        NxU32 NbLeaks = 0;
+        PxU32 NbLeaks = 0;
         printf("\n\n  ICE Message Memory leaks detected :\n\n");
-        NxU32 used = mMemBlockUsed;
-        for(NxU32 i=0, j=0; i<used; i++, j++)
+        PxU32 used = mMemBlockUsed;
+        for(PxU32 i=0, j=0; i<used; i++, j++)
         {
             while(!mMemBlockList[j]) j++;
             size_t* cur = (size_t*)mMemBlockList[j];
@@ -85,7 +85,7 @@ void* PhAllocator::malloc(size_t size)
     return NULL;
 }
 
-void* PhAllocator::malloc(size_t size, NxMemoryType type)
+void* PhAllocator::malloc(size_t size, PxMemoryType type)
 {
 #ifdef _DEBUG
     return mallocDEBUG(size, NULL, 0, "Undefined", type);
@@ -121,7 +121,7 @@ void* PhAllocator::mallocDEBUG(size_t size, const char* file, int line)
     return NULL;
 }
 
-void* PhAllocator::mallocDEBUG(size_t size, const char* file, int line, const char* className, NxMemoryType type)
+void* PhAllocator::mallocDEBUG(size_t size, const char* file, int line, const char* className, PxMemoryType type)
 {
 #ifndef _DEBUG
     return malloc(size, type);
@@ -232,7 +232,7 @@ void* PhAllocator::realloc(void* memory, size_t size)
     *(((size_t*)ptr2)+2) = 0;   // File
     *(((size_t*)ptr2)+3) = 0;   // Line
 
-    NxU32* blockStart = (NxU32*)ptr2;
+    PxU32* blockStart = (PxU32*)ptr2;
 
     // Remove the old allocated block from the debug memory block list
     if(mMemBlockList)

@@ -18,7 +18,7 @@ GmObject::SInfo::SInfo()
 }
 
 //----------------------------------------------------------
-GmObject::GmObject( const tstring& name, URef< GrModel > model, NxActor* actor )
+GmObject::GmObject( const tstring& name, URef< GrModel > model, PxActor* actor )
 : GmEntity( name, model )
 , _actor( actor )
 {
