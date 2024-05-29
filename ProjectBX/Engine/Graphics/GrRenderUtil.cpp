@@ -316,16 +316,25 @@ GrRenderUtil::DrawColoredSphere( const MVec3& pos, float radius, const GrColor& 
 void
 GrRenderUtil::DrawColoredLine( const MVec3& pos1, const MVec3& pos2, const GrColor& color )
 {
+    DrawColoredLine( pos1, pos2, color, color );
+}
+
+//----------------------------------------------------------
+void
+GrRenderUtil::DrawColoredLine( const MVec3& pos1, const MVec3& pos2, const GrColor& color1, const GrColor& color2 )
+{
     // pack the color to RGBA.
-    unsigned long packedColor = 0;
-    color.PackToRGBA( ( unsigned char* )&packedColor );
+    unsigned long packedColor1 = 0;
+    color1.PackToRGBA( ( unsigned char* )&packedColor1 );
+    unsigned long packedColor2 = 0;
+    color2.PackToRGBA( ( unsigned char* )&packedColor2 );
 
     // now pack vertices.
     SColorVertex vertices[ 2 ];
     vertices[ 0 ].position = SVec3( pos1.GetX(), pos1.GetY(), pos1.GetZ() );
-    vertices[ 0 ].color = packedColor;
+    vertices[ 0 ].color = packedColor1;
     vertices[ 1 ].position = SVec3( pos2.GetX(), pos2.GetY(), pos2.GetZ() );
-    vertices[ 1 ].color = packedColor;
+    vertices[ 1 ].color = packedColor2;
 
     // upload the data to the card.
     _colorVB->UploadUncached( 0, vertices, sizeof( vertices ) );
@@ -341,18 +350,29 @@ GrRenderUtil::DrawColoredLine( const MVec3& pos1, const MVec3& pos2, const GrCol
 void
 GrRenderUtil::DrawColoredTriangle( const MVec3& pos1, const MVec3& pos2, const MVec3& pos3, const GrColor& color )
 {
+    DrawColoredTriangle( pos1, pos2, pos3, color, color, color );
+}
+
+//----------------------------------------------------------
+void
+GrRenderUtil::DrawColoredTriangle( const MVec3& pos1, const MVec3& pos2, const MVec3& pos3, const GrColor& color1, const GrColor& color2, const GrColor& color3 )
+{
     // pack the color to RGBA.
-    unsigned long packedColor = 0;
-    color.PackToRGBA( ( unsigned char* )&packedColor );
+    unsigned long packedColor1 = 0;
+    color1.PackToRGBA( ( unsigned char* )&packedColor1 );
+    unsigned long packedColor2 = 0;
+    color2.PackToRGBA( ( unsigned char* )&packedColor2 );
+    unsigned long packedColor3 = 0;
+    color3.PackToRGBA( ( unsigned char* )&packedColor3 );
 
     // now pack vertices.
     SColorVertex vertices[ 3 ];
     vertices[ 0 ].position = SVec3( pos1.GetX(), pos1.GetY(), pos1.GetZ() );
-    vertices[ 0 ].color = packedColor;
+    vertices[ 0 ].color = packedColor1;
     vertices[ 1 ].position = SVec3( pos2.GetX(), pos2.GetY(), pos2.GetZ() );
-    vertices[ 1 ].color = packedColor;
+    vertices[ 1 ].color = packedColor2;
     vertices[ 2 ].position = SVec3( pos3.GetX(), pos3.GetY(), pos3.GetZ() );
-    vertices[ 2 ].color = packedColor;
+    vertices[ 2 ].color = packedColor3;
 
     // upload the data to the card.
     _colorVB->UploadUncached( 0, vertices, sizeof( vertices ) );

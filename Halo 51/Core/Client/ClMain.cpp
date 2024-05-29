@@ -88,7 +88,7 @@
 #define CAMERA_ORBIT_RADIUS 4.0f        // meters.
 
 // enable this to visualize physics debug info.
-#define VISUALIZE_PHYSICS   0
+#define VISUALIZE_PHYSICS   1
 
 #define PHYSICS_ALPHA       0.90f
 
@@ -430,11 +430,11 @@ ClRender( ClWindow* window )
 
 #if VISUALIZE_PHYSICS
         // render a visualization of the scene's physics.
-        gPhSDK->setParameter( NX_VISUALIZATION_SCALE, 1.0f );
-        gPhSDK->setParameter( NX_VISUALIZE_BODY_MASS_AXES, 1.0f );
-        gPhSDK->setParameter( NX_VISUALIZE_COLLISION_SHAPES, 1.0f );
-        gPhSDK->setParameter( NX_VISUALIZE_COLLISION_AXES, 1.0f );
-        gPhSDK->setParameter( NX_VISUALIZE_CONTACT_FORCE, 3.0f );
+        gPhScene->setVisualizationParameter( PxVisualizationParameter::eSCALE, 1.0f );
+        gPhScene->setVisualizationParameter( PxVisualizationParameter::eBODY_MASS_AXES, 1.0f );
+        gPhScene->setVisualizationParameter( PxVisualizationParameter::eCOLLISION_SHAPES, 1.0f );
+        gPhScene->setVisualizationParameter( PxVisualizationParameter::eCOLLISION_AXES, 1.0f );
+        gPhScene->setVisualizationParameter( PxVisualizationParameter::eCONTACT_FORCE, 3.0f );
         ClRenderPhysicsVisualizers( *gGameCamera, PHYSICS_ALPHA );
 #endif
     }}
@@ -466,16 +466,16 @@ ClShutdown()
 void
 ClRenderPhysicsVisualizers( const GrCamera& cam, float alpha )
 {
-    const PxDebugRenderable *dbgData = gPhScene->getDebugRenderable();
+    const PxRenderBuffer& dbgData = gPhScene->getRenderBuffer();
 
     // draw points.
     {{
-        PxU32 pointCount = dbgData->getNbPoints();
-        const PxDebugPoint* point = dbgData->getPoints();
+        PxU32 pointCount = dbgData.getNbPoints();
+        const PxDebugPoint* point = dbgData.getPoints();
         while ( pointCount-- )
         {
             gGrRenderUtil->DrawColoredPoint( cam, 
-                PhSubsys::ConvertVec3( point->p ), 
+                PhSubsys::ConvertVec3( point->pos ),
                 PhSubsys::ConvertColor( point->color, alpha ), 
                 2 );
             ++point;
@@ -484,29 +484,32 @@ ClRenderPhysicsVisualizers( const GrCamera& cam, float alpha )
 
     // draw lines.
     {{
-        PxU32 lineCount = dbgData->getNbLines();
-        const PxDebugLine* line = dbgData->getLines();
+        PxU32 lineCount = dbgData.getNbLines();
+        const PxDebugLine* line = dbgData.getLines();
         while ( lineCount-- )
         {
             gGrRenderUtil->DrawColoredLine( 
-                PhSubsys::ConvertVec3( line->p0 ), 
-                PhSubsys::ConvertVec3( line->p1 ), 
-                PhSubsys::ConvertColor( line->color, alpha ) );
+                PhSubsys::ConvertVec3( line->pos0 ),
+                PhSubsys::ConvertVec3( line->pos1 ),
+                PhSubsys::ConvertColor( line->color0, alpha ),
+                PhSubsys::ConvertColor( line->color1, alpha ) );
             ++line;
         }
     }}
 
     // draw triangles.
     {{
-        PxU32 triCount = dbgData->getNbTriangles();
-        const PxDebugTriangle* tri = dbgData->getTriangles();
+        PxU32 triCount = dbgData.getNbTriangles();
+        const PxDebugTriangle* tri = dbgData.getTriangles();
         while ( triCount-- )
         {
             gGrRenderUtil->DrawColoredTriangle( 
-                PhSubsys::ConvertVec3( tri->p0 ), 
-                PhSubsys::ConvertVec3( tri->p1 ), 
-                PhSubsys::ConvertVec3( tri->p2 ), 
-                PhSubsys::ConvertColor( tri->color, alpha ) );
+                PhSubsys::ConvertVec3( tri->pos0 ),
+                PhSubsys::ConvertVec3( tri->pos1 ),
+                PhSubsys::ConvertVec3( tri->pos2 ),
+                PhSubsys::ConvertColor( tri->color0, alpha ),
+                PhSubsys::ConvertColor( tri->color1, alpha ),
+                PhSubsys::ConvertColor( tri->color2, alpha ) );
             ++tri;
         }
     }}

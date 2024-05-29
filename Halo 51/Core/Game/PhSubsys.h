@@ -17,6 +17,7 @@
 #include "PxPhysics.h"
 #include "PxControllerManager.h"
 #include "PxController.h"
+#include "PxScene.h"
 #include "PxCooking.h"
 #include "foundation/PxSimpleTypes.h"
 #include "foundation/PxTransform.h"

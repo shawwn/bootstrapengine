@@ -39,7 +39,9 @@ public:
     // drawing functions that submit a point, line, or triangle for rendering.
     void                DrawColoredPoint( const GrCamera& camera, const MVec3& pos, const GrColor& color, unsigned int sizeInPixels = 1 );
     void                DrawColoredLine( const MVec3& pos1, const MVec3& pos2, const GrColor& color );
+    void                DrawColoredLine( const MVec3& pos1, const MVec3& pos2, const GrColor& color1, const GrColor& color2 );
     void                DrawColoredTriangle( const MVec3& pos1, const MVec3& pos2, const MVec3& pos3, const GrColor& color );
+    void                DrawColoredTriangle( const MVec3& pos1, const MVec3& pos2, const MVec3& pos3, const GrColor& color1, const GrColor& color2, const GrColor& color3 );
 
     // Drawing functions that submit a shape for rendering.  Note that
     // cones open towards -Z.
